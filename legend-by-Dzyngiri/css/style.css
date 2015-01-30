@@ -26,6 +26,10 @@ CONTENTS:
 01 Sensible defaults ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 
+.picktime{
+	
+}
+
 div, article, section, header, footer, nav, li {
 	position:relative;
 }
@@ -262,7 +266,7 @@ ul#menu-main > li > a:hover {
 	;
 	min-height: 600px;
 	margin-top: -60px;
-	padding-top:160px;
+	padding-top:100px;
 	text-align:center;
 }
 #headerwrap h1 {
@@ -270,14 +274,14 @@ ul#menu-main > li > a:hover {
 	font-family: 'Patua One', cursive;
 	font-size: 4em;
 	font-weight: 400;
-	margin: 1em 0;
+	margin: 0.5em 0 0 0;
 }
 #headerwrap h2 {
 	color: #FFFFFF;
 	font-family: 'Open Sans', sans serif;
 	font-size: 2em;
 	font-weight: normal;
-	margin: 0.5em 0;
+	margin: 0 0 1.5em 0;
 	text-shadow: 1px 1px 1px #333333;
 }
 #headerwrap h1 span {
@@ -291,6 +295,8 @@ ul#menu-main > li > a:hover {
 	text-align: center;
 	vertical-align: middle;
 	margin-bottom:0 !important;
+	margin-right: 10px;
+
 }
 #headerwrap input[type=text]:focus {
 	background: #43413e;
@@ -301,7 +307,7 @@ ul#menu-main > li > a:hover {
 }
 #headerwrap input[type=text] {
 	height: 2.9em;
-	width:50%;
+	width:20%;
 }
 #headerwrap input[type=submit] {
 	font-family: 'Patua One', cursive;

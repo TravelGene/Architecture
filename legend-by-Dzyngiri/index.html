@@ -9,6 +9,7 @@
     <!-- Styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/signinup.css" rel="stylesheet">
     <link rel='stylesheet' id='prettyphoto-css'  href="css/prettyPhoto.css" type='text/css' media='all'>
     <link href="css/fontello.css" type="text/css" rel="stylesheet">
     <!--[if lt IE 7]>
@@ -18,6 +19,7 @@
     <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
     <style>
     body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -36,11 +38,59 @@
     <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
     <!-- Load LocalScroll -->
     <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+    <!-- Set log in check -->
+    <script type="text/javascript" src="js/Login.js"></script>
+
+    <script type="text/javascript" src="js/SigninupJQ.js"></script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" 
+          rel="stylesheet"/> 
+
     <!-- prettyPhoto Initialization -->
     <script type="text/javascript" charset="utf-8">
+
+
+
           $(document).ready(function(){
             $("a[rel^='prettyPhoto']").prettyPhoto();
           });
+          $(function() {
+              $( "#goDate" ).datepicker({
+              changeMonth:true,  //月份下拉列表
+              changeYear: true,  //月份下拉列表
+              minDate: "-5d",   //可选最小日期
+              maxDate: "+365d",  //可选最大日期
+              // showOn: "both",       //点击图片和输入框都弹出面板
+              // buttonImageOnly : true,
+              // showButtonPanel: true, //显示面板底部按钮
+              closeTextType:"close", //关闭按钮文字
+              currentText: "today",   //返回今天按钮文字
+              dateFormat:"yy-mm-dd",
+              dayNamesMin:['Sun','Mo','Tu','We','Th','Fr','Sa'],
+
+            });
+          });
+
+
+          $(function() {
+              $( "#returnDate" ).datepicker({
+              changeMonth:true,  //月份下拉列表
+              changeYear: true,  //月份下拉列表
+              minDate: "+1d",   //可选最小日期
+              maxDate: "+365d",  //可选最大日期
+              // showOn: "both",       //点击图片和输入框都弹出面板
+              // buttonImageOnly : true,
+              // showButtonPanel: true, //显示面板底部按钮
+              closeTextType:"close", //关闭按钮文字
+              currentText: "today",   //返回今天按钮文字
+              dateFormat:"yy-mm-dd",
+              dayNamesMin:['Sun','Mo','Tu','We','Th','Fr','Sa'],
+
+            });
+          });
+
         </script>
     </head>
     <body>
@@ -51,12 +101,12 @@
           <div class="container">
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-            <h1 class="brand"><a href="#top">Travel Gene!</a></h1>
+            <h1 class="brand"><a href="index.html">Home</a></h1>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <nav class="pull-right nav-collapse collapse">
               <ul id="menu-main" class="nav">
-                <li><a title="portfolio" href="#portfolio">Sign in</a></li>
-                <li><a title="services" href="#services">Sign up</a></li>
+                <li><a title="portfolio" onclick="openpopin()" href="#portfolio">Sign in</a></li>
+                <li><a title="services" onclick="openpopup()" href="#services">Sign up</a></li>
               </ul>
             </nav>
           </div>
@@ -75,9 +125,11 @@
         <div class="container">
           <div class="row">
             <div class="span12">
-              <h2>Welcome to your trip!</h2>
-              <input type="text" name="your-email" placeholder=" enter your destination" class="cform-text" size="40" title="your email">
-              <input type="submit" value="begin a new trip" class="cform-submit">
+              <h2>YOUR PERSONAL TRIP ADVISOR</h2>
+              <input type="text" name="your-email" placeholder=" enter your destination" class="cform-text" size="40" title="your email" style ="width : 400px">
+              <input type="text"  class="picktime" id="goDate"  name="your-email" placeholder=" start date" class="cform-text" size="40" title="your email">
+              <input type="text" class="picktime" id="returnDate" name="your-email" placeholder=" return date" class="cform-text" size="40" title="your email">
+              <input type="submit"  value="begin a new trip" class="cform-submit">
             </div>
           </div>
           <div class="row">
@@ -94,26 +146,88 @@
         </div>
       </header>
     </div>
-    <!--******************** Feature ********************-->
-    <div class="scrollblock">
-      <section id="feature">
-        <div class="container">
-          <div class="row">
-            <div class="span12">
-              <article>
-                <p>We work to make web a beautiful place.</p>
-                <p>We craft beautiful designs and convert them into</p>
-                <p>fully functional and user-friendy web app.</p>
-              </article>
-            </div>
-            <!-- ./span12 -->
-          </div>
-          <!-- .row -->
-        </div>
-        <!-- ./container -->
-      </section>
+  <div id="overlay" ></div>
+  <div class="modal-dialog sign-dialog" id="popupsign" tabindex="0" role="dialog" aria-labelledby=":r" style="left: 387.5px; top: 124px; width: 500px; display:none ;opacity:1;z-index: 9999;">
+
+    <div class="modal-dialog-title modal-dialog-title-draggable " id=":r"><span class="modal-dialog-title-text">Login or Signup</span><span class="modal-dialog-title-close" id="close" onclick="closepop()"></span>
     </div>
-    <hr>
+    <div class="modal-dialog-content">
+      <div id="js-sign-flow" class="sign-flow dialog" style="display: block;">
+
+      <!-- ÆäËûÕËºÅµÇÂ½   -->
+        <div class="view view-sina" >
+          <img id="logPart" class="log-part" src="img\LogPart.png"> 
+        </div>
+
+    <!-- signin -->
+      
+        <div class="view view-signin" id="view-signin" style="display: block; z-index:9999">
+
+          <div class="stitle">
+            <a id="signin" class="js-signup signup-switch with-icon" style="cursor:pointer">Signup<i class="icon-sign icon-sign-arrow"></i></a>
+            <span class="js-title-label title-label">Login</span>
+          </div>
+          <div class="zu-side-login-box" >
+          <div class="input-wrap">
+            <input required="" class="zg-form-text-input" name="email" id="username_in" placeholder="User name"  onblur="checkUsername()">
+            <div id="username_error" class="log-error"></div>
+          </div>
+          <div class="input-wrap">
+            <input required="" class="zg-form-text-input" maxlength="128" name="password" type="password" id="userpwd_in" onblur="checkPwd()" placeholder="Password">
+            <div id="userpwd_error" class="log-error"></div>
+
+          </div>            
+          <div class="captcha-holder"></div>
+          <div class="command">
+            <div class="zg-right actions">
+              <label class="zg-link-gray remember_me"><input type="checkbox" name="rememberme" checked="" value="y">Remember me </label>
+              <span class="middot zg-gray">¡¤</span>
+<!--              <a class="zg-link-gray" target="_blank" href="/resetpassword"> Forget pwd</a> -->
+              <input type="submit" id="sign_in_btn" class="zg-btn-blue" value="Login">
+            </div>
+          </div>
+          </div>
+        </div>
+        <!-- singin -->
+        <!-- signup -->
+        <div class="view view-signup" id="view-signup" style="display: none; ">
+          <div class="stitle">
+            <a id="signup" class="js-signin signin-switch with-icon" style="cursor:pointer">Login<i class="icon-sign icon-sign-arrow"></i></a>
+            <span class="js-title-label title-label">Sign Up</span>
+          </div>
+          <div class="zu-side-login-box" id="sign-form-1" >
+            <div class="input-wrap">
+              <input required="" class="zg-form-text-input" name="email" placeholder="User name"  id="username_up" onblur="checkUserName2()">
+              <div id="username2_error" class="log-error"></div>
+            </div>
+            <div class="input-wrap">
+              <input required="" class="zg-form-text-input" name="email" type="email" placeholder="Email"  id="email_up" onblur="checkEmail()">
+              <div id="email_error" class="log-error"></div>
+            </div>
+            <div class="input-wrap">
+              <input data-rule-strongpassword="true" required="" class="zg-form-text-input" maxlength="128" name="password" type="password" placeholder="Password" id="userpwd_up" onblur="checkPwdUp()">
+              <div id="pwd_error" class="log-error"></div>
+            </div>
+            <div class="input-wrap">
+              <input data-rule-strongpassword="true" required="" class="zg-form-text-input" maxlength="128" name="rpassword" type="password" placeholder="Password again" id="ruserpwd_up" onblur="checkRPwdUp()">
+              <div id="rpwd_error" class="log-error"></div>
+              </div>
+
+            <div class="command">
+              <div class="zg-right actions">
+            
+                <input type="submit" id="sign_up_btn"  class="zg-btn-blue" value="Sign up"  >
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- signup -->
+
+      </div>
+    </div>
+    <div class="modal-dialog-buttons" style="display: none;"></div>
+  </div>
     <!-- Loading the javaScript at the end of the page -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
