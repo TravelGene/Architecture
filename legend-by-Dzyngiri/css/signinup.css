@@ -246,7 +246,7 @@ width: 178px;
 color: #999;
 font-weight: 400;
 font-size: 12px;
-
+display: none;
 }
 
 input[type=checkbox] {
