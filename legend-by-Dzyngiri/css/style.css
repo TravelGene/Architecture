@@ -404,13 +404,17 @@ section#portfolio hgroup h3 {
 	font-family: 'Patua One', cursive;
 }
 section#portfolio .entry-content {
-	margin: 1em 0 2.5em;
+	margin-left: 2em
 }
 section#portfolio .align {
 	text-align:center;
 	margin-top:10px;
 	font-size:6em;
 }
+/*eyre: */
+
+
+
 /* Portfolio Image Hover */
 .mask2 img {
 	margin: 0 auto;
@@ -1088,4 +1092,17 @@ footer p {
 	/* Desktops and laptops ----------- */
 	@media only screen  and (min-width : 1224px) {
 /* Styles */
+
+
+/* Map */
+
+.map {
+    height: 500px;
+}
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
 	}
