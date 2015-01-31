@@ -707,6 +707,8 @@ footer p {
 	padding: 0 20px;
 	margin-top: 200px;
 	position:absolute;
+	margin-right: 50px;
+	margin-left: auto;
 }
 .carousel-caption h1,  .carousel-caption .lead {
 	margin: 0;
@@ -721,13 +723,20 @@ footer p {
 	height: 50px;
 	top: 46%;
 	margin-top: 0;
-	font-size: 6.5em;
+	
+	margin-right: 0px;
+	margin-left: auto;
+	font-size: 4em;
+	
+	
 	text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
 	background-color: transparent;
 	border: 0;
 	font-family: 'Open Sans', sans-serif;
 	opacity: 0.4;
 	border-radius: 0;
+	
+	
 }
 .carousel-control:link, .carousel-control:visited {
 	color: #262626;

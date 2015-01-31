@@ -1,51 +1,106 @@
-.Activities {
-	font-size: 2em; 
-	color: #abcdef;	
-	width : 50%;
-	height : 500px;
+#MainBody{
+  margin-left: 0;
 }
-
-.add{
-	float:left; 
-	width:100%; 
-	height:50px; 
-	margin:10px;
-	padding:10px;
+.comment_user{
+  width:20%;
+  float:left;
+  height: 150px;
 }
-.add img{
-	float:left;
-	width:30%;
-	height:100%;
+.users_feedback{
+  float:right;
+  width:100%;
 }
-.add p{
-	font-size: 20px;
-	color: #cad123;
-	float:right;
-	width: 70%;
+.comment_user img{
+  float:left;
+  width:50%;
 }
-.rec{
-	float:right; 
-	width:100%; 
-	height:50px; 
-	margin:10px;
-	padding:10px;
+.comment_user .location{
+  font-style: italic;
 }
-.rec img{
-	float:left;
-	width:30%;
-	height:100%;
+.comments{
+  height: 150px;
+  width:80%;
+  margin-left: 10em;
 }
-.rec p{
-	font-size: 20px;
-	color: #cad123;
-	float:right;
-	width: 70%;
+.activity_detail{
+  float:left;
+  width:100%;
 }
-
-.demo { width: 620px }
-
-ul { width: 400px; height: 150px; padding: 2em; margin: 10px; color:#ddd; list-style: none; }
-ul li { cursor: pointer; }
-
-#draggable { background: #444; }
-#droppable { background: #222; }
+.diy-slideshow{
+  float:left;
+  padding-top: 2em;
+  padding-left: 2em;
+  height:100%;
+  width:50%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.show_area{
+  position: relative;
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.9);
+  height: 550px;
+}
+.activity_info{
+  height:400px;
+  width: 100%;
+}
+.activity_info h2{
+  font-size: 2em;
+  padding-left: 2em;
+  padding-top: 2em;
+}
+.activity_info .listing_detail{
+  padding-top: 10em;
+}
+figure{
+  position: absolute;
+  opacity: 0;
+  transition: 1s opacity;
+}
+figcaption{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: .8em;
+  bottom: .75em;
+  right: .35em;
+  padding: .25em;
+  color: #fff;
+  background: rgba(0,0,0, .25);
+  border-radius: 2px;
+}
+figcaption a{
+  color: #fff;
+}
+figure.show{
+  opacity: 1;
+  position: static;
+  transition: 1s opacity;
+}
+.next, .prev{
+  color: #fff;
+  position: absolute;
+  background: rgba(0,0,0, .6);
+  top: 50%;
+  z-index: 1;
+  font-size: 2em;
+  margin-top: -.75em;
+  opacity: .3;
+  user-select: none;
+}
+.next:hover, .prev:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+.next{
+  right: 0;
+  padding: 10px 5px 15px 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.prev{
+  left: 10;
+  padding: 10px 10px 15px 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}

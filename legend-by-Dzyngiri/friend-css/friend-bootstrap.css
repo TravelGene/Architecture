@@ -4348,7 +4348,9 @@ to {
 .carousel-control {
 	position: absolute;
 	top: 40%;
-	left: 15px;
+	
+	left: auto;
+	
 	width: 40px;
 	height: 40px;
 	margin-top: -20px;
@@ -4366,7 +4368,7 @@ to {
 	filter: alpha(opacity=50);
 }
 .carousel-control.right {
-	right: 15px;
+	right: 5px;
 	left: auto;
 }
 .carousel-control:hover, .carousel-control:focus {
@@ -4375,17 +4377,28 @@ to {
 	opacity: 0.9;
 	filter: alpha(opacity=90);
 }
+
 .carousel-indicators {
 	position: absolute;
-	top: 15px;
-	right: 15px;
+	
+	bottom: 100px;
+	
+	right: 0px;
+	left:  0px;
+	
 	z-index: 5;
-	margin: 0;
+	
+	
 	list-style: none;
+	
+	
+	
 }
+
 .carousel-indicators li {
+
 	display: block;
-	float: left;
+	float: center;
 	width: 10px;
 	height: 10px;
 	margin-left: 5px;
@@ -4393,7 +4406,10 @@ to {
 	background-color: #ccc;
 	background-color: rgba(255, 255, 255, 0.25);
 	border-radius: 5px;
+	
 }
+
+
 .carousel-indicators .active {
 	background-color: #fff;
 }
