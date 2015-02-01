@@ -7,81 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Styles -->
-    <style>
-    body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-    }
-	#trip-details {
-		height: 100%;
-		width: 28%;
-        margin: 0px;
-        padding: 0px;
-		float:left;
-	}
-	#map-canvas {
-		height: 380px;
-		width: 70%;
-        margin: 0px;
-        padding: 0px;
-		float:right;
-	}
-	 #elevation_chart {
-		height: 200px;
-		width: 70%;
-        margin: 0px;
-        padding: 0px;
-		float:right;
-	}
-	table.lamp {
-		border:1px solid #d4d4d4;
-	}
-	table.lamp th, td {
-		padding:10px;
-	}
-	table.lamp th {
-		width:40px;
-	}
-	.myButton {
-		-moz-box-shadow: 3px 4px 0px 0px #899599;
-		-webkit-box-shadow: 3px 4px 0px 0px #899599;
-		box-shadow: 3px 4px 0px 0px #899599;
-		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
-		background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-		background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-		background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-		background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-		background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
-		background-color:#ededed;
-		-moz-border-radius:15px;
-		-webkit-border-radius:15px;
-		border-radius:15px;
-		border:1px solid #d6bcd6;
-		display:inline-block;
-		cursor:pointer;
-		color:#3a8a9e;
-		font-family:arial;
-		font-size:17px;
-		padding:7px 25px;
-		text-decoration:none;
-		text-shadow:0px 1px 0px #e1e2ed;
-	}
-	.myButton:hover {
-		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
-		background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-		background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-		background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-		background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-		background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
-		background-color:#bab1ba;
-	}
-	.myButton:active {
-		position:relative;
-		top:1px;
-	}
-
-    </style>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel='stylesheet' id='prettyphoto-css'  href="css/prettyPhoto.css" type='text/css' media='all'>
@@ -93,6 +18,14 @@
     <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	
+	
+	
+    <style>
+    body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+    </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -111,7 +44,18 @@
           $(document).ready(function(){
             $("a[rel^='prettyPhoto']").prettyPhoto();
           });
-    </script>
+        </script>
+	
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Showing elevation along a path</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
     <script src="https://www.google.com/jsapi"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <script>
@@ -267,6 +211,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
               <ul id="menu-main" class="nav">
                 <li><a title="portfolio" href="#portfolio">Sign in</a></li>
                 <li><a title="services" href="#services">Sign up</a></li>
+				
+				
+				
 				<li><a href="friend.html" target="_top">Friend List</a></li>
               </ul>
             </nav>
@@ -282,82 +229,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <!-- ******************** HeaderWrap ********************-->
     <div id="headerwrap">
       <header class="clearfix">
-        <h1><span>Your Trip #08 Detail</h1>
+        <h2><span>Trip Detail</h2>
 		<div class="container">
 			<div>
-				<div id="trip-details">
-				<h2>Trip Description</h2>
-				<table border="1" class="lamp">
-				<tr>
-				  <th>
-					<img src="https://raw.githubusercontent.com/TravelGene/Architecture/master/legend-by-Dzyngiri/Trip%20icon/airplane.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Take flight AA386 from Hanford to Death Valley at 4:00 PM at Hanford Airport on Jan 1st
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="https://raw.githubusercontent.com/TravelGene/Architecture/master/legend-by-Dzyngiri/Trip%20icon/enternment.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Explore the famous Death Valley Amusement Park at 9:00 AM
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="https://raw.githubusercontent.com/TravelGene/Architecture/master/legend-by-Dzyngiri/Trip%20icon/history.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Visit the Golden Valley Museum
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="https://raw.githubusercontent.com/TravelGene/Architecture/master/legend-by-Dzyngiri/Trip%20icon/museum.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Shop at Inyo Forest Mall and eat lunch at 11:00 AM
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="https://raw.githubusercontent.com/TravelGene/Architecture/master/legend-by-Dzyngiri/Trip%20icon/shopping.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					The table element was not designed to be a layout tool.
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="https://raw.githubusercontent.com/TravelGene/Architecture/master/legend-by-Dzyngiri/Trip%20icon/bus.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Take bus X27 to Sierra Mountain Forest at 4:00 PM
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="https://raw.githubusercontent.com/TravelGene/Architecture/master/legend-by-Dzyngiri/Trip%20icon/sports.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Watch the Super Bowl Game at 5:00 PM
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="https://raw.githubusercontent.com/TravelGene/Architecture/master/legend-by-Dzyngiri/Trip%20icon/airplane.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Take flight AA387 from Sierra Mountain to Hanford at 8:00 PM at Hanford Airport on Jan 1st
-				  </td>
-				</tr>
-				</table>
-				</div>
-				<h2>Trip Map</h2>
-				<div id="map-canvas"></div>
-				<div id="elevation_chart"></div>
-				<a href="#" class="myButton" onclick="myFunction()">Print this Trip</a>
+			<div id="map-canvas" style="height:380px;"></div>
+			<div id="elevation_chart"></div>
 			</div>
           <div class="row">
           </div>
@@ -385,10 +261,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-	  
-	  function myFunction() {
-		window.print();
-	}
 	</script>
     </body>
     </html>
