@@ -46,6 +46,19 @@
               $("a[rel^='prettyPhoto']").prettyPhoto();
             });
           </script>
+          <style type="text/css">
+          .demo { width: 100% ;top: 100px}
+
+          #droppable2 { position:absolute; background: gray;top:0px;left: 15%; width: 300px;height: 400px;z-index:1;opacity:0.1}
+          #droppable { position:absolute;top:0px;left: 15%; width: 300px;height: 400px;z-index:2}
+          #draggable1 { position:absolute;top:0px;right: 15%;width: 300px;z-index:2;height: 400px}
+          #draggable12 { position:absolute; background: gray;top:0px;right: 15%;width: 300px;z-index:1;height: 400px;opacity:0.1}
+          #aaa {position:relative; background: yellow; width: 100px; left: 100px }
+          #test1 {background:url(1.jpg); height: 50px;}
+          #test12 {background:url(2.png); height: 50px;}
+          #test13 {background:url(1.jpg); height: 50px;}
+          #test14 {background:url(2.png); height: 50px;}
+          </style>
         </head>
         <body>
           <!--******************** NAVBAR ********************-->
@@ -77,20 +90,25 @@
           <!--******************** Portfolio Section ********************-->
           <section id="portfolio" class="single-page scrollblock">
             <div class="container">
-              <div id="MainBody">
+              <div id="MainBody" style="z-index:1">
                 <article class="show_area">
-                  <div class="demo">
-                    <h2>Design your own day</h2>  
+                  <div class="demo" style="z-index:3">
+              
+              <div id="draggable1">
+                <div id="test1" style="height:50px"></div>
+                <div id="test12" style="height:50px"></div>
+                <div id="test13" style="height:50px"></div>
+                <div id="test14" style="height:50px"></div>
+              </div>
+              <div id="draggable12"></div>
 
-                    <div id="draggable">
-                      <li style="height:150px"><div id="test">Box #1</div></li>
-                      <li style="height:150px"><div id="test2">Box #2</div></li>
-                    </div>
-                    <div id="droppable">
 
-                    </div>
+              <div id="droppable">
 
-                  </div>
+              </div>
+              <div id="droppable2"></div>
+
+            </div>
                   
                 </article>
               </div>
