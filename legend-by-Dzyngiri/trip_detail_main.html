@@ -1,0 +1,403 @@
+    <!DOCTYPE HTML>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Legend - One Page Bootstrap Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Styles -->
+    <style>
+    body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+	#trip-details {
+		height: 100%;
+		width: 28%;
+        margin: 0px;
+        padding: 0px;
+		float:left;
+	}
+	#map-canvas {
+		height: 380px;
+		width: 70%;
+        margin: 0px;
+        padding: 0px;
+		float:right;
+	}
+	 #elevation_chart {
+		height: 200px;
+		width: 70%;
+        margin: 0px;
+        padding: 0px;
+		float:right;
+	}
+	table.lamp {
+		border:1px solid #d4d4d4;
+	}
+	table.lamp th, td {
+		padding:10px;
+	}
+	table.lamp th {
+		width:40px;
+	}
+	.myButton {
+		-moz-box-shadow: 3px 4px 0px 0px #899599;
+		-webkit-box-shadow: 3px 4px 0px 0px #899599;
+		box-shadow: 3px 4px 0px 0px #899599;
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+		background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+		background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+		background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+		background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+		background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+		background-color:#ededed;
+		-moz-border-radius:15px;
+		-webkit-border-radius:15px;
+		border-radius:15px;
+		border:1px solid #d6bcd6;
+		display:inline-block;
+		cursor:pointer;
+		color:#3a8a9e;
+		font-family:arial;
+		font-size:17px;
+		padding:7px 25px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #e1e2ed;
+		margin-top: 20px;
+	}
+	.myButton:hover {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+		background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+		background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+		background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+		background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+		background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+		background-color:#bab1ba;
+	}
+	.myButton:active {
+		position:relative;
+		top:1px;
+	}
+	#head1 {
+		font-family: "Courier New";
+		font-size: 40px;
+		margin-bottom: 20px;
+		font-weight: bold;
+		color:#FFCC00;
+	}
+	#head2 {
+		font-family: "Times New Roman", Times, serif;
+		font-size: 30px;
+		margin-bottom: 20px;
+		font-weight: bold;
+		color:#404040;
+	}
+
+    </style>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel='stylesheet' id='prettyphoto-css'  href="css/prettyPhoto.css" type='text/css' media='all'>
+	<link rel='stylesheet' id='prettyphoto-css'  href="css/yanchenl/profilestyle.css" type='text/css' media='all'>
+    <link href="css/fontello.css" type="text/css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/images.png">
+    <!--[if lt IE 7]>
+            <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">  
+        <![endif]-->
+    <!-- Google Web fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- Load ScrollTo -->
+    <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+    <!-- Load LocalScroll -->
+    <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+    <!-- prettyPhoto Initialization -->
+    <script type="text/javascript" charset="utf-8">
+          $(document).ready(function(){
+            $("a[rel^='prettyPhoto']").prettyPhoto();
+          });
+    </script>
+    <script src="https://www.google.com/jsapi"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+var elevator;
+var map;
+var chart;
+var polyline;
+
+// The following path marks a general path from Mt.
+// Whitney, the highest point in the continental United
+// States to Badwater, Death Valley, the lowest point.
+var whitney = new google.maps.LatLng(36.578581, -118.291994);
+var lonepine = new google.maps.LatLng(36.606111, -118.062778);
+var owenslake = new google.maps.LatLng(36.433269, -117.950916);
+var beattyjunction = new google.maps.LatLng(36.588056, -116.943056);
+var panamintsprings = new google.maps.LatLng(36.339722, -117.467778);
+var badwater = new google.maps.LatLng(36.23998, -116.83171);
+var badwaterrrrrrr = new google.maps.LatLng(37.23998, -118.83171);
+var badwaterrr = new google.maps.LatLng(36.33998, -119.63171);
+var badwaterr = new google.maps.LatLng(36.578581, -118.291994);
+
+// Load the Visualization API and the columnchart package.
+google.load('visualization', '1', {packages: ['columnchart']});
+
+function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: lonepine,
+    mapTypeId: 'terrain'
+  }
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  
+  var lineCoordinates = [ whitney, lonepine, owenslake, panamintsprings, beattyjunction, badwater, badwaterrrrrrr, badwaterrr, badwaterr];
+  
+  // Define the symbol, using one of the predefined paths ('CIRCLE')
+  // supplied by the Google Maps JavaScript API.
+  var lineSymbol = {
+    path: google.maps.SymbolPath.CIRCLE,
+    scale: 8,
+    strokeColor: '#393'
+  };
+
+  // Create an ElevationService.
+  elevator = new google.maps.ElevationService();
+
+  // Draw the path, using the Visualization API and the Elevation service.
+  drawPath();
+  
+  // Create the polyline and add the symbol to it via the 'icons' property.
+  line = new google.maps.Polyline({
+    path: lineCoordinates,
+    icons: [{
+      icon: lineSymbol,
+      offset: '100%'
+    }],
+    map: map
+  });
+  
+  animateCircle();
+}
+
+function drawPath() {
+
+  // Create a new chart in the elevation_chart DIV.
+  chart = new google.visualization.ColumnChart(document.getElementById('elevation_chart'));
+
+  var path = [ whitney, lonepine, owenslake, panamintsprings, beattyjunction, badwater, badwaterrrrrrr, badwaterrr, badwaterr];
+
+  // Create a PathElevationRequest object using this array.
+  // Ask for 256 samples along that path.
+  var pathRequest = {
+    'path': path,
+    'samples': 256
+  }
+
+  // Initiate the path request.
+  elevator.getElevationAlongPath(pathRequest, plotElevation);
+}
+
+// Takes an array of ElevationResult objects, draws the path on the map
+// and plots the elevation profile on a Visualization API ColumnChart.
+function plotElevation(results, status) {
+  if (status != google.maps.ElevationStatus.OK) {
+    return;
+  }
+  var elevations = results;
+
+  // Extract the elevation samples from the returned results
+  // and store them in an array of LatLngs.
+  var elevationPath = [];
+  for (var i = 0; i < results.length; i++) {
+    elevationPath.push(elevations[i].location);
+  }
+
+  // Display a polyline of the elevation path.
+  var pathOptions = {
+    path: elevationPath,
+    strokeColor: '#0000CC',
+    opacity: 0.4,
+    map: map
+  }
+  polyline = new google.maps.Polyline(pathOptions);
+
+  // Extract the data from which to populate the chart.
+  // Because the samples are equidistant, the 'Sample'
+  // column here does double duty as distance along the
+  // X axis.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Sample');
+  data.addColumn('number', 'Elevation');
+  for (var i = 0; i < results.length; i++) {
+    data.addRow(['', elevations[i].elevation]);
+  }
+
+  // Draw the chart using the data within its DIV.
+  document.getElementById('elevation_chart').style.display = 'block';
+  chart.draw(data, {
+    height: 150,
+    legend: 'none',
+    titleY: 'Elevation (m)'
+  });
+}
+
+// Use the DOM setInterval() function to change the offset of the symbol
+// at fixed intervals.
+function animateCircle() {
+    var count = 0;
+    window.setInterval(function() {
+      count = (count + 1) % 200;
+
+      var icons = line.get('icons');
+      icons[0].offset = (count / 2) + '%';
+      line.set('icons', icons);
+  }, 20);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+	
+    </head>
+    <body>
+    <!--******************** NAVBAR ********************-->
+    <div class="navbar-wrapper">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+            <h1 class="brand"><a href="index.html">Travel Gene!</a></h1>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <nav class="pull-right nav-collapse collapse">
+              <ul id="menu-main" class="nav">
+                <li><a title="services" href="#services">Sign out</a></li>
+                <li><a title="portfolio" href="profilec.html">Account</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.navbar-inner -->
+      </div>
+      <!-- /.navbar -->
+    </div>
+    <!-- /.navbar-wrapper -->
+    <div id="top"></div>
+    <!-- ******************** HeaderWrap ********************-->
+    <div id="headerwrap">
+      <header class="clearfix">
+        <div id="head1">Trip Details</div>
+		<div class="container">
+			<div>
+				<div id="trip-details">
+				<div id="head2">Trip Description</div>
+				<table border="1" class="lamp">
+				<tr>
+				  <th>
+					<img src="img/TripIcon/airplane.png" alt="Note" style="height:32px;width:32px">
+				  </th>
+				  <td>
+					Take flight AA386 from Hanford to Death Valley at 4:00 PM at Hanford Airport on Jan 1st
+				  </td>
+				</tr>
+				<tr>
+				  <th>
+					<img src="img/TripIcon/enternment.png" alt="Note" style="height:32px;width:32px">
+				  </th>
+				  <td>
+					Explore the famous Death Valley Amusement Park at 9:00 AM
+				  </td>
+				</tr>
+				<tr>
+				  <th>
+					<img src="img/TripIcon/history.png" alt="Note" style="height:32px;width:32px">
+				  </th>
+				  <td>
+					Visit the Golden Valley Museum
+				  </td>
+				</tr>
+				<tr>
+				  <th>
+					<img src="img/TripIcon/museum.png" alt="Note" style="height:32px;width:32px">
+				  </th>
+				  <td>
+					Shop at Inyo Forest Mall and eat lunch at 11:00 AM
+				  </td>
+				</tr>
+				<tr>
+				  <th>
+					<img src="img/TripIcon/shopping.png" alt="Note" style="height:32px;width:32px">
+				  </th>
+				  <td>
+					The table element was not designed to be a layout tool.
+				  </td>
+				</tr>
+				<tr>
+				  <th>
+					<img src="img/TripIcon/bus.png" alt="Note" style="height:32px;width:32px">
+				  </th>
+				  <td>
+					Take bus X27 to Sierra Mountain Forest at 4:00 PM
+				  </td>
+				</tr>
+				<tr>
+				  <th>
+					<img src="img/TripIcon/sports.png" alt="Note" style="height:32px;width:32px">
+				  </th>
+				  <td>
+					Watch the Super Bowl Game at 5:00 PM
+				  </td>
+				</tr>
+				<tr>
+				  <th>
+					<img src="img/TripIcon/airplane.png" alt="Note" style="height:32px;width:32px">
+				  </th>
+				  <td>
+					Take flight AA387 from Sierra Mountain to Hanford at 8:00 PM at Hanford Airport on Jan 1st
+				  </td>
+				</tr>
+				</table>
+				</div>
+				<div id="head2">Route Map</div>
+				<div id="map-canvas"></div>
+				<div id="elevation_chart"></div>
+				<div class="span12">
+				  <ul class="icon">
+					<li><a href="#" target="_blank"><i class="icon-pinterest-circled"></i></a></li>
+					<li><a href="#" target="_blank"><i class="icon-facebook-circled"></i></a></li>
+					<li><a href="#" target="_blank"><i class="icon-twitter-circled"></i></a></li>
+					<li><a href="#" target="_blank"><i class="icon-gplus-circled"></i></a></li>
+					<li><a href="#" target="_blank"><i class="icon-skype-circled"></i></a></li>
+				  </ul>
+				</div>
+				<a href="#" class="myButton" onclick="myFunction()">Print this Trip</a>
+			</div>
+          <div class="row">
+          </div>
+          <div class="row">
+          </div>
+        </div>
+      </header>
+    </div>
+	
+
+    <!-- Loading the javaScript at the end of the page -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+  
+    </body>
+    </html>
