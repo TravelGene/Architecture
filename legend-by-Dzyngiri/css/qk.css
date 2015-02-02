@@ -76,7 +76,8 @@ div #test2 {background:url(../img/restaurant2.png); height: 150px;}
   width: 40%;
   float:right;
 }
-.activity_info .foot_category{
+.activity_info .food_category{
+  color:grey;
   padding-top:3em;
   width:40%;
   float:right;
@@ -87,7 +88,6 @@ div #test2 {background:url(../img/restaurant2.png); height: 150px;}
   width:40%;
 }
 .activity_info .telephone{
-  color:grey;
   padding-top: 5em;
   width:40%;
   float:right;
