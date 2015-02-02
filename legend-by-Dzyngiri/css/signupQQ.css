@@ -1,0 +1,62 @@
+.span12{
+	height:auto;
+	/*margin-bottom: 10px;*/
+}
+.row{
+	margin-bottom: 20px;
+}
+
+#container input[type=text]{
+	height: 2.5em;
+}
+
+#container input.cform-text-name{
+	text-align: left;
+	width: 200px;
+}
+
+
+#container input.cform-text{
+	width: 415px;
+	text-align: left;
+}
+#container select{
+	background: rgba(227, 231, 228, 1);
+	width: 130px;
+	height: 40px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#container label{
+	color: #141823;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 18px;
+	padding: 0 10px 0 3px;
+}
+
+._5k_2 {
+-webkit-border-radius: 4px;
+border-width: 1px;
+display: inline-block;
+padding: 5px 0 5px 4px;
+width: 90px;
+	margin-right: 5px;
+}
+._5k_3{
+	display: inline-block;
+	width: 210px;
+	margin-left: 40px;
+
+}
+
+.sex{
+	float:left;
+	margin-bottom: 0;
+
+}
+#container .po{
+	float: left;
+	margin-top: 0px;
+}

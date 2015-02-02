@@ -17,14 +17,14 @@ function openpopin(){
   // document.getElementById("logPart").src="img/LogPart2.png";
   // document.getElementById("logPart").style.height="180px";
 }
-function openpopup(){
-	document.getElementById("popupsign").style.display="block";
-	document.getElementById("overlay").style.display="block";
-	document.getElementById("view-signup").style.display="block";
-	document.getElementById("view-signin").style.display="none";
-  // document.getElementById("logPart").src="img/LogPart.png";
-  // document.getElementById("logPart").style.height="300px";
-}
+// function openpopup(){
+// 	document.getElementById("popupsign").style.display="block";
+// 	document.getElementById("overlay").style.display="block";
+// 	document.getElementById("view-signup").style.display="block";
+// 	document.getElementById("view-signin").style.display="none";
+//   // document.getElementById("logPart").src="img/LogPart.png";
+//   // document.getElementById("logPart").style.height="300px";
+// }
 
 function closepop(){
 	document.getElementById("popupsign").style.display="none";
