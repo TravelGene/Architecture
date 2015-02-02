@@ -69,10 +69,28 @@ div #test2 {background:url(../img/restaurant2.png); height: 150px;}
 .activity_info h2{
   font-size: 2em;
   padding-left: 2em;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 .activity_info .listing_detail{
-  padding-top: 10em;
+  padding-top: 5em;
+  width: 40%;
+  float:right;
+}
+.activity_info .food_category{
+  color:grey;
+  padding-top:3em;
+  width:40%;
+  float:right;
+}
+.activity_info .location{
+  float:right;
+  font-weight: bold;
+  width:40%;
+}
+.activity_info .telephone{
+  padding-top: 5em;
+  width:40%;
+  float:right;
 }
 figure{
   position: absolute;
