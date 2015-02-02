@@ -454,7 +454,31 @@ float:right;
 width: 30%;
 }
 
-
+.myButton {
+    font-family: 'Patua One', cursive;
+    color: #fff;
+    width: 185px;
+    text-shadow: none;
+    font-size: 1.3125em; /* 21px */
+    padding: 1em 0.5em;
+    letter-spacing: 0.05em;
+    display: block;
+    border: 0;
+    text-transform: none;
+    background: #f0bf00 !important;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.myButton:link, .btn:visited {
+    color: #fff;
+}
+.myButton:hover {
+    background: #312A1E !important;
+}
 
 }
 
