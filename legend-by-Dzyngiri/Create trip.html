@@ -47,10 +47,6 @@
           <style type="text/css">
           .demo { width: 100% ;top: 100px}
 
-          ul { width: 400px; height: 150px; padding: 2em; margin: 10px; color:#ddd; list-style: none; }
-          ul li { cursor: pointer; height: 50px}
-
-
           #droppable2 { position:absolute; background: yellow;top:100px;left: 15%; width: 300px;height: 400px;z-index:1;opacity:0.5}
           #droppable { position:absolute;top:100px;left: 15%; width: 300px;height: 400px;z-index:2}
           #draggable1 { position:absolute;top:100px;right: 15%;width: 300px;z-index:2;height: 400px}
@@ -60,11 +56,9 @@
           #test12 {background:url(2.png); height: 50px;}
           #test13 {background:url(1.jpg); height: 50px;}
           #test14 {background:url(2.png); height: 50px;}
-          #innertitle{position:absolute;top:20px;right: 15%;width: 300px;z-index:2;height: 50px;z-index: 299;background: yellow;}
           </style>
         </head>
         <body>
-          <div id="innertitle">HAHA</div>
           <!--******************** NAVBAR ********************-->
           <div class="navbar-wrapper">
             <div class="navbar navbar-inverse navbar-fixed-top">
@@ -74,12 +68,12 @@
                   <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
                   <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
                   <h1 class="brand"><a href="#top">Travel Gene!</a></h1>
-                  <h2>haha</h2>
+            
                   <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                   <nav class="pull-right nav-collapse collapse">
                     <ul id="menu-main" class="nav">
-                      <li><a title="signin" href="/signin.html">Sign in</a></li>
-                      <li><a title="signup" href="/signup.html">Sign up</a></li>
+                      <li><a title="signin" href="/signin.html">Sign out</a></li>
+                      <li><a title="signup" href="profilec.html">Account</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -125,18 +119,5 @@
           <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
           <script type="text/javascript" src="js/site.js"></script>
 
-          <!--ANALYTICS CODE-->
-          <script type="text/javascript">
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-29231762-1']);
-          _gaq.push(['_setDomainName', 'dzyngiri.com']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-          </script>
         </body>
         </html>

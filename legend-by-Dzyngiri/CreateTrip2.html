@@ -22,9 +22,9 @@
             <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
             <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
             <style>
-              body {
-                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-              }
+            body {
+              padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            }
             </style>
             <link href="css/bootstrap-responsive.css" rel="stylesheet">
             <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -42,10 +42,30 @@
           <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
           <!-- prettyPhoto Initialization -->
           <script type="text/javascript" charset="utf-8">
-            $(document).ready(function(){
-              $("a[rel^='prettyPhoto']").prettyPhoto();
-            });
+          $(document).ready(function(){
+            $("a[rel^='prettyPhoto']").prettyPhoto();
+          });
           </script>
+          <style type="text/css">
+          .demo { width: 100% ;top: 100px}
+
+          #droppable2 { position:absolute; background: gray;top:0px;left: 15%; width: 300px;height: 400px;z-index:1;opacity:0.1}
+          #droppable { position:absolute;top:0px;left: 15%; width: 300px;height: 400px;z-index:2}
+          #draggable1 { position:absolute;top:0px;right: 15%;width: 300px;z-index:2;height: 400px}
+          #draggable12 { position:absolute; background: gray;top:0px;right: 15%;width: 300px;z-index:1;height: 400px;opacity:0.1}
+          #aaa {position:relative; background: yellow; width: 100px; left: 100px }
+          #test1 {background:url(1.jpg); height: 100px;}
+          #test12 {background:url(2.png); height: 100px;}
+          #test13 {background:url(1.jpg); height: 100px;}
+          #test14 {background:url(2.png); height: 100px;}
+
+
+          #design{ position:absolute;top:10px;left: 35%; width: 400px;height: 400px;z-index:2;font-size: 36px}
+          #plan{ position:absolute;top:55px;left: 22%; width: 300px;height: 400px;z-index:2;font-size: 20px}
+          #alter{ position:absolute;top:55px;left: 65%; width: 300px;height: 400px;z-index:2;font-size: 20px}
+
+
+          </style>
         </head>
         <body>
           <!--******************** NAVBAR ********************-->
@@ -59,8 +79,8 @@
                   <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                   <nav class="pull-right nav-collapse collapse">
                     <ul id="menu-main" class="nav">
-                      <li><a title="portfolio" href="#portfolio">Sign in</a></li>
-                      <li><a title="services" href="#services">Sign up</a></li>
+                      <li><a title="portfolio" href="#portfolio">Sign out</a></li>
+                      <li><a title="services" href="profilec.html">Account</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -77,19 +97,28 @@
           <!--******************** Portfolio Section ********************-->
           <section id="portfolio" class="single-page scrollblock">
             <div class="container">
-              <div id="MainBody">
+              <div id="MainBody" style="z-index:1">
                 <article class="show_area">
-                  <div class="demo">
-                    <h2>Design your own day</h2>  
+                  <div id="design">Design Your Own Trip</div>
+                  <div id="plan">Your Trip Plan</div>
+                  <div id="alter">Alternative activities</div>
+                  <div class="demo" style="z-index:3">
 
-                    <div id="draggable">
-                      <li style="height:150px"><div id="test">Box #1</div></li>
-                      <li style="height:150px"><div id="test2">Box #2</div></li>
+
+
+                    <div id="draggable1">
+                      <div id="test1" ></div>
+                      <div id="test12"></div>
+                      <div id="test13"></div>
+                      <div id="test14"></div>
                     </div>
+                    <div id="draggable12"></div>
+
+
                     <div id="droppable">
 
-
                     </div>
+                    <div id="droppable2"></div>
 
                   </div>
                   
@@ -104,25 +133,13 @@
           <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
           <script type="text/javascript" src="js/site.js"></script>
           <script type="text/javascript" src="js/create_trip.js"></script>
-          <!--ANALYTICS CODE-->
-          <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-29231762-1']);
-            _gaq.push(['_setDomainName', 'dzyngiri.com']);
-            _gaq.push(['_trackPageview']);
 
-            (function() {
-              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-          </script>
           <!--Panel-->
           <script>
-            $(function () {
-              $('#myTab a:last').tab('show')
-            })
+          $(function () {
+            $('#myTab a:last').tab('show')
+          })
           </script>
- </script>
-</body>
-</html>
+        </script>
+      </body>
+      </html>
