@@ -5,7 +5,7 @@ $(document).ready(function() {
         // click time (milliseconds)
         lastClick, diffClick; // timestamps
 
-    $("#draggable1 div")
+    $("#droppable div, #draggable1 div")
     // Script to deferentiate a click from a mousedown for drag event
     .bind('mousedown mouseup', function(e) {
         if (e.type == "mousedown") {
