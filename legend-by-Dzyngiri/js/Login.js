@@ -32,9 +32,9 @@ function closepop(){
 
 }
 
-function getAcount(){
+function getAccount(){
   document.getElementById("popupsign").style.display="none";
-  document.getElementById("acount").style.display="block";
+  document.getElementById("account").style.display="block";
   document.getElementById("siin").style.display="none";
   document.getElementById("siup").style.display="none";
   document.getElementById("overlay").style.display="none";
@@ -43,7 +43,7 @@ function getAcount(){
 
 function login(){
   document.getElementById("popupsign").style.display="none";
-  document.getElementById("acount").style.display="block";
+  document.getElementById("account").style.display="block";
   document.getElementById("siin").style.display="none";
   document.getElementById("siup").style.display="none";
   document.getElementById("overlay").style.display="none";
