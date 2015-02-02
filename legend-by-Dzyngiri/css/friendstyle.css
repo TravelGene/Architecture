@@ -456,6 +456,70 @@ width: 30%;
 
 
 
+.shiny-button {
+  display: inline-block;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.1;
+  font-weight: normal;
+  font-family: sans-serif;
+  color: #FFFFFF;
+  font-size: 12px;
+  background-color: #00BFA9;
+  background-image: -webkit-linear-gradient(top, #00c4ae 0%, #17d1bb 48%, #00BFA9 49%, #00BFA9 82%, #00dbc2 100%);
+  background-image: -moz-linear-gradient(top, #00c4ae 0%, #17d1bb 48%, #00BFA9 49%, #00BFA9 82%, #00dbc2 100%);
+  background-image: -o-linear-gradient(top, #00c4ae 0%, #17d1bb 48%, #00BFA9 49%, #00BFA9 82%, #00dbc2 100%);
+  background-image: -ms-linear-gradient(top, #00c4ae 0%, #17d1bb 48%, #00BFA9 49%, #00BFA9 82%, #00dbc2 100%);
+  border-color: hsl(173, 45%, 37%);
+  -webkit-box-shadow: inset 0 0 1px 1px #00f2d6, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 0 1px 1px #00f2d6, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 1px 1px #00f2d6, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 1px #00594f;
+  -moz-text-shadow: 1px 1px 1px #00594f;
+  -o-text-shadow: 1px 1px 1px #00594f;
+  text-shadow: 1px 1px 1px #00594f;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  padding: 12px 30px 12px 30px;
+}
+
+.shiny-button strong {
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+
+.shiny-button:hover {
+  color: #FFFFFF;
+  background-color: #00ceb7;
+  background-image: -webkit-linear-gradient(top, #00d3bc 0%, #19dec8 48%, #00ceb7 49%, #00ceb7 82%, #00ead0 100%);
+  background-image: -moz-linear-gradient(top, #00d3bc 0%, #19dec8 48%, #00ceb7 49%, #00ceb7 82%, #00ead0 100%);
+  background-image: -o-linear-gradient(top, #00d3bc 0%, #19dec8 48%, #00ceb7 49%, #00ceb7 82%, #00ead0 100%);
+  background-image: -ms-linear-gradient(top, #00d3bc 0%, #19dec8 48%, #00ceb7 49%, #00ceb7 82%, #00ead0 100%);
+  border-color: hsl(173, 44%, 38%);
+  -webkit-box-shadow: inset 0 0 1px 1px #07ffe3, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 0 1px 1px #07ffe3, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 1px 1px #07ffe3, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 1px #00685c;
+  -moz-text-shadow: 1px 1px 1px #00685c;
+  -o-text-shadow: 1px 1px 1px #00685c;
+  text-shadow: 1px 1px 1px #00685c;
+}
+
+.shiny-button:active {
+  color: #FFFFFF;
+  background-color: #00b09b;
+  background-image: -webkit-linear-gradient(top, #00a692 0%, #00BFA9 100%);
+  background-image: -moz-linear-gradient(top, #00a692 0%, #00BFA9 100%);
+  background-image: -o-linear-gradient(top, #00a692 0%, #00BFA9 100%);
+  background-image: -ms-linear-gradient(top, #00a692 0%, #00BFA9 100%);
+  padding: 13px 30px 11px 30px;
+}
+
+
 }
 
 

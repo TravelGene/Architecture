@@ -784,7 +784,7 @@ footer p {
 	width: 185px;
 	height: 20px;
 	text-shadow: none;
-	font-size: 1.3125em; /* 21px */
+	font-size: small; /* 21px */
 	padding: 1em 0.5em;
 	letter-spacing: 0.05em;
 	margin: 4.5em auto 0;
