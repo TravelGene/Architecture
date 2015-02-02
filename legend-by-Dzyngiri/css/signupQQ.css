@@ -36,6 +36,11 @@
 	padding: 0 10px 0 3px;
 }
 
+#container .selection{
+	margin-left:27px;
+}
+
+
 ._5k_2 {
 -webkit-border-radius: 4px;
 border-width: 1px;
