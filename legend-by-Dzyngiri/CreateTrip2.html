@@ -56,13 +56,14 @@
           #aaa {position:relative; background: yellow; width: 100px; left: 100px }
           #test1 {background:url(1.jpg); height: 100px;}
           #test12 {background:url(2.png); height: 100px;}
-          #test13 {background:url(1.jpg); height: 100px;}
+          #test13 {background:url(3.jpg); height: 100px;background-position: center bottom;}
           #test14 {background:url(2.png); height: 100px;}
 
 
           #design{ position:absolute;top:10px;left: 35%; width: 400px;height: 400px;z-index:2;font-size: 36px}
           #plan{ position:absolute;top:55px;left: 22%; width: 300px;height: 400px;z-index:2;font-size: 20px}
           #alter{ position:absolute;top:55px;left: 65%; width: 300px;height: 400px;z-index:2;font-size: 20px}
+          #create{ position:absolute;top:500px;left: 42%; width: 400px;height: 400px;z-index:2;font-size: 36px}
 
 
           </style>
@@ -107,10 +108,10 @@
 
 
                     <div id="draggable1">
-                      <div id="test1" ></div>
-                      <div id="test12"></div>
-                      <div id="test13"></div>
-                      <div id="test14"></div>
+                      <div id="test1" onclick="location.href='Activities.html'" ></div>
+                      <div id="test12" onclick="location.href='Activities.html'"></div>
+                      <div id="test13" onclick="location.href='Activities.html'"></div>
+                      <div id="test14" onclick="location.href='Activities.html'"></div>
                     </div>
                     <div id="draggable12"></div>
 
@@ -121,6 +122,7 @@
                     <div id="droppable2"></div>
 
                   </div>
+                  <div id="create" onclick="location.href='profilec.html'">Create Trip</div>
                   
                 </article>
               </div>
