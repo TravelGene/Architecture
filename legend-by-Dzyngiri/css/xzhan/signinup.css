@@ -23,7 +23,7 @@ font-family: 'Patua One', cursive;
 .sign-dialog .modal-dialog-title {
 	background-color: #0f6fb2;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(15, 111, 178)), to(rgb(34, 65, 112)));
-	background-image: -webkit-linear-gradient(top, #4B66A0, #4B66A0);
+	background-image: -webkit-linear-gradient(top, rgb(15, 111, 178), rgb(34, 65, 112));
 	background-repeat: repeat-x;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1781eb', endColorstr='#006cd9', GradientType=0);
 	border-top: 1px solid #006CD9;
@@ -136,16 +136,7 @@ font-family: 'Patua One', cursive;
 	vertical-align: middle;
 }
 
-.facebook-icon{
-	
-	background-image: url(../img/download.png);
-	background-repeat: no-repeat;
-	display: inline-block;
-	vertical-align: middle;
-	height: 150px;
-	width: 150px;
 
-}
 
 
 
@@ -170,7 +161,7 @@ font-family: 'Patua One', cursive;
 	position: relative;
 	margin-bottom: 10px;
 	margin-top: 10px;
-	text-align: center;
+
 }
 
 .sign-flow .view .stitle .signup-switch, .sign-flow .view .stitle .signin-switch {
@@ -224,7 +215,6 @@ font-family: 'Patua One', cursive;
 		position: relative;
 		margin-bottom: 20px;
 		width: 220px;
-		text-align: center;
 	}
 
 
@@ -343,8 +333,8 @@ font-family: 'Patua One', cursive;
 	}
 	input.zg-btn-blue{
 		background-color: #0f6fb2;
-		background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(116, 185, 234)), to(rgb(66, 94, 145)));
-		background-image: -webkit-linear-gradient(top, #4B66A0, #4B66A0);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(15, 111, 178)), to(rgb(34, 65, 112)));
+		background-image: -webkit-linear-gradient(top, rgb(15, 111, 178), rgb(34, 65, 112));
 		background-repeat: repeat-x;
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1d7fe2', endColorstr='#0865c2', GradientType=0);
 		text-shadow: 0 -1px 0 rgba(0,0,0,.5);

@@ -2,38 +2,61 @@
 
 
 
-//点击登陆或注册
+function logfbpup(){
+  // window.open("logfb.html", "", "toolbar=no, height=300,width=500, top=200, left=400");
+  // return false;
+  document.getElementById("signin").style.display="none";
+}
+
+
 function openpopin(){
 	document.getElementById("popupsign").style.display="block";
 	document.getElementById("view-signin").style.display="block";
 	document.getElementById("view-signup").style.display="none";
 	document.getElementById("overlay").style.display="block";
-  document.getElementById("logPart").src="img/LogPart2.png";
-  document.getElementById("logPart").style.height="180px";
+  // document.getElementById("logPart").src="img/LogPart2.png";
+  // document.getElementById("logPart").style.height="180px";
 }
 function openpopup(){
 	document.getElementById("popupsign").style.display="block";
 	document.getElementById("overlay").style.display="block";
 	document.getElementById("view-signup").style.display="block";
 	document.getElementById("view-signin").style.display="none";
-  document.getElementById("logPart").src="img/LogPart.png";
-  document.getElementById("logPart").style.height="300px";
+  // document.getElementById("logPart").src="img/LogPart.png";
+  // document.getElementById("logPart").style.height="300px";
 }
-//关闭弹出框
+
 function closepop(){
 	document.getElementById("popupsign").style.display="none";
 	document.getElementById("overlay").style.display="none";
 
 }
 
+function getAcount(){
+  document.getElementById("popupsign").style.display="none";
+  document.getElementById("acount").style.display="block";
+  document.getElementById("siin").style.display="none";
+  document.getElementById("siup").style.display="none";
+  document.getElementById("overlay").style.display="none";
+
+}
+
+function login(){
+  document.getElementById("popupsign").style.display="none";
+  document.getElementById("acount").style.display="block";
+  document.getElementById("siin").style.display="none";
+  document.getElementById("siup").style.display="none";
+  document.getElementById("overlay").style.display="none";
+
+}
+
+
+
+
 //to judge the input of login and sigin in column
-   //保存一个密码用于校验
+
     var _pass;
-    /**
-    *检查用户名
-   
-    */
-    
+
     //---------------------------------------------------------------------------
     function checkUsername(){
      var username;

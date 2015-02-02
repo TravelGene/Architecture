@@ -106,9 +106,9 @@
       					<nav class="pull-right nav-collapse collapse">
       						<ul id="menu-main" class="nav">
 
-      							<li><a title="portfolio" onclick="openpopin()" href="#portfolio">Sign in</a></li>
-      							<li><a title="services" onclick="openpopup()" href="#services">Sign up</a></li>
-
+      							<li id="siin"><a title="portfolio" onclick="openpopin()" href="#portfolio">Sign in</a></li>
+      							<li id="siup"><a title="services" onclick="openpopup()" href="#services">Sign up</a></li>
+								<li id="acount"  style="display:none;"><a title="services"  href="#services">Acount</a></li>
 
       						</ul>
       					</nav>
@@ -138,7 +138,7 @@
 						</a>							<a href="http://johnvublog.com/" target="_blank"><i class="cform-submit"></i></a></li>
       					</div>
       				</div>
-      				<div class="row">
+<!--       				<div class="row">
       					<div class="span12">
       						<ul class="icon">
       							<li><a href="http://johnvublog.com/" target="_blank"><i class="icon-pinterest-circled"></i></a></li>
@@ -148,7 +148,7 @@
       							<li><a href="http://johnvublog.com/" target="_blank"><i class="icon-skype-circled"></i></a></li>
       						</ul>
       					</div>
-      				</div>
+      				</div> -->
       			</div>
       		</header>
       	</div>
@@ -156,7 +156,7 @@
       	<div id="overlay" ></div>
       	<div class="modal-dialog sign-dialog" id="popupsign" tabindex="0" role="dialog" aria-labelledby=":r" style="left: 450.5px; top: 124px;  display:none; opacity:1;z-index: 9999;">
 
-      		<div class="modal-dialog-title modal-dialog-title-draggable " id=":r"><span class="modal-dialog-title-text">Login or Signup</span><span class="modal-dialog-title-close" id="close" onclick="closepop()"></span>
+      		<div class="modal-dialog-title modal-dialog-title-draggable " id=":r"><span class="modal-dialog-title-text">Login</span><span class="modal-dialog-title-close" id="close" onclick="closepop()"></span>
       		</div>
       		<div class="modal-dialog-content">
       			<div id="js-sign-flow" class="sign-flow dialog" style="display: block;">
@@ -171,7 +171,7 @@
       				<div class="view view-signin" id="view-signin" style="display: block; z-index:9999">
 
       					<div class="stitle">
-      						<a id="signin" class="js-signup signup-switch with-icon" style="cursor:pointer">Signup<i class="icon-sign icon-sign-arrow"></i></a>
+<!--       						<a id="signin" class="js-signup signup-switch with-icon" style="cursor:pointer">Signup<i class="icon-sign icon-sign-arrow"></i></a> -->
       						<span class="js-title-label title-label">Login</span>
       					</div>
       					<div class="zu-side-login-box" >
@@ -190,7 +190,7 @@
       								<label class="zg-link-gray remember_me"><input type="checkbox" name="rememberme" checked="" value="y">Remember me </label>
       								<!-- <span class="middot zg-gray">¡¤</span> -->
       								<!--              <a class="zg-link-gray" target="_blank" href="/resetpassword"> Forget pwd</a> -->
-      								<input type="submit" id="sign_in_btn" class="zg-btn-blue" value="Login">
+      								<input type="submit" id="sign_in_btn" onclick="login()" class="zg-btn-blue" value="Login">
       							</div>
       						</div>
       					</div>
@@ -199,10 +199,13 @@
       				<!-- signup -->
       				<div class="view view-signup" id="view-signup" style="display: none; ">
       					<div class="stitle">
-      						<a id="signup" class="js-signin signin-switch with-icon" style="cursor:pointer">Login<i class="icon-sign icon-sign-arrow"></i></a>
-      						<span class="js-title-label title-label">Sign Up</span>
+<!--       						<a id="signup" class="js-signin signin-switch with-icon" style="cursor:pointer">Login<i class="icon-sign icon-sign-arrow"></i></a> -->
+      						<span class="js-title-label title-label">Sign Up FaceBook Acount</span>
       					</div>
       					<div class="zu-side-login-box" id="sign-form-1" >
+      						<div class="input-wrap">
+								<img src="img/download.png" width="100" height="100">
+      						</div>
       						<div class="input-wrap">
       							<input required="" class="zg-form-text-input" name="email" placeholder="User name"  id="username_up" onblur="checkUserName2()">
       							<div id="username2_error" class="log-error"></div>
@@ -211,19 +214,19 @@
       							<input required="" class="zg-form-text-input" name="email" type="email" placeholder="Email"  id="email_up" onblur="checkEmail()">
       							<div id="email_error" class="log-error"></div>
       						</div>
-      						<div class="input-wrap">
+<!--       						<div class="input-wrap">
       							<input data-rule-strongpassword="true" required="" class="zg-form-text-input" maxlength="128" name="password" type="password" placeholder="Password" id="userpwd_up" onblur="checkPwdUp()">
       							<div id="pwd_error" class="log-error"></div>
       						</div>
       						<div class="input-wrap">
       							<input data-rule-strongpassword="true" required="" class="zg-form-text-input" maxlength="128" name="rpassword" type="password" placeholder="Password again" id="ruserpwd_up" onblur="checkRPwdUp()">
       							<div id="rpwd_error" class="log-error"></div>
-      						</div>
+      						</div> -->
 
       						<div class="command">
       							<div class="zg-right actions">
 
-      								<input type="submit" id="sign_up_btn"  class="zg-btn-blue" value="Sign up"  >
+      								<input type="submit" id="sign_up_btn" onclick="getAcount()" class="zg-btn-blue" value="Connect"  >
       							</div>
       						</div>
       					</div>
@@ -233,7 +236,7 @@
 
       			</div>
       		</div>
-      		<div class="modal-dialog-bottom" id=":r">
+      		<div class="modal-dialog-bottom" id="signin" onclick="logfbpup()">
       			<div class ="modal-dialog-fb-bt">
       			<span class="modal-dialog-log-fb">Login with Facebook</span><span class="modal-dialog-fbicon"  ></span>
       			</div>
