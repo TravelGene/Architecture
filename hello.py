@@ -1,6 +1,14 @@
 from flask import Flask, render_template
+from flask.ext.pymongo import PyMongo
+import json
+app = Flask("travel")
+mongo = PyMongo(app)
 
-app = Flask(__name__)
+@app.route('/')
+def homeP():
+	Seattles = mongo.db.Seattle.find()
+	print(type(Seattles))
+	return Seattles
 
 @app.route('/index.html')
 def home_page():
