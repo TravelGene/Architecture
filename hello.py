@@ -8,7 +8,7 @@ mongo = PyMongo(app)
 def homeP():
 	Seattles = mongo.db.Seattle.find()
 	print(type(Seattles))
-	return Seattles
+	return str(Seattles)
 
 @app.route('/index.html')
 def home_page():
