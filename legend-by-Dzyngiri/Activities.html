@@ -1,48 +1,78 @@
-    <!DOCTYPE HTML>
-    <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>Legend - One Page Bootstrap Template</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- Styles -->
-      <link rel="stylesheet" type="text/css" href="css/qk.css">
-      <link href="css/bootstrap.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
-      <link rel='stylesheet' id='prettyphoto-css'  href="css/prettyPhoto.css" type='text/css' media='all'>
-      <link rel='stylesheet' id='prettyphoto-css'  href="css/zhiyuel/profilestyle.css" type='text/css' media='all'>
-      <link href="css/fontello.css" type="text/css" rel="stylesheet">
-    <!--[if lt IE 7]>
-            <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">  
+      <!DOCTYPE HTML>
+      <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <title>Legend - One Page Bootstrap Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="css/qk.css">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel='stylesheet' id='prettyphoto-css'  href="css/prettyPhoto.css" type='text/css' media='all'>
+        <link rel='stylesheet' id='prettyphoto-css'  href="css/zhiyuel/profilestyle.css" type='text/css' media='all'>
+        <link href="css/fontello.css" type="text/css" rel="stylesheet">
+      <!--[if lt IE 7]>
+              <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">  
+              <![endif]-->
+              <!-- Google Web fonts -->
+              <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+              <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+              <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+              <style>
+                body {
+                  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+                }
+              </style>
+              <link href="css/bootstrap-responsive.css" rel="stylesheet">
+              <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
             <![endif]-->
-            <!-- Google Web fonts -->
-            <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
-            <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
-            <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-            <style>
-              body {
-                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            <!-- Favicon -->
+            <link rel="shortcut icon" href="img/images.png">
+            <!-- JQuery -->
+            <script type="text/javascript" src="js/jquery.js"></script>
+            <!-- Load ScrollTo -->
+            <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+            <!-- Load LocalScroll -->
+            <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+            <!-- prettyPhoto Initialization -->
+            <script type="text/javascript" charset="utf-8">
+              $(document).ready(function(){
+                $("a[rel^='prettyPhoto']").prettyPhoto();
+              });
+            </script>
+            <script type="text/javascript">
+             function loadInfo()
+             {
+              var xmlhttp;
+              if (window.XMLHttpRequest)
+              {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
               }
-            </style>
-            <link href="css/bootstrap-responsive.css" rel="stylesheet">
-            <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-          <![endif]-->
-          <!-- Favicon -->
-          <link rel="shortcut icon" href="img/images.png">
-          <!-- JQuery -->
-          <script type="text/javascript" src="js/jquery.js"></script>
-          <!-- Load ScrollTo -->
-          <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
-          <!-- Load LocalScroll -->
-          <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
-          <!-- prettyPhoto Initialization -->
-          <script type="text/javascript" charset="utf-8">
-            $(document).ready(function(){
-              $("a[rel^='prettyPhoto']").prettyPhoto();
-            });
+              else
+              {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+              }
+              xmlhttp.onreadystatechange=function()
+              {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                  console.log(xmlhttp.responseText);
+                  var obj = JSON.parse(xmlhttp.responseText);
+                  x=document.getElementsByClassName("location");
+                  x[0].innerHTML = obj.address;      
+                  x=document.getElementsByClassName("activity_name");
+                  console.log(obj.name);
+                  x[0].innerHTML = obj.name;            
+                }
+              }
+              xmlhttp.open("GET","http://127.0.0.1:5000/CityInfo/Seattle/address",true);
+              xmlhttp.send();
+            }
+            window.onload = loadInfo();
           </script>
         </head>
         <body>
@@ -57,175 +87,175 @@
                   <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                   <nav class="pull-right nav-collapse collapse">
                     <ul id="menu-main" class="nav">
-					  <li><a title="Signout" >Sign out</a></li>
-                      <li><a title="Account" href="profilec.html">Account</a></li>
-                    </ul>
-                  </nav>
-                </div>
-                <!-- /.container -->
-              </div>
-              <!-- /.navbar-inner -->
-            </div>
-            <!-- /.navbar -->
+                     <li><a title="Signout" >Sign out</a></li>
+                     <li><a title="Account" href="profilec.html">Account</a></li>
+                   </ul>
+                 </nav>
+               </div>
+               <!-- /.container -->
+             </div>
+             <!-- /.navbar-inner -->
+           </div>
+           <!-- /.navbar -->
+         </div>
+         <!-- /.container -->
+       </div>
+       <!-- /.navbar-inner -->
+     </div>
+     <!-- /.navbar -->
+   </div>
+   <!-- /.navbar-wrapper -->
+   <div id="top"></div>
+
+   <!--******************** Portfolio Section ********************-->
+   <section id="portfolio" class="single-page scrollblock">
+    <div class="container">
+      <div id="MainBody">
+        <article class="show_area">
+
+          <div class="activity_info">
+           <h2 class="activity_name">La Gourmandine Bakery</h2>
+           <div class="diy-slideshow">
+            <figure class="show">
+              <img src="img/restaurant1.png" width="100%" /><figcaption>Taken by QQ</figcaption> 
+            </figure>
+            <figure>
+              <img src="img/restaurant2.png" width="100%" /><figcaption>"Starlight" by ChaoticMind75</figcaption> 
+            </figure>
+            <figure>
+              <img src="img/restaurant3.png" width="100%" /><figcaption>"Snowstorm" by Beaulawrence</figcaption> 
+            </figure>
+            <span class="prev">&laquo;</span>
+            <span class="next">&raquo;</span>
           </div>
-          <!-- /.container -->
+          <div class="listing_detail">
+            <div><b>Hours:</b></div>
+            <div>
+              <span class="days">
+                Tue - Fri
+              </span>
+              <span class="hours">7:30 am - 4:30 pm</span>
+            </div>
+          </div>
+          <div class="food_category"><b>Cuisines:</b> French</div>
+          <div class="telephone">Tel:412315369</div>
+          <div class="location">Location:4605 butler Strret, Lawrenceville, PA</div>
         </div>
-        <!-- /.navbar-inner -->
-      </div>
-      <!-- /.navbar -->
-    </div>
-    <!-- /.navbar-wrapper -->
-    <div id="top"></div>
 
-          <!--******************** Portfolio Section ********************-->
-          <section id="portfolio" class="single-page scrollblock">
-            <div class="container">
-              <div id="MainBody">
-                <article class="show_area">
-
-                  <div class="activity_info">
-                   <h2>La Gourmandine Bakery</h2>
-                   <div class="diy-slideshow">
-                    <figure class="show">
-                      <img src="img/restaurant1.png" width="100%" /><figcaption>Taken by QQ</figcaption> 
-                    </figure>
-                    <figure>
-                      <img src="img/restaurant2.png" width="100%" /><figcaption>"Starlight" by ChaoticMind75</figcaption> 
-                    </figure>
-                    <figure>
-                      <img src="img/restaurant3.png" width="100%" /><figcaption>"Snowstorm" by Beaulawrence</figcaption> 
-                    </figure>
-                    <span class="prev">&laquo;</span>
-                    <span class="next">&raquo;</span>
-                  </div>
-                  <div class="listing_detail">
-                    <div><b>Hours:</b></div>
-                    <div>
-                      <span class="days">
-                        Tue - Fri
-                      </span>
-                      <span class="hours">7:30 am - 4:30 pm</span>
-                    </div>
-                  </div>
-                  <div class="food_category"><b>Cuisines:</b> French</div>
-                  <div class="telephone">Tel:412315369</div>
-                  <div class="location">Location:4605 butler Strret, Lawrenceville, PA</div>
-                  </div>
-
-                  <div class="users_feedback"> 
-                    <div class="inside">
-                      <ul class="nav nav-tabs" role="tablist" id="myTab">
-                        <li role="presentation" class="active"><a href="#Review" aria-controls="Review" role="tab" data-toggle="tab">Review</a></li>
-                      </ul>
-                      <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="Review">
-                          <div class="comment_user">
-                            <a href="profilec.html">
-							<img src="img/portrait-1.jpg" />
-						</a>
-						<p >
-                              Yinzer13
-                            </p>
-                            <p class="location">
-                              Pittsburgh
-                            </p>  
-                          </div>
-                          <div class="comments">
-                            <p>
-                              This little bakery is such a welcome addition to the atmosphere and offerings Lawrenceville provides! The owners are from France and have not Americanized their pastries or breads! You can get a sandwhich or bread or pastries and eat it there on the very few tables provided. At lunchtime you can imagine it getting rather crowded and tables being scarce!
-                            </p>
-                          </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane active" id="Review">
-                          <div class="comment_user">
-						  <a href="profilec.html">
-							<img src="img/portrait-2.jpg" />
-						</a>
-                            
-                            <p >
-                              alynn
-                            </p>
-                            <p class="location">
-                              Pittsburgh
-                            </p>  
-                          </div>
-                          <div class="comments">
-                            <p>
-                              When I say that I am a bakery connoisseur, I kid you not. I love and appreciate well baked items with quality ingredients. My husband and I will drive 45 minutes to get to this bakery. Everything we have ever purchased has been amazing. Their baguettes, their croissants, their rolls are all delectable. Every pastry we buy is over the...
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+        <div class="users_feedback"> 
+          <div class="inside">
+            <ul class="nav nav-tabs" role="tablist" id="myTab">
+              <li role="presentation" class="active"><a href="#Review" aria-controls="Review" role="tab" data-toggle="tab">Review</a></li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="Review">
+                <div class="comment_user">
+                  <a href="profilec.html">
+                   <img src="img/portrait-1.jpg" />
+                 </a>
+                 <p >
+                  Yinzer13
+                </p>
+                <p class="location">
+                  Pittsburgh
+                </p>  
+              </div>
+              <div class="comments">
+                <p>
+                  This little bakery is such a welcome addition to the atmosphere and offerings Lawrenceville provides! The owners are from France and have not Americanized their pastries or breads! You can get a sandwhich or bread or pastries and eat it there on the very few tables provided. At lunchtime you can imagine it getting rather crowded and tables being scarce!
+                </p>
               </div>
             </div>
-            <!-- /.container -->
-          </section>
+            <div role="tabpanel" class="tab-pane active" id="Review">
+              <div class="comment_user">
+                <a href="profilec.html">
+                 <img src="img/portrait-2.jpg" />
+               </a>
 
-          <!-- Loading the javaScript at the end of the page -->
-          <script type="text/javascript" src="js/bootstrap.js"></script>
-          <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-          <script type="text/javascript" src="js/site.js"></script>
+               <p >
+                alynn
+              </p>
+              <p class="location">
+                Pittsburgh
+              </p>  
+            </div>
+            <div class="comments">
+              <p>
+                When I say that I am a bakery connoisseur, I kid you not. I love and appreciate well baked items with quality ingredients. My husband and I will drive 45 minutes to get to this bakery. Everything we have ever purchased has been amazing. Their baguettes, their croissants, their rolls are all delectable. Every pastry we buy is over the...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+</div>
+<!-- /.container -->
+</section>
 
-          <!--ANALYTICS CODE-->
-          <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-29231762-1']);
-            _gaq.push(['_setDomainName', 'dzyngiri.com']);
-            _gaq.push(['_trackPageview']);
+<!-- Loading the javaScript at the end of the page -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/site.js"></script>
 
-            (function() {
-              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-          </script>
-          <!--Panel-->
-          <script>
-            $(function () {
-              $('#myTab a:last').tab('show')
-            })
-          </script>
-          <a href="#" class="more-link">Details</a>
-          <!-- Slide show-->
-          <script type="text/javascript">
-    var counter = 0, // to keep track of current slide
-         $items = $('.diy-slideshow figure'), // a collection of all of the slides, caching for performance
-         numItems = $items.length; // total number of slides
+<!--ANALYTICS CODE-->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29231762-1']);
+  _gaq.push(['_setDomainName', 'dzyngiri.com']);
+  _gaq.push(['_trackPageview']);
 
-         // this function is what cycles the slides, showing the next or previous slide and hiding all the others
-         var showCurrent = function(){
-         var itemToShow = Math.abs(counter%numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--Panel-->
+<script>
+  $(function () {
+    $('#myTab a:last').tab('show')
+  })
+</script>
+<a href="#" class="more-link">Details</a>
+<!-- Slide show-->
+<script type="text/javascript">
+      var counter = 0, // to keep track of current slide
+           $items = $('.diy-slideshow figure'), // a collection of all of the slides, caching for performance
+           numItems = $items.length; // total number of slides
 
-         $items.removeClass('show'); // remove .show from whichever element currently has it
-         $items.eq(itemToShow).addClass('show');    
-       };
+           // this function is what cycles the slides, showing the next or previous slide and hiding all the others
+           var showCurrent = function(){
+           var itemToShow = Math.abs(counter%numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show  
 
-       // add click events to prev & next buttons 
-       $('.next').on('click', function(){
-         counter++;
-         showCurrent(); 
+           $items.removeClass('show'); // remove .show from whichever element currently has it
+           $items.eq(itemToShow).addClass('show');    
+         };
+
+         // add click events to prev & next buttons 
+         $('.next').on('click', function(){
+           counter++;
+           showCurrent(); 
+         });
+         $('.prev').on('click', function(){
+           counter--;
+           showCurrent(); 
+         });
+
+     // if touch events are supported then add swipe interactions using TouchSwipe https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+     if('ontouchstart' in window){
+       $('.diy-slideshow').swipe({
+         swipeLeft:function() {
+           counter++;
+           showCurrent(); 
+         },
+         swipeRight:function() {
+           counter--;
+           showCurrent(); 
+         }
        });
-       $('.prev').on('click', function(){
-         counter--;
-         showCurrent(); 
-       });
-
-   // if touch events are supported then add swipe interactions using TouchSwipe https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
-   if('ontouchstart' in window){
-     $('.diy-slideshow').swipe({
-       swipeLeft:function() {
-         counter++;
-         showCurrent(); 
-       },
-       swipeRight:function() {
-         counter--;
-         showCurrent(); 
-       }
-     });
-   }
- </script>
-</body>
-</html>
+     }
+   </script>
+ </body>
+ </html>
