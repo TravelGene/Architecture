@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import json
 from pymongo import MongoClient
 import pymongo
@@ -12,13 +12,43 @@ cors = CORS(app)
 @app.route('/')
 def hello_world():
     return app.name
+def homeP():
+    Seattles = mongo.db.Seattle.find()
+    print(type(Seattles))
+    return str(Seattles)
 
-@app.route('/user/<mm>')
-def user_profile(mm):
-    response = db[mm]
-    print db.collection_names()
-    return str(response.find_one())
+@app.route('/index.html')
+def home_page():
+    return render_template('index.html')
 
+@app.route('/CreateTrip.html')
+def create_trip():
+    return render_template('CreateTrip.html')
+
+@app.route('/Activities.html')
+def activities():
+    return render_template('Activities.html')
+
+@app.route('/trip_detail_main.html')
+def tripdetail():
+    return render_template('trip_detail_main.html')
+
+@app.route('/profilec.html')
+def profiles():
+    return render_template('profilec.html')
+
+@app.route('/friendlist.html')
+def friendlist():
+    return render_template('friendlist.html')
+
+@app.route('/signup.html')
+def signup():
+    return render_template('signup.html')
+
+@app.route('/calendar.html')
+def calendar():
+    return render_template('calendar.html')
+    
 @app.route('/CityInfo/<City>/<para>')
 def get_info(City,para):
     response = db[City]
@@ -30,11 +60,6 @@ def get_info(City,para):
     result['name'] = allContent['title'];
     return json.dumps(result);
 
-
-
-@app.route('/t/<tt>')
-def hello_world2(tt):
-    return tt
 
 if __name__ == '__main__':
     app.debug = True
