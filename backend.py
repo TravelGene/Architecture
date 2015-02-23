@@ -5,17 +5,14 @@ import pymongo
 import flask_debugtoolbar
 from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
-client = MongoClient('localhost', 27017)
-db = client['travel']
+from flask.ext.pymongo import PyMongo
 app = Flask("travel")
+mongo = PyMongo(app)
 cors = CORS(app)
 @app.route('/')
-def hello_world():
-    return app.name
-def homeP():
-    Seattles = mongo.db.Seattle.find()
-    print(type(Seattles))
-    return str(Seattles)
+def hello_world():    
+	print mongo.db.Seattle.find_one();
+  	return "abc"
 
 @app.route('/index.html')
 def home_page():
@@ -51,13 +48,13 @@ def calendar():
     
 @app.route('/CityInfo/<City>/<para>')
 def get_info(City,para):
-    response = db[City]
-    allContent = response.find_one();
+    allContent = mongo.db.Seattle.find_one();
     result = {};
     result['address'] = allContent['address'];
     result['cato'] = allContent['category_str_list'];
     result['comment'] = allContent['comment'];
     result['name'] = allContent['title'];
+    print result;
     return json.dumps(result);
 
 if __name__ == '__main__':
