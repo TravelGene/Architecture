@@ -60,7 +60,6 @@ def get_info(City,para):
     result['name'] = allContent['title'];
     return json.dumps(result);
 
-
 if __name__ == '__main__':
     app.debug = True
     app.config['SECRET_KEY'] = '<replace with a secret key>'
