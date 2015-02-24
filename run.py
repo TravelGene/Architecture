@@ -1,5 +1,5 @@
 #!flask/bin/python
-from travel import app
+from travelgene import app
 import flask_debugtoolbar
 from flask_debugtoolbar import DebugToolbarExtension
 
