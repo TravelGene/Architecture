@@ -177,24 +177,28 @@
       						<span class="js-title-label title-label">Login</span>
       					</div>
       					<div class="zu-side-login-box" >
-      						<div class="input-wrap">
-      							<input required="" class="zg-form-text-input" name="email" id="username_in" placeholder="User name"  onblur="checkUsername()">
-      							<div id="username_error" class="log-error"></div>
-      						</div>
-      						<div class="input-wrap">
-      							<input required="" class="zg-form-text-input" maxlength="128" name="password" type="password" id="userpwd_in" onblur="checkPwd()" placeholder="Password">
-      							<div id="userpwd_error" class="log-error"></div>
+                            <form id="login_form" action="/login" method="post">
+                                <div class="input-wrap">
+                                    <input required="" class="zg-form-text-input"
+                                           name="email" id="username_in" placeholder="User name"  onblur="checkUsername()">
+                                    <div id="username_error" class="log-error"></div>
+                                </div>
+                                <div class="input-wrap">
+                                    <input required="" class="zg-form-text-input" maxlength="128"
+                                           name="password" type="password" id="userpwd_in" onblur="checkPwd()" placeholder="Password">
+                                    <div id="userpwd_error" class="log-error"></div>
 
-      						</div>            
-      						<div class="captcha-holder"></div>
-      						<div class="command">
-      							<div class="zg-right actions">
-      								<label class="zg-link-gray remember_me"><input type="checkbox" name="rememberme" checked="" value="y">Remember me </label>
-      								<!-- <span class="middot zg-gray">¡¤</span> -->
-      								<!--              <a class="zg-link-gray" target="_blank" href="/resetpassword"> Forget pwd</a> -->
-      								<input type="submit" id="sign_in_btn" onclick="login()" class="zg-btn-blue" value="Login">
-      							</div>
-      						</div>
+                                </div>
+                                <div class="captcha-holder"></div>
+                                <div class="command">
+                                    <div class="zg-right actions">
+                                        <label class="zg-link-gray remember_me"><input type="checkbox" name="rememberme" checked="" value="y">Remember me </label>
+                                        <!-- <span class="middot zg-gray">¡¤</span> -->
+                                        <!--              <a class="zg-link-gray" target="_blank" href="/resetpassword"> Forget pwd</a> -->
+                                        <input type="submit" id="sign_in_btn" onclick="login()" class="zg-btn-blue" value="Login">
+                                    </div>
+                                </div>
+                            </form>
       					</div>
       				</div>
       				<!-- singin -->
@@ -206,8 +210,8 @@
       					</div>
       					<div class="zu-side-login-box" id="sign-form-1" >
       						<div class="input-wrap">
-								<img src="img/download.png" width="100" height="100">
-      						/static/</div>
+								<img src="static/img/download.png" width="100" height="100">
+      						</div>
       						<div class="input-wrap">
       							<input required="" class="zg-form-text-input" name="email" placeholder="User name"  id="username_up" onblur="checkUserName2()">
       							<div id="username2_error" class="log-error"></div>
@@ -216,18 +220,8 @@
       							<input required="" class="zg-form-text-input" name="email" type="email" placeholder="Email"  id="email_up" onblur="checkEmail()">
       							<div id="email_error" class="log-error"></div>
       						</div>
-<!--       						<div class="input-wrap">
-      							<input data-rule-strongpassword="true" required="" class="zg-form-text-input" maxlength="128" name="password" type="password" placeholder="Password" id="userpwd_up" onblur="checkPwdUp()">
-      							<div id="pwd_error" class="log-error"></div>
-      						</div>
-      						<div class="input-wrap">
-      							<input data-rule-strongpassword="true" required="" class="zg-form-text-input" maxlength="128" name="rpassword" type="password" placeholder="Password again" id="ruserpwd_up" onblur="checkRPwdUp()">
-      							<div id="rpwd_error" class="log-error"></div>
-      						</div> -->
-
       						<div class="command">
       							<div class="zg-right actions">
-
       								<input type="submit" id="sign_up_btn" onclick="getAccount()" class="zg-btn-blue" value="Connect"  >
       							</div>
       						</div>
