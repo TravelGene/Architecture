@@ -6,6 +6,8 @@ function logfbpup(){
   // window.open("logfb.html", "", "toolbar=no, height=300,width=500, top=200, left=400");
   // return false;
   document.getElementById("signin").style.display="none";
+  document.getElementById("view-signin").style.display="none";
+  document.getElementById("view-signup").style.display="block";
 }
 
 
@@ -14,6 +16,7 @@ function openpopin(){
 	document.getElementById("view-signin").style.display="block";
 	document.getElementById("view-signup").style.display="none";
 	document.getElementById("overlay").style.display="block";
+  document.getElementById("signin").style.display="block";
 //    document.getElementById("logPart").src="static/img/LogPart2.png";
   // document.getElementById("logPart").style.height="180px";
 }
