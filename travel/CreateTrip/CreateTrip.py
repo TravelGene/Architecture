@@ -9,8 +9,10 @@ from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 
 #Author: Qiankun Zhuang
-@app.route('/index')
-def index():
+@app.route('/addActivity/<City>/<id>')
+def addActivity(City,id):
+	mongo.db[City].get_one('id':id);
+	mongo.db[username].insert();
     if 'username' in session:
         return 'Logged in as %s' % escape(session['username'])
     return "Hello, World!"
