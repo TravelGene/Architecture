@@ -1,4 +1,4 @@
-from travel import app
+from travelgene import app
 
 from flask import Flask, render_template, session, redirect, url_for, escape, request
 import json

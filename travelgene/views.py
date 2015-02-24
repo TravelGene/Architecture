@@ -1,4 +1,5 @@
-from travel import app
+#author zhiyuel
+from travelgene import app
 from flask import Flask, render_template, session, redirect, url_for, escape, request
 import json
 from pymongo import MongoClient
@@ -19,6 +20,7 @@ def index():
 # zhiyuel
 @app.route('/tmp.html')
 def tmp():
+    print "hello world"
     user = { 'nickname': 'Miguel' } # fake user
     posts = [ # fake array of posts
         {
@@ -34,3 +36,16 @@ def tmp():
         title = 'Home',
         user = user,
         posts = posts)
+@app.route('/login',methods=['POST'])
+def login():
+    email = request.form['email']
+    password = request.form['password']
+    #update in database
+    print password
+    return redirect(url_for('nextPage', id="test"))#param
+
+
+@app.route('/test/<id>')
+def nextPage(id):
+    print id
+    return redirect('index.html')

@@ -6,6 +6,8 @@ function logfbpup(){
   // window.open("logfb.html", "", "toolbar=no, height=300,width=500, top=200, left=400");
   // return false;
   document.getElementById("signin").style.display="none";
+  document.getElementById("view-signin").style.display="none";
+  document.getElementById("view-signup").style.display="block";
 }
 
 
@@ -14,19 +16,8 @@ function openpopin(){
 	document.getElementById("view-signin").style.display="block";
 	document.getElementById("view-signup").style.display="none";
 	document.getElementById("overlay").style.display="block";
-    document.getElementById("logPart").src="static/img/LogPart2.png";
-    var xmlhttp;
-      if (window.XMLHttpRequest)
-      {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-      }
-      else
-      {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-     x=document.getElementsByClassName("location");
-     xmlhttp.open("POST","http://127.0.0.1:5000/CityInfo/Seattle/address",true);
-     xmlhttp.send();
+  document.getElementById("signin").style.display="block";
+//    document.getElementById("logPart").src="static/img/LogPart2.png";
   // document.getElementById("logPart").style.height="180px";
 }
 // function openpopup(){
@@ -59,9 +50,13 @@ function login(){
   document.getElementById("siin").style.display="none";
   document.getElementById("siup").style.display="none";
   document.getElementById("overlay").style.display="none";
+  var x=document.getElementById("username_in").value;
+  var y=document.getElementById("userpwd_in").value;
+
+
+
 
 }
-
 
 
 

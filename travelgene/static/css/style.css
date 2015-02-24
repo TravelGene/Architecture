@@ -291,7 +291,7 @@ ul#menu-main > li > a:hover {
 	;
 	min-height: 1000px;
 	margin-top: 0px;
-	padding-top:100px;
+/*	padding-top:100px;*/
 	text-align:center;
 }
 #headerwrap h1 {
@@ -299,7 +299,7 @@ ul#menu-main > li > a:hover {
 	font-family: 'Patua One', cursive;
 	font-size: 4em;
 	font-weight: 400;
-	margin-top: 250px;
+/*	margin-top: 250px;*/
 }
 #headerwrap h2 {
 	color: #FFFFFF;
