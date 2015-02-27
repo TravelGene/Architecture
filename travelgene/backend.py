@@ -53,14 +53,5 @@ def signup():
 def calendar():
     return render_template('calendar.html')
     
-@app.route('/CityInfo/<City>/<para>')
-def get_info(City,para):
-    allContent = mongo.db[City].find_one();
-    result = {};
-    result['address'] = allContent['address'];
-    result['cato'] = allContent['category_str_list'];
-    result['comment'] = allContent['comment'];
-    result['name'] = allContent['title'];
-    print result;
-    return json.dumps(result);
+
 

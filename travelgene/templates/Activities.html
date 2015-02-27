@@ -46,36 +46,10 @@
                 $("a[rel^='prettyPhoto']").prettyPhoto();
               });
             </script>
+            <script type="text/javascript" src="static/js/loadActivities.js"></script>
             <script type="text/javascript">
-             function loadInfo()
-             {
-              var xmlhttp;
-              if (window.XMLHttpRequest)
-              {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-              }
-              else
-              {// code for IE6, IE5
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-              }
-              xmlhttp.onreadystatechange=function()
-              {
-                if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                {
-                  console.log(xmlhttp.responseText);
-                  var obj = JSON.parse(xmlhttp.responseText);
-                  x=document.getElementsByClassName("location");
-                  x[0].innerHTML = obj.address;      
-                  x=document.getElementsByClassName("activity_name");
-                  console.log(obj.name);
-                  x[0].innerHTML = obj.name;            
-                }
-              }
-              xmlhttp.open("GET","http://127.0.0.1:5000/CityInfo/Seattle/address",true);
-              xmlhttp.send();
-            }
             window.onload = loadInfo();
-          </script>
+            </script>
         </head>
         <body>
           <!--******************** NAVBAR ********************-->
@@ -232,19 +206,7 @@
            showCurrent(); 
          });
 
-     // if touch events are supported then add swipe interactions using TouchSwipe https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
-     if('ontouchstart' in window){
-       $('.diy-slideshow').swipe({
-         swipeLeft:function() {
-           counter++;
-           showCurrent(); 
-         },
-         swipeRight:function() {
-           counter--;
-           showCurrent(); 
-         }
-       });
-     }
+  
    </script>
  </body>
  </html>

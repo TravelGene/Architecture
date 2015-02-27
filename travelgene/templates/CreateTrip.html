@@ -46,6 +46,10 @@
             $("a[rel^='prettyPhoto']").prettyPhoto();
           });
           </script>
+          <script type="text/javascript" src="/static/CreateTrip/createTrip.js"></script>
+          <script type="text/javascript">
+            window.load(loadActivities("Seattle"));
+          </script>
           <style type="text/css">
           .demo { width: 100% ;top: 100px}
 
@@ -146,19 +150,18 @@
                   <div id="alter">Alternative activities</div>
                   <div class="demo" style="z-index:3">
                     <div id="draggable1">
-                      <div id="test1" onclick="location.href='/Activities.html'" ></div>
-                      <div id="test12" onclick="location.href='/Activities.html'"></div>
-                      <div id="test13" onclick="location.href='/Activities.html'"></div>
-                      <div id="test14" onclick="location.href='/Activities.html'"></div>                      
+                      <div id="test1" onclick="" link=""></div>
+                      <div id="test12" onclick="" link=""></div>
+                      <div id="test13" onclick=""></div>
+                      <div id="test14" onclick=""></div>                    
                     </div>
                     <div id="draggable12"></div>
                     <div id="droppable">
-                      <div id="test15" onclick="location.href='/Activities.html'"></div>
-                      <div id="test16" onclick="location.href='/Activities.html'"></div>
+
                     </div>
                     <div id="droppable2"></div>
                   </div>
-                  <div id="create" onclick="writeActivities({{user}},{{city}})"><a href="/profilec.html" class="myButtonr">Create Trip</a></div>
+                  <div id="create" onclick="writeActivities({"date","user","city")"><a href="/profilec.html" class="myButtonr">Create Trip</a></div>
                 </article>
               </div>
             </div>
