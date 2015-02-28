@@ -9,9 +9,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 
-app.config['MONGO2_DBNAME'] = 'nonono'#test second database
-mongo1=PyMongo(app, config_prefix='MONGO2')#in this way we could use multiple database
-mongo = PyMongo(app)
+
 cors = CORS(app)
 @app.route('/test')
 def hello_world():
@@ -30,7 +28,6 @@ def create_trip():
 
 @app.route('/Activities.html')
 def activities():
-    print "????????"
     return render_template('Activities.html')
 
 @app.route('/trip_detail_main.html')

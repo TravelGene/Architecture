@@ -22,6 +22,6 @@ xmlhttp.onreadystatechange=function()
     x[0].innerHTML = obj.name;            
   }
 }
-xmlhttp.open("GET","http://127.0.0.1:5000/CityInfo/Seattle/1",true);
+xmlhttp.open("GET","http://127.0.0.1:5000/CityInfo/Seattle/2",true);
 xmlhttp.send();
 }

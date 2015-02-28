@@ -20,6 +20,7 @@ function requestActivity(city,id,elem){
 }
 function loadActivities(city){
     var child = document.getElementById("draggable1").childNodes;
+    console.log(child);
     for(i = 0; i < child.length; i++){
        requestActivity(city,i, child[i]);
     }

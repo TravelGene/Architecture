@@ -9,8 +9,8 @@ from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 
 app = Flask(__name__)
-
+mongo=PyMongo(app);
 from travelgene import views
 from travelgene import backend
-
+from travelgene import activities
 
