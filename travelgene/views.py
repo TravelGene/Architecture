@@ -38,7 +38,6 @@ def tmp():
         title = 'Home',
         user = user,
         posts = posts)
-#nanjie chenglie
 @app.route('/login',methods=['POST'])
 def login():
     oh=db['user']
@@ -51,10 +50,11 @@ def login():
     if passw==password:
         print "yesyesyes"
         session['username'] = email
+        return redirect('profilec.html')
+        return redirect(url_for('nextPage', id="test"))#param
     else:
         print "nononononononono"
-    return redirect(url_for('nextPage', id="test"))#param
-
+        return redirect('Nlogin.html')
 
 @app.route('/test/<id>')
 def nextPage(id):
