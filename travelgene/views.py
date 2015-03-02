@@ -8,7 +8,9 @@ import flask_debugtoolbar
 from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
-
+from bson.json_util import dumps
+client = MongoClient('localhost', 27017)
+db = client['travelgene']
 @app.route('/')
 @app.route('/index')
 #zhiyuel
@@ -36,12 +38,21 @@ def tmp():
         title = 'Home',
         user = user,
         posts = posts)
+#nanjie chenglie
 @app.route('/login',methods=['POST'])
 def login():
+    oh=db['user']
+    Found=oh.find({'user_id':'00000004'})
+    dictt=dumps(Found)
+    passw=dictt.split("password")[1].split(",")[0].split("\"")[2]
     email = request.form['email']
     password = request.form['password']
     #update in database
-    print password
+    if passw==password:
+        print "yesyesyes"
+        session['username'] = email
+    else:
+        print "nononononononono"
     return redirect(url_for('nextPage', id="test"))#param
 
 
