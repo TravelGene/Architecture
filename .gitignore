@@ -6,3 +6,5 @@ travel/backend.pyc
 travel/views.pyc
 
 *.pyc
+
+*.iml
