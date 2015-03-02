@@ -35,6 +35,7 @@
           <link rel="shortcut icon" href="/static/img/images.png">
           <!-- JQuery -->
           <script type="text/javascript" src="/static/js/jquery.js"></script>
+          <script type="text/javascript" src="/static/js/load_trip_info.js"></script>
           <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.js"></script>
           <!-- Load ScrollTo -->
           <script type="text/javascript" src="/static/js/jquery.scrollTo-1.4.2-min.js"></script>
@@ -110,7 +111,7 @@
 
           </style>
         </head>
-        <body>
+        <body onLoad="loadTripInfo()">
           <!--******************** NAVBAR ********************-->
           <div class="navbar-wrapper">
             <div class="navbar navbar-inverse navbar-fixed-top">
