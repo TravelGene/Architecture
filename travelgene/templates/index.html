@@ -43,6 +43,7 @@
           <script type="text/javascript" src="/static/js/jquery.localscroll-1.2.7-min.js"></script>
           <!-- Set log in check -->
           <script type="text/javascript" src="/static/js/Login.js"></script>
+          <script type="text/javascript" src="/static/js/input_trip.js"></script>
           <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
           <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
           <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" 
@@ -127,15 +128,13 @@
       				<div class="row">
       					<div class="span12" style="min-width:1280px;">
       						<h2>YOUR PERSONAL TRIP ADVISOR</h2>
-      						<input type="text" name="your-email" placeholder=" enter your destination" class="cform-text" size="40" title="your email" style ="width : 400px">
+      						<input type="text" id="destination" name="your-email" placeholder=" enter your destination" class="cform-text" size="40" title="your email" style ="width : 400px">
       						<input type="text"  class="picktime" id="goDate"  name="your-email" placeholder=" start date" class="cform-text" size="40" title="your email">
       						<input type="text" class="picktime" id="returnDate" name="your-email" placeholder=" return date" class="cform-text" size="40" title="your email">
-      						<a href="/CreateTrip.html" >
-      						<input type="submit"  value="begin a new trip" class="cform-submit" href="/CreateTrip.html"></a>
-							<!-- <li>
-							<a href="http://johnvublog.com/">
-						</a>							<a href="CreateTrip.html" target="_blank"><i class="cform-submit"></i></a></li> -->
-      					</div>
+      						<!-- <a href="/CreateTrip.html" > -->
+                  <a>
+      						<input type="submit" onclick="conveyTripInfo()"  value="begin a new trip" class="cform-submit" ></a>
+							 </div>
       				</div>
 <!--       				<div class="row">
       					<div class="span12">
