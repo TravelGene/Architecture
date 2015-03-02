@@ -9,10 +9,10 @@
         <!-- Styles -->
         <link href="/static/css/bootstrap.css" rel="stylesheet">
         <link href="/static/css/style.css" rel="stylesheet">
-        <link rel='stylesheet' id='prettyphoto-css'  href="/static/css/prettyPhoto.css" type='text/css' media='all'>
-        <link rel='stylesheet' id='prettyphoto-css'  href="/static/css/zhiyuel/profilestyle.css" type='text/css' media='all'>
-        <link rel='stylesheet' id='prettyphoto-css'  href="/static/css/zhiyuel/calendar.css" type='text/css' media='all'>
-        <link rel='stylesheet' id='prettyphoto-css'  href="/static/css/zhiyuel/calendar.min.css" type='text/css' media='all'>
+        <link rel='stylesheet'  id='prettyphoto-css' href="/static/css/prettyPhoto.css" type='text/css' media='all'>
+        <link rel='stylesheet'  href="/static/css/zhiyuel/profilestyle.css" type='text/css' media='all'>
+        <link rel='stylesheet'  href="/static/css/zhiyuel/calendar.css" type='text/css' media='all'>
+        <link rel='stylesheet' href="/static/css/zhiyuel/calendar.min.css" type='text/css' media='all'>
         <link href="/static/css/fontello.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/static/css/qk.css">
       <!--[if lt IE 7]>
@@ -48,8 +48,8 @@
             </script>
             <script type="text/javascript" src="static/js/loadActivities.js"></script>
             <script type="text/javascript">
-            window.onload = loadInfo("{{city}}",{{id}});
-            console.log("asdfasdf","{{city}}",{{id}});
+            window.onload = loadInfo("{{city}}","{{id}}");
+            console.log("asdfasdf","{{city}}","{{id}}");
             </script>
         </head>
         <body>
@@ -125,7 +125,7 @@
               <li role="presentation" class="active"><a href="#Review" aria-controls="Review" role="tab" data-toggle="tab">Review</a></li>
             </ul>
             <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="Review">
+              <div role="tabpanel" class="tab-pane active" id="Review1">
                 <div class="comment_user">
                   <a href="/profilec.html">
                    <img src="static/img/portrait-1.jpg" />
@@ -143,7 +143,7 @@
                 </p>
               </div>
             </div>
-            <div role="tabpanel" class="tab-pane active" id="Review">
+            <div role="tabpanel" class="tab-pane active" id="Review2">
               <div class="comment_user">
                 <a href="/profilec.html">
                  <img src="static/img/portrait-2.jpg" />
