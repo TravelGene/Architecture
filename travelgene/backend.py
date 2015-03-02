@@ -21,6 +21,10 @@ def hello_world():
 @app.route('/index.html')
 def home_page():
     return render_template('index.html')
+    
+@app.route('/Nlogin.html')
+def home_page():
+    return render_template('Nlogin.html')
 
 @app.route('/CreateTrip.html')
 def create_trip():
