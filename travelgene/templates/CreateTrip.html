@@ -11,11 +11,11 @@
       <link href="/static/css/bootstrap.css" rel="stylesheet">
       <link href="/static/css/style.css" rel="stylesheet">
       <link rel='stylesheet' id='prettyphoto-css'  href="/static/css/prettyPhoto.css" type='text/css' media='all'>
-      <link rel='stylesheet' id='prettyphoto-css'  href="/static/css/zhiyuel/profilestyle.css" type='text/css' media='all'>
+
       <link href="/static/css/fontello.css" type="text/css" rel="stylesheet">
 
     <!--[if lt IE 7]>
-            <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">  
+            <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">
             <![endif]-->
             <!-- Google Web fonts -->
             <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
@@ -46,7 +46,8 @@
             $("a[rel^='prettyPhoto']").prettyPhoto();
           });
           </script>
-          
+
+        <script type="text/javascript" src="/static/js/create_trip.js"></script>
           <style type="text/css">
           .demo { width: 100% ;top: 100px}
 
@@ -147,10 +148,11 @@
                   <div id="alter">Alternative activities</div>
                   <div class="demo" style="z-index:3">
                     <div id="draggable1">
+                            <div class="abc">abc</div>
                       <div id="test1" onclick="" link=""></div>
                       <div id="test12" onclick="" link=""></div>
                       <div id="test13" onclick=""></div>
-                      <div id="test14" onclick=""></div>                    
+                      <div id="test14" onclick=""></div>
                     </div>
                     <div id="draggable12"></div>
                     <div id="droppable">
@@ -164,14 +166,13 @@
             </div>
             <!-- /.container -->
           </section>
-
+        </body>
           <!-- Loading the javaScript at the end of the page -->
           <script type="text/javascript" src="/static/js/bootstrap.js"></script>
           <script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script>
           <script type="text/javascript" src="/static/js/site.js"></script>
-          <script type="text/javascript" src="/static/js/create_trip.js"></script>
           <script type="text/javascript" src="/static/CreateTrip/createTrip.js"></script>
-          <script type="text/javascript">            
+          <script type="text/javascript">
             loadActivities("Seattle");
           </script>
           <!--Panel-->
@@ -180,6 +181,6 @@
             $('#myTab a:last').tab('show')
           })
           </script>
-        </script>
-      </body>
+
+
       </html>

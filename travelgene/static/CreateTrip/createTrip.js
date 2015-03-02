@@ -10,18 +10,25 @@ function requestActivity(city,id,elem){
       var obj = JSON.parse(xmlhttp.responseText);
       href = './Activities?'+"city="+obj['a_id'].split('_')[0]+'&id='+obj['a_id'].split('_')[1];
       elem.nodeValue = obj['a_id'];
+      console.log()
       elem.onclick= function(){
         location.href= href;
       };
   }
  }
+  console.log(city,id);
   xmlhttp.open("GET","http://127.0.0.1:5000/ActivityInfo/"+city+"/"+id,true);
   xmlhttp.send();
 }
 function loadActivities(city){
     var child = document.getElementById("draggable1").childNodes;
-    for(i = 0; i < 4; i++){
-       requestActivity(city,i, child[i]);
+    var cnt = 0;
+    for(i = 0; i < child.length; i++){
+       var strId = ""+(child[i].id);
+       if(strId.indexOf("test")>=0){
+            requestActivity(city,cnt++, child[i]);
+            console.log(child[i].id);
+       }
     }
 }
 
