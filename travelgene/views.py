@@ -38,6 +38,25 @@ def tmp():
         title = 'Home',
         user = user,
         posts = posts)
+@app.route('/signup',methods=['POST'])
+def signupp():
+    email = request.form['Email or mobile number']
+    password = request.form['New password']
+    firstname = request.form['First name']
+    lastname = request.form['Last name']
+    wholename = firstname+lastname
+
+    #print firstname
+    #print lastname
+    print wholename
+    print password
+
+    print email
+
+    db.user.insert({'user_id':'1','user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
+
+    return redirect('CreateTrip.html')
+
 @app.route('/login',methods=['POST'])
 def login():
     oh=db['user']
