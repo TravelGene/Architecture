@@ -60,10 +60,10 @@ def signupp():
 @app.route('/login',methods=['POST'])
 def login():
     oh=db['user']
-    Found=oh.find({'user_id':'00000004'})
+    email = request.form['email']
+    Found=oh.find({'email':email})
     dictt=dumps(Found)
     passw=dictt.split("password")[1].split(",")[0].split("\"")[2]
-    email = request.form['email']
     password = request.form['password']
     #update in database
     if passw==password:
