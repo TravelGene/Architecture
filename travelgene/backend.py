@@ -23,7 +23,7 @@ def home_page():
     return render_template('index.html')
     
 @app.route('/Nlogin.html')
-def home_page():
+def home_page2():
     return render_template('Nlogin.html')
 
 @app.route('/CreateTrip.html')

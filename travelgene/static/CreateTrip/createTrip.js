@@ -7,13 +7,14 @@ function requestActivity(city,id,elem){
  }
  xmlhttp.onreadystatechange=function(){
    if (xmlhttp.readyState==4 && xmlhttp.status==200){
+      return xmlhttp.responseText.split("$");
       var obj = JSON.parse(xmlhttp.responseText);
-      href = './Activities?'+"city="+obj['a_id'].split('_')[0]+'&id='+obj['a_id'].split('_')[1];
+
       elem.nodeValue = obj['a_id'];
-      console.log()
       elem.onclick= function(){
         location.href= href;
       };
+
   }
  }
   console.log(city,id);
@@ -23,10 +24,11 @@ function requestActivity(city,id,elem){
 function loadActivities(city){
     var child = document.getElementById("draggable1").childNodes;
     var cnt = 0;
+    requestActivity(city,cnt++, child[i]);
     for(i = 0; i < child.length; i++){
        var strId = ""+(child[i].id);
        if(strId.indexOf("test")>=0){
-            requestActivity(city,cnt++, child[i]);
+            href = './Activities?'+"city="+obj['a_id'].split('_')[0]+'&id='+obj['a_id'].split('_')[1];
             console.log(child[i].id);
        }
     }
