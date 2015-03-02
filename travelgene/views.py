@@ -69,8 +69,8 @@ def login():
     if passw==password:
         print "yesyesyes"
         session['username'] = email
-        return redirect('profilec.html')
-        return redirect(url_for('nextPage', id="test"))#param
+        return render_template("profilec.html", username=email)
+        #return redirect(url_for('nextPage', id="test"))#param
     else:
         print "nononononononono"
         return redirect('Nlogin.html')
