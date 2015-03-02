@@ -9,13 +9,14 @@ from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 
-@app.route('/CityInfo/<City>/<id>')
+@app.route('/ActivityInfo/<City>/<id>')
 def get_info(City,id):  
     idval = City+"_"+id;
     print idval;
     allContent = mongo.db[City].find_one({'a_id' : str(idval)});  
     print allContent;
     result = {};
+    result['a_id'] = allContent['a_id'];
     result['address'] = allContent['address'];
     result['cato'] = allContent['category_str_list'];
     result['comment'] = allContent['comment'];

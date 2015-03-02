@@ -26,9 +26,12 @@ def home_page():
 def create_trip():
     return render_template('CreateTrip.html')
 
-@app.route('/Activities.html')
-def activities():
-    return render_template('Activities.html')
+@app.route('/Activities',methods=['GET'])
+def toActivity():
+    city=str(request.args.get('city'));
+    id=request.args.get('id');
+    return render_template("Activities.html",city=city,id=id);
+
 
 @app.route('/trip_detail_main.html')
 def tripdetail():

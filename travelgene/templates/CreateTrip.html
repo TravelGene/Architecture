@@ -46,7 +46,6 @@
             $("a[rel^='prettyPhoto']").prettyPhoto();
           });
           </script>
-          <script type="text/javascript" src="/static/CreateTrip/createTrip.js"></script>
           
           <style type="text/css">
           .demo { width: 100% ;top: 100px}
@@ -159,7 +158,7 @@
                     </div>
                     <div id="droppable2"></div>
                   </div>
-                  <div id="create" onclick="writeActivities({"date","user","city")"><a href="/profilec.html" class="myButtonr">Create Trip</a></div>
+                  <div id="create" onclick=writeActivities({"01/01/2015","02/02/2015","zzz","pit"})><a  class="myButtonr">Create Trip</a></div>
                 </article>
               </div>
             </div>
@@ -171,8 +170,9 @@
           <script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script>
           <script type="text/javascript" src="/static/js/site.js"></script>
           <script type="text/javascript" src="/static/js/create_trip.js"></script>
+          <script type="text/javascript" src="/static/CreateTrip/createTrip.js"></script>
           <script type="text/javascript">            
-            window.load(loadActivities("Seattle"));
+            loadActivities("Seattle");
           </script>
           <!--Panel-->
           <script>
