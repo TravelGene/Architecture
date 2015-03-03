@@ -38,6 +38,7 @@ def tmp():
         title = 'Home',
         user = user,
         posts = posts)
+#Nanjie Chenglie
 @app.route('/signup',methods=['POST'])
 def signupp():
     email = request.form['Email or mobile number']
@@ -56,7 +57,7 @@ def signupp():
     db.user.insert({'user_id':'1','user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
 
     return redirect('CreateTrip.html')
-
+#Nanjie Chenglie
 @app.route('/login',methods=['POST'])
 def login():
     oh=db['user']
