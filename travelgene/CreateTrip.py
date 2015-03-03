@@ -24,14 +24,17 @@ def addTrip():
         'endate':date2,
         'activities':activitiesList,
     };
-    print newTrip+'\n\n\n\n\n\n';
+    print newTrip,'\n\n\n\n\n\n';
     mongo.db[usrid].insert(newTrip);
     print 'done';
+    return render_template('profilec.html')
 
 
-@app.route('/ActivityInfo/<city>/<id>')
-def retrieveActivity(city, id):
-    result = mongo.db[city].find_one({'id':id});
-    rst = {};
-    rst['name']=result['name'];
-    return json.dump(rst);
+@app.route('/ActivityInfo/<city>')
+def retrieveActivity(city):
+    result = mongo.db[city].distinct('a_id');
+    res = "";
+    for s in result:
+        res += (s+'$');
+    print res;
+    return res;

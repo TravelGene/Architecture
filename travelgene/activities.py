@@ -9,7 +9,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 
-@app.route('/ActivityInfo/<City>')
+@app.route('/ActivityInfo/<City>/<id>')
 def get_info(City,id):  
     idval = City+"_"+id;
     print idval;

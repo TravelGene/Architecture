@@ -1,37 +1,39 @@
-function requestActivity(city,id,elem){
-  var xmlhttp;
-  if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
-   xmlhttp=new XMLHttpRequest();
-  }else{// code for IE6, IE5
-   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
- }
- xmlhttp.onreadystatechange=function(){
-   if (xmlhttp.readyState==4 && xmlhttp.status==200){
-      return xmlhttp.responseText.split("$");
-      var obj = JSON.parse(xmlhttp.responseText);
 
-      elem.nodeValue = obj['a_id'];
-      elem.onclick= function(){
-        location.href= href;
-      };
-
-  }
- }
-  console.log(city,id);
-  xmlhttp.open("GET","http://127.0.0.1:5000/ActivityInfo/"+city+"/"+id,true);
-  xmlhttp.send();
-}
 function loadActivities(city){
-    var child = document.getElementById("draggable1").childNodes;
-    var cnt = 0;
-    requestActivity(city,cnt++, child[i]);
-    for(i = 0; i < child.length; i++){
-       var strId = ""+(child[i].id);
-       if(strId.indexOf("test")>=0){
-            href = './Activities?'+"city="+obj['a_id'].split('_')[0]+'&id='+obj['a_id'].split('_')[1];
-            console.log(child[i].id);
-       }
-    }
+    var ids;
+    var xmlhttp;
+      if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+       xmlhttp=new XMLHttpRequest();
+      }else{// code for IE6, IE5
+       xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+     }
+      xmlhttp.onreadystatechange=function(){
+   if (xmlhttp.readyState==4 && xmlhttp.status==200){
+        idStr = xmlhttp.responseText;
+        var child = document.getElementById("draggable1").childNodes;
+        var cnt = 0;
+        idStr = idStr.substring(0,idStr.length-1);
+        ids = idStr.split("$");
+        console.log("zxcvz",ids);
+        var cnt = 0;
+        for(i = 0; i < child.length; i++){
+           var strId = ""+(child[i].id);
+           if(strId.indexOf("test")>=0){
+                child[i].text = ids[cnt];
+                shref = './Activities?'+"city="+city+'&id='+ids[cnt++].split('_')[1];
+                var ns = shref;
+                child[i].text = ids[cnt];
+                child[i].onclick = function(){
+                    location.href = text;
+                }
+                console.log("tesT"+child[i].text);
+                console.log(child[i].id);
+           }
+        }
+   }
+ }
+    xmlhttp.open("GET","http://127.0.0.1:5000/ActivityInfo/"+city);
+    xmlhttp.send();
 }
 
 function loadInfo(City,para){
@@ -56,6 +58,8 @@ function loadInfo(City,para){
   xmlhttp.send();
 }
 function writeInfo(activitiesId, date1,date2, userid, city){
+  activitiesId = activitiesId.substring(0,activitiesId.length-1);
+  console.log(activitiesId);
   var xmlhttp;
     if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
       xmlhttp=new XMLHttpRequest();
@@ -67,11 +71,13 @@ function writeInfo(activitiesId, date1,date2, userid, city){
 }
 
 function writeActivities(date1,date2, user, dst){
-  x = document.getElementsById("droppable");
-  activitiesId = x[0].childNodes[0].nodeValue;
-  for(i=1;i<x[0].childNodes.length;i++){
-    activitiesId += ("$"+x[0].childNodes.nodeValue[i]);
+  child = document.getElementById("droppable").childNodes;
+  activitiesId = ""
+  for(i=0;i<child.length;i++){
+    var strId = ""+(child[i].id);
+    if(strId.indexOf("test")>=0){
+            activitiesId += (child[i].text+"$");
+    }
   }
-  console.log(activitiesId);
   writeInfo(activitiesId, date1,date2, user, dst);
 }
