@@ -1,5 +1,6 @@
 from travelgene import app
 
+from travelgene import mongo
 from flask import Flask, render_template, session, redirect, url_for, escape, request
 import json
 from pymongo import MongoClient
@@ -21,10 +22,11 @@ def hello_world():
 @app.route('/index.html')
 def home_page():
     return render_template('index.html')
-    
+
 @app.route('/Nlogin.html')
 def unabletologin():
     return render_template('Nlogin.html')
+
 
 @app.route('/CreateTrip.html')
 def create_trip():
@@ -35,6 +37,7 @@ def toActivity():
     city=str(request.args.get('city'));
     id=request.args.get('id');
     return render_template("Activities.html",city=city,id=id);
+    #here jumps to nothing!!!!
 
 
 @app.route('/trip_detail_main.html')

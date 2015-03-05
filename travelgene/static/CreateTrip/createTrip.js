@@ -1,3 +1,4 @@
+//request the info from py, and receive what from that
 function requestActivity(city,id,elem){
   var xmlhttp;
   if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -23,11 +24,16 @@ function requestActivity(city,id,elem){
 }
 function loadActivities(city){
     var child = document.getElementById("draggable1").childNodes;
+
+    console.log(child[2].className);
+    console.log("===");
     var cnt = 0;
     requestActivity(city,cnt++, child[i]);
     for(i = 0; i < child.length; i++){
        var strId = ""+(child[i].id);
        if(strId.indexOf("test")>=0){
+            //click and jump to the detail of this activity
+            //why we don't add at the draggable onclick function???
             href = './Activities?'+"city="+obj['a_id'].split('_')[0]+'&id='+obj['a_id'].split('_')[1];
             console.log(child[i].id);
        }
@@ -67,7 +73,7 @@ function writeInfo(activitiesId, date1,date2, userid, city){
 }
 
 function writeActivities(date1,date2, user, dst){
-  x = document.getElementsById("droppable");
+  x = document.getElementsById("droppable");//undefined exception, no droppable in html file
   activitiesId = x[0].childNodes[0].nodeValue;
   for(i=1;i<x[0].childNodes.length;i++){
     activitiesId += ("$"+x[0].childNodes.nodeValue[i]);

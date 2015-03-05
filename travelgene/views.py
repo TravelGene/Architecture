@@ -40,21 +40,25 @@ def tmp():
         posts = posts)
 @app.route('/login',methods=['POST'])
 def login():
-    oh=db['user']
-    Found=oh.find({'user_id':'00000004'})
-    dictt=dumps(Found)
-    passw=dictt.split("password")[1].split(",")[0].split("\"")[2]
-    email = request.form['email']
-    password = request.form['password']
-    #update in database
-    if passw==password:
-        print "yesyesyes"
-        session['username'] = email
-        return redirect('profilec.html')
-        return redirect(url_for('nextPage', id="test"))#param
-    else:
-        print "nononononononono"
-        return redirect('Nlogin.html')
+    if request.method == 'POST':
+        oh=db['user']
+        Found=oh.find({'user_id':'00000004'})
+        dictt=dumps(Found)
+        passw=dictt.split("password")[1].split(",")[0].split("\"")[2]
+        email = request.form['email']
+        password = request.form['password']
+        print passw
+        print dictt
+        #update in database
+        if passw==password:
+            print "yesyesyes"
+            session['username'] = email
+            print session['username']
+            return redirect('profilec.html') #test ok
+            # return redirect(url_for('nextPage', id="test"))#param test ok
+        else:
+            print "nononononononono"
+            return redirect('Nlogin.html')
 
 @app.route('/test/<id>')
 def nextPage(id):
