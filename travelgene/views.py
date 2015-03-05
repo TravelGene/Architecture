@@ -38,24 +38,41 @@ def tmp():
         title = 'Home',
         user = user,
         posts = posts)
+#Nanjie Chenglie
+@app.route('/signup',methods=['POST'])
+def signupp():
+    email = request.form['Email or mobile number']
+    password = request.form['New password']
+    firstname = request.form['First name']
+    lastname = request.form['Last name']
+    wholename = firstname+lastname
+
+    #print firstname
+    #print lastname
+    print wholename
+    print password
+
+    print email
+
+    db.user.insert({'user_id':'1','user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
+
+    return redirect('CreateTrip.html')
+#Nanjie Chenglie
 @app.route('/login',methods=['POST'])
 def login():
     if request.method == 'POST':
         oh=db['user']
-        Found=oh.find({'user_id':'00000004'})
+        email = request.form['email']
+        Found=oh.find({'email':email})
         dictt=dumps(Found)
         passw=dictt.split("password")[1].split(",")[0].split("\"")[2]
-        email = request.form['email']
         password = request.form['password']
-        print passw
-        print dictt
         #update in database
         if passw==password:
             print "yesyesyes"
             session['username'] = email
-            print session['username']
-            return redirect('profilec.html') #test ok
-            # return redirect(url_for('nextPage', id="test"))#param test ok
+            return render_template("profilec.html", username=email)
+            #return redirect(url_for('nextPage', id="test"))#param
         else:
             print "nononononononono"
             return redirect('Nlogin.html')
