@@ -37,7 +37,7 @@ def toActivity():
     city=str(request.args.get('city'));
     id=request.args.get('id');
     return render_template("Activities.html",city=city,id=id);
-    #here jumps to nothing!!!!
+    #zhiyuel: here jumps to nothing!!!!
 
 
 @app.route('/trip_detail_main.html')

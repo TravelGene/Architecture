@@ -32,7 +32,7 @@ function loadActivities(city){
     for(i = 0; i < child.length; i++){
        var strId = ""+(child[i].id);
        if(strId.indexOf("test")>=0){
-            //click and jump to the detail of this activity
+            //zhiyuel: click and jump to the detail of this activity
             //why we don't add at the draggable onclick function???
             href = './Activities?'+"city="+obj['a_id'].split('_')[0]+'&id='+obj['a_id'].split('_')[1];
             console.log(child[i].id);
@@ -73,7 +73,7 @@ function writeInfo(activitiesId, date1,date2, userid, city){
 }
 
 function writeActivities(date1,date2, user, dst){
-  x = document.getElementsById("droppable");//undefined exception, no droppable in html file
+  x = document.getElementsById("droppable");//zhiyuel: undefined exception, no droppable in html file
   activitiesId = x[0].childNodes[0].nodeValue;
   for(i=1;i<x[0].childNodes.length;i++){
     activitiesId += ("$"+x[0].childNodes.nodeValue[i]);

@@ -55,6 +55,7 @@ def signupp():
     print email
 
     db.user.insert({'user_id':'1','user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
+    # zhiyuel: jumps to where????? need to be consistent
 
     return redirect('CreateTrip.html')
 #Nanjie Chenglie
