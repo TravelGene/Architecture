@@ -28,9 +28,16 @@ def unabletologin():
     return render_template('Nlogin.html')
 
 
-@app.route('/CreateTrip.html')
-def create_trip():
-    return render_template('CreateTrip.html')
+@app.root('/CreateTrip.html', method = ['GET'])
+def loadTrip():
+    dest = request.form.get('destination')
+    date1 = request.form.get('goDate')
+    date2 = request.form.get('returnDate')
+    result = []
+    result.add(dest)
+    result.add(date1)
+    result.add(date2)
+    return render_template("CreateTrip.html", dest=dest, date1 = date1, date2 = date2)
 
 @app.route('/Activities',methods=['GET'])
 def toActivity():
