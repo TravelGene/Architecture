@@ -37,8 +37,8 @@
       <file leaf-file-name="CreateTrip.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/travelgene/templates/CreateTrip.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.464286" vertical-offset="2822" max-vertical-offset="3648">
-              <caret line="161" column="83" selection-start-line="161" selection-start-column="83" selection-end-line="161" selection-end-column="83" />
+            <state vertical-scroll-proportion="-15.142858" vertical-offset="3762" max-vertical-offset="4992">
+              <caret line="161" column="84" selection-start-line="161" selection-start-column="84" selection-end-line="161" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="createTrip.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/travelgene/static/js/createTrip.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.0263157" vertical-offset="1443" max-vertical-offset="4290">
-              <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
+            <state vertical-scroll-proportion="-4.6578946" vertical-offset="453" max-vertical-offset="4230">
+              <caret line="21" column="67" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -69,7 +69,7 @@
       <file leaf-file-name="CreateTrip.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/travelgene/CreateTrip.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6010545" vertical-offset="0" max-vertical-offset="874">
+            <state vertical-scroll-proportion="0.45869946" vertical-offset="261" max-vertical-offset="1334">
               <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -81,8 +81,8 @@
       <file leaf-file-name="backend.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/travelgene/backend.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1820">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1820">
+              <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -123,9 +123,9 @@
         <option value="$PROJECT_DIR$/travelgene/activities.py" />
         <option value="$PROJECT_DIR$/travelgene/templates/Activities.html" />
         <option value="$PROJECT_DIR$/travelgene/static/CreateTrip/createTrip.js" />
-        <option value="$PROJECT_DIR$/travelgene/templates/CreateTrip.html" />
-        <option value="$PROJECT_DIR$/travelgene/static/js/createTrip.js" />
         <option value="$PROJECT_DIR$/travelgene/CreateTrip.py" />
+        <option value="$PROJECT_DIR$/travelgene/static/js/createTrip.js" />
+        <option value="$PROJECT_DIR$/travelgene/templates/CreateTrip.html" />
       </list>
     </option>
   </component>
@@ -397,7 +397,9 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -773,14 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/travelgene/templates/CreateTrip.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.464286" vertical-offset="2822" max-vertical-offset="3648">
-          <caret line="161" column="83" selection-start-line="161" selection-start-column="83" selection-end-line="161" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/travelgene/templates/Activities.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="4123">
@@ -797,10 +791,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/travelgene/templates/CreateTrip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.142858" vertical-offset="3762" max-vertical-offset="4992">
+          <caret line="161" column="84" selection-start-line="161" selection-start-column="84" selection-end-line="161" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/travelgene/backend.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1330">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1820">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -819,15 +821,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/travelgene/static/js/createTrip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0263157" vertical-offset="1443" max-vertical-offset="4290">
-          <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
+        <state vertical-scroll-proportion="-4.6578946" vertical-offset="453" max-vertical-offset="4230">
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/travelgene/CreateTrip.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6010545" vertical-offset="0" max-vertical-offset="874">
+        <state vertical-scroll-proportion="0.45869946" vertical-offset="261" max-vertical-offset="1334">
           <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />

@@ -14,17 +14,16 @@ function loadActivities(city){
         var cnt = 0;
         idStr = idStr.substring(0,idStr.length-1);
         ids = idStr.split("$");
-        console.log("zxcvz",ids);
         var cnt = 0;
         for(i = 0; i < child.length; i++){
            var strId = ""+(child[i].id);
            if(strId.indexOf("test")>=0){
                 child[i].text = ids[cnt];
                 shref = './Activities?'+"city="+city+'&id='+ids[cnt].split('_')[1];
-                var ns = shref;
-                child[i].text = ids[cnt];
+                child[i].setAttribute('link',shref);
+                child[i].setAttribute('text',ids[cnt]);
                 child[i].onclick = function(){
-                    location.href = text;
+                    location.href = this.getAttribute('link');
                 }
                 cnt++;
            }
@@ -34,8 +33,7 @@ function loadActivities(city){
     xmlhttp.open("GET","http://127.0.0.1:5000/ActivityInfo/"+city);
     xmlhttp.send();
 }
-
-function writeInfo(activitiesId, date1,date2, userid, city){
+function writeInfo(activitiesId, date1, date2, userid, city){
   activitiesId = activitiesId.substring(0,activitiesId.length-1);
   console.log(activitiesId);
   var xmlhttp;
