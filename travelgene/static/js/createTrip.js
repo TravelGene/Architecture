@@ -20,14 +20,13 @@ function loadActivities(city){
            var strId = ""+(child[i].id);
            if(strId.indexOf("test")>=0){
                 child[i].text = ids[cnt];
-                shref = './Activities?'+"city="+city+'&id='+ids[cnt++].split('_')[1];
+                shref = './Activities?'+"city="+city+'&id='+ids[cnt].split('_')[1];
                 var ns = shref;
                 child[i].text = ids[cnt];
                 child[i].onclick = function(){
                     location.href = text;
                 }
-                console.log("tesT"+child[i].text);
-                console.log(child[i].id);
+                cnt++;
            }
         }
    }
@@ -55,6 +54,7 @@ function writeActivities(date1,date2, user, dst){
   for(i=0;i<child.length;i++){
     var strId = ""+(child[i].id);
     if(strId.indexOf("test")>=0){
+            console.log(child[i].text);
             activitiesId += (child[i].text+"$");
     }
   }
