@@ -44,19 +44,15 @@ function getAccount(){
 
 }
 
-function login(){
-  document.getElementById("popupsign").style.display="none";
-  document.getElementById("account").style.display="block";
-  document.getElementById("siin").style.display="none";
-  document.getElementById("siup").style.display="none";
-  document.getElementById("overlay").style.display="none";
-  var x=document.getElementById("username_in").value;
-  var y=document.getElementById("userpwd_in").value;
-
-
-
-
-}
+//function login(){
+//  document.getElementById("popupsign").style.display="none";
+//  document.getElementById("account").style.display="block";
+//  document.getElementById("siin").style.display="none";
+//  document.getElementById("siup").style.display="none";
+//  document.getElementById("overlay").style.display="none";
+//  var x=document.getElementById("username_in").value;
+//  var y=document.getElementById("userpwd_in").value;
+//}
 
 
 

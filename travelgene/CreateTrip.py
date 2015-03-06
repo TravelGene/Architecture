@@ -29,7 +29,6 @@ def addTrip():
     print 'done';
     return render_template('profilec.html')
 
-
 @app.route('/ActivityInfo/<city>')
 def retrieveActivity(city):
     result = mongo.db[city].distinct('a_id');

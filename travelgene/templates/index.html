@@ -35,19 +35,20 @@
           <![endif]-->
           <!-- Favicon -->
           <link rel="shortcut icon" href="/static/img/images.png">
-          <!-- JQuery -->
           <script type="text/javascript" src="/static/js/jquery.js"></script>
-          <!-- Load ScrollTo -->
           <script type="text/javascript" src="/static/js/jquery.scrollTo-1.4.2-min.js"></script>
-          <!-- Load LocalScroll -->
           <script type="text/javascript" src="/static/js/jquery.localscroll-1.2.7-min.js"></script>
-          <!-- Set log in check -->
-          <script type="text/javascript" src="/static/js/Login.js"></script>
-          <script type="text/javascript" src="/static/js/input_trip.js"></script>
           <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
           <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-          <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" 
-          rel="stylesheet"/> 
+          <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"
+          rel="stylesheet"/>
+
+
+          <!--our system's js-->
+          <script type="text/javascript" src="/static/js/Login.js"></script>
+          <script type="text/javascript" src="/static/js/input_trip.js"></script>
+
+
 
           <!-- prettyPhoto Initialization -->
           <script type="text/javascript" charset="utf-8">
@@ -191,7 +192,8 @@
                                         <label class="zg-link-gray remember_me"><input type="checkbox" name="rememberme" checked="" value="y">Remember me </label>
                                         <!-- <span class="middot zg-gray">¡¤</span> -->
                                         <!--              <a class="zg-link-gray" target="_blank" href="/resetpassword"> Forget pwd</a> -->
-                                        <input type="submit" id="sign_in_btn" onclick="login()" class="zg-btn-blue" value="Login">
+                                        <!-- here login we don't need to check the inputbox anymore-->
+                                        <input type="submit" id="sign_in_btn" class="zg-btn-blue" value="Login">
                                     </div>
                                 </div>
                             </form>

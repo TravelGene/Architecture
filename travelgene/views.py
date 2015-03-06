@@ -38,6 +38,7 @@ def tmp():
         title = 'Home',
         user = user,
         posts = posts)
+#Nanjie Chenglie
 @app.route('/signup',methods=['POST'])
 def signupp():
     email = request.form['Email or mobile number']
@@ -54,26 +55,28 @@ def signupp():
     print email
 
     db.user.insert({'user_id':'1','user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
+    # zhiyuel: jumps to where????? need to be consistent
 
     return redirect('CreateTrip.html')
-
+#Nanjie Chenglie
 @app.route('/login',methods=['POST'])
 def login():
-    oh=db['user']
-    email = request.form['email']
-    Found=oh.find({'email':email})
-    dictt=dumps(Found)
-    passw=dictt.split("password")[1].split(",")[0].split("\"")[2]
-    password = request.form['password']
-    #update in database
-    if passw==password:
-        print "yesyesyes"
-        session['username'] = email
-        return render_template("profilec.html", username=email)
-        #return redirect(url_for('nextPage', id="test"))#param
-    else:
-        print "nononononononono"
-        return redirect('Nlogin.html')
+    if request.method == 'POST':
+        oh=db['user']
+        email = request.form['email']
+        Found=oh.find({'email':email})
+        dictt=dumps(Found)
+        passw=dictt.split("password")[1].split(",")[0].split("\"")[2]
+        password = request.form['password']
+        #update in database
+        if passw==password:
+            print "yesyesyes"
+            session['username'] = email
+            return render_template("profilec.html", username=email)
+            #return redirect(url_for('nextPage', id="test"))#param
+        else:
+            print "nononononononono"
+            return redirect('Nlogin.html')
 
 @app.route('/test/<id>')
 def nextPage(id):
