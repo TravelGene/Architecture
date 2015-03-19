@@ -12,29 +12,29 @@ from flask.ext.pymongo import PyMongo
 #Author: Qiankun Zhuang
 @app.route('/addTrip',methods=['GET'])
 def addTrip():
-    if request.method == 'GET':
-        dest = request.args.get('city');
-        date1 = request.args.get('date1');
-        date2 = request.args.get('date2');
-        activitiesId = request.args.get('activitiesId');
-        usrid = request.args.get('userid');
-        activitiesList = activitiesId.split('$');
-        newTrip = {
-            'dest':dest,
-            'startdate':date1,
-            'endate':date2,
-            'activities':activitiesList,
-        };
-        print newTrip+'\n\n\n\n\n\n';
-        mongo.db[usrid].insert(newTrip);
-        print 'done';
+    dest = request.args.get('city');
+    date1 = request.args.get('date1');
+    date2 = request.args.get('date2');
+    activitiesId = request.args.get('activitiesId');
+    print activitiesId;
+    usrid = request.args.get('userid');
+    activitiesList = activitiesId.split('$');
+    newTrip = {
+        'dest':dest,
+        'startdate':date1,
+        'endate':date2,
+        'activities':activitiesList,
+    };
+    print newTrip,'\n\n\n\n\n\n';
+    mongo.db[usrid].insert(newTrip);
+    print 'done';
+    return render_template('profilec.html')
 
-
-@app.route('/ActivityInfo/<city>/<id>')
-def retrieveActivity(city, id):
-    print
-    result = mongo.db[city].find_one({'id':id});
-    rst = {};
-    print result['name'];
-    rst['name']=result['name'];
-    return json.dump(rst);
+@app.route('/ActivityInfo/<city>')
+def retrieveActivity(city):
+    result = mongo.db[city].distinct('a_id');
+    res = "";
+    for s in result:
+        res += (s+'$');
+    print res;
+    return res;

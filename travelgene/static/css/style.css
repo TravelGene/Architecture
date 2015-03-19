@@ -30,9 +30,9 @@ CONTENTS:
 	
 }
 
-div, article, section, header, footer, nav, li {
+/*div, article, section, header, footer, nav, li {
 	position:relative;
-}
+}*/
 .group:after {
 	display:block;
 	height:0;
@@ -299,14 +299,14 @@ ul#menu-main > li > a:hover {
 	font-family: 'Patua One', cursive;
 	font-size: 4em;
 	font-weight: 400;
-/*	margin-top: 250px;*/
+	margin-top: 120px;
 }
 #headerwrap h2 {
 	color: #FFFFFF;
 	font-family: 'Open Sans', sans serif;
 	font-size: 2em;
 	font-weight: normal;
-	margin: 0 0 1.5em 0;
+	margin: 0.2em 0 1.0em 0;
 	text-shadow: 1px 1px 1px #333333;
 }
 #headerwrap h1 span {
@@ -318,6 +318,7 @@ ul#menu-main > li > a:hover {
 	font-size: 1.3125em;
 	border: 0;
 	text-align: center;
+	line-height:normal;
 	vertical-align: middle;
 	margin-bottom:0 !important;
 	margin-right: 10px;
@@ -331,14 +332,14 @@ ul#menu-main > li > a:hover {
 	-webkit-transition: background 0.25 ease-in;
 }
 #headerwrap input[type=text] {
-	height: 2.9em;
+	height: 2.3em;
 	width:20%;
 }
 #headerwrap input[type=submit] {
 	font-family: 'Patua One', cursive;
 	color: #fff;
 	width: 185px;
-	height: 2.9em;
+	height: 2.3em;
 	font-size: 1.3125em; /* 21px */
 	padding:0.5em;
 	letter-spacing: 0.05em;

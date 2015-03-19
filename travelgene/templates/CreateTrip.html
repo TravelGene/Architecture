@@ -48,7 +48,6 @@
           });
           </script>
 
-        <script async type="text/javascript" src="/static/js/create_trip.js"></script>
           <style type="text/css">
           .demo { width: 100% ;top: 100px}
 
@@ -149,11 +148,10 @@
                   <div id="alter">Alternative activities</div>
                   <div class="demo" style="z-index:3">
                     <div id="draggable1">
-                            <div class="abc">abc</div>
-                      <div id="test1" onclick="" link=""></div>
-                      <div id="test12" onclick="" link=""></div>
-                      <div id="test13" onclick=""></div>
-                      <div id="test14" onclick=""></div>
+                      <div id="test1" link="" onclick=""></div>
+                      <div id="test12" link="" onclick=""></div>
+                      <div id="test13"></div>
+                      <div id="test14"></div>
                     </div>
                     <div id="draggable12"></div>
                     <div id="droppable">
@@ -161,7 +159,8 @@
                     </div>
                     <div id="droppable2"></div>
                   </div>
-                  <div id="create" onclick=writeActivities("01/01/2015","02/02/2015","zzz","pit")><a  class="myButtonr">Create Trip</a></div>
+                  <div id="create" onclick=writeActivities({{date1}},{{date2}},"zzz",{{dest}}) ><a  class="myButtonr" href="/profilec.html">Create Trip</a></div>
+
                 </article>
               </div>
             </div>
@@ -172,7 +171,7 @@
           <script type="text/javascript" src="/static/js/bootstrap.js"></script>
           <script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script>
           <script type="text/javascript" src="/static/js/site.js"></script>
-          <script type="text/javascript" src="/static/CreateTrip/createTrip.js"></script>
+          <script type="text/javascript" src="/static/js/createTrip.js"></script>
           <script type="text/javascript">
             loadActivities("Seattle");
           </script>

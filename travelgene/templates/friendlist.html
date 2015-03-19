@@ -279,9 +279,77 @@
         <div id="BODYCON2" style="margin-left: 30%;">
 
 
+        {% for friend in friendlist %}
 
-          <!---->
+                      <article class="post">
 
+           <div style="float:left">
+            <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-2.jpg" alt="">
+          </div>
+
+
+          <div style = "margin-left : 250px">
+
+            <div style = "padding-top : 50px">
+             <h2>{{friend.user_name}}</h2>
+
+             <div class ="destination" style = "margin-left : 100px">
+
+                 {% for place in friend.trip_id %}
+                 <h2>{{place}} </h2>
+                 {% endfor %}
+                 {% for place in friend['trip_list'] %}
+                 <h2>{{place.destination}} </h2>
+                 {% endfor %}
+
+            </div>
+
+            <div style = "float:right">
+             <a href="#" class="myButton1">add to wishlist</a>
+           </div>
+
+
+         </div>
+
+       </div>
+
+       <div class="inside" style="margin-top : 50px">
+
+        <img class="img-news" src="/static/img/france.jpg" alt width="400" height="300">
+
+        <p class="post-date">Feb, 2015</p>
+
+
+
+        <div class="entry-content" style="margin-top : 50px; float:right">
+
+          <h3> Attraction:  Eiffel Tower, louvre</h3>
+
+
+
+
+
+
+          <div style="margin-top : 50px">
+
+
+            <a href="/trip_detail_main.html" class="more-link" style = "float:right">Details</a>
+
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+        {% endfor %}
+
+
+
+            <!--        -->
           <article class="post">
 
            <div style="float:left">
@@ -292,7 +360,7 @@
           <div style = "margin-left : 250px">
 
             <div style = "padding-top : 50px">
-             <h2>Eric</h2>
+             <h2>NIKE</h2>
 
              <div style = "margin-left : 100px">
               <h2>Paris, France</h2>

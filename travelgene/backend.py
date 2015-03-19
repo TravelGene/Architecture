@@ -29,9 +29,13 @@ def unabletologin():
     return render_template('Nlogin.html')
 
 
-@app.route('/CreateTrip.html')
-def create_trip():
-    return render_template('CreateTrip.html')
+@app.route('/CreateTrip.html', methods = ['GET'])
+def loadTrip():
+    dest = request.args.get('destination')
+    date1 = request.args.get('goDate')
+    date2 = request.args.get('returnDate')
+    print dest,date1,date2;
+    return render_template("CreateTrip.html", dest=dest, date1 = date1, date2 = date2)
 
 @app.route('/Activities',methods=['GET'])
 def toActivity():
@@ -49,9 +53,7 @@ def tripdetail():
 def profiles():
     return render_template('profilec.html')
 
-@app.route('/friendlist.html')
-def friendlist():
-    return render_template('friendlist.html')
+
 
 @app.route('/signup.html')
 def signup():
