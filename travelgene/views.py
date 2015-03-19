@@ -51,7 +51,8 @@ def signupp():
     firstname = request.form['First name']
     lastname = request.form['Last name']
     wholename = firstname+lastname
-
+    # after sign up it is sign in
+    session['username'] = email
     #print firstname
     #print lastname
     print wholename
@@ -59,7 +60,7 @@ def signupp():
 
     print email
 
-    db.user.insert({'user_id':'1','user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
+    mongo.db['user'].insert({'user_id':'1','user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
     # zhiyuel: jumps to where????? need to be consistent
 
     return redirect('CreateTrip.html')
@@ -67,21 +68,10 @@ def signupp():
 @app.route('/login',methods=['POST'])
 def login():
     if request.method == 'POST':
-        oh=db['user']
+        oh=mongo.db['user']
         email = request.form['email']
-<<<<<<< HEAD
-
-        cont=mongo.db.user.find_one()
-        print cont
-        print '======'
-
-        Found=oh.find({'email':email})
-        dictt=dumps(Found)
-        passw=dictt.split("password")[1].split(",")[0].split("\"")[2]
-=======
         Found=oh.find_one({'email':email})
         passw = Found['password']
->>>>>>> origin/master
         password = request.form['password']
         #update in database
         if passw==password:
