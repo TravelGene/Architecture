@@ -14,3 +14,4 @@ from travelgene import views
 from travelgene import backend
 from travelgene import activities
 from travelgene import CreateTrip
+from travelgene import friendlist

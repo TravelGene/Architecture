@@ -52,9 +52,7 @@ def tripdetail():
 def profiles():
     return render_template('profilec.html')
 
-@app.route('/friendlist.html')
-def friendlist():
-    return render_template('friendlist.html')
+
 
 @app.route('/signup.html')
 def signup():

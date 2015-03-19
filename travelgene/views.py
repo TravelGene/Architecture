@@ -10,6 +10,7 @@ from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 from bson.json_util import dumps
 client = MongoClient('localhost', 27017)
+
 db = client['travelgene']
 @app.route('/')
 @app.route('/index')
@@ -64,9 +65,8 @@ def login():
     if request.method == 'POST':
         oh=db['user']
         email = request.form['email']
-        Found=oh.find({'email':email})
-        dictt=dumps(Found)
-        passw=dictt.split("password")[1].split(",")[0].split("\"")[2]
+        Found=oh.find_one({'email':email})
+        passw = Found['password']
         password = request.form['password']
         #update in database
         if passw==password:
