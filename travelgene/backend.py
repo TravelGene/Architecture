@@ -12,6 +12,7 @@ from flask.ext.pymongo import PyMongo
 
 
 cors = CORS(app)
+
 @app.route('/test')
 def hello_world():
     print app.name

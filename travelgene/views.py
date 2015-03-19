@@ -1,5 +1,7 @@
 #author zhiyuel
 from travelgene import app
+from travelgene import mongo
+
 from flask import Flask, render_template, session, redirect, url_for, escape, request
 import json
 from pymongo import MongoClient
@@ -9,10 +11,14 @@ from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 from bson.json_util import dumps
+
+
 client = MongoClient('localhost', 27017)
 db = client['travelgene']
+
 @app.route('/')
 @app.route('/index')
+
 #zhiyuel
 def index():
     if 'username' in session:
@@ -64,6 +70,11 @@ def login():
     if request.method == 'POST':
         oh=db['user']
         email = request.form['email']
+
+        cont=mongo.db.user.find_one()
+        print cont
+        print '======'
+
         Found=oh.find({'email':email})
         dictt=dumps(Found)
         passw=dictt.split("password")[1].split(",")[0].split("\"")[2]
@@ -72,6 +83,7 @@ def login():
         if passw==password:
             print "yesyesyes"
             session['username'] = email
+            print session['username']
             return render_template("profilec.html", username=email)
             #return redirect(url_for('nextPage', id="test"))#param
         else:

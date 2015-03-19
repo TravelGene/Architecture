@@ -9,8 +9,19 @@ from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 
 app = Flask(__name__)
-mongo=PyMongo(app);
+# mongo=PyMongo(app);
+# connect to another MongoDB server altogether
+app.config['MONGO3_URI']='mongodb://travelgene:genetravel@ds031107.mongolab.com:31107/travelgene'
+app.config['MONGO3_HOST'] = 'ds031107.mongolab.com'
+app.config['MONGO3_PORT'] = 31107
+app.config['MONGO3_DBNAME'] = 'travelgene'
+app.config['MONGO3_USERNAME']='travelgene'
+app.config['MONGO3_PASSWORD']='genetravel'
+
+mongo = PyMongo(app, config_prefix='MONGO3')
+
 from travelgene import views
 from travelgene import backend
 from travelgene import activities
 from travelgene import CreateTrip
+
