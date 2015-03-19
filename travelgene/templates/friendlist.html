@@ -107,7 +107,7 @@
                 <div class="container">
                   <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
                   <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-                  <h1 class="brand"><a href="/index.html">Travel Gene!</a></h1>
+                  <h1 class="brand"><a href="{{ url_for('home_page') }}">Travel Gene!</a></h1>
                   <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
 
                   <nav class="pull-right nav-collapse collapse">
@@ -160,14 +160,20 @@
           <div class="span3" style="margin-top: 10px">
             <div class="entry-content">
               <h3>Your Friends on TravelGene</h3>
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-2.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-3.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-4.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">
+                {% for friend in friendlist %}
+                    <h3>{{friend.user_name}}</h3>
+
+                {% endfor %}
+
+
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">-->
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-2.jpg" alt="" width="50" height="50">-->
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-3.jpg" alt="" width="50" height="50">-->
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-4.jpg" alt="" width="50" height="50">-->
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">-->
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">-->
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">-->
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">-->
 
 
             </div>
@@ -191,19 +197,21 @@
            <div class="span3" style="margin-top: 10px">
             <div class="entry-content">
               <h3>Most Popular Destinations</h3>
-              <h4>NO.1 : Paris</h4>
+                {% for key, value in tripDictSort.iteritems() %}
+
+
+
+
+              <h4>NO.{{value}} : {{key}}</h4>
               <img src="/static/img/france.jpg" alt="Chania" width="200" height="150">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-2.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-3.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-4.jpg" alt="" width="50" height="50">
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">-->
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-2.jpg" alt="" width="50" height="50">-->
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-3.jpg" alt="" width="50" height="50">-->
+              <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-4.jpg" alt="" width="50" height="50">-->
               <p> and 3 more friends have been there</p>
 
-              <h4>NO.2 : Seattle</h4>
-              <img src="/static/img/seattle.jpg" alt="Chania" width="200" height="150">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-3.jpg" alt="" width="50" height="50">
-              <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-4.jpg" alt="" width="50" height="50">
-              <p> and 2 more friends have been there</p>
+                {% endfor %}
+
 
             </div>
           </div>
@@ -346,233 +354,10 @@
 
 
             <!--        -->
-          <article class="post">
-
-           <div style="float:left">
-            <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-2.jpg" alt="">
-          </div>
-
-
-          <div style = "margin-left : 250px">
-
-            <div style = "padding-top : 50px">
-             <h2>NIKE</h2>
-
-             <div style = "margin-left : 100px">
-              <h2>Paris, France</h2>
-            </div>
-
-            <div style = "float:right">
-             <a href="/profilec.html" class="myButton1">add to wishlist</a> 
-           </div>
-
-
-         </div>
-
-       </div>
-
-       <div class="inside" style="margin-top : 50px">
-
-        <img class="img-news" src="/static/img/france.jpg" alt width="400" height="300">
-
-        <p class="post-date">Feb, 2015</p>
-
-
-
-        <div class="entry-content" style="margin-top : 50px; float:right">
-
-          <h3> Attraction:  Eiffel Tower, louvre</h3>  
-
-
-
-
-
-
-          <div style="margin-top : 50px">            
-
-
-            <a href="/trip_detail_main.html" class="more-link" style = "float:right">Details</a>
-
-
-
-
-
-          </div>
-
-        </div>
-
-      </div>
-    </article>
-
-
-    <!---->
-
-    <article class="post">
-
-     <div style="float:left">
-      <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-3.jpg" alt="">
-    </div>
-
-
-    <div style = "margin-left : 250px">
-
-      <div style = "padding-top : 50px">
-       <h2>Christina </h2>
-
-       <div style = "margin-left : 100px">
-        <h2>Seattle, WA</h2>
-      </div>
-
-      <div style = "float:right">
-       <a href="#" class="myButton1">add to wishlist</a> 
-     </div>
-
-   </div>
-
- </div>
-
- <div class="inside" style="margin-top : 50px">
-
-  <img class="img-news" src="/static/img/seattle.jpg" alt width="400" height="300">
-
-  <p class="post-date">Feb, 2015</p>
-
-
-
-  <div class="entry-content" style="margin-top : 50px; float:right">
-
-    <h3> Attraction:  Skyline </h3>    
-
-    <div style="margin-top : 50px">            
-
-      <a href="/trip_detail_main.html" class="more-link" style = "float:right">Details</a>
-
-
-
-
-    </div>
-
-  </div>
-
-</div>
-</article>
 
 
 
 <!---->
-
-<article class="post">
-
- <div style="float:left">
-  <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-4.jpg" alt="">
-</div>
-
-
-<div style = "margin-left : 250px">
-
-  <div style = "padding-top : 50px">
-   <h2>Mike </h2>
-
-   <div style = "margin-left : 100px">
-    <h2>Pittsburgh</h2>
-  </div>
-  <div style = "float:right">
-   <a href="#" class="myButton1">add to wishlist</a> 
- </div>
-
-</div>
-
-</div>
-
-<div class="inside" style="margin-top : 50px">
-
-  <img class="img-news" src="/static/img/coast.jpg" alt width="400" height="300">
-
-  <p class="post-date">Feb, 2015</p>
-
-
-
-  <div class="entry-content" style="margin-top : 50px; float:right">
-
-    <h3> Attraction:  Coast </h3>    
-
-    <div style="margin-top : 50px">            
-
-      <a href="/trip_detail_main.html" class="more-link" style = "float:right">Details</a>
-
-
-
-    </div>
-
-  </div>
-
-</div>
-</article>
-
-
-
-<!---->
-
-<article class="post">
-
- <div style="float:left">
-  <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="">
-</div>
-
-
-<div style = "margin-left : 250px">
-
-  <div style = "padding-top : 50px">
-   <h2>Jack </h2>
-
-   <div style = "margin-left : 100px">
-    <h2>London, England</h2>
-  </div>
-
-  <div style = "float:right">
-   <a href="#" class="myButton1">add to wishlist</a> 
- </div>
-
-
-
-</div>
-
-</div>
-
-<div class="inside" style="margin-top : 50px">
-
-  <img class="img-news" src="/static/img/france.jpg" alt width="400" height="300">
-
-  <p class="post-date">Feb, 2015</p>
-
-
-
-  <div class="entry-content" style="margin-top : 50px; float:right">
-
-    <h3> Attraction:  London Tower</h3>    
-
-    <div style="margin-top : 50px">            
-
-      <a href="/trip_detail_main.html" class="more-link" style = "float:right">Details</a>
-
-
-
-    </div>
-
-  </div>
-
-</div>
-</article>
-
-
-
-
-
-
-
-
-
-
 
 </div>
 

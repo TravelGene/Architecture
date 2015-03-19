@@ -11,6 +11,8 @@ from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 from bson.json_util import dumps
+import operator
+
 
 
 
@@ -23,16 +25,37 @@ def showFriendList():
     friendIdList = targetUser['friend_id']
     tripDB = mongo.db['trip']
     friendObjList = []
+    tripDict = {}
+
     for friendId in friendIdList:
         friendObj = userDB.find_one({'user_id': friendId})
         tripIdList = friendObj['trip_id']
         tripObjList = []
+        print tripIdList
         for tripId in tripIdList:
             tripObj = tripDB.find_one({'trip_id':tripId})
+
+            # print tripObj
+            if bool(tripObj):
+                if bool(tripObj['destination']):
+                    if bool(tripDict) == False or tripDict.has_key(str(tripObj['destination'])) == False:
+                        tripDict[str(tripObj['destination'])] = 1
+                    else:
+                        tripDict[str(tripObj['destination'])] += 1
             tripObjList.append(tripObj)
         friendObj['trip_list'] = tripObjList
         friendObjList.append(friendObj)
 
+    sorted_tuple = sorted(tripDict.items(), key = operator.itemgetter(1))
+    tripDictSort = dict(sorted_tuple)
+
+    rank = 1
+    for tripName in tripDictSort:
+        tripDictSort[tripName] = rank
+        rank += 1
+        if rank == 4:
+            break
+    print tripDictSort
 
 
-    return render_template('friendlist.html', friendlist = friendObjList, targetUser = targetUser)
+    return render_template('friendlist.html', friendlist = friendObjList, targetUser = targetUser, tripDictSort = tripDictSort)
