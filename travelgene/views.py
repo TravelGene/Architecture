@@ -1,4 +1,5 @@
 #author zhiyuel
+import os
 from travelgene import app
 from travelgene import mongo
 
@@ -13,9 +14,6 @@ from flask.ext.pymongo import PyMongo
 from bson.json_util import dumps
 
 
-client = MongoClient('localhost', 27017)
-
-db = client['travelgene']
 
 @app.route('/')
 @app.route('/index')
