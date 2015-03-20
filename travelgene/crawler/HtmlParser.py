@@ -214,7 +214,7 @@ if __name__ == "__main__":
     root_url="http://www.tripadvisor.com/Attractions-g58528-Activities-Issaquah_Washington.html"
     root_url="http://www.tripadvisor.com/Attractions-g58578-Activities-Lynnwood_Washington.html"
     root_url="http://www.tripadvisor.com/Attractions-g58704-Activities-Renton_Washington.html"
-    root_url="http://www.tripadvisor.com/Attractions-g58555-Activities-Lakewood_Washington.html"
+    # root_url="http://www.yelp.com/c/pittsburgh/restaurants"
     visited_url={}
     visited_url[root_url]=1
 
@@ -234,15 +234,15 @@ if __name__ == "__main__":
         cur["subcat"] = "none"
         cur["url_pattern"] = root_url.strip() 
         cats.append(cur)
-        #print cats
-
+        # print cats
+        
     for cat in cats:
         #print  cat["url_pattern"]
         if cat["cat"] == "none": 
             url = cat["url_pattern"]
         else:
             url = cat["url_pattern"]%("")
-        #print url
+        print "aaa",url
         soup = dump_url(url)
         pageno = get_last_page_no(soup)
         parse_page(soup, cat)
@@ -254,5 +254,3 @@ if __name__ == "__main__":
                 soup = dump_url(url)
                 parse_page(soup, cat)
                 sys.stdout.flush()
-
-

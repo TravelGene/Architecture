@@ -1,3 +1,5 @@
+//Author: Qiankun Zhuang
+
 function loadInfo(city,id)
 {
   var xmlhttp;
@@ -13,12 +15,10 @@ xmlhttp.onreadystatechange=function()
 {
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
   {
-    console.log(xmlhttp.responseText);
     var obj = JSON.parse(xmlhttp.responseText);
     x=document.getElementsByClassName("location");
     x[0].innerHTML = obj.address;      
     x=document.getElementsByClassName("activity_name");
-    console.log(obj.name);
     x[0].innerHTML = obj.name;            
   }
 }
