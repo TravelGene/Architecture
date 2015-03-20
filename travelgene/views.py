@@ -1,4 +1,5 @@
 #author zhiyuel
+import os
 from travelgene import app
 from travelgene import mongo
 
@@ -13,9 +14,6 @@ from flask.ext.pymongo import PyMongo
 from bson.json_util import dumps
 
 
-client = MongoClient('localhost', 27017)
-
-db = client['travelgene']
 
 @app.route('/')
 @app.route('/index')
@@ -53,7 +51,8 @@ def signupp():
     firstname = request.form['First name']
     lastname = request.form['Last name']
     wholename = firstname+lastname
-
+    # after sign up it is sign in
+    session['username'] = email
     #print firstname
     #print lastname
     print wholename
@@ -61,7 +60,7 @@ def signupp():
 
     print email
 
-    db.user.insert({'user_id':'1','user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
+    mongo.db['user'].insert({'user_id':'1','user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
     # zhiyuel: jumps to where????? need to be consistent
 
     return redirect('CreateTrip.html')
@@ -69,10 +68,9 @@ def signupp():
 @app.route('/login',methods=['POST'])
 def login():
     if request.method == 'POST':
-        oh=db['user']
+        oh=mongo.db['user']
         email = request.form['email']
-        Found=oh.find({'email':email})
-        dictt=dumps(Found)
+
         Found=oh.find_one({'email':email})
         passw = Found['password']
 
