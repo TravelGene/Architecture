@@ -3,6 +3,7 @@ import os
 from travelgene import app
 from travelgene import mongo
 from flask import Flask, render_template, session, redirect, url_for, escape, request
+
 import json
 from pymongo import MongoClient
 import pymongo
@@ -13,6 +14,21 @@ from flask.ext.pymongo import PyMongo
 from bson.json_util import dumps
 import operator
 
+def getMonth(str):
+    monthMap = {}
+    monthMap['01'] = 'Jan'
+    monthMap['02'] = 'Feb'
+    monthMap['03'] = 'Mar'
+    monthMap['04'] = 'Apr'
+    monthMap['05'] = 'May'
+    monthMap['06'] = 'Jun'
+    monthMap['07'] = 'Jul'
+    monthMap['08'] = 'Aug'
+    monthMap['09'] = 'Sep'
+    monthMap['10'] = 'Oct'
+    monthMap['11'] = 'Nov'
+    monthMap['12'] = 'Dec'
+    return monthMap[str]
 
 
 
@@ -54,6 +70,13 @@ def showFriendList():
                 tripInfo = mongo.db['city'].find_one({'dest' :str(tripObj['destination'])})
                 tripObj['img_url'] = tripInfo['img_url']
                 tripObj['attraction'] = tripInfo['attraction']
+                date = str(tripObj['depart_date']).split(" ")[0]
+                dateResult = getMonth(date.split("-")[1])
+                dateResult += ', '
+                dateResult += date.split("-")[0]
+                tripObj['depart_date'] = dateResult
+                print tripObj['depart_date']
+
             tripObjList.append(tripObj)
 
         friendObj['trip_list'] = tripObjList

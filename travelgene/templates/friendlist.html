@@ -324,12 +324,13 @@
 
              {% for place in friend.trip_list %}
                 {% if loop.index == 1 %}
-                 <img class="img-news" src="{{place.img_url}}" alt width="400" height="300">
+                 <img class="img-news"  src="{{place.img_url}}" alt width="400" height="300">
+            <p class="post-date">{{place.depart_date}}</p>
                 {% endif %}
              {% endfor %}
 
 
-        <p class="post-date">Feb, 2015</p>
+
 
 
 
@@ -338,8 +339,8 @@
 
                  {% for place in friend.trip_list %}
                     {% if loop.index == 1 %}
-                    <h3 style="width:270px"> Attraction:</h3>
-                    <h2 style="width:270px"> {{ place.attraction }}</h2>
+                    <h3 style="width:260px"> Attraction:</h3>
+                    <h2 style="width:260px"> {{ place.attraction }}</h2>
                     {% endif %}
                  {% endfor %}
 
