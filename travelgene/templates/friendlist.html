@@ -202,13 +202,12 @@
 
 
 
-              <h4>NO.{{value}} : {{key}}</h4>
-              <img src="/static/img/france.jpg" alt="Chania" width="200" height="150">
+              <h4>NO.{{loop.index}} : {{value.dest}}</h4>
+              <img src="{{value.img_url}}" alt="Chania" width="200" height="150">
               <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="" width="50" height="50">-->
               <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-2.jpg" alt="" width="50" height="50">-->
               <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-3.jpg" alt="" width="50" height="50">-->
               <!--<img class="team-thumb img-circle" align="middle" src="/static/img/portrait-4.jpg" alt="" width="50" height="50">-->
-              <p> and 3 more friends have been there</p>
 
                 {% endfor %}
 
@@ -303,8 +302,12 @@
              <div class ="destination" style = "margin-left : 100px">
                  <h2>Been to : </h2>
                  {% for place in friend.trip_list %}
-                    <h2 style="margin-top : 3px">{{ place.destination }} </h2>
+                 {% if loop.index == 1 %}
+                    <h2 style="margin-top : 3px; float:left; margin-left:5px">{{ place['destination'] }} </h2>
+                 {% endif %}
                  {% endfor %}
+
+
 
             </div>
 
@@ -319,7 +322,12 @@
 
        <div class="inside" style="margin-top : 50px">
 
-        <img class="img-news" src="/static/img/france.jpg" alt width="400" height="300">
+             {% for place in friend.trip_list %}
+                {% if loop.index == 1 %}
+                 <img class="img-news" src="{{place.img_url}}" alt width="400" height="300">
+                {% endif %}
+             {% endfor %}
+
 
         <p class="post-date">Feb, 2015</p>
 
@@ -327,14 +335,18 @@
 
         <div class="entry-content" style="margin-top : 50px; float:right">
 
-          <h3> Attraction:  Eiffel Tower, louvre</h3>
+
+                 {% for place in friend.trip_list %}
+                    {% if loop.index == 1 %}
+                    <h3 style="width:270px"> Attraction:</h3>
+                    <h2 style="width:270px"> {{ place.attraction }}</h2>
+                    {% endif %}
+                 {% endfor %}
 
 
 
 
-
-
-          <div style="margin-top : 50px">
+          <div style="float:right">
 
 
             <a href="/trip_detail_main.html" class="more-link" style = "float:right">Details</a>
