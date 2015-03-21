@@ -82,9 +82,6 @@
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
-
-
-
     console.log('Welcome!  Fetching your information.... ');
         FB.api('/me/permissions', function(response) {
             console.log(JSON.stringify(response));
@@ -111,11 +108,11 @@
 //            auth_type: 'rerequest'
 //          }
 //        );
-//       FB.api('/me/taggable_friends', function(response) {
-//            test1JSON.stringify(response));
-////          document.getElementById('status').innerHTML =
-////            'Thanks for logging in, ' + response.name +":"+response.id +'!';
-//       });
+       FB.api('/me/taggable_friends', function(response) {
+            console.log(JSON.stringify(response));
+//          document.getElementById('status').innerHTML =
+//            'Thanks for logging in, ' + response.name +":"+response.id +'!';
+       });
 
        }
 

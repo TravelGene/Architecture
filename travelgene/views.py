@@ -78,7 +78,14 @@ def login():
         oh=mongo.db['user']
         email = request.form['email']
 
+        # Found=oh.find({'email':email})
+        # dictt=dumps(Found)
+        # Found=oh.find_one({'email':email})
+        # passw = Found['password']
+        print email
+        print oh
         Found=oh.find_one({'email':email})
+        print Found
         passw = Found['password']
 
         password = request.form['password']

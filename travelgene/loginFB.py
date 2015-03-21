@@ -22,16 +22,17 @@ facebook = oauth.remote_app('facebook',
     authorize_url='https://www.facebook.com/dialog/oauth',
     consumer_key=FACEBOOK_APP_ID,
     consumer_secret=FACEBOOK_APP_SECRET,
-    request_token_params={'scope': 'user_posts,user_friends,public_profile,email,user_likes'}
+    request_token_params={'scope': 'user_posts,user_friends,public_profile,email,user_likes'},
+    access_token_method="GET"
 )
 
 @app.route('/test1.html')
 def testfb():
     print 'nnnnnn'
-    return render_template('test1.html')
-    # return facebook.authorize(callback=url_for('facebook_authorized',
-    #     next=request.args.get('next') or request.referrer or None,
-    #     _external=True))
+    # return render_template('test1.html')
+    return facebook.authorize(callback=url_for('facebook_authorized',
+        next=request.args.get('next') or request.referrer or None,
+        _external=True))
 
 @app.route('/fblogin/authorized')
 @facebook.authorized_handler
@@ -48,8 +49,9 @@ def facebook_authorized(resp):
 
     print 'Logged in as id=%s name=%s redirect=%s' % \
         (me.data['id'], me.data['name'], request.args.get('next'))
-    return 'Logged in as id=%s name=%s redirect=%s' % \
-        (me.data['id'], me.data['name'], request.args.get('next'))
+
+    print request.args.get('next')
+    return redirect(url_for('home_page'))
 
 @app.route('/logout')
 def logout():
