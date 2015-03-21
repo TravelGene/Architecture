@@ -33,6 +33,7 @@ def addTrip():
 @app.route('/ActivityInfo/<city>')
 def retrieveActivity(city):
     result = mongo.db[city].distinct('a_id');
+    print result
     res = "";
     for s in result:
         res += (s+'$');

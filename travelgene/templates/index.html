@@ -92,6 +92,30 @@
           	});
 
           </script>
+
+        <!--<script type="text/javascript" charset="utf-8">-->
+              <!--window.fbAsyncInit = function() {-->
+                <!--FB.init({-->
+                  <!--appId      : '1596233553958439',-->
+                  <!--xfbml      : true,-->
+                  <!--version    : 'v2.2'-->
+                <!--});-->
+              <!--};-->
+
+              <!--(function(d, s, id){-->
+                 <!--var js, fjs = d.getElementsByTagName(s)[0];-->
+                 <!--if (d.getElementById(id)) {return;}-->
+                 <!--js = d.createElement(s); js.id = id;-->
+                 <!--js.src = "//connect.facebook.net/en_US/sdk.js";-->
+                 <!--fjs.parentNode.insertBefore(js, fjs);-->
+               <!--}(document, 'script', 'facebook-jssdk'));-->
+
+
+            <!--FB.ui({-->
+                  <!--method: 'send',-->
+                  <!--link: 'http%3A%2F%2Fwww.nytimes.com%2F2011%2F06%2F15%2Farts%2Fpeople-argue-just-to-win-scholars-assert.html'-->
+                <!--});-->
+        <!--</script>-->
       </head>
       <body>
       	<!--******************** NAVBAR ********************-->
@@ -163,12 +187,6 @@
       		</div>
       		<div class="modal-dialog-content">
       			<div id="js-sign-flow" class="sign-flow dialog" style="display: block;">
-
-      				<!-- ÆäËûÕËºÅµÇÂ½   -->
-<!--       				<div class="view view-sina" >
-      					<img id="logPart" class="log-part" src="img\LogPart.png"> 
-      				</div> -->
-
       				<!-- signin -->
 
       				<div class="view view-signin" id="view-signin" style="display: block; z-index:9999">
@@ -236,7 +254,14 @@
       		</div>
       		<div class="modal-dialog-bottom" id="signin" onclick="logfbpup()">
       			<div class ="modal-dialog-fb-bt">
-      			<span class="modal-dialog-log-fb">Login with Facebook</span><span class="modal-dialog-fbicon"  ></span>
+                    <!--@author:zhiyuel-->
+                    <!-- like and share plugin of facebook-->
+                    <!--<div class="fb-like"-->
+                      <!--data-share="true"-->
+                      <!--data-width="450"-->
+                      <!--data-show-faces="true">-->
+                <div class="fb-login-button" data-max-rows="2" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
+      			<!--<span class="modal-dialog-log-fb">Login with Facebook</span><span class="modal-dialog-fbicon"  ></span>-->
       			</div>
       		</div>
       	</div>

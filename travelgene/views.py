@@ -77,8 +77,10 @@ def login():
     if request.method == 'POST':
         oh=mongo.db['user']
         email = request.form['email']
+
         Found=oh.find_one({'email':email})
         passw = Found['password']
+
         password = request.form['password']
         #update in database
         if passw==password:

@@ -1,3 +1,5 @@
+//Author: Qiankun Zhuang
+
 
 function loadActivities(city){
     var ids;
@@ -19,6 +21,7 @@ function loadActivities(city){
            var strId = ""+(child[i].id);
            if(strId.indexOf("test")>=0){
                 child[i].text = ids[cnt];
+                console.log(child[i]);
                 shref = './Activities?'+"city="+city+'&id='+ids[cnt].split('_')[1];
                 child[i].setAttribute('link',shref);
                 child[i].setAttribute('text',ids[cnt]);
