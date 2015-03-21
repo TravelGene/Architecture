@@ -19,14 +19,12 @@ app.config['MONGO3_PASSWORD']='genetravel'
 mongo = PyMongo(app, config_prefix='MONGO3')
 oauth = OAuth()
 
+# from travelgene import *
 from travelgene import views
 from travelgene import backend
 from travelgene import activities
 from travelgene import CreateTrip
 from travelgene import friendlist
-<<<<<<< HEAD
 from travelgene import editprofile
-=======
 from travelgene import loginFB
 
->>>>>>> origin/master
