@@ -27,6 +27,11 @@ facebook = oauth.remote_app('facebook',
 )
 
 @app.route('/test1.html')
+def test1():
+    print 'test1.html'
+    return render_template('test1.html')
+
+@app.route('/fb.html')
 def testfb():
     print 'nnnnnn'
     # return render_template('test1.html')
@@ -46,6 +51,8 @@ def facebook_authorized(resp):
     session['oauth_token'] = (resp['access_token'], '')
     session['logged_in'] = True
     me = facebook.get('/me')
+    friends=facebook.get('/me/taggable_friends')
+    print friends
 
     print 'Logged in as id=%s name=%s redirect=%s' % \
         (me.data['id'], me.data['name'], request.args.get('next'))
