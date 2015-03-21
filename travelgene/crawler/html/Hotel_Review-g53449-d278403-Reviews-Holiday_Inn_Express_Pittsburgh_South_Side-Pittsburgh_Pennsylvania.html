@@ -526,7 +526,186 @@ left:auto;
 right:70px;
 }
 /* end IBX-1031 */
-/* popupLeft and popupRight alternative styling */
+.pre_dates_msg {
+margin-top: 50px ;
+color: #589442;
+}
+.pre_dates_msg .logo {
+display: inline-block;
+width: 35px;
+overflow: hidden;
+}
+.pre_dates_msg .logo img {
+width: 197px;
+height: 33px;
+}
+.pre_dates_msg .counter {
+font-size: 0;
+font-weight: bold;
+}
+.pre_dates_msg .counter .digit,
+.pre_dates_msg .counter .cur,
+.pre_dates_msg .counter .next,
+.pre_dates_msg .counter .comma {
+display: inline-block;
+width: 16px;
+height: 28px;
+font-size:28px;
+}
+.pre_dates_msg .counter .digit {
+position: relative;
+overflow: hidden;
+}
+.pre_dates_msg .counter .cur,
+.pre_dates_msg .counter .next {
+position: absolute;
+top: 0;
+left: 0;
+}
+.pre_dates_msg .counter .next {
+top: 100%;
+}
+.pre_dates_msg .counter .comma {
+width: auto;
+}
+.pre_dates_msg .avatars {
+font-size: 0;
+}
+.pre_dates_msg .circularAvWrap {
+display: inline-block;
+display: inline !ie;
+zoom: 1;
+float: none;
+}
+.pre_dates_msg.v1 p {
+width: 220px;
+margin: auto;
+font-size: 1.5em;
+}
+.pre_dates_msg.v2 p {
+margin: 0.5em 0;
+font-size: 1.0835em;
+}
+.odometer {
+display: inline-block;
+position: relative;
+font-size: 28px;
+font-weight: bold;
+line-height: 1em;
+padding: 3px 0 1px;
+}
+.odometer-auto-theme {
+padding: 0;
+}
+.odometer-inside:before {
+content: '';
+width: 100%;
+height: 6px;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+.odometer-inside:after {
+content: '';
+width: 100%;
+height: 6px;
+position: absolute;
+bottom: 0;
+left: 0;
+z-index: 1;
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.odometer .odometer-digit {
+display: inline-block;
+position: relative;
+}
+.odometer-formatting-mark {
+position: relative;
+z-index: 2;
+}
+.odometer .odometer-digit .odometer-digit-spacer,
+.odometer .odometer-digit-inner {
+padding: 3px 0 1px;
+}
+.odometer .odometer-digit .odometer-digit-spacer {
+display: inline-block;
+visibility: hidden;
+}
+.odometer .odometer-digit-inner {
+text-align: left;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+overflow: hidden;
+}
+.odometer .odometer-ribbon {
+display: block;
+}
+.odometer .odometer-ribbon-inner {
+display: block;
+-webkit-backface-visibility: hidden;
+}
+.odometer .odometer-value {
+display: block;
+-webkit-transform: translateZ(0);
+}
+.odometer .odometer-last-value {
+position: absolute;
+}
+.odometer.odometer-animating-up .odometer-ribbon-inner {
+-webkit-transition: -webkit-transform 2s;
+-moz-transition: -moz-transform 2s;
+-ms-transition: -ms-transform 2s;
+-o-transition: -o-transform 2s;
+transition: transform 2s;
+-webkit-transition-timing-function: linear;
+transition-timing-function: linear;
+}
+.odometer.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+-webkit-transform: translateY(-100%);
+-moz-transform: translateY(-100%);
+-ms-transform: translateY(-100%);
+-o-transform: translateY(-100%);
+transform: translateY(-100%);
+}
+.odometer.odometer-animating-down .odometer-ribbon-inner {
+-webkit-transform: translateY(-100%);
+-moz-transform: translateY(-100%);
+-ms-transform: translateY(-100%);
+-o-transform: translateY(-100%);
+transform: translateY(-100%);
+}
+.odometer.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+-webkit-transition: -webkit-transform 2s;
+-moz-transition: -moz-transform 2s;
+-ms-transition: -ms-transform 2s;
+-o-transition: -o-transform 2s;
+transition: transform 2s;
+-webkit-transform: translateY(0);
+-moz-transform: translateY(0);
+-ms-transform: translateY(0);
+-o-transform: translateY(0);
+transform: translateY(0);
+-webkit-transition-timing-function: linear;
+transition-timing-function: linear;
+}/* popupLeft and popupRight alternative styling */
 #SAVES .popupLeft .savesContainer,
 #SAVES .popupRight .savesContainer {
 position: relative;
@@ -1324,6 +1503,19 @@ border: none;
 </div>
 <div id="USER_PREFS" class="prfs">
 <ul>
+<li class="masthead_war_cta_container">
+<a class="masthead_war_cta_d3" href="https://www.tripadvisor.com/UserReview-e__2F__Hotel__5F__Review__2D__g53449__2D__d278403__2D__Reviews__2D__Holiday__5F__Inn__5F__Express__5F__Pittsburgh__5F__South__5F__Side__2D__Pittsburgh__5F__Pennsylvania__2E__html" onclick="ta.trackEventOnPage('MastheadWarCta', 'Click_39389', 'OpenFlyout', 0, false); ta.util.cookie.setPIDCookie(39389); $$('.masthead_war_flyout').toggleClass('hidden'); var header = $$('.brandArea')[0]; $$('.masthead_war_flyout_backdrop').setStyle('top', header.getOffsets().y+header.getHeight()); return false;">
+Write a Review<div class="masthead_war_cta_sprite sprite-pen-paper-blue"></div>
+</a>
+<div class="masthead_war_flyout hidden">
+<div class="masthead_war_flyout_backdrop" onclick="$$('.masthead_war_flyout').toggleClass('hidden');"></div>
+<div class="masthead_war_flyout_content">
+<div class="masthead_war_flyout_close" onclick="$$('.masthead_war_flyout').toggleClass('hidden');">&times;</div>
+<a class="border-padding" href="https://www.tripadvisor.com/UserReviewEdit-g53449-d278403-e__2F__Hotel__5F__Review__2D__g53449__2D__d278403__2D__Reviews__2D__Holiday__5F__Inn__5F__Express__5F__Pittsburgh__5F__South__5F__Side__2D__Pittsburgh__5F__Pennsylvania__2E__html-Holiday_Inn_Express_Pittsburgh_South_Side-Pittsburgh_Pennsylvania.html" onclick="ta.setEvtCookie('MastheadWarCta', 'Click_39389', 'Attached', 0, this.href);">Review Holiday Inn Express Pittsburgh South Side<div class="masthead_war_flyout_sprite sprite-right-arrow-blue"></div></a>
+<a href="https://www.tripadvisor.com/UserReview-e__2F__Hotel__5F__Review__2D__g53449__2D__d278403__2D__Reviews__2D__Holiday__5F__Inn__5F__Express__5F__Pittsburgh__5F__South__5F__Side__2D__Pittsburgh__5F__Pennsylvania__2E__html" onclick="ta.setEvtCookie('MastheadWarCta', 'Click_39389', 'Unattached', 0, '/UserReviewRedesign');">Review another place<div class="masthead_war_flyout_sprite sprite-right-arrow-blue"></div></a>
+</div>
+</div>
+</li>
 <li id="register" onclick="ta.setEvtCookie('TopNav', 'open', 'Join', 0, '/Register');ta.util.cookie.setPIDCookie(427);ta.store('registration.ga_module', 'Masthead');  return ta.registration.register({product: 'MASTHEAD', action: 'SIGNUP', data: function () { return { pid: 427 }; } } ); "><span class="link">JOIN</span></li>
 <li class="login" onclick="ta.setEvtCookie('TopNav', 'open', 'Login', 0, '/Register');ta.util.cookie.setPIDCookie(429);ta.store('registration.ga_module', 'Masthead'); return ta.registration.register({product: 'MASTHEAD', data: function () { return { pid: 429 }; } } ); "><span class="link">LOG IN</span></li>
 <li>
@@ -1647,48 +1839,6 @@ Best of 2015
 </li>
 </ul>
 </li>
-<li class="tabItem altItem dropDown warLink">
-<span class="tabLink arwLink">
-<span class="arrow_text">
-Write a Review <div id="WAR_NOTIFICATION_FLAG" class="lsJewelCounter">
-1+
-</div>
-</span>
-<img class="arrow_dropdown_wht sprite-arrow_dropdown_wht_refresh" src="http://e2.tacdn.com/img2/x.gif" alt="" width="9" height="7">
-</span>
-<div class="subNav">
-<div id="WAR_TO_DO_LIST">
-<div id="WAR_CURRENT_POI" class="warCurrentPOI">
-<div class="warLoc subItem " onclick="ta.setEvtCookie('WAR','WAR_PROJECT_GLOBAL_NAV_DROP_DOWN', 'CURRENT_POI', '39392', 'https://www.tripadvisor.com/UserReviewEdit-g53449-d278403-e__2F__Hotel__5F__Review__2D__g53449__2D__d278403__2D__Reviews__2D__Holiday__5F__Inn__5F__Express__5F__Pittsburgh__5F__South__5F__Side__2D__Pittsburgh__5F__Pennsylvania__2E__html-Holiday_Inn_Express_Pittsburgh_South_Side-Pittsburgh_Pennsylvania.html');ta.util.cookie.setPIDCookie(39392);location.href='https://www.tripadvisor.com/UserReviewEdit-g53449-d278403-e__2F__Hotel__5F__Review__2D__g53449__2D__d278403__2D__Reviews__2D__Holiday__5F__Inn__5F__Express__5F__Pittsburgh__5F__South__5F__Side__2D__Pittsburgh__5F__Pennsylvania__2E__html-Holiday_Inn_Express_Pittsburgh_South_Side-Pittsburgh_Pennsylvania.html'">
-<div class="warLocImg">
-<div class="sizedThumb  " style="height: 39px; width: 40px; ">
-<img src="http://media-cdn.tripadvisor.com/media/ProviderThumbnails/dirs/e3/d3/e3d38fbd92b345d25c613507079755fb1.jpg" class="photo_image" style="height: 39px; width: 60px; margin-left: -10px;" alt="Holiday Inn Express Pittsburgh South Side" width="40" height="39"/>
-</div>
-</div>
-<div class="warLocDetail">
-<div class="warLocName">Holiday Inn Express Pittsburgh South Side</div>
-<span>Write a Review</span> </div>
-</div>
-</div>
-<div id="WAR_ANOTHER_POI" class="warAnotherPOI">
-<div class="warLoc subItem" onclick="ta.setEvtCookie('WAR', 'WAR_PROJECT_GLOBAL_NAV_DROP_DOWN', 'PICK_ANOTHER_POI', '39392', '/UserReviewRedesign');ta.util.cookie.setPIDCookie(39392);location.href='https://www.tripadvisor.com/UserReview-e__2F__Hotel__5F__Review__2D__g53449__2D__d278403__2D__Reviews__2D__Holiday__5F__Inn__5F__Express__5F__Pittsburgh__5F__South__5F__Side__2D__Pittsburgh__5F__Pennsylvania__2E__html'">
-<div class="warLocImg">
-<div class="nophoto thumbNail">
-<img id='lazyload_1347943086_0' class='lodge' src='http://e2.tacdn.com/img2/x.gif'/>
-</div>
-</div>
-<div class="warLocDetail">
-<span>
-Review another place </span>
-</div>
-</div>
-</div>
-<div id="WAR_TODO_LOADING">
-<img src="http://e2.tacdn.com/img2/spinner.gif"/>
-</div>
-</div>
-</div>
-</li>
 </ul> </div>
 </div> </div>
 <div id="SECONDARY_NAV_BAR" class="secondaryNavBar ">
@@ -1778,7 +1928,7 @@ Holiday Inn Express Pittsburgh South Side
 <div class="fl">
 <script>
 <!--
-function escramble_111(){
+function escramble_49(){
 var a,b,c
 a='877'
 b='-5'
@@ -1787,7 +1937,7 @@ b+='095'
 c='9'
 document.write(a+c+b)
 }
-escramble_111()
+escramble_49()
 //-->
 </script>
 </div>
@@ -1852,7 +2002,7 @@ Special Offer
 <div id="MAIN" class="Hotel_Review
              prodp13n_jfy_beta_ribbon_overflow_visible
         " rel="v:itemreviewed">
-<div id="BODYCON" class="col bodLHN poolB adjust_padding new_meta_chevron new_meta_chevron_v2" typeof="v:Organization">
+<div id="BODYCON" class="col bodLHN poolA adjust_padding new_meta_chevron new_meta_chevron_v2" typeof="v:Organization">
 <div>
 </div>
 <div class=" hr_top_block content_block has_heading">
@@ -1969,22 +2119,9 @@ Check Out
 <div id="CHECK_RATE" class="submit emboss_wht id_278403 custom_area_QC_Inline no_cpu cmAVTest win_test_3" onclick="ta.widgets.calendar.trackCRButtonClick(); ta.store('meta.isFromShowPriceButton', true); ta.commerce.meta.clickMetaShowPrices(event);">
 Show Prices
 </div>
-<div id="PROVIDER_BUTTONS" class="no_cpu">
-<div id="WE_SEARCH_MSG">Compare best prices from top travel sites</div>
-<div id="BUTTON_ROW">
-<div class="wrap">
-<span class="provider_btn_gry first" onclick="ta.commerce.meta.providerButtonClicked(1); ta.call('ta.overlays.Factory.loadDatePicker', event, ta.id('date_picker_in_278403_mnm'), '278403', '_mnm', ta.widgets.calendar.handleNewDates ); ta.widgets.calendar.launchInlineMeta(event);">
-<img class="provider_logo" src='http://e2.tacdn.com/img2/branding/hotels/booking.gif' alt="Booking.com">
-</span>
-<span class="provider_btn_gry" onclick="ta.commerce.meta.providerButtonClicked(2); ta.call('ta.overlays.Factory.loadDatePicker', event, ta.id('date_picker_in_278403_mnm'), '278403', '_mnm', ta.widgets.calendar.handleNewDates ); ta.widgets.calendar.launchInlineMeta(event);">
-<img class="provider_logo" src='http://e2.tacdn.com/img2/branding/hotels/Travelocity-v1.gif' alt="Travelocity">
-</span>
-<span class="provider_btn_gry" onclick="ta.commerce.meta.providerButtonClicked(3); ta.call('ta.overlays.Factory.loadDatePicker', event, ta.id('date_picker_in_278403_mnm'), '278403', '_mnm', ta.widgets.calendar.handleNewDates ); ta.widgets.calendar.launchInlineMeta(event);">
-<img class="provider_logo" src='http://e2.tacdn.com/img2/branding/hotels/HIExpress.com-v2.gif' alt="HIExpress.com">
-</span>
-</div>
-<div id="EXTRA_PROVIDER_COUNT" onclick="ta.commerce.meta.moreSitesLinkClicked(8);ta.call('ta.overlays.Factory.loadDatePicker', event, ta.id('date_picker_in_278403_mnm'), '278403', '_mnm', ta.widgets.calendar.handleNewDates );">and 8 more sites!</div> </div>
-</div>
+<div class="pre_dates_msg v1">
+<span class="logo"><img src="http://e2.tacdn.com/img2/branding/trip_logo.svg" alt=""></span>
+<p>We search <strong>over 220 sites</strong> to find you the best deal and help you save.</p> </div>
 </div> </div> </div> </fieldset>
 </form>
 <div id="errbox" class="js_error"></div>
@@ -2020,7 +2157,7 @@ Show Prices
 <span class="rate sprite-rating_ss rating_ss">
 <img class="sprite-rating_ss_fill rating_ss_fill ss40" src="http://e2.tacdn.com/img2/x.gif" alt="4 of 5 stars">
 </span>
-<span class="relativeDate review_date" title='March 17, 2015'>reviewed 2 days ago </span> </div>
+<span class="relativeDate review_date" title='March 17, 2015'>reviewed 4 days ago </span> </div>
 <div class="recentReview_meta_member">
 <span id="recent-UID_E41496BF384A481A266C90C54E9F4EA4" class="memberOverlayLink" onmouseover="ta.call('ta.overlays.Factory.memberOverlayBelow', event, this, 's3 dg rgba_gry update2012', -18, 0);">
 Shasta W
@@ -2116,7 +2253,7 @@ Shasta W
 <!--etk-->
 <div id="REVIEWS" class="deckB review_collection ">
 <div class="ratings_and_types concepts_and_filters">
-<a href="https://www.tripadvisor.com/UserReviewEdit-g53449-d278403-e__2F__Hotel__5F__Review__2D__g53449__2D__d278403__2D__Reviews__2D__Holiday__5F__Inn__5F__Express__5F__Pittsburgh__5F__South__5F__Side__2D__Pittsburgh__5F__Pennsylvania__2E__html-Holiday_Inn_Express_Pittsburgh_South_Side-Pittsburgh_Pennsylvania.html" class="rndBtn rndBtnGreen rndBtnLarge button_war" onclick="ta.util.cookie.setPIDCookie(      4190
+<a href="https://www.tripadvisor.com/UserReview-g53449-d278403-e__2F__Hotel__5F__Review__2D__g53449__2D__d278403__2D__Reviews__2D__Holiday__5F__Inn__5F__Express__5F__Pittsburgh__5F__South__5F__Side__2D__Pittsburgh__5F__Pennsylvania__2E__html-Holiday_Inn_Express_Pittsburgh_South_Side-Pittsburgh_Pennsylvania.html" class="rndBtn rndBtnGreen rndBtnLarge button_war" onclick="ta.util.cookie.setPIDCookie(      4190
   ); ta.setEvtCookie('Reviews_Summary', 'write_review', '', 0, '/UserReviewEdit') ">
 Write a Review
 </a>
@@ -2498,7 +2635,7 @@ Any </option>
 <div id="UID_E41496BF384A481A266C90C54E9F4EA4-SRC_260127066" class="memberOverlayLink" onmouseover="ta.trackEventOnPage('Reviews','show_reviewer_info_window','user_name_photo'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, (new Element(this)).getElement('.avatar')&&(new Element(this)).getElement('.avatar').getStyle('border-radius')=='100%'?-10:0);">
 <div class="avatar profile_E41496BF384A481A266C90C54E9F4EA4 ">
 <a onclick=>
-<img id='lazyload_1347943086_1' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:E41496BF384A481A266C90C54E9F4EA4' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_0' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:E41496BF384A481A266C90C54E9F4EA4' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -2512,14 +2649,14 @@ Westover, Pennsylvania
 <div class="memberBadging">
 <div id="UID_E41496BF384A481A266C90C54E9F4EA4-CONT" class="totalReviewBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','review_count'); ta.util.cookie.setPIDCookie('15984'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -10, -50);">
 <div class="reviewerTitle">Contributor</div>
-<img id='lazyload_1347943086_2' height='24' alt='20 reviews' width='25' class='icon lazy badge_contributor sprite-badge_contributor' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_1' height='24' alt='20 reviews' width='25' class='icon lazy badge_contributor sprite-badge_contributor' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">20 reviews</span>
 <div class="contributionReviewBadge">
-<img id='lazyload_1347943086_3' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_2' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">5 hotel reviews</span>
 </div> </div>
 <div id="UID_E41496BF384A481A266C90C54E9F4EA4-HV" class="helpfulVotesBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','helpful_count'); ta.util.cookie.setPIDCookie('15983'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -22, -50);">
-<img id='lazyload_1347943086_4' height='24' alt='5 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_3' height='24' alt='5 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">5 helpful votes</span>
 </div>
 </div>
@@ -2534,7 +2671,7 @@ Westover, Pennsylvania
 <span class="rate sprite-rating_s rating_s">
 <img class="sprite-rating_s_fill rating_s_fill s40" src="http://e2.tacdn.com/img2/x.gif" alt="4 of 5 stars">
 </span>
-<span class="ratingDate relativeDate" title='March 17, 2015'>Reviewed 2 days ago
+<span class="ratingDate relativeDate" title='March 17, 2015'>Reviewed 4 days ago
 <span class="new">NEW</span>
 </span>
 </div>
@@ -2556,7 +2693,7 @@ More&nbsp; </span>
 <div class="wrap reportProblem">
 <span id="ReportIAP_260127066" class="problem collapsed taLnk" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'USERREVIEW', contentId: '260127066'})" onmouseover="ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.onmouseover=null">
 <span class="hidden ulBlueLinks">Problem with this review?</span>
-<img id='lazyload_1347943086_5' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_4' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
 </span>
 </div> </div>
 </div>
@@ -2571,7 +2708,7 @@ More&nbsp; </span>
 <div id="UID_FD087346AEF0CDFA95EB0E4A17394C7F-SRC_260001046" class="memberOverlayLink" onmouseover="ta.trackEventOnPage('Reviews','show_reviewer_info_window','user_name_photo'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, (new Element(this)).getElement('.avatar')&&(new Element(this)).getElement('.avatar').getStyle('border-radius')=='100%'?-10:0);">
 <div class="avatar profile_FD087346AEF0CDFA95EB0E4A17394C7F ">
 <a onclick=>
-<img id='lazyload_1347943086_6' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:FD087346AEF0CDFA95EB0E4A17394C7F' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_5' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:FD087346AEF0CDFA95EB0E4A17394C7F' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -2585,14 +2722,14 @@ Somewhere, USA
 <div class="memberBadging">
 <div id="UID_FD087346AEF0CDFA95EB0E4A17394C7F-CONT" class="totalReviewBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','review_count'); ta.util.cookie.setPIDCookie('15984'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -10, -50);">
 <div class="reviewerTitle">Top Contributor</div>
-<img id='lazyload_1347943086_7' height='24' alt='102 reviews' width='25' class='icon lazy badge_topcontributor sprite-badge_topcontributor' src='http://e2.tacdn.com/img2/x.gif'/>
-<span class="badgeText">102 reviews</span>
+<img id='lazyload_95398141_6' height='24' alt='103 reviews' width='25' class='icon lazy badge_topcontributor sprite-badge_topcontributor' src='http://e2.tacdn.com/img2/x.gif'/>
+<span class="badgeText">103 reviews</span>
 <div class="contributionReviewBadge">
-<img id='lazyload_1347943086_8' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_7' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">7 hotel reviews</span>
 </div> </div>
 <div id="UID_FD087346AEF0CDFA95EB0E4A17394C7F-HV" class="helpfulVotesBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','helpful_count'); ta.util.cookie.setPIDCookie('15983'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -22, -50);">
-<img id='lazyload_1347943086_9' height='24' alt='55 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_8' height='24' alt='55 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">55 helpful votes</span>
 </div>
 </div>
@@ -2607,7 +2744,7 @@ Somewhere, USA
 <span class="rate sprite-rating_s rating_s">
 <img class="sprite-rating_s_fill rating_s_fill s30" src="http://e2.tacdn.com/img2/x.gif" alt="3 of 5 stars">
 </span>
-<span class="ratingDate relativeDate" title='March 17, 2015'>Reviewed 2 days ago
+<span class="ratingDate relativeDate" title='March 17, 2015'>Reviewed 4 days ago
 <span class="new">NEW</span>
 </span>
 </div>
@@ -2629,7 +2766,7 @@ More&nbsp; </span>
 <div class="wrap reportProblem">
 <span id="ReportIAP_260001046" class="problem collapsed taLnk" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'USERREVIEW', contentId: '260001046'})" onmouseover="ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.onmouseover=null">
 <span class="hidden ulBlueLinks">Problem with this review?</span>
-<img id='lazyload_1347943086_10' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_9' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
 </span>
 </div> </div>
 </div>
@@ -2644,7 +2781,7 @@ More&nbsp; </span>
 <div id="UID_1EAB3D40163D4748EC36FABC7CC451E5-SRC_258915545" class="memberOverlayLink" onmouseover="ta.trackEventOnPage('Reviews','show_reviewer_info_window','user_name_photo'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, (new Element(this)).getElement('.avatar')&&(new Element(this)).getElement('.avatar').getStyle('border-radius')=='100%'?-10:0);">
 <div class="avatar profile_1EAB3D40163D4748EC36FABC7CC451E5 ">
 <a onclick=>
-<img id='lazyload_1347943086_11' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:1EAB3D40163D4748EC36FABC7CC451E5' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_10' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:1EAB3D40163D4748EC36FABC7CC451E5' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -2658,14 +2795,14 @@ Long Island, New York
 <div class="memberBadging">
 <div id="UID_1EAB3D40163D4748EC36FABC7CC451E5-CONT" class="totalReviewBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','review_count'); ta.util.cookie.setPIDCookie('15984'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -10, -50);">
 <div class="reviewerTitle">Senior Contributor</div>
-<img id='lazyload_1347943086_12' height='24' alt='40 reviews' width='25' class='icon lazy badge_srcontributor sprite-badge_srcontributor' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_11' height='24' alt='40 reviews' width='25' class='icon lazy badge_srcontributor sprite-badge_srcontributor' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">40 reviews</span>
 <div class="contributionReviewBadge">
-<img id='lazyload_1347943086_13' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_12' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">8 hotel reviews</span>
 </div> </div>
 <div id="UID_1EAB3D40163D4748EC36FABC7CC451E5-HV" class="helpfulVotesBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','helpful_count'); ta.util.cookie.setPIDCookie('15983'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -22, -50);">
-<img id='lazyload_1347943086_14' height='24' alt='20 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_13' height='24' alt='20 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">20 helpful votes</span>
 </div>
 </div>
@@ -2701,7 +2838,7 @@ More&nbsp; </span>
 <div class="wrap reportProblem">
 <span id="ReportIAP_258915545" class="problem collapsed taLnk" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'USERREVIEW', contentId: '258915545'})" onmouseover="ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.onmouseover=null">
 <span class="hidden ulBlueLinks">Problem with this review?</span>
-<img id='lazyload_1347943086_15' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_14' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
 </span>
 </div> </div>
 </div>
@@ -2721,7 +2858,7 @@ More&nbsp; </span>
 <div id="UID_CA819DFB4E3986D82C0364F370D91FF7-SRC_258507393" class="memberOverlayLink" onmouseover="ta.trackEventOnPage('Reviews','show_reviewer_info_window','user_name_photo'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, (new Element(this)).getElement('.avatar')&&(new Element(this)).getElement('.avatar').getStyle('border-radius')=='100%'?-10:0);">
 <div class="avatar profile_CA819DFB4E3986D82C0364F370D91FF7 ">
 <a onclick=>
-<img id='lazyload_1347943086_16' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:CA819DFB4E3986D82C0364F370D91FF7' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_15' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:CA819DFB4E3986D82C0364F370D91FF7' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -2769,7 +2906,7 @@ More&nbsp; </span>
 <div class="wrap reportProblem">
 <span id="ReportIAP_258507393" class="problem collapsed taLnk" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'USERREVIEW', contentId: '258507393'})" onmouseover="ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.onmouseover=null">
 <span class="hidden ulBlueLinks">Problem with this review?</span>
-<img id='lazyload_1347943086_17' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_16' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
 </span>
 </div> </div>
 <div class="mgrRspnInline">
@@ -2799,7 +2936,7 @@ More&nbsp; </span>
 <div id="UID_B50A9C6A70ABBAB4F5FB208D7CE42B09-SRC_255345570" class="memberOverlayLink" onmouseover="ta.trackEventOnPage('Reviews','show_reviewer_info_window','user_name_photo'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, (new Element(this)).getElement('.avatar')&&(new Element(this)).getElement('.avatar').getStyle('border-radius')=='100%'?-10:0);">
 <div class="avatar profile_B50A9C6A70ABBAB4F5FB208D7CE42B09 ">
 <a onclick=>
-<img id='lazyload_1347943086_18' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:B50A9C6A70ABBAB4F5FB208D7CE42B09' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_17' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:B50A9C6A70ABBAB4F5FB208D7CE42B09' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -2813,14 +2950,14 @@ Oregon, Ohio
 <div class="memberBadging">
 <div id="UID_B50A9C6A70ABBAB4F5FB208D7CE42B09-CONT" class="totalReviewBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','review_count'); ta.util.cookie.setPIDCookie('15984'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -10, -50);">
 <div class="reviewerTitle">Senior Reviewer</div>
-<img id='lazyload_1347943086_19' height='24' alt='9 reviews' width='25' class='icon lazy badge_srreviewer sprite-badge_srreviewer' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_18' height='24' alt='9 reviews' width='25' class='icon lazy badge_srreviewer sprite-badge_srreviewer' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">9 reviews</span>
 <div class="contributionReviewBadge">
-<img id='lazyload_1347943086_20' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_19' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">4 hotel reviews</span>
 </div> </div>
 <div id="UID_B50A9C6A70ABBAB4F5FB208D7CE42B09-HV" class="helpfulVotesBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','helpful_count'); ta.util.cookie.setPIDCookie('15983'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -22, -50);">
-<img id='lazyload_1347943086_21' height='24' alt='4 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_20' height='24' alt='4 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">4 helpful votes</span>
 </div>
 </div>
@@ -2857,7 +2994,7 @@ More&nbsp; </span>
 <div class="wrap reportProblem">
 <span id="ReportIAP_255345570" class="problem collapsed taLnk" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'USERREVIEW', contentId: '255345570'})" onmouseover="ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.onmouseover=null">
 <span class="hidden ulBlueLinks">Problem with this review?</span>
-<img id='lazyload_1347943086_22' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_21' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
 </span>
 </div> </div>
 </div>
@@ -2872,7 +3009,7 @@ More&nbsp; </span>
 <div id="UID_B59A04CCB35D67AEEF986471795B5E6D-SRC_255336963" class="memberOverlayLink" onmouseover="ta.trackEventOnPage('Reviews','show_reviewer_info_window','user_name_photo'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, (new Element(this)).getElement('.avatar')&&(new Element(this)).getElement('.avatar').getStyle('border-radius')=='100%'?-10:0);">
 <div class="avatar profile_B59A04CCB35D67AEEF986471795B5E6D ">
 <a onclick=>
-<img id='lazyload_1347943086_23' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:B59A04CCB35D67AEEF986471795B5E6D' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_22' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:B59A04CCB35D67AEEF986471795B5E6D' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -2886,14 +3023,14 @@ Raleigh, North Carolina
 <div class="memberBadging">
 <div id="UID_B59A04CCB35D67AEEF986471795B5E6D-CONT" class="totalReviewBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','review_count'); ta.util.cookie.setPIDCookie('15984'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -10, -50);">
 <div class="reviewerTitle">Senior Reviewer</div>
-<img id='lazyload_1347943086_24' height='24' alt='10 reviews' width='25' class='icon lazy badge_srreviewer sprite-badge_srreviewer' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_23' height='24' alt='10 reviews' width='25' class='icon lazy badge_srreviewer sprite-badge_srreviewer' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">10 reviews</span>
 <div class="contributionReviewBadge">
-<img id='lazyload_1347943086_25' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_24' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">3 hotel reviews</span>
 </div> </div>
 <div id="UID_B59A04CCB35D67AEEF986471795B5E6D-HV" class="helpfulVotesBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','helpful_count'); ta.util.cookie.setPIDCookie('15983'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -22, -50);">
-<img id='lazyload_1347943086_26' height='24' alt='3 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_25' height='24' alt='3 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">3 helpful votes</span>
 </div>
 </div>
@@ -2924,7 +3061,7 @@ I was there with a Bantam hockey team for a tournament in Pittsburgh. The hotel 
 <div class="wrap reportProblem">
 <span id="ReportIAP_255336963" class="problem collapsed taLnk" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'USERREVIEW', contentId: '255336963'})" onmouseover="ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.onmouseover=null">
 <span class="hidden ulBlueLinks">Problem with this review?</span>
-<img id='lazyload_1347943086_27' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_26' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
 </span>
 </div> </div>
 </div>
@@ -2939,7 +3076,7 @@ I was there with a Bantam hockey team for a tournament in Pittsburgh. The hotel 
 <div id="UID_1C82F7E4483092BBB80826ADB1F13DC5-SRC_255092984" class="memberOverlayLink" onmouseover="ta.trackEventOnPage('Reviews','show_reviewer_info_window','user_name_photo'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, (new Element(this)).getElement('.avatar')&&(new Element(this)).getElement('.avatar').getStyle('border-radius')=='100%'?-10:0);">
 <div class="avatar profile_1C82F7E4483092BBB80826ADB1F13DC5 ">
 <a onclick=>
-<img id='lazyload_1347943086_28' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:1C82F7E4483092BBB80826ADB1F13DC5' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_27' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:1C82F7E4483092BBB80826ADB1F13DC5' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -2953,14 +3090,14 @@ Meadville, PA
 <div class="memberBadging">
 <div id="UID_1C82F7E4483092BBB80826ADB1F13DC5-CONT" class="totalReviewBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','review_count'); ta.util.cookie.setPIDCookie('15984'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -10, -50);">
 <div class="reviewerTitle">Top Contributor</div>
-<img id='lazyload_1347943086_29' height='24' alt='66 reviews' width='25' class='icon lazy badge_topcontributor sprite-badge_topcontributor' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_28' height='24' alt='66 reviews' width='25' class='icon lazy badge_topcontributor sprite-badge_topcontributor' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">66 reviews</span>
 <div class="contributionReviewBadge">
-<img id='lazyload_1347943086_30' height='24' alt='' width='25' class='icon lazy badge_hotels_2nd sprite-badge_hotels_2nd' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_29' height='24' alt='' width='25' class='icon lazy badge_hotels_2nd sprite-badge_hotels_2nd' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">23 hotel reviews</span>
 </div> </div>
 <div id="UID_1C82F7E4483092BBB80826ADB1F13DC5-HV" class="helpfulVotesBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','helpful_count'); ta.util.cookie.setPIDCookie('15983'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -22, -50);">
-<img id='lazyload_1347943086_31' height='24' alt='32 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_30' height='24' alt='32 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">32 helpful votes</span>
 </div>
 </div>
@@ -2996,7 +3133,7 @@ More&nbsp; </span>
 <div class="wrap reportProblem">
 <span id="ReportIAP_255092984" class="problem collapsed taLnk" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'USERREVIEW', contentId: '255092984'})" onmouseover="ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.onmouseover=null">
 <span class="hidden ulBlueLinks">Problem with this review?</span>
-<img id='lazyload_1347943086_32' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_31' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
 </span>
 </div> </div>
 </div>
@@ -3011,7 +3148,7 @@ More&nbsp; </span>
 <div id="UID_22700DB64DDC4D20C4D2BC3A3967AB38-SRC_253920897" class="memberOverlayLink" onmouseover="ta.trackEventOnPage('Reviews','show_reviewer_info_window','user_name_photo'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, (new Element(this)).getElement('.avatar')&&(new Element(this)).getElement('.avatar').getStyle('border-radius')=='100%'?-10:0);">
 <div class="avatar profile_22700DB64DDC4D20C4D2BC3A3967AB38 ">
 <a onclick=>
-<img id='lazyload_1347943086_33' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:22700DB64DDC4D20C4D2BC3A3967AB38' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_32' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:22700DB64DDC4D20C4D2BC3A3967AB38' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -3037,7 +3174,7 @@ More&nbsp; </span>
 <span class="rate sprite-rating_s rating_s">
 <img class="sprite-rating_s_fill rating_s_fill s50" src="http://e2.tacdn.com/img2/x.gif" alt="5 of 5 stars">
 </span>
-<span class="ratingDate relativeDate" title='February 13, 2015'>Reviewed 4 weeks ago
+<span class="ratingDate">Reviewed February 13, 2015
 </span>
 </div>
 <div class="entry">
@@ -3053,7 +3190,7 @@ The service was far better than I expected. Everyone was great, but Jay was abov
 <div class="wrap reportProblem">
 <span id="ReportIAP_253920897" class="problem collapsed taLnk" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'USERREVIEW', contentId: '253920897'})" onmouseover="ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.onmouseover=null">
 <span class="hidden ulBlueLinks">Problem with this review?</span>
-<img id='lazyload_1347943086_34' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_33' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
 </span>
 </div> </div>
 </div>
@@ -3068,7 +3205,7 @@ The service was far better than I expected. Everyone was great, but Jay was abov
 <div id="UID_939FCFD5DA3E16932D4AC72296496157-SRC_253033540" class="memberOverlayLink" onmouseover="ta.trackEventOnPage('Reviews','show_reviewer_info_window','user_name_photo'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, (new Element(this)).getElement('.avatar')&&(new Element(this)).getElement('.avatar').getStyle('border-radius')=='100%'?-10:0);">
 <div class="avatar profile_939FCFD5DA3E16932D4AC72296496157 ">
 <a onclick=>
-<img id='lazyload_1347943086_35' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:939FCFD5DA3E16932D4AC72296496157' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_34' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:939FCFD5DA3E16932D4AC72296496157' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -3084,7 +3221,7 @@ Wheeling, West Virginia
 <span class="badgeText">2 reviews</span>
 </div>
 <div id="UID_939FCFD5DA3E16932D4AC72296496157-HV" class="helpfulVotesBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','helpful_count'); ta.util.cookie.setPIDCookie('15983'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -22, -50);">
-<img id='lazyload_1347943086_36' height='24' alt='1 helpful vote' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_35' height='24' alt='1 helpful vote' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">1 helpful vote</span>
 </div>
 </div>
@@ -3117,7 +3254,7 @@ Everyone was very nice to us. Ms. Betty at the desk was very nice and helpful an
 <div class="wrap reportProblem">
 <span id="ReportIAP_253033540" class="problem collapsed taLnk" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'USERREVIEW', contentId: '253033540'})" onmouseover="ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.onmouseover=null">
 <span class="hidden ulBlueLinks">Problem with this review?</span>
-<img id='lazyload_1347943086_37' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_36' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
 </span>
 </div> </div>
 </div>
@@ -3132,7 +3269,7 @@ Everyone was very nice to us. Ms. Betty at the desk was very nice and helpful an
 <div id="UID_72D2CA7B9665FC03F2622D3363F89946-SRC_252827178" class="memberOverlayLink" onmouseover="ta.trackEventOnPage('Reviews','show_reviewer_info_window','user_name_photo'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, (new Element(this)).getElement('.avatar')&&(new Element(this)).getElement('.avatar').getStyle('border-radius')=='100%'?-10:0);">
 <div class="avatar profile_72D2CA7B9665FC03F2622D3363F89946 ">
 <a onclick=>
-<img id='lazyload_1347943086_38' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:72D2CA7B9665FC03F2622D3363F89946' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_37' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:72D2CA7B9665FC03F2622D3363F89946' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -3145,14 +3282,14 @@ Everyone was very nice to us. Ms. Betty at the desk was very nice and helpful an
 <div class="memberBadging">
 <div id="UID_72D2CA7B9665FC03F2622D3363F89946-CONT" class="totalReviewBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','review_count'); ta.util.cookie.setPIDCookie('15984'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -10, -50);">
 <div class="reviewerTitle">Reviewer</div>
-<img id='lazyload_1347943086_39' height='24' alt='4 reviews' width='25' class='icon lazy badge_reviewer sprite-badge_reviewer' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_38' height='24' alt='4 reviews' width='25' class='icon lazy badge_reviewer sprite-badge_reviewer' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">4 reviews</span>
 <div class="contributionReviewBadge">
-<img id='lazyload_1347943086_40' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_39' height='24' alt='' width='25' class='icon lazy badge_hotels_1st sprite-badge_hotels_1st' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">4 hotel reviews</span>
 </div> </div>
 <div id="UID_72D2CA7B9665FC03F2622D3363F89946-HV" class="helpfulVotesBadge badge no_cpu" onclick="ta.trackEventOnPage('Reviews','show_reviewer_info_window','helpful_count'); ta.util.cookie.setPIDCookie('15983'); ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', -22, -50);">
-<img id='lazyload_1347943086_41' height='24' alt='13 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_40' height='24' alt='13 helpful votes' width='25' class='icon lazy badge_helpful sprite-badge_helpful' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="badgeText">13 helpful votes</span>
 </div>
 </div>
@@ -3191,7 +3328,7 @@ More&nbsp; </span>
 <div class="wrap reportProblem">
 <span id="ReportIAP_252827178" class="problem collapsed taLnk" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'USERREVIEW', contentId: '252827178'})" onmouseover="ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.onmouseover=null">
 <span class="hidden ulBlueLinks">Problem with this review?</span>
-<img id='lazyload_1347943086_42' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_41' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif'/>
 </span>
 </div> </div>
 </div>
@@ -3271,7 +3408,7 @@ Pittsburgh, PA </div>
 <img class="sprite-rating_ss_fill rating_ss_fill ss40" src="http://e2.tacdn.com/img2/x.gif" alt="4 of 5 stars">
 </span>
 <a class="wsnw" onclick="ta.util.cookie.setPIDCookie(15264);ta.setEvtCookieAndPath('ReviewCount');(new Event(event)).stopPropagation();" href="/Hotel_Review-g53449-d74353-Reviews-Holiday_Inn_Express_Hotel_Suites_Pittsburgh_West-Pittsburgh_Pennsylvania.html#REVIEWS" target="_blank">
-52 Reviews </a>
+53 Reviews </a>
 </div>
 <div class="location">
 Pittsburgh, PA </div>
@@ -3353,7 +3490,7 @@ Pittsburgh, PA </div>
 </div> <div class="thumbnail fl avthumb">
 <a onclick="ta.util.cookie.setPIDCookie(15265);ta.setEvtCookieAndPath('Thumbnail');(new Event(event)).stopPropagation();" href="/Hotel_Review-g53449-d1682077-Reviews-Residence_Inn_Pittsburgh_North_Shore-Pittsburgh_Pennsylvania.html" target="_blank">
 <div class="sizedThumb  " style="height: 60px; width: 60px; ">
-<img id='lazyload_1347943086_43' height='60' style='height: 90px; width: 60px; margin-top: -15px;' alt='Residence Inn Pittsburgh North Shore' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_42' height='60' style='height: 90px; width: 60px; margin-top: -15px;' alt='Residence Inn Pittsburgh North Shore' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </a>
 </div>
@@ -3370,7 +3507,7 @@ Pittsburgh, PA </div>
 <img class="sprite-rating_ss_fill rating_ss_fill ss45" src="http://e2.tacdn.com/img2/x.gif" alt="4.5 of 5 stars">
 </span>
 <a class="wsnw" onclick="ta.util.cookie.setPIDCookie(15264);ta.setEvtCookieAndPath('ReviewCount');(new Event(event)).stopPropagation();" href="/Hotel_Review-g53449-d649230-Reviews-Hampton_Inn_Suites_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html#REVIEWS" target="_blank">
-703 Reviews </a>
+704 Reviews </a>
 </div>
 <div class="location">
 Pittsburgh, PA </div>
@@ -3385,7 +3522,7 @@ Pittsburgh, PA </div>
 </div> <div class="thumbnail fl avthumb">
 <a onclick="ta.util.cookie.setPIDCookie(15265);ta.setEvtCookieAndPath('Thumbnail');(new Event(event)).stopPropagation();" href="/Hotel_Review-g53449-d649230-Reviews-Hampton_Inn_Suites_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html" target="_blank">
 <div class="sizedThumb  " style="height: 60px; width: 60px; ">
-<img id='lazyload_1347943086_44' height='60' style='height: 60px; width: 60px;' alt='Hampton Inn &amp; Suites Pittsburgh - Downtown' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_43' height='60' style='height: 60px; width: 60px;' alt='Hampton Inn &amp; Suites Pittsburgh - Downtown' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </a>
 </div>
@@ -3402,7 +3539,7 @@ Pittsburgh, PA </div>
 <img class="sprite-rating_ss_fill rating_ss_fill ss40" src="http://e2.tacdn.com/img2/x.gif" alt="4 of 5 stars">
 </span>
 <a class="wsnw" onclick="ta.util.cookie.setPIDCookie(15264);ta.setEvtCookieAndPath('ReviewCount');(new Event(event)).stopPropagation();" href="/Hotel_Review-g53449-d1687458-Reviews-SpringHill_Suites_Pittsburgh_Southside_Works-Pittsburgh_Pennsylvania.html#REVIEWS" target="_blank">
-194 Reviews </a>
+188 Reviews </a>
 </div>
 <div class="location">
 Pittsburgh, PA </div>
@@ -3417,7 +3554,7 @@ Pittsburgh, PA </div>
 </div> <div class="thumbnail fl avthumb">
 <a onclick="ta.util.cookie.setPIDCookie(15265);ta.setEvtCookieAndPath('Thumbnail');(new Event(event)).stopPropagation();" href="/Hotel_Review-g53449-d1687458-Reviews-SpringHill_Suites_Pittsburgh_Southside_Works-Pittsburgh_Pennsylvania.html" target="_blank">
 <div class="sizedThumb  " style="height: 60px; width: 60px; ">
-<img id='lazyload_1347943086_45' height='60' style='height: 60px; width: 60px;' alt='SpringHill Suites Pittsburgh Southside Works' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_44' height='60' style='height: 60px; width: 60px;' alt='SpringHill Suites Pittsburgh Southside Works' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </a>
 </div>
@@ -3442,7 +3579,7 @@ More </span>
 <img class="sprite-rating_ss_fill rating_ss_fill ss40" src="http://e2.tacdn.com/img2/x.gif" alt="4 of 5 stars">
 </span>
 <a class="wsnw" onclick="ta.util.cookie.setPIDCookie(15264);ta.setEvtCookieAndPath('ReviewCount');(new Event(event)).stopPropagation();" href="/Hotel_Review-g53449-d115503-Reviews-DoubleTree_by_Hilton_Hotel_Suites_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html#REVIEWS" target="_blank">
-959 Reviews </a>
+960 Reviews </a>
 </div>
 <div class="location">
 Pittsburgh, PA </div>
@@ -3457,7 +3594,7 @@ Pittsburgh, PA </div>
 </div> <div class="thumbnail fl avthumb">
 <a onclick="ta.util.cookie.setPIDCookie(15265);ta.setEvtCookieAndPath('Thumbnail');(new Event(event)).stopPropagation();" href="/Hotel_Review-g53449-d115503-Reviews-DoubleTree_by_Hilton_Hotel_Suites_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html" target="_blank">
 <div class="sizedThumb  " style="height: 59px; width: 60px; ">
-<img id='lazyload_1347943086_46' height='59' style='height: 59px; width: 129px; margin-left: -34px;' alt='DoubleTree by Hilton Hotel &amp; Suites Pittsburgh Downtown' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_45' height='59' style='height: 59px; width: 129px; margin-left: -34px;' alt='DoubleTree by Hilton Hotel &amp; Suites Pittsburgh Downtown' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </a>
 </div>
@@ -3489,7 +3626,7 @@ Pittsburgh, PA </div>
 </div> <div class="thumbnail fl avthumb">
 <a onclick="ta.util.cookie.setPIDCookie(15265);ta.setEvtCookieAndPath('Thumbnail');(new Event(event)).stopPropagation();" href="/Hotel_Review-g53449-d217676-Reviews-Holiday_Inn_Express_Hotel_Suites_Pittsburgh_Airport-Pittsburgh_Pennsylvania.html" target="_blank">
 <div class="sizedThumb  " style="height: 60px; width: 60px; ">
-<img id='lazyload_1347943086_47' height='60' style='height: 60px; width: 60px;' alt='Holiday Inn Express Hotel &amp; Suites Pittsburgh Airport' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_46' height='60' style='height: 60px; width: 60px;' alt='Holiday Inn Express Hotel &amp; Suites Pittsburgh Airport' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </a>
 </div>
@@ -3521,7 +3658,7 @@ Pittsburgh, PA </div>
 </div> <div class="thumbnail fl avthumb">
 <a onclick="ta.util.cookie.setPIDCookie(15265);ta.setEvtCookieAndPath('Thumbnail');(new Event(event)).stopPropagation();" href="/Hotel_Review-g53449-d1870845-Reviews-Cambria_Suites_at_Consol_Energy_Center-Pittsburgh_Pennsylvania.html" target="_blank">
 <div class="sizedThumb  " style="height: 60px; width: 60px; ">
-<img id='lazyload_1347943086_48' height='60' style='height: 60px; width: 60px;' alt='Cambria Suites at Consol Energy Center' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_47' height='60' style='height: 60px; width: 60px;' alt='Cambria Suites at Consol Energy Center' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </a>
 </div>
@@ -3551,7 +3688,12 @@ Less </span>
 <span class="mapWxH" onclick=" ta.call('ta.mapsv2.Factory.createPOIMapViaHashRedirect', event, this, null
 ,   null
 );">
-<img id='lazyload_1347943086_49' height='190' alt='' width='300' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_48' height='190' alt='' width='300' src='http://e2.tacdn.com/img2/x.gif'/>
+<div class="floating_sponsor">
+<span>Sponsored by:</span> <div class="sponsor_icon bstWst"></div>
+<img id='lazyload_95398141_49' class='tracking' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_50' class='tracking' src='http://e2.tacdn.com/img2/x.gif'/>
+</div>
 </span>
 </div>
 <div class="js_floatContent" title="Map">
@@ -3634,7 +3776,7 @@ Things to Do
 <div class="spinner-centering-wrap">
 <div class="updating_map">
 <div class="updating_wrapper">
-<img id='lazyload_1347943086_50' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_51' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="updating_text">Updating Map...</span> </div>
 </div>
 </div>
@@ -3648,8 +3790,8 @@ Your filters are still active. </div>
 Thank you for your interest.<br/>This feature is coming soon. </div>
 <div class="sponsorDeck ads2015 closed">
 <div class="sponsorLogoButtons">
-<div class="sponsoredByTxt">Sponsored by:</div> <span data-no-hotels="No Best Western hotels available in the area" data-trackingcode="BestWesternHotelsMapsSponsorship" class="lbstWst sponsor_BEST_WESTERN chkSet js_markerClassSponsor ">
-<input type="checkbox" class="sponsor_BEST_WESTERN" id="cbx-bstWst">
+<div class="sponsoredByTxt">Sponsored by:</div> <span data-no-hotels="No Best Western hotels available in the area" data-trackingcode="BestWesternHotelsMapsSponsorship" class="lbstWst sponsor_BEST_WESTERN chkSet js_markerClassSponsor cur">
+<input type="checkbox" checked="checked" class="sponsor_BEST_WESTERN" id="cbx-bstWst">
 <label for="cbx-bstWst" class="sprite-bstWst sponsorSprite"></label>
 <span class="sponsor-checkmark"></span>
 </span>
@@ -3774,11 +3916,77 @@ Pittsburgh maps</span>
 <div id="gpt-ad-300x250-300x600-bottom" class="adInner gptAd"></div>
 </div>
 <!-- smoke:rbrDisplay -->
+<div class="ad iab_rect3to1">
+<div id="gpt-ad-300x100-housepromo" class="adInner gptAd"></div>
+</div>
 <div id="HOTELS_AROUND" class="bx01 hotelsAround">
 <!--trkP:hotels_around-->
 <h2 class="title">Hotels around Pittsburgh</h2>
 <ul>
-<!--trkN:1/L:217673-->
+<!--trkN:1/L:96791-->
+<li class="wrap greyText">
+<div class="detail wrap">
+<div class="data">
+<a href="/Hotel_Review-g53449-d96791-Reviews-Omni_William_Penn_Hotel-Pittsburgh_Pennsylvania.html">Omni William Penn Hotel</a>
+</div>
+<div>
+<span>4.5 out of 5, </span> 2,189 reviews </div>
+<div class="data">
+Last reviewed Mar 21, 2015
+</div>
+</div>
+<div class="fl">
+<div class="sizedThumb  " style="height: 40px; width: 40px; ">
+<a href="/Hotel_Review-g53449-d96791-Reviews-Omni_William_Penn_Hotel-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
+<img id='lazyload_95398141_52' height='40' style='height: 50px; width: 40px; margin-top: -5px;' alt='Omni William Penn Hotel' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+</a>
+</div>
+</div>
+</li>
+<!--etk-->
+<!--trkN:2/L:122450-->
+<li class="wrap greyText">
+<div class="detail wrap">
+<div class="data">
+<a href="/Hotel_Review-g53449-d122450-Reviews-The_Westin_Convention_Center_Pittsburgh-Pittsburgh_Pennsylvania.html">The Westin Convention Center Pittsburgh</a>
+</div>
+<div>
+<span>4.0 out of 5, </span> 306 reviews </div>
+<div class="data">
+Last reviewed Mar 21, 2015
+</div>
+</div>
+<div class="fl">
+<div class="sizedThumb  " style="height: 40px; width: 40px; ">
+<a href="/Hotel_Review-g53449-d122450-Reviews-The_Westin_Convention_Center_Pittsburgh-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
+<img id='lazyload_95398141_53' height='40' style='height: 40px; width: 40px;' alt='The Westin Convention Center Pittsburgh' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+</a>
+</div>
+</div>
+</li>
+<!--etk-->
+<!--trkN:3/L:96782-->
+<li class="wrap greyText">
+<div class="detail wrap">
+<div class="data">
+<a href="/Hotel_Review-g53449-d96782-Reviews-Wyndham_Grand_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html">Wyndham Grand Pittsburgh Downtown</a>
+</div>
+<div>
+<span>3.5 out of 5, </span> 2,332 reviews </div>
+<div class="data">
+Last reviewed Mar 21, 2015
+</div>
+</div>
+<div class="fl">
+<div class="sizedThumb  " style="height: 40px; width: 40px; ">
+<a href="/Hotel_Review-g53449-d96782-Reviews-Wyndham_Grand_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
+<img id='lazyload_95398141_54' height='40' style='height: 40px; width: 40px;' alt='Wyndham Grand Pittsburgh Downtown' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+</a>
+</div>
+</div>
+</li>
+<!--etk-->
+<!--trkN:4/L:217673-->
 <li class="wrap greyText">
 <div class="detail wrap">
 <div class="data">
@@ -3793,13 +4001,97 @@ Last reviewed Mar 19, 2015
 <div class="fl">
 <div class="sizedThumb  " style="height: 40px; width: 40px; ">
 <a href="/Hotel_Review-g53449-d217673-Reviews-DoubleTree_by_Hilton_Hotel_Pittsburgh_Green_Tree-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_51' height='40' style='height: 40px; width: 40px;' alt='DoubleTree by Hilton Hotel Pittsburgh-Green Tree' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_55' height='40' style='height: 40px; width: 40px;' alt='DoubleTree by Hilton Hotel Pittsburgh-Green Tree' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 </div>
 </li>
 <!--etk-->
-<!--trkN:2/L:1563869-->
+<!--trkN:5/L:1803694-->
+<li class="wrap greyText">
+<div class="detail wrap">
+<div class="data">
+<a href="/Hotel_Review-g53449-d1803694-Reviews-Hyatt_Place_Pittsburgh_North_Shore-Pittsburgh_Pennsylvania.html">Hyatt Place Pittsburgh-North Shore</a>
+</div>
+<div>
+<span>4.0 out of 5, </span> 376 reviews </div>
+<div class="data">
+Last reviewed Mar 20, 2015
+</div>
+</div>
+<div class="fl">
+<div class="sizedThumb  " style="height: 39px; width: 40px; ">
+<a href="/Hotel_Review-g53449-d1803694-Reviews-Hyatt_Place_Pittsburgh_North_Shore-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
+<img id='lazyload_95398141_56' height='39' style='height: 39px; width: 60px; margin-left: -10px;' alt='Hyatt Place Pittsburgh-North Shore' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+</a>
+</div>
+</div>
+</li>
+<!--etk-->
+<!--trkN:6/L:102577-->
+<li class="wrap greyText">
+<div class="detail wrap">
+<div class="data">
+<a href="/Hotel_Review-g53449-d102577-Reviews-Marriott_Pittsburgh_City_Center-Pittsburgh_Pennsylvania.html">Marriott Pittsburgh City Center</a>
+</div>
+<div>
+<span>4.0 out of 5, </span> 515 reviews </div>
+<div class="data">
+Last reviewed Mar 19, 2015
+</div>
+</div>
+<div class="fl">
+<div class="sizedThumb  " style="height: 40px; width: 40px; ">
+<a href="/Hotel_Review-g53449-d102577-Reviews-Marriott_Pittsburgh_City_Center-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
+<img id='lazyload_95398141_57' height='40' style='height: 40px; width: 40px;' alt='Marriott Pittsburgh City Center' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+</a>
+</div>
+</div>
+</li>
+<!--etk-->
+<!--trkN:7/L:122455-->
+<li class="wrap greyText">
+<div class="detail wrap">
+<div class="data">
+<a href="/Hotel_Review-g53449-d122455-Reviews-Hampton_Inn_Pittsburgh_University_Medical_Center-Pittsburgh_Pennsylvania.html">Hampton Inn Pittsburgh University/Medical Center</a>
+</div>
+<div>
+<span>4.0 out of 5, </span> 454 reviews </div>
+<div class="data">
+Last reviewed Mar 19, 2015
+</div>
+</div>
+<div class="fl">
+<div class="sizedThumb  " style="height: 40px; width: 40px; ">
+<a href="/Hotel_Review-g53449-d122455-Reviews-Hampton_Inn_Pittsburgh_University_Medical_Center-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
+<img id='lazyload_95398141_58' height='40' style='height: 40px; width: 40px;' alt='Hampton Inn Pittsburgh University/Medical Center' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+</a>
+</div>
+</div>
+</li>
+<!--etk-->
+<!--trkN:8/L:7171548-->
+<li class="wrap greyText">
+<div class="detail wrap">
+<div class="data">
+<a href="/Hotel_Review-g53449-d7171548-Reviews-Hotel_Monaco_Pittsburgh-Pittsburgh_Pennsylvania.html">Hotel Monaco Pittsburgh</a>
+</div>
+<div>
+<span>5.0 out of 5, </span> 34 reviews </div>
+<div class="data">
+Last reviewed Mar 19, 2015
+</div>
+</div>
+<div class="fl">
+<div class="sizedThumb  " style="height: 40px; width: 40px; ">
+<a href="/Hotel_Review-g53449-d7171548-Reviews-Hotel_Monaco_Pittsburgh-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
+<img id='lazyload_95398141_59' height='40' style='height: 40px; width: 40px;' alt='Hotel Monaco Pittsburgh' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+</a>
+</div>
+</div>
+</li>
+<!--etk-->
+<!--trkN:9/L:1563869-->
 <li class="wrap greyText">
 <div class="detail wrap">
 <div class="data">
@@ -3814,118 +4106,13 @@ Last reviewed Mar 18, 2015
 <div class="fl">
 <div class="sizedThumb  " style="height: 40px; width: 40px; ">
 <a href="/Hotel_Review-g53449-d1563869-Reviews-Fairmont_Pittsburgh-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_52' height='40' style='height: 40px; width: 40px;' alt='Fairmont Pittsburgh' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_60' height='40' style='height: 40px; width: 40px;' alt='Fairmont Pittsburgh' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 </div>
 </li>
 <!--etk-->
-<!--trkN:3/L:122455-->
-<li class="wrap greyText">
-<div class="detail wrap">
-<div class="data">
-<a href="/Hotel_Review-g53449-d122455-Reviews-Hampton_Inn_Pittsburgh_University_Medical_Center-Pittsburgh_Pennsylvania.html">Hampton Inn Pittsburgh University/Medical Center</a>
-</div>
-<div>
-<span>4.0 out of 5, </span> 453 reviews </div>
-<div class="data">
-Last reviewed Mar 19, 2015
-</div>
-</div>
-<div class="fl">
-<div class="sizedThumb  " style="height: 40px; width: 40px; ">
-<a href="/Hotel_Review-g53449-d122455-Reviews-Hampton_Inn_Pittsburgh_University_Medical_Center-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_53' height='40' style='height: 40px; width: 40px;' alt='Hampton Inn Pittsburgh University/Medical Center' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
-</a>
-</div>
-</div>
-</li>
-<!--etk-->
-<!--trkN:4/L:102577-->
-<li class="wrap greyText">
-<div class="detail wrap">
-<div class="data">
-<a href="/Hotel_Review-g53449-d102577-Reviews-Marriott_Pittsburgh_City_Center-Pittsburgh_Pennsylvania.html">Marriott Pittsburgh City Center</a>
-</div>
-<div>
-<span>4.0 out of 5, </span> 515 reviews </div>
-<div class="data">
-Last reviewed Mar 18, 2015
-</div>
-</div>
-<div class="fl">
-<div class="sizedThumb  " style="height: 40px; width: 40px; ">
-<a href="/Hotel_Review-g53449-d102577-Reviews-Marriott_Pittsburgh_City_Center-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_54' height='40' style='height: 40px; width: 40px;' alt='Marriott Pittsburgh City Center' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
-</a>
-</div>
-</div>
-</li>
-<!--etk-->
-<!--trkN:5/L:96791-->
-<li class="wrap greyText">
-<div class="detail wrap">
-<div class="data">
-<a href="/Hotel_Review-g53449-d96791-Reviews-Omni_William_Penn_Hotel-Pittsburgh_Pennsylvania.html">Omni William Penn Hotel</a>
-</div>
-<div>
-<span>4.5 out of 5, </span> 2,187 reviews </div>
-<div class="data">
-Last reviewed Mar 19, 2015
-</div>
-</div>
-<div class="fl">
-<div class="sizedThumb  " style="height: 40px; width: 40px; ">
-<a href="/Hotel_Review-g53449-d96791-Reviews-Omni_William_Penn_Hotel-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_55' height='40' style='height: 50px; width: 40px; margin-top: -5px;' alt='Omni William Penn Hotel' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
-</a>
-</div>
-</div>
-</li>
-<!--etk-->
-<!--trkN:6/L:96782-->
-<li class="wrap greyText">
-<div class="detail wrap">
-<div class="data">
-<a href="/Hotel_Review-g53449-d96782-Reviews-Wyndham_Grand_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html">Wyndham Grand Pittsburgh Downtown</a>
-</div>
-<div>
-<span>3.5 out of 5, </span> 2,328 reviews </div>
-<div class="data">
-Last reviewed Mar 19, 2015
-</div>
-</div>
-<div class="fl">
-<div class="sizedThumb  " style="height: 40px; width: 40px; ">
-<a href="/Hotel_Review-g53449-d96782-Reviews-Wyndham_Grand_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_56' height='40' style='height: 40px; width: 40px;' alt='Wyndham Grand Pittsburgh Downtown' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
-</a>
-</div>
-</div>
-</li>
-<!--etk-->
-<!--trkN:7/L:7171548-->
-<li class="wrap greyText">
-<div class="detail wrap">
-<div class="data">
-<a href="/Hotel_Review-g53449-d7171548-Reviews-Hotel_Monaco_Pittsburgh-Pittsburgh_Pennsylvania.html">Hotel Monaco Pittsburgh</a>
-</div>
-<div>
-<span>5.0 out of 5, </span> 34 reviews </div>
-<div class="data">
-Last reviewed Mar 18, 2015
-</div>
-</div>
-<div class="fl">
-<div class="sizedThumb  " style="height: 40px; width: 40px; ">
-<a href="/Hotel_Review-g53449-d7171548-Reviews-Hotel_Monaco_Pittsburgh-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_57' height='40' style='height: 40px; width: 40px;' alt='Hotel Monaco Pittsburgh' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
-</a>
-</div>
-</div>
-</li>
-<!--etk-->
-<!--trkN:8/L:7307237-->
+<!--trkN:10/L:7307237-->
 <li class="wrap greyText">
 <div class="detail wrap">
 <div class="data">
@@ -3940,49 +4127,7 @@ Last reviewed Mar 18, 2015
 <div class="fl">
 <div class="sizedThumb  " style="height: 40px; width: 40px; ">
 <a href="/Hotel_Review-g53252-d7307237-Reviews-Springhill_Suites_By_Marriott_Pittsburgh_Mt_Lebanon-Mount_Lebanon_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_58' height='40' style='height: 40px; width: 40px;' alt='Springhill Suites By Marriott Pittsburgh Mt. Lebanon' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
-</a>
-</div>
-</div>
-</li>
-<!--etk-->
-<!--trkN:9/L:122450-->
-<li class="wrap greyText">
-<div class="detail wrap">
-<div class="data">
-<a href="/Hotel_Review-g53449-d122450-Reviews-The_Westin_Convention_Center_Pittsburgh-Pittsburgh_Pennsylvania.html">The Westin Convention Center Pittsburgh</a>
-</div>
-<div>
-<span>4.0 out of 5, </span> 304 reviews </div>
-<div class="data">
-Last reviewed Mar 18, 2015
-</div>
-</div>
-<div class="fl">
-<div class="sizedThumb  " style="height: 40px; width: 40px; ">
-<a href="/Hotel_Review-g53449-d122450-Reviews-The_Westin_Convention_Center_Pittsburgh-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_59' height='40' style='height: 40px; width: 40px;' alt='The Westin Convention Center Pittsburgh' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
-</a>
-</div>
-</div>
-</li>
-<!--etk-->
-<!--trkN:10/L:1803694-->
-<li class="wrap greyText">
-<div class="detail wrap">
-<div class="data">
-<a href="/Hotel_Review-g53449-d1803694-Reviews-Hyatt_Place_Pittsburgh_North_Shore-Pittsburgh_Pennsylvania.html">Hyatt Place Pittsburgh-North Shore</a>
-</div>
-<div>
-<span>4.0 out of 5, </span> 375 reviews </div>
-<div class="data">
-Last reviewed Mar 17, 2015
-</div>
-</div>
-<div class="fl">
-<div class="sizedThumb  " style="height: 39px; width: 40px; ">
-<a href="/Hotel_Review-g53449-d1803694-Reviews-Hyatt_Place_Pittsburgh_North_Shore-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_60' height='39' style='height: 39px; width: 60px; margin-left: -10px;' alt='Hyatt Place Pittsburgh-North Shore' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_61' height='40' style='height: 40px; width: 40px;' alt='Springhill Suites By Marriott Pittsburgh Mt. Lebanon' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 </div>
@@ -4003,7 +4148,7 @@ Last reviewed Mar 17, 2015
 <div class="fl">
 <div class="sizedThumb  " style="height: 39px; width: 40px; ">
 <a href="/Hotel_Review-g52314-d102323-Reviews-Extended_Stay_America_Pittsburgh_Carnegie-Carnegie_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_61' height='39' style='height: 39px; width: 60px; margin-left: -10px;' alt='Extended Stay America - Pittsburgh - Carnegie' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_62' height='39' style='height: 39px; width: 60px; margin-left: -10px;' alt='Extended Stay America - Pittsburgh - Carnegie' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 </div>
@@ -4024,7 +4169,7 @@ Last reviewed Mar 17, 2015
 <div class="fl">
 <div class="sizedThumb  " style="height: 40px; width: 40px; ">
 <a href="/Hotel_Review-g53449-d3577928-Reviews-HYATT_house_Pittsburgh_South_Side-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_62' height='40' style='height: 40px; width: 40px;' alt='HYATT house Pittsburgh-South Side' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_63' height='40' style='height: 40px; width: 40px;' alt='HYATT house Pittsburgh-South Side' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 </div>
@@ -4045,7 +4190,7 @@ Last reviewed Mar 17, 2015
 <div class="fl">
 <div class="sizedThumb  " style="height: 40px; width: 40px; ">
 <a href="/Hotel_Review-g53449-d224122-Reviews-Renaissance_Pittsburgh_Hotel-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_63' height='40' style='height: 40px; width: 40px;' alt='Renaissance Pittsburgh Hotel' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_64' height='40' style='height: 40px; width: 40px;' alt='Renaissance Pittsburgh Hotel' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 </div>
@@ -4066,7 +4211,7 @@ Last reviewed Mar 3, 2015
 <div class="fl">
 <div class="sizedThumb  " style="height: 40px; width: 40px; ">
 <a href="/Hotel_Review-g53449-d295459-Reviews-Courtyard_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_64' height='40' style='height: 40px; width: 40px;' alt='Courtyard Pittsburgh Downtown' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_65' height='40' style='height: 40px; width: 40px;' alt='Courtyard Pittsburgh Downtown' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 </div>
@@ -4087,7 +4232,7 @@ Last reviewed Mar 3, 2015
 <div class="fl">
 <div class="sizedThumb  " style="height: 40px; width: 40px; ">
 <a href="/Hotel_Review-g53449-d81604-Reviews-Morning_Glory_Inn-Pittsburgh_Pennsylvania.html" class="photo_link " onClick=" " data-navArea-linkType="Thumbnail">
-<img id='lazyload_1347943086_65' height='40' style='height: 40px; width: 40px;' alt='Morning Glory Inn' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_66' height='40' style='height: 40px; width: 40px;' alt='Morning Glory Inn' width='40' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 </div>
@@ -4107,9 +4252,9 @@ Last reviewed Mar 3, 2015
 <a href="/Hotel_Review-g45963-d97737-Reviews-The_Mirage_Hotel_Casino-Las_Vegas_Nevada.html">The Mirage Hotel Las Vegas</a>
 </div>
 <div>
-<span>4.5 out of 5, </span> 11,049 reviews </div>
+<span>4.5 out of 5, </span> 11,065 reviews </div>
 <div class="data">
-Last reviewed Mar 19, 2015
+Last reviewed Mar 21, 2015
 </div>
 </div>
 </li>
@@ -4143,9 +4288,9 @@ Last reviewed Mar 18, 2015
 <a href="/Hotel_Review-g635535-d501072-Reviews-Occidental_Grand_Papagayo-Gulf_of_Papagayo_Province_of_Guanacaste.html">Occidental Grand Papagayo in Gulf of Papagayo</a>
 </div>
 <div>
-<span>3.5 out of 5, </span> 1,913 reviews </div>
+<span>3.5 out of 5, </span> 1,915 reviews </div>
 <div class="data">
-Last reviewed Mar 19, 2015
+Last reviewed Mar 20, 2015
 </div>
 </div>
 </li>
@@ -4155,7 +4300,7 @@ Last reviewed Mar 19, 2015
 <a href="/Hotel_Review-g187791-d650621-Reviews-Yes_Hotel-Rome_Lazio.html">Yes Hotel in Rome</a>
 </div>
 <div>
-<span>4.5 out of 5, </span> 937 reviews </div>
+<span>4.5 out of 5, </span> 938 reviews </div>
 <div class="data">
 Last reviewed Mar 18, 2015
 </div>
@@ -4167,9 +4312,9 @@ Last reviewed Mar 18, 2015
 <a href="/Hotel_Review-g60750-d79954-Reviews-BEST_WESTERN_PLUS_Island_Palms_Hotel_Marina-San_Diego_California.html">BEST WESTERN PLUS Island Palms Hotel &amp; Marina in San Diego</a>
 </div>
 <div>
-<span>4.5 out of 5, </span> 2,149 reviews </div>
+<span>4.5 out of 5, </span> 2,151 reviews </div>
 <div class="data">
-Last reviewed Mar 19, 2015
+Last reviewed Mar 20, 2015
 </div>
 </div>
 </li>
@@ -4194,7 +4339,7 @@ Last reviewed Mar 19, 2015
 <a href="/Hotels-g31522-Conway_Arkansas-Hotels.html">Conway Hotels</a>
 </div>
 <div>
-18 Hotels, 2,065 Reviews
+18 Hotels, 2,072 Reviews
 </div>
 <div class="data">
 </div>
@@ -4206,7 +4351,7 @@ Last reviewed Mar 19, 2015
 <a href="/Tourism-g32584-La_Quinta_California-Vacations.html">La Quinta</a>
 </div>
 <div>
-3 Hotels, 1,912 Reviews
+3 Hotels, 1,873 Reviews
 </div>
 <div class="data">
 </div>
@@ -4218,7 +4363,7 @@ Last reviewed Mar 19, 2015
 <a href="/Tourism-g45095-Bozeman_Montana-Vacations.html">Bozeman</a>
 </div>
 <div>
-29 Hotels, 6,225 Reviews
+29 Hotels, 6,236 Reviews
 </div>
 <div class="data">
 </div>
@@ -4256,7 +4401,7 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#5A3333"></div>
+<div class="albumStack1" style="background-color:#A37A00"></div>
 <div class="albumStack2" style="background-color:#999980"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'View from room'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 2, null, 21); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
@@ -4271,8 +4416,8 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#5A3333"></div>
-<div class="albumStack2" style="background-color:#85A3FF"></div>
+<div class="albumStack1" style="background-color:#B29980"></div>
+<div class="albumStack2" style="background-color:#669999"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Room/suite'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 2, null, 18); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4286,8 +4431,8 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#669999"></div>
-<div class="albumStack2" style="background-color:#7DBD9D"></div>
+<div class="albumStack1" style="background-color:#AD5C33"></div>
+<div class="albumStack2" style="background-color:#669999"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Bathroom'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 2, null, 19); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4301,8 +4446,8 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#C2D1FF"></div>
-<div class="albumStack2" style="background-color:#999980"></div>
+<div class="albumStack1" style="background-color:#B87070"></div>
+<div class="albumStack2" style="background-color:#B29980"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Hotel & grounds'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 2, null, 17); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4316,8 +4461,8 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#A37A00"></div>
-<div class="albumStack2" style="background-color:#7DBD9D"></div>
+<div class="albumStack1" style="background-color:#99B2FF"></div>
+<div class="albumStack2" style="background-color:#B36666"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Pool/beach area'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 2, null, 20); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4331,8 +4476,8 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#85A3FF"></div>
-<div class="albumStack2" style="background-color:#A37A00"></div>
+<div class="albumStack1" style="background-color:#7DBD9D"></div>
+<div class="albumStack2" style="background-color:#85A3FF"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Other'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 2, null, 100); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4348,8 +4493,8 @@ Viewed </div>
 <div class="albumGroup managementPhotos   ">
 <h4><span>Management photos:</span> Courtesy of the property manager</h4>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#FFB870"></div>
-<div class="albumStack2" style="background-color:#99B2FF"></div>
+<div class="albumStack1" style="background-color:#A37A00"></div>
+<div class="albumStack2" style="background-color:#5A3333"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'All management photos'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 1, null, 101); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4363,8 +4508,8 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#FFB870"></div>
-<div class="albumStack2" style="background-color:#A37A00"></div>
+<div class="albumStack1" style="background-color:#7DBD9D"></div>
+<div class="albumStack2" style="background-color:#B36666"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Hotel & grounds'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 1, null, 17); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4378,8 +4523,8 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#B87070"></div>
-<div class="albumStack2" style="background-color:#FFB870"></div>
+<div class="albumStack1" style="background-color:#669999"></div>
+<div class="albumStack2" style="background-color:#999980"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Bathroom'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 1, null, 19); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4393,8 +4538,8 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#999980"></div>
-<div class="albumStack2" style="background-color:#814E4E"></div>
+<div class="albumStack1" style="background-color:#B29980"></div>
+<div class="albumStack2" style="background-color:#999980"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Room/suite'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 1, null, 18); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4408,8 +4553,8 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#B36666"></div>
-<div class="albumStack2" style="background-color:#B87070"></div>
+<div class="albumStack1" style="background-color:#B29980"></div>
+<div class="albumStack2" style="background-color:#FFB870"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Dining    '); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 1, null, 16); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4423,7 +4568,7 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#B87070"></div>
+<div class="albumStack1" style="background-color:#B29980"></div>
 <div class="albumStack2" style="background-color:#B36666"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Business center/function rooms'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 1, null, 23); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
@@ -4438,8 +4583,8 @@ Viewed </div>
 </div>
 </div>
 <div class="albumGridItem albumCover">
-<div class="albumStack1" style="background-color:#85A3FF"></div>
-<div class="albumStack2" style="background-color:#B29980"></div>
+<div class="albumStack1" style="background-color:#7DBD9D"></div>
+<div class="albumStack2" style="background-color:#7DBD9D"></div>
 <div onclick="ta.trackEventOnPage('Tab_Content', 'photo_album', 'Other'); ta.call('ta.overlays.Factory.albumsLB', event, this, 278403, 53449, 1, null, 100); return false;" class="photoGridImg photoPlaceholder">
 <div class="visitedBarOverlay"></div>
 <div class="visitedBar">
@@ -4479,7 +4624,7 @@ Check Out
 </span>
 </div>
 <img class="show_prices_button pointer sprite-showPricesIdle_ylw_lrg " src="http://e2.tacdn.com/img2/x.gif" alt="Price Your Stay" onmouseover="this.addClass('sprite-showPricesHover_ylw_lrg')" onmouseout="this.removeClass('sprite-showPricesHover_ylw_lrg')" onclick="ta.trk('ClickDates'); ta.call('ta.overlays.Factory.simulateDatePickerClick', event, ta.id(this), '278403', '_smt',             ta.widgets.calendar.handleNewDates
- , {'calendarOptions' : {'parentContainer' : 'HSCS', 'fontSize' : '1em'}}); event.returnValue=false; return false;"> <img id='lazyload_1347943086_66' onmouseout='this.src="http://e2.tacdn.com/img2/buttons/changeDates.png"' alt='' onclick='ta.call("ta.overlays.Factory.simulateDatePickerClick", event, this, "278403", "_smt",             ta.widgets.calendar.handleNewDates
+ , {'calendarOptions' : {'parentContainer' : 'HSCS', 'fontSize' : '1em'}}); event.returnValue=false; return false;"> <img id='lazyload_95398141_67' onmouseout='this.src="http://e2.tacdn.com/img2/buttons/changeDates.png"' alt='' onclick='ta.call("ta.overlays.Factory.simulateDatePickerClick", event, this, "278403", "_smt",             ta.widgets.calendar.handleNewDates
  , {"calendarOptions" : {"parentContainer" : "HSCS", "fontSize" : "1em"}}); ta.trk("ChangeDates");' class='change_dates_button pointer  hidden ' onmouseover='this.src="http://e2.tacdn.com/img2/buttons/changeDates_hover.png"' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </div>
@@ -4503,29 +4648,29 @@ Check Out
 <div class="tags">
 <div class="tagDisplay_oneLine_r2_3577928" onmouseover="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_3577928', false); ta.trk('hoverOnTag');">
 <div class="tagDisplay oneLine fl">
-<img id='lazyload_1347943086_67' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_68' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="tagText similar_tab_rhr_yes" style="display:none;">Romantic, Free Wifi, Free Breakfa...</span>
 <span class="tagText similar_tab_rhr_no">Romantic, Free...</span>
 </div>
 <div class="showMore fr">
-<span class="showMoreText">Show More</span><img id='lazyload_1347943086_68' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
+<span class="showMoreText">Show More</span><img id='lazyload_95398141_69' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
 </div> </div>
 <div class="tagDisplay all tagDisplay_all_r2_3577928 hidden" onmouseleave="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_3577928', true);">
-<img id='lazyload_1347943086_69' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Romantic, Free Wifi, Free Breakfast, Mid-range, Pool</span>
+<img id='lazyload_95398141_70' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Romantic, Free Wifi, Free Breakfast, Mid-range, Pool</span>
 </div>
 </div>
 <div class="geograph">
-<img id='lazyload_1347943086_70' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="distance">Southside Flats</span>
+<img id='lazyload_95398141_71' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="distance">Southside Flats</span>
 </div>
 <a href="/Hotel_Review-g53449-d3577928-Reviews-HYATT_house_Pittsburgh_South_Side-Pittsburgh_Pennsylvania.html" onclick="setPID();ta.setEvtCookieAndPath('Thumbnail')" target="_blank">
 <span class="similar_tab_rhr_yes" style="display:none;">
 <div class="sizedThumb  " style="height: 177px; width: 315px; ">
-<img id='lazyload_1347943086_71' height='177' style='height: 177px; width: 315px;' alt='HYATT house Pittsburgh-South Side' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_72' height='177' style='height: 177px; width: 315px;' alt='HYATT house Pittsburgh-South Side' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 <span class="similar_tab_rhr_no">
 <div class="sizedThumb  " style="height: 176px; width: 205px; ">
-<img id='lazyload_1347943086_72' height='176' style='height: 176px; width: 266px; margin-left: -30px;' alt='HYATT house Pittsburgh-South Side' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_73' height='176' style='height: 176px; width: 266px; margin-left: -30px;' alt='HYATT house Pittsburgh-South Side' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 </a>
@@ -4547,26 +4692,26 @@ Check Out
 <div class="tags">
 <div class="tagDisplay_oneLine_r2_74353" onmouseover="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_74353', false); ta.trk('hoverOnTag');">
 <div class="tagDisplay oneLine fl">
-<img id='lazyload_1347943086_73' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_74' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="tagText similar_tab_rhr_yes" style="display:none;">Free Parking, Pool, Free Wifi, Bu...</span>
 <span class="tagText similar_tab_rhr_no">Free Parking, P...</span>
 </div>
 <div class="showMore fr">
-<span class="showMoreText">Show More</span><img id='lazyload_1347943086_74' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
+<span class="showMoreText">Show More</span><img id='lazyload_95398141_75' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
 </div> </div>
 <div class="tagDisplay all tagDisplay_all_r2_74353 hidden" onmouseleave="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_74353', true);">
-<img id='lazyload_1347943086_75' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Free Parking, Pool, Free Wifi, Budget, Free Breakfast</span>
+<img id='lazyload_95398141_76' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Free Parking, Pool, Free Wifi, Budget, Free Breakfast</span>
 </div>
 </div>
 <a href="/Hotel_Review-g53449-d74353-Reviews-Holiday_Inn_Express_Hotel_Suites_Pittsburgh_West-Pittsburgh_Pennsylvania.html" onclick="setPID();ta.setEvtCookieAndPath('Thumbnail')" target="_blank">
 <span class="similar_tab_rhr_yes" style="display:none;">
 <div class="sizedThumb  " style="height: 177px; width: 315px; ">
-<img id='lazyload_1347943086_76' height='177' style='height: 177px; width: 315px;' alt='Holiday Inn Express Hotel &amp; Suites Pittsburgh West' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_77' height='177' style='height: 177px; width: 315px;' alt='Holiday Inn Express Hotel &amp; Suites Pittsburgh West' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 <span class="similar_tab_rhr_no">
 <div class="sizedThumb  " style="height: 176px; width: 205px; ">
-<img id='lazyload_1347943086_77' height='176' style='height: 176px; width: 266px; margin-left: -30px;' alt='Holiday Inn Express Hotel &amp; Suites Pittsburgh West' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_78' height='176' style='height: 176px; width: 266px; margin-left: -30px;' alt='Holiday Inn Express Hotel &amp; Suites Pittsburgh West' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 </a>
@@ -4578,7 +4723,7 @@ Check Out
 <span class="rate sprite-rating_s rating_s">
 <img class="sprite-rating_s_fill rating_s_fill s40" src="http://e2.tacdn.com/img2/x.gif" alt="4.0 of 5 stars">
 </span>
-<a href="/Hotel_Review-g53449-d74353-Reviews-Holiday_Inn_Express_Hotel_Suites_Pittsburgh_West-Pittsburgh_Pennsylvania.html#REVIEWS" class="rtngCnt" onclick="setPID(25138);ta.setEvtCookieAndPath('ReviewCount')" target="_blank">52 reviews</a>
+<a href="/Hotel_Review-g53449-d74353-Reviews-Holiday_Inn_Express_Hotel_Suites_Pittsburgh_West-Pittsburgh_Pennsylvania.html#REVIEWS" class="rtngCnt" onclick="setPID(25138);ta.setEvtCookieAndPath('ReviewCount')" target="_blank">53 reviews</a>
 </div>
 <!--etk-->
 </td>
@@ -4588,26 +4733,26 @@ Check Out
 <div class="tags">
 <div class="tagDisplay_oneLine_r2_543559" onmouseover="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_543559', false); ta.trk('hoverOnTag');">
 <div class="tagDisplay oneLine fl">
-<img id='lazyload_1347943086_78' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_79' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="tagText similar_tab_rhr_yes" style="display:none;">Pool, Suites, Fitness center, Fre...</span>
 <span class="tagText similar_tab_rhr_no">Pool, Suites, F...</span>
 </div>
 <div class="showMore fr">
-<span class="showMoreText">Show More</span><img id='lazyload_1347943086_79' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
+<span class="showMoreText">Show More</span><img id='lazyload_95398141_80' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
 </div> </div>
 <div class="tagDisplay all tagDisplay_all_r2_543559 hidden" onmouseleave="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_543559', true);">
-<img id='lazyload_1347943086_80' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Pool, Suites, Fitness center, Free Breakfast, Mid-range</span>
+<img id='lazyload_95398141_81' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Pool, Suites, Fitness center, Free Breakfast, Mid-range</span>
 </div>
 </div>
 <a href="/Hotel_Review-g53449-d543559-Reviews-SpringHill_Suites_North_Shore-Pittsburgh_Pennsylvania.html" onclick="setPID();ta.setEvtCookieAndPath('Thumbnail')" target="_blank">
 <span class="similar_tab_rhr_yes" style="display:none;">
 <div class="sizedThumb  " style="height: 177px; width: 315px; ">
-<img id='lazyload_1347943086_81' height='177' style='height: 177px; width: 315px;' alt='SpringHill Suites North Shore' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_82' height='177' style='height: 177px; width: 315px;' alt='SpringHill Suites North Shore' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 <span class="similar_tab_rhr_no">
 <div class="sizedThumb  " style="height: 176px; width: 205px; ">
-<img id='lazyload_1347943086_82' height='176' style='height: 176px; width: 266px; margin-left: -30px;' alt='SpringHill Suites North Shore' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_83' height='176' style='height: 176px; width: 266px; margin-left: -30px;' alt='SpringHill Suites North Shore' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 </a>
@@ -4651,26 +4796,26 @@ Check Out
 <div class="tags">
 <div class="tagDisplay_oneLine_r2_1682077" onmouseover="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_1682077', false); ta.trk('hoverOnTag');">
 <div class="tagDisplay oneLine fl">
-<img id='lazyload_1347943086_83' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_84' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="tagText similar_tab_rhr_yes" style="display:none;">Free Breakfast, Mid-range, Pool...</span>
 <span class="tagText similar_tab_rhr_no">Free Breakfast...</span>
 </div>
 <div class="showMore fr">
-<span class="showMoreText">Show More</span><img id='lazyload_1347943086_84' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
+<span class="showMoreText">Show More</span><img id='lazyload_95398141_85' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
 </div> </div>
 <div class="tagDisplay all tagDisplay_all_r2_1682077 hidden" onmouseleave="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_1682077', true);">
-<img id='lazyload_1347943086_85' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Free Breakfast, Mid-range, Pool, Pets Allowed, Free Wifi</span>
+<img id='lazyload_95398141_86' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Free Breakfast, Mid-range, Pool, Pets Allowed, Free Wifi</span>
 </div>
 </div>
 <a href="/Hotel_Review-g53449-d1682077-Reviews-Residence_Inn_Pittsburgh_North_Shore-Pittsburgh_Pennsylvania.html" onclick="setPID();ta.setEvtCookieAndPath('Thumbnail')" target="_blank">
 <span class="similar_tab_rhr_yes" style="display:none;">
 <div class="sizedThumb  " style="height: 177px; width: 315px; ">
-<img id='lazyload_1347943086_86' height='177' style='height: 472px; width: 315px; margin-top: -147px;' alt='Residence Inn Pittsburgh North Shore' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_87' height='177' style='height: 472px; width: 315px; margin-top: -147px;' alt='Residence Inn Pittsburgh North Shore' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 <span class="similar_tab_rhr_no">
 <div class="sizedThumb  " style="height: 177px; width: 205px; ">
-<img id='lazyload_1347943086_87' height='177' style='height: 307px; width: 205px; margin-top: -65px;' alt='Residence Inn Pittsburgh North Shore' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_88' height='177' style='height: 307px; width: 205px; margin-top: -65px;' alt='Residence Inn Pittsburgh North Shore' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 </a>
@@ -4692,26 +4837,26 @@ Check Out
 <div class="tags">
 <div class="tagDisplay_oneLine_r2_649230" onmouseover="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_649230', false); ta.trk('hoverOnTag');">
 <div class="tagDisplay oneLine fl">
-<img id='lazyload_1347943086_88' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_89' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="tagText similar_tab_rhr_yes" style="display:none;">Free Wifi, Budget, Free Breakfast...</span>
 <span class="tagText similar_tab_rhr_no">Free Wifi, Budg...</span>
 </div>
 <div class="showMore fr">
-<span class="showMoreText">Show More</span><img id='lazyload_1347943086_89' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
+<span class="showMoreText">Show More</span><img id='lazyload_95398141_90' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
 </div> </div>
 <div class="tagDisplay all tagDisplay_all_r2_649230 hidden" onmouseleave="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_649230', true);">
-<img id='lazyload_1347943086_90' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Free Wifi, Budget, Free Breakfast, Free Parking, Pool</span>
+<img id='lazyload_95398141_91' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Free Wifi, Budget, Free Breakfast, Free Parking, Pool</span>
 </div>
 </div>
 <a href="/Hotel_Review-g53449-d649230-Reviews-Hampton_Inn_Suites_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html" onclick="setPID();ta.setEvtCookieAndPath('Thumbnail')" target="_blank">
 <span class="similar_tab_rhr_yes" style="display:none;">
 <div class="sizedThumb  " style="height: 177px; width: 315px; ">
-<img id='lazyload_1347943086_91' height='177' style='height: 177px; width: 315px;' alt='Hampton Inn &amp; Suites Pittsburgh - Downtown' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_92' height='177' style='height: 177px; width: 315px;' alt='Hampton Inn &amp; Suites Pittsburgh - Downtown' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 <span class="similar_tab_rhr_no">
 <div class="sizedThumb  " style="height: 176px; width: 205px; ">
-<img id='lazyload_1347943086_92' height='176' style='height: 176px; width: 266px;' alt='Hampton Inn &amp; Suites Pittsburgh - Downtown' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_93' height='176' style='height: 176px; width: 266px;' alt='Hampton Inn &amp; Suites Pittsburgh - Downtown' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 </a>
@@ -4723,7 +4868,7 @@ Check Out
 <span class="rate sprite-rating_s rating_s">
 <img class="sprite-rating_s_fill rating_s_fill s45" src="http://e2.tacdn.com/img2/x.gif" alt="4.5 of 5 stars">
 </span>
-<a href="/Hotel_Review-g53449-d649230-Reviews-Hampton_Inn_Suites_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html#REVIEWS" class="rtngCnt" onclick="setPID(25138);ta.setEvtCookieAndPath('ReviewCount')" target="_blank">703 reviews</a>
+<a href="/Hotel_Review-g53449-d649230-Reviews-Hampton_Inn_Suites_Pittsburgh_Downtown-Pittsburgh_Pennsylvania.html#REVIEWS" class="rtngCnt" onclick="setPID(25138);ta.setEvtCookieAndPath('ReviewCount')" target="_blank">704 reviews</a>
 </div>
 <!--etk-->
 </td>
@@ -4733,29 +4878,29 @@ Check Out
 <div class="tags">
 <div class="tagDisplay_oneLine_r2_1687458" onmouseover="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_1687458', false); ta.trk('hoverOnTag');">
 <div class="tagDisplay oneLine fl">
-<img id='lazyload_1347943086_93' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_94' alt='' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="tagText similar_tab_rhr_yes" style="display:none;">Suites, Free Wifi, Free Breakfast...</span>
 <span class="tagText similar_tab_rhr_no">Suites, Free Wi...</span>
 </div>
 <div class="showMore fr">
-<span class="showMoreText">Show More</span><img id='lazyload_1347943086_94' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
+<span class="showMoreText">Show More</span><img id='lazyload_95398141_95' alt='' class='showMoreArrow' src='http://e2.tacdn.com/img2/x.gif'/>
 </div> </div>
 <div class="tagDisplay all tagDisplay_all_r2_1687458 hidden" onmouseleave="ta.call('ta.p13n.wizard.expandTagOnSimilarTab', event, this, 'r2_1687458', true);">
-<img id='lazyload_1347943086_95' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Suites, Free Wifi, Free Breakfast, Mid-range, Pool</span>
+<img id='lazyload_95398141_96' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="tagText">Suites, Free Wifi, Free Breakfast, Mid-range, Pool</span>
 </div>
 </div>
 <div class="geograph">
-<img id='lazyload_1347943086_96' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="distance">Southside Flats</span>
+<img id='lazyload_95398141_97' alt='' src='http://e2.tacdn.com/img2/x.gif'/><span class="distance">Southside Flats</span>
 </div>
 <a href="/Hotel_Review-g53449-d1687458-Reviews-SpringHill_Suites_Pittsburgh_Southside_Works-Pittsburgh_Pennsylvania.html" onclick="setPID();ta.setEvtCookieAndPath('Thumbnail')" target="_blank">
 <span class="similar_tab_rhr_yes" style="display:none;">
 <div class="sizedThumb  " style="height: 177px; width: 315px; ">
-<img id='lazyload_1347943086_97' height='177' style='height: 177px; width: 315px;' alt='SpringHill Suites Pittsburgh Southside Works' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_98' height='177' style='height: 177px; width: 315px;' alt='SpringHill Suites Pittsburgh Southside Works' width='315' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 <span class="similar_tab_rhr_no">
 <div class="sizedThumb  " style="height: 176px; width: 205px; ">
-<img id='lazyload_1347943086_98' height='176' style='height: 176px; width: 255px; margin-left: -25px;' alt='SpringHill Suites Pittsburgh Southside Works' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_99' height='176' style='height: 176px; width: 255px; margin-left: -25px;' alt='SpringHill Suites Pittsburgh Southside Works' width='205' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 </span>
 </a>
@@ -4767,7 +4912,7 @@ Check Out
 <span class="rate sprite-rating_s rating_s">
 <img class="sprite-rating_s_fill rating_s_fill s40" src="http://e2.tacdn.com/img2/x.gif" alt="4.0 of 5 stars">
 </span>
-<a href="/Hotel_Review-g53449-d1687458-Reviews-SpringHill_Suites_Pittsburgh_Southside_Works-Pittsburgh_Pennsylvania.html#REVIEWS" class="rtngCnt" onclick="setPID(25138);ta.setEvtCookieAndPath('ReviewCount')" target="_blank">194 reviews</a>
+<a href="/Hotel_Review-g53449-d1687458-Reviews-SpringHill_Suites_Pittsburgh_Southside_Works-Pittsburgh_Pennsylvania.html#REVIEWS" class="rtngCnt" onclick="setPID(25138);ta.setEvtCookieAndPath('ReviewCount')" target="_blank">188 reviews</a>
 </div>
 <!--etk-->
 </td>
@@ -4803,9 +4948,12 @@ Check Out
 Near Holiday Inn Express Pittsburgh South Side </h3>
 <div class="content">
 <div class="mapWrap">
+<div class="sponsored">
+<img class=" bstWst" src="http://e2.tacdn.com/img2/x.gif">
+</div>
 <div class="mapLBCTA" onclick="ta.call('ta.mapsv2.Factory.createPOIMapViaHashRedirect', event, this, 'null', null, null, null, null, null, null, null, null, null, null, 'restaurants attractions'); ta.trackEventOnPage('Tab_Content', 'ENLARGE_MAP', 'Enlarge Map')">
-<img id='lazyload_1347943086_99' height='30' width='30' class='enlargeIcon idle' src='http://e2.tacdn.com/img2/x.gif'/>
-<img id='lazyload_1347943086_100' height='30' width='30' class='enlargeIcon hover' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_100' height='30' width='30' class='enlargeIcon idle' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_101' height='30' width='30' class='enlargeIcon hover' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 <div class="mapControls">
 <div class="zoomControls">
@@ -4820,20 +4968,20 @@ Near Holiday Inn Express Pittsburgh South Side </h3>
 <div class="attractions fl nearbyCol pinContainer" data-pinimg="http://e2.tacdn.com/img2/maps/icons/pin_lg_ThingToDo.png" data-hoverpinimg="http://e2.tacdn.com/img2/maps/icons/locationTab_pin_A_border.png">
 <div class="colTitle">Top-rated Attractions Nearby</div> <div class="attraction nearby-2689690" data-name="Consol Energy Center" data-locid="2689690" data-lat="40.439228" data-lng="-79.98993" onmouseenter="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseIn', event)" onmouseleave="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseOut', event)" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, '/Attraction_Review-g53449-d2689690-Reviews-Consol_Energy_Center-Pittsburgh_Pennsylvania.html'); window.location.href='/Attraction_Review-g53449-d2689690-Reviews-Consol_Energy_Center-Pittsburgh_Pennsylvania.html'">
 <div class="sizedThumb  " style="height: 60px; width: 60px; ">
-<img id='lazyload_1347943086_101' height='60' style='height: 60px; width: 60px;' alt='Consol Energy Center' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_102' height='60' style='height: 60px; width: 60px;' alt='Consol Energy Center' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 <div class="bubbles">
 <span class="rate sprite-rating_no rating_no">
 <img class="sprite-rating_no_fill rating_no_fill no45" src="http://e2.tacdn.com/img2/x.gif" alt="4.5 of 5 stars">
 </span>
-<a class="count" href="/Attraction_Review-g53449-d2689690-Reviews-Consol_Energy_Center-Pittsburgh_Pennsylvania.html#REVIEWS" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_REVIEW_LINK', '332', 0, this.href);">332 Reviews</a> </div>
+<a class="count" href="/Attraction_Review-g53449-d2689690-Reviews-Consol_Energy_Center-Pittsburgh_Pennsylvania.html#REVIEWS" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_REVIEW_LINK', '334', 0, this.href);">334 Reviews</a> </div>
 <div class="nameWrapper">
 <a href="/Attraction_Review-g53449-d2689690-Reviews-Consol_Energy_Center-Pittsburgh_Pennsylvania.html" class="name" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, this.href);">Consol Energy Center</a>
 </div>
 </div>
 <div class="attraction nearby-272375" data-name="South Side" data-locid="272375" data-lat="40.4288" data-lng="-79.973465" onmouseenter="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseIn', event)" onmouseleave="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseOut', event)" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, '/Attraction_Review-g53449-d272375-Reviews-South_Side-Pittsburgh_Pennsylvania.html'); window.location.href='/Attraction_Review-g53449-d272375-Reviews-South_Side-Pittsburgh_Pennsylvania.html'">
 <div class="sizedThumb  " style="height: 60px; width: 60px; ">
-<img id='lazyload_1347943086_102' height='60' style='height: 60px; width: 60px;' alt='South Side' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_103' height='60' style='height: 60px; width: 60px;' alt='South Side' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 <div class="bubbles">
 <span class="rate sprite-rating_no rating_no">
@@ -4846,7 +4994,7 @@ Near Holiday Inn Express Pittsburgh South Side </h3>
 </div>
 <div class="attraction nearby-5567751" data-name="Golden Triangle Bike Rental" data-locid="5567751" data-lat="40.435932" data-lng="-79.99715" onmouseenter="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseIn', event)" onmouseleave="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseOut', event)" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, '/Attraction_Review-g53449-d5567751-Reviews-Golden_Triangle_Bike_Rental-Pittsburgh_Pennsylvania.html'); window.location.href='/Attraction_Review-g53449-d5567751-Reviews-Golden_Triangle_Bike_Rental-Pittsburgh_Pennsylvania.html'">
 <div class="sizedThumb  " style="height: 60px; width: 60px; ">
-<img id='lazyload_1347943086_103' height='60' style='height: 60px; width: 60px;' alt='Golden Triangle Bike Rental' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_104' height='60' style='height: 60px; width: 60px;' alt='Golden Triangle Bike Rental' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
 </div>
 <div class="bubbles">
 <span class="rate sprite-rating_no rating_no">
@@ -4859,33 +5007,7 @@ Near Holiday Inn Express Pittsburgh South Side </h3>
 </div>
 <div class="colFoot"><a onclick="ta.call('ta.mapsv2.Factory.createPOIMapViaHashRedirect', event, this, 'null', null, null, null, null, null, null, null, null, null, null, 'attractions'); ta.setEvtCookie('Tab_Content', 'ATT_ALL_LINK', '', 0, document.location.href);">Browse all attractions</a></div> </div>
 <div class="eateries fr nearbyCol pinContainer" data-pinimg="http://e2.tacdn.com/img2/maps/icons/pin_lg_Restaurant.png" data-hoverpinimg="http://e2.tacdn.com/img2/maps/icons/locationTab_pin_R_border.png">
-<div class="colTitle">Top-rated Restaurants Nearby</div> <div class="eatery nearby-5212807" data-name="The Urban Tap" data-locid="5212807" data-lat="40.42899" data-lng="-79.98586" onmouseenter="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseIn', event)" onmouseleave="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseOut', event)" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, '/Restaurant_Review-g53449-d5212807-Reviews-The_Urban_Tap-Pittsburgh_Pennsylvania.html'); window.location.href='/Restaurant_Review-g53449-d5212807-Reviews-The_Urban_Tap-Pittsburgh_Pennsylvania.html'">
-<div class="sizedThumb  " style="height: 60px; width: 60px; ">
-<img id='lazyload_1347943086_104' height='60' style='height: 60px; width: 60px;' alt='The Urban Tap' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
-</div>
-<div class="bubbles">
-<span class="rate sprite-rating_no rating_no">
-<img class="sprite-rating_no_fill rating_no_fill no45" src="http://e2.tacdn.com/img2/x.gif" alt="4.5 of 5 stars">
-</span>
-<a class="count" href="/Restaurant_Review-g53449-d5212807-Reviews-The_Urban_Tap-Pittsburgh_Pennsylvania.html#REVIEWS" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_REVIEW_LINK', '21', 0, this.href);">21 Reviews</a> </div>
-<div class="nameWrapper">
-<a href="/Restaurant_Review-g53449-d5212807-Reviews-The_Urban_Tap-Pittsburgh_Pennsylvania.html" class="name" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, this.href);">The Urban Tap</a>
-</div>
-</div>
-<div class="eatery nearby-400958" data-name="Kassab's Restaurant" data-locid="400958" data-lat="40.428757" data-lng="-79.98601" onmouseenter="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseIn', event)" onmouseleave="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseOut', event)" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, '/Restaurant_Review-g53449-d400958-Reviews-Kassab_s_Restaurant-Pittsburgh_Pennsylvania.html'); window.location.href='/Restaurant_Review-g53449-d400958-Reviews-Kassab_s_Restaurant-Pittsburgh_Pennsylvania.html'">
-<div class="sizedThumb  " style="height: 60px; width: 60px; ">
-<img id='lazyload_1347943086_105' height='60' style='height: 60px; width: 60px;' alt='Kassab&#39;s Restaurant' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
-</div>
-<div class="bubbles">
-<span class="rate sprite-rating_no rating_no">
-<img class="sprite-rating_no_fill rating_no_fill no45" src="http://e2.tacdn.com/img2/x.gif" alt="4.5 of 5 stars">
-</span>
-<a class="count" href="/Restaurant_Review-g53449-d400958-Reviews-Kassab_s_Restaurant-Pittsburgh_Pennsylvania.html#REVIEWS" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_REVIEW_LINK', '39', 0, this.href);">39 Reviews</a> </div>
-<div class="nameWrapper">
-<a href="/Restaurant_Review-g53449-d400958-Reviews-Kassab_s_Restaurant-Pittsburgh_Pennsylvania.html" class="name" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, this.href);">Kassab's Restaurant</a>
-</div>
-</div>
-<div class="eatery nearby-628168" data-name="Cafe du Jour" data-locid="628168" data-lat="40.42888" data-lng="-79.987144" onmouseenter="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseIn', event)" onmouseleave="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseOut', event)" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, '/Restaurant_Review-g53449-d628168-Reviews-Cafe_du_Jour-Pittsburgh_Pennsylvania.html'); window.location.href='/Restaurant_Review-g53449-d628168-Reviews-Cafe_du_Jour-Pittsburgh_Pennsylvania.html'">
+<div class="colTitle">Top-rated Restaurants Nearby</div> <div class="eatery nearby-628168" data-name="Cafe du Jour" data-locid="628168" data-lat="40.42888" data-lng="-79.987144" onmouseenter="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseIn', event)" onmouseleave="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseOut', event)" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, '/Restaurant_Review-g53449-d628168-Reviews-Cafe_du_Jour-Pittsburgh_Pennsylvania.html'); window.location.href='/Restaurant_Review-g53449-d628168-Reviews-Cafe_du_Jour-Pittsburgh_Pennsylvania.html'">
 <div class="noImageBorder">
 <div class="noImageContainer">
 <div class="sizedThumb nppCont" style="height: 60px; width: 60px;">
@@ -4900,6 +5022,32 @@ Near Holiday Inn Express Pittsburgh South Side </h3>
 <a class="count" href="/Restaurant_Review-g53449-d628168-Reviews-Cafe_du_Jour-Pittsburgh_Pennsylvania.html#REVIEWS" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_REVIEW_LINK', '36', 0, this.href);">36 Reviews</a> </div>
 <div class="nameWrapper">
 <a href="/Restaurant_Review-g53449-d628168-Reviews-Cafe_du_Jour-Pittsburgh_Pennsylvania.html" class="name" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, this.href);">Cafe du Jour</a>
+</div>
+</div>
+<div class="eatery nearby-5212807" data-name="The Urban Tap" data-locid="5212807" data-lat="40.42899" data-lng="-79.98586" onmouseenter="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseIn', event)" onmouseleave="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseOut', event)" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, '/Restaurant_Review-g53449-d5212807-Reviews-The_Urban_Tap-Pittsburgh_Pennsylvania.html'); window.location.href='/Restaurant_Review-g53449-d5212807-Reviews-The_Urban_Tap-Pittsburgh_Pennsylvania.html'">
+<div class="sizedThumb  " style="height: 60px; width: 60px; ">
+<img id='lazyload_95398141_105' height='60' style='height: 60px; width: 60px;' alt='The Urban Tap' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+</div>
+<div class="bubbles">
+<span class="rate sprite-rating_no rating_no">
+<img class="sprite-rating_no_fill rating_no_fill no45" src="http://e2.tacdn.com/img2/x.gif" alt="4.5 of 5 stars">
+</span>
+<a class="count" href="/Restaurant_Review-g53449-d5212807-Reviews-The_Urban_Tap-Pittsburgh_Pennsylvania.html#REVIEWS" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_REVIEW_LINK', '21', 0, this.href);">21 Reviews</a> </div>
+<div class="nameWrapper">
+<a href="/Restaurant_Review-g53449-d5212807-Reviews-The_Urban_Tap-Pittsburgh_Pennsylvania.html" class="name" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, this.href);">The Urban Tap</a>
+</div>
+</div>
+<div class="eatery nearby-400958" data-name="Kassab's Restaurant" data-locid="400958" data-lat="40.428757" data-lng="-79.98601" onmouseenter="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseIn', event)" onmouseleave="ta.call('ta.mapsv2.InlineNearbyMap.onNearbyMouseOut', event)" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, '/Restaurant_Review-g53449-d400958-Reviews-Kassab_s_Restaurant-Pittsburgh_Pennsylvania.html'); window.location.href='/Restaurant_Review-g53449-d400958-Reviews-Kassab_s_Restaurant-Pittsburgh_Pennsylvania.html'">
+<div class="sizedThumb  " style="height: 60px; width: 60px; ">
+<img id='lazyload_95398141_106' height='60' style='height: 60px; width: 60px;' alt='Kassab&#39;s Restaurant' width='60' class='photo_image' src='http://e2.tacdn.com/img2/x.gif'/>
+</div>
+<div class="bubbles">
+<span class="rate sprite-rating_no rating_no">
+<img class="sprite-rating_no_fill rating_no_fill no45" src="http://e2.tacdn.com/img2/x.gif" alt="4.5 of 5 stars">
+</span>
+<a class="count" href="/Restaurant_Review-g53449-d400958-Reviews-Kassab_s_Restaurant-Pittsburgh_Pennsylvania.html#REVIEWS" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_REVIEW_LINK', '39', 0, this.href);">39 Reviews</a> </div>
+<div class="nameWrapper">
+<a href="/Restaurant_Review-g53449-d400958-Reviews-Kassab_s_Restaurant-Pittsburgh_Pennsylvania.html" class="name" onclick="ta.setEvtCookie('Tab_Content', 'POI_ROW_LINK', '', 0, this.href);">Kassab's Restaurant</a>
 </div>
 </div>
 <div class="colFoot"><a onclick="ta.call('ta.mapsv2.Factory.createPOIMapViaHashRedirect', event, this, 'null', null, null, null, null, null, null, null, null, null, null, 'restaurants'); ta.setEvtCookie('Tab_Content', 'REST_ALL_LINK', '', 0, this.href);">Browse all restaurants</a></div> </div>
@@ -5065,7 +5213,7 @@ Address: <span class="format_address"><span class="street-address" property="v:s
 <div class="fl">
 <span class="tel">Phone Number: <script>
 <!--
-function escramble_111(){
+function escramble_49(){
 var a,b,c
 a='877'
 b='-5'
@@ -5074,7 +5222,7 @@ b+='095'
 c='9'
 document.write(a+c+b)
 }
-escramble_111()
+escramble_49()
 //-->
 </script></span>
 </div>
@@ -5100,7 +5248,7 @@ $$
 </div>
 <dl class="additional_info reservation_info">
 <dt>Reservation Options:</dt>
-<dd class="indent">TripAdvisor is proud to partner with Booking.com, Travelocity, IHG, Expedia, Orbitz, Priceline, Despegar.com, Hotels.com, Agoda, Odigeo and Tingo so you can book your Holiday Inn Express Pittsburgh South Side reservations with confidence. We help millions of travelers each month to find the perfect hotel for both vacation and business trips, always with the best discounts and special offers.</dd>
+<dd class="indent">TripAdvisor is proud to partner with Booking.com, Orbitz, Expedia, IHG, Priceline, Despegar.com, Hotels.com, Agoda, Odigeo and Tingo so you can book your Holiday Inn Express Pittsburgh South Side reservations with confidence. We help millions of travelers each month to find the perfect hotel for both vacation and business trips, always with the best discounts and special offers.</dd>
 </dl>
 <dl id="AKA" class="additional_info">
 <dt>Also Known As:</dt>
@@ -5146,7 +5294,7 @@ Register now for free — and start getting automatic notification of new review
 <div class="memberOverlayLink" id="UID_1DECE3555F6656A85B2A593E92CABF6A-LT_407383" onmouseover="ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, -14);">
 <div class="avatar profile_1DECE3555F6656A85B2A593E92CABF6A ">
 <a>
-<img id='lazyload_1347943086_106' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:1DECE3555F6656A85B2A593E92CABF6A' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_107' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:1DECE3555F6656A85B2A593E92CABF6A' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -5168,7 +5316,7 @@ Pittsburgh, Pennsylvania
 <span class="subTime">1 month ago</span>
 <span class="reportWrap">
 <span id="ReportIAP_407383" class="problem collapsed taLnk" onmouseover="ta.select('.topic407383').removeClass('hidden');" onmouseout="ta.select('.topic407383').addClass('hidden');" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'LOCATION_TOPIC', contentId: '407383'})">
-<img id='lazyload_1347943086_107' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_108' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="hidden ulBlueLinks topic407383">Problem with this question?</span> </span>
 </span> </div> </div> </div>
 <div class="postCount">
@@ -5183,7 +5331,7 @@ Pittsburgh, Pennsylvania
 <div class="memberOverlayLink" id="UID_1DECE3555F6656A85B2A593E92CABF6A-LT_407377" onmouseover="ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, -14);">
 <div class="avatar profile_1DECE3555F6656A85B2A593E92CABF6A ">
 <a>
-<img id='lazyload_1347943086_108' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:1DECE3555F6656A85B2A593E92CABF6A' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_109' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:1DECE3555F6656A85B2A593E92CABF6A' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -5205,7 +5353,7 @@ Pittsburgh, Pennsylvania
 <span class="subTime">1 month ago</span>
 <span class="reportWrap">
 <span id="ReportIAP_407377" class="problem collapsed taLnk" onmouseover="ta.select('.topic407377').removeClass('hidden');" onmouseout="ta.select('.topic407377').addClass('hidden');" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'LOCATION_TOPIC', contentId: '407377'})">
-<img id='lazyload_1347943086_109' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_110' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="hidden ulBlueLinks topic407377">Problem with this question?</span> </span>
 </span> </div> </div> </div>
 <div class="postCount">
@@ -5220,7 +5368,7 @@ Pittsburgh, Pennsylvania
 <div class="memberOverlayLink" id="UID_0C436D49BF61ED9B07D65EAB00E2EFC4-LT_119839" onmouseover="ta.call('ta.overlays.Factory.memberOverlayWOffset', event, this, 's3 dg rgba_gry update2012', 0, -14);">
 <div class="avatar profile_0C436D49BF61ED9B07D65EAB00E2EFC4 ">
 <a>
-<img id='lazyload_1347943086_110' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:0C436D49BF61ED9B07D65EAB00E2EFC4' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_111' height='74' width='74' class='avatar potentialFacebookAvatar avatarGUID:0C436D49BF61ED9B07D65EAB00E2EFC4' src='http://e2.tacdn.com/img2/x.gif'/>
 </a>
 </div>
 <div class="username mo">
@@ -5242,7 +5390,7 @@ Newcastle, Canada
 <span class="subTime">4 months ago</span>
 <span class="reportWrap">
 <span id="ReportIAP_119839" class="problem collapsed taLnk" onmouseover="ta.select('.topic119839').removeClass('hidden');" onmouseout="ta.select('.topic119839').addClass('hidden');" onclick="ta.trackEventOnPage('Reviews', 'report_problem', 'click'); ta.call('ta.overlays.Factory.iapFlyout', event, this, {voteContentType:'LOCATION_TOPIC', contentId: '119839'})">
-<img id='lazyload_1347943086_111' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_112' height='14' alt='' width='13' src='http://e2.tacdn.com/img2/x.gif' src='http://e2.tacdn.com/img2/x.gif'/>
 <span class="hidden ulBlueLinks topic119839">Problem with this question?</span> </span>
 </span> </div> </div> </div>
 <div class="postCount">
@@ -5271,8 +5419,8 @@ Newcastle, Canada
 <fieldset class="submitWrap wrap spinnerReplaceable">
 <button id="SBMT_QUESTION" type="submit" name="submit" class="postButton submit rndBtn rndBtnGreen rndBtnLarge">
 Ask </button> <div id="SBMT_SPNR" class="spinner hidden"></div>
-<input type="hidden" name="altsessid" id="altsessid" value="19EAD2FAB558D63C08CB58B3F5495BB7"/>
-<input type="hidden" name="token" id="token" value="AAABTDPyYyNJJUkwu9YbggUSuO8GwE/pfCkPfg=="/>
+<input type="hidden" name="altsessid" id="altsessid" value="5724041F84C31ED077C7048508C61F71"/>
+<input type="hidden" name="token" id="token" value="AAABTD0c/JhVveV0qsbZyEwJfqUpWSFk/JQLkQ=="/>
 <input type="hidden" name="detail" id="detail" value="278403">
 <input type="hidden" name="pid" id="pid" value="38097">
 </fieldset>
@@ -5335,7 +5483,7 @@ Check Out
 <div class="block">
 <dl class="sep brand">
 <dt>
-<img id='lazyload_1347943086_112' height='20' alt='TripAdvisor' width='132' src='http://e2.tacdn.com/img2/x.gif'/>
+<img id='lazyload_95398141_113' height='20' alt='TripAdvisor' width='132' src='http://e2.tacdn.com/img2/x.gif'/>
 </dt>
 <dd class="meta">
 Reviews and advice on hotels, resorts, flights, vacation rentals, travel packages, and more so you can plan and book your perfect trip!
@@ -5344,7 +5492,7 @@ Reviews and advice on hotels, resorts, flights, vacation rentals, travel package
 <div class="sep internal">
 <span><a class="taLnk" href="/PressCenter-c6-About_Us.html">About Us</a></span>
 | <span><a class="taLnk" href="/AllLocations-g53449-c1-Hotels-Pittsburgh_Pennsylvania.html">Site Map</a></span>
-| <span class="taLnk" onclick="return ta.call('ta.overlays.Factory.helpCenterLB', event);">Help&nbsp;Center <img id='lazyload_1347943086_113' height='10' alt='' width='14' src='http://e2.tacdn.com/img2/x.gif'/></span> </div>
+| <span class="taLnk" onclick="return ta.call('ta.overlays.Factory.helpCenterLB', event);">Help&nbsp;Center <img id='lazyload_95398141_114' height='10' alt='' width='14' src='http://e2.tacdn.com/img2/x.gif'/></span> </div>
 <div class="sep legal">
 <div class="copyright">
 © 2015 TripAdvisor LLC All rights reserved. TripAdvisor <a href="/pages/terms.html">Terms of Use</a> and <a href="/pages/privacy.html">Privacy Policy</a>.
@@ -5625,7 +5773,7 @@ var bingMapsCountry = "US".toLowerCase();
 var bingMapsBaseUrl = "http://www.bing.com/maps/default.aspx?cc=us&";
 var googleMapsBaseUrl = "http://maps.google.com/?";
 var yandexMapsBaseUrl = "http://maps.yandex.com";
-var serverPool = "B";
+var serverPool = "A";
 var reg_overhaul = true;
 var posLocale = "en_US";
 var cssPhotoViewerAsset = "http://e2.tacdn.com/css2/photos-v22684219574a.css";
@@ -5702,7 +5850,7 @@ var globalTypeAheadCss = "http://e2.tacdn.com/css2/global_typeahead-v21746349392
 var globalTypeAheadFontCss = "http://e2.tacdn.com/css2/proxima_nova-v2717956579a.css";
 var compareHotelCSS = 'http://e2.tacdn.com/css2/pages/compareHotel-v24288065984a.css';
 var wiFriHasMember =  false  ;
-var JS_SECURITY_TOKEN = "AAABTDPyYyNJJUkwu9YbggUSuO8GwE/pfCkPfg==";
+var JS_SECURITY_TOKEN = "AAABTD0c/JhVveV0qsbZyEwJfqUpWSFk/JQLkQ==";
 var addOverlayCloseClass = "";
 var isOverlayServlet = "";
 var IS_OVERLAY_DEBUG = "false";
@@ -5712,8 +5860,8 @@ var cpu_enabled = true;
 </script>
 <script type="text/javascript">
 var freshVSTrackingCookie = true;         </script>
-<script type='text/javascript' crossorigin='anonymous' src='http://e2.tacdn.com/js3/single_hotel_detail-c-v24240529239a.js'></script>
-<script type="text/javascript">var taSecureToken = "AAABTDPyYyNJJUkwu9YbggUSuO8GwE/pfCkPfg==";</script>
+<script type='text/javascript' crossorigin='anonymous' src='http://e2.tacdn.com/js3/single_hotel_detail-c-v23351630255a.js'></script>
+<script type="text/javascript">var taSecureToken = "AAABTD0c/JhVveV0qsbZyEwJfqUpWSFk/JQLkQ==";</script>
 <script type="text/javascript">
 if(window.ta && ta.store) {
 ta.store('photo.viewer.localization.videoError', 'We\'re sorry, video player could not load');     }
@@ -5721,10 +5869,11 @@ ta.store('photo.viewer.localization.videoError', 'We\'re sorry, video player cou
 <script type="text/javascript">
 var geoParam = "&geo=53449";
 </script>
-<!-- web650a.a.tripadvisor.com -->
+<script type="text/javascript" src='http://e2.tacdn.com/js3/src/ta/commerce/Odometer-v23537115598a.js' crossorigin='anonymous'></script>
+<!-- web136a.a.tripadvisor.com -->
 <!-- PRODUCTION -->
 <!-- PRODUCTION -->
-<script type='text/javascript'> ta.store('flag_flyout_link_fixing.featureEnabled', 'false'); </script><script>ta.common.header.createNavMenu(ta.find('.warLink'), { initFn: function() { ta.run('ta.overlays.Factory.createWARToDoListOverlay', 278403); }});</script><script>ta.common.header.createNavMenu(ta.select('.jsNavMenu'));</script><script type='text/javascript'>
+<script type='text/javascript'> ta.store('flag_flyout_link_fixing.featureEnabled', 'false'); </script><script>ta.common.header.createNavMenu(ta.select('.jsNavMenu'));</script><script type='text/javascript'>
 ta.store('typeahead_closed_label', 'CLOSED'); // CLOSED
 ta.store('typeahead.scoped.all_of_trip', 'All of TripAdvisor');
 var get_scoped_typeahead = function(evt){
@@ -5878,7 +6027,7 @@ ta.util.element.doIfElementIsVisible(ta.id('ALSO_VIEWED_LIST'), ta.trackEventOnP
 });
 </script><script type='text/javascript'>
 ta.store('mapsv2.geoName', 'Pittsburgh');
-ta.store('mapsv2.map_addressnotfound', 'Address not found');         ta.store('mapsv2.map_addressnotfound3', 'We couldn\'t find that location near {0}.  Please try another search.');       </script><script type='text/javascript'>ta.store('mapsv2.search', true);</script><script type='text/javascript'>ta.queueForLoad(function () {ta.maps.trackpixel.storeTrackPixleSrc('//ad.atdmt.com/i/img;p=11007200799203;cache=?ord=1426800665429');}, 'storeTrackPixleSrc' );</script><script type='text/javascript'>ta.queueForLoad(function () {ta.maps.trackpixel.storeTrackPixleSrc('//ad.doubleclick.net/ad/N4764.TripAdvisor/B7050081.4;sz=1x1?ord=1426800665429');}, 'storeTrackPixleSrc' );</script><script type='text/javascript'>ta.queueForLoad(function () {ta.maps.trackpixel.storeTrackPixleSrc('//ad.doubleclick.net/ad/N884.TripAdvisor1/B8548389.115503144;sz=1x1;?ord=1426800665429');}, 'storeTrackPixleSrc' );</script><script type='text/javascript'>ta.queueForLoad(function () {ta.maps.trackpixel.storeTrackPixleSrc('//choice.demdex.net/event?d_event=imp&d_adgroup=115503137&d_placement=115503144&d_site=370125&d_campaign=8548389&ord=1426800665429');}, 'storeTrackPixleSrc' );</script><script type='text/javascript'>ta.queueForLoad(function () {ta.maps.trackpixel.storeTrackPixleSrc('//ad.doubleclick.net/ad/N4764.TripAdvisor/B8559819.115631984;sz=1x1?ord=1426800665429');}, 'storeTrackPixleSrc' );</script>
+ta.store('mapsv2.map_addressnotfound', 'Address not found');         ta.store('mapsv2.map_addressnotfound3', 'We couldn\'t find that location near {0}.  Please try another search.');       </script><script type='text/javascript'>ta.store('mapsv2.search', true);</script><script type='text/javascript'>ta.queueForLoad(function () {ta.maps.trackpixel.storeTrackPixleSrc('//ad.atdmt.com/i/img;p=11007200799203;cache=?ord=1426954452171');}, 'storeTrackPixleSrc' );</script><script type='text/javascript'>ta.queueForLoad(function () {ta.maps.trackpixel.storeTrackPixleSrc('//ad.doubleclick.net/ad/N4764.TripAdvisor/B7050081.4;sz=1x1?ord=1426954452171');}, 'storeTrackPixleSrc' );</script><script type='text/javascript'>ta.queueForLoad(function () {ta.maps.trackpixel.storeTrackPixleSrc('//ad.doubleclick.net/ad/N884.TripAdvisor1/B8548389.115503144;sz=1x1;?ord=1426954452171');}, 'storeTrackPixleSrc' );</script><script type='text/javascript'>ta.queueForLoad(function () {ta.maps.trackpixel.storeTrackPixleSrc('//choice.demdex.net/event?d_event=imp&d_adgroup=115503137&d_placement=115503144&d_site=370125&d_campaign=8548389&ord=1426954452171');}, 'storeTrackPixleSrc' );</script><script type='text/javascript'>ta.queueForLoad(function () {ta.maps.trackpixel.storeTrackPixleSrc('//ad.doubleclick.net/ad/N4764.TripAdvisor/B8559819.115631984;sz=1x1?ord=1426954452171');}, 'storeTrackPixleSrc' );</script>
 <script type="text/javascript">
 window.mapDivId = 'map0Div';
 window.map0Div = {
@@ -5921,6 +6070,8 @@ ta.run("ta.mapsv2.Factory.handleHashLocation", {}, false);
 });
 }
 window.addEvent('load', function(evt) { if (window.location.hash == "#MAPVIEW") { ta.run("ta.mapsv2.Factory.handleHashLocation", {}, true); } });
+ta.store('sponsor.name','BEST_WESTERN');
+ta.store('sponsor.shortName','bstWst');
 ta.store("iframe_popup_config_map_usability_survey",
 {
 isEnabled : false,
@@ -6019,7 +6170,7 @@ var servletName = 'Hotel_Review'
 ta.queueForLoad( function() {
 ta.util.element.doIfElementIsVisible(ta.id('owner_reg_cta'), ta.trackEventOnPage, ['owner_reg_cta', 'view_owner_cta', servletName]);
 });
-</script><script type='text/javascript'>ta.store('altsessid', '19EAD2FAB558D63C08CB58B3F5495BB7');</script>
+</script><script type='text/javascript'>ta.store('altsessid', '5724041F84C31ED077C7048508C61F71');</script>
 <script type='text/javascript'>
 ta.merge('facebook.data.params', {d: '278403'});          if(ta.keep) {
 ta.keep('facebook.data.request', 'HIGHLIGHT_FRIENDS');
@@ -6115,7 +6266,7 @@ ta.store('ta.hac.locationTimezoneOffset', -14400000);
 </script><script type='text/javascript'>ta.queueForLoad(function() {new Asset.css('http://e2.tacdn.com/css2/member_badges-v21658422114a.css');}, 1, 'Member badges');</script>
 <script type="text/javascript">
 ta.queueForReady( function() {
-ta.localStorage && ta.localStorage.updateSessionId('C8E48A6CF031AD303B0CC813914CE756');
+ta.localStorage && ta.localStorage.updateSessionId('92E1883E91B2718C6E6AE9FD1B421165');
 }, 1, "reset localStorage session id");
 </script>
 <script type="text/javascript">
@@ -6197,7 +6348,7 @@ ta.store('multiDP.checkIn', "Check In");           ta.store('multiDP.checkOut', 
 (function(window,ta,undefined){
 try {
 ta = window.ta = window.ta || {};
-ta.uid = 'VQtAGQokHiwAAH2bQFQAAAAW';
+ta.uid = 'VQ2Y0wokHTwAAAuEfSsAAAAQ';
 ta.userLoggedIn = false;
 ta.userSecurelyLoggedIn = false;
 if (ta.prerender && ta.prerender._init){
@@ -6218,18 +6369,18 @@ _gaq.push(['_setCustomVar',9,'EntryDetail','Holiday Inn Express Pittsburgh South
 _gaq.push(['_setCustomVar',3,'EntryGeo','Pittsburgh-53449',3]);
 _gaq.push(['_setCustomVar',4,'EntryCountry','United States-191',3]);
 _gaq.push(['_setCustomVar',5,'EntryServlet','Hotel_Review',3]);
-_gaq.push(['_setCustomVar',6,'Pool','B',3]);
-_gaq.push(['_setCustomVar',7,'Slice','2469',3]);
+_gaq.push(['_setCustomVar',6,'Pool','A',3]);
+_gaq.push(['_setCustomVar',7,'Slice','2533',3]);
 _gaq.push(['_setCustomVar',18,'MCID','OtherReferrer-13091',3]);
 _gaq.push(['_setCustomVar',21,'PageType','Desktop Page',3]);
 _gaq.push(['_setCustomVar',22,'DeviceType','Desktop',3]);
 _gaq.push(['_setCustomVar',23,'IPGeo','Pittsburgh-53449',3]);
 _gaq.push(['_setCustomVar',24,'ProductType','Browser',3]);
-_gaq.push(['_setCustomVar',48,'WebServer','web650a',3]);
-pageData=ta.analytics._JSON_parse('{\"cv\":[[\"_deleteCustomVar\",1],[\"_deleteCustomVar\",47],[\"_setCustomVar\",11,\"Detail\",\"Holiday Inn Express Pittsburgh South Side-278403\",3],[\"_setCustomVar\",12,\"Country\",\"United States-191\",3],[\"_setCustomVar\",25,\"Continent\",\"North America-19\",3],[\"_setCustomVar\",13,\"Geo\",\"Pittsburgh-53449\",3],[\"_setCustomVar\",20,\"PP\",\"-12-279-276-216-396-144-213-261-209-234-479-274-199-217-\",3],[\"_deleteCustomVar\",19],[\"_deleteCustomVar\",14],[\"_deleteCustomVar\",8],[\"_deleteCustomVar\",10]],\"url\":\"/Hotel_Review\"}');
+_gaq.push(['_setCustomVar',48,'WebServer','web136a',3]);
+pageData=ta.analytics._JSON_parse('{\"cv\":[[\"_deleteCustomVar\",1],[\"_deleteCustomVar\",47],[\"_setCustomVar\",11,\"Detail\",\"Holiday Inn Express Pittsburgh South Side-278403\",3],[\"_setCustomVar\",12,\"Country\",\"United States-191\",3],[\"_setCustomVar\",25,\"Continent\",\"North America-19\",3],[\"_setCustomVar\",13,\"Geo\",\"Pittsburgh-53449\",3],[\"_setCustomVar\",20,\"PP\",\"-12-279-216-396-144-213-261-209-234-479-274-199-217-\",3],[\"_setCustomVar\",26,\"Promos\",\"-RBr_adcall300x100-\",3],[\"_deleteCustomVar\",19],[\"_deleteCustomVar\",14],[\"_deleteCustomVar\",8],[\"_deleteCustomVar\",10]],\"url\":\"/Hotel_Review\"}');
 pageDataStack.push(pageData);
 if(ta.keep){
-ta.keep("partials.pageProperties","12-279-276-216-396-144-213-261-209-234-479-274-199-217");
+ta.keep("partials.pageProperties","12-279-216-396-144-213-261-209-234-479-274-199-217");
 }
 if(ta.store){
 ta.store("gaMemberState","-");
@@ -6253,121 +6404,122 @@ ta.util.error.record(e,'global_ga.vm');
 </script>
 <script type="text/javascript">
 var lazyImgs = [
-{"id":"lazyload_1347943086_0","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/generic/site/pencil.png"}
-,   {"id":"lazyload_1347943086_1","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/8d/avatar014.jpg"}
-,   {"id":"lazyload_1347943086_2","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_3","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_4","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_5","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_6","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/b9/88/7c/the-common-man.jpg"}
-,   {"id":"lazyload_1347943086_7","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_8","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_9","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_10","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_11","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/05/f4/d6/7e/joekool79.jpg"}
-,   {"id":"lazyload_1347943086_12","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_13","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_14","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_15","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_16","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/80/avatar001.jpg"}
-,   {"id":"lazyload_1347943086_17","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_18","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/6a/avatar048.jpg"}
-,   {"id":"lazyload_1347943086_19","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_20","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_21","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_22","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_23","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/06/3b/86/d7/hockeynut2116.jpg"}
-,   {"id":"lazyload_1347943086_24","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_25","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_26","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_27","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_28","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/5c/e5/9b/timalnick.jpg"}
-,   {"id":"lazyload_1347943086_29","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_30","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_31","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_32","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_33","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/07/69/87/34/jessicamccoy.jpg"}
-,   {"id":"lazyload_1347943086_34","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_35","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/a7/avatar078.jpg"}
-,   {"id":"lazyload_1347943086_36","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_37","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_38","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2a/fd/a3/avatar.jpg"}
-,   {"id":"lazyload_1347943086_39","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_40","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_41","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
-,   {"id":"lazyload_1347943086_42","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_43","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/02/7c/31/53/residence-inn-located.jpg"}
-,   {"id":"lazyload_1347943086_44","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/7d/3e/07/hampton-inn-suites-pittsburgh.jpg"}
-,   {"id":"lazyload_1347943086_45","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/07/80/e3/f8/king-suite-sleeping-area.jpg"}
-,   {"id":"lazyload_1347943086_46","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/06/6a/5a/7a/doubletree-by-hilton.jpg"}
-,   {"id":"lazyload_1347943086_47","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/06/fb/56/6d/welcome-to-the-holiday.jpg"}
-,   {"id":"lazyload_1347943086_48","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/c2/0b/09/cambria-suites-at-consol.jpg"}
-,   {"id":"lazyload_1347943086_49","tagType":"img","scroll":false,"priority":500,"logerror":true,"data":"//maps.google.com/maps/api/staticmap?channel=ta.desktop&center=40.429955,-79.988869&zoom=14&maptype=roadmap&size=300x190&client=gme-tripadvisorinc1&sensor=false&markers=icon:http%3A%2F%2Fc1.tacdn.com%2Fimg2%2Fmaps%2Ficons%2Fpin_v2_CurrentCenter.png|40.429955,-79.98887&language=en_US&signature=be7d_Aw7JEymnPDJly8xJIGtI1c="}
-,   {"id":"lazyload_1347943086_50","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/maps/icons/spinner24.gif"}
-,   {"id":"lazyload_1347943086_51","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/06/2e/5c/b9/exterior.jpg"}
-,   {"id":"lazyload_1347943086_52","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/80/c3/ef/1-king-bed.jpg"}
-,   {"id":"lazyload_1347943086_53","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/06/29/ff/1b/welcome.jpg"}
-,   {"id":"lazyload_1347943086_54","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/53/e0/0d/marriott-pittsburgh-city.jpg"}
-,   {"id":"lazyload_1347943086_55","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/ProviderThumbnails/dirs/87/34/8734ee8d74cba16735566188df0717781.jpg"}
-,   {"id":"lazyload_1347943086_56","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/01/a3/98/6e/standard-king-guest-room.jpg"}
-,   {"id":"lazyload_1347943086_57","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/4e/66/37/monaco-pittsburgh.jpg"}
-,   {"id":"lazyload_1347943086_58","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/2a/1e/02/room-with-2-queen-beds.jpg"}
-,   {"id":"lazyload_1347943086_59","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/05/5b/ee/23/traditional-king-room.jpg"}
-,   {"id":"lazyload_1347943086_60","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/ProviderThumbnails/dirs/56/da/56daf0b4e2286c65f667f06a75cd60b91.jpg"}
-,   {"id":"lazyload_1347943086_61","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/ProviderThumbnails/dirs/bc/9f/bc9f270e4e9e942814559cfa79cb864f2.jpg"}
-,   {"id":"lazyload_1347943086_62","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/04/20/4d/93/hyatt-house-pittsburgh.jpg"}
-,   {"id":"lazyload_1347943086_63","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/73/90/e3/queen-guest-room.jpg"}
-,   {"id":"lazyload_1347943086_64","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/73/8c/1b/queen-guest-room.jpg"}
-,   {"id":"lazyload_1347943086_65","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/02/bf/ea/e9/morning-glory-inn.jpg"}
-,   {"id":"lazyload_1347943086_66","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/buttons/changeDates.png"}
-,   {"id":"lazyload_1347943086_67","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_68","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
-,   {"id":"lazyload_1347943086_69","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_70","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/location-pin.png"}
-,   {"id":"lazyload_1347943086_71","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/04/20/4d/93/hyatt-house-pittsburgh.jpg"}
-,   {"id":"lazyload_1347943086_72","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/04/20/4d/93/hyatt-house-pittsburgh.jpg"}
-,   {"id":"lazyload_1347943086_73","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_74","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
-,   {"id":"lazyload_1347943086_75","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_76","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/06/98/9a/93/welcome-to-the-holiday.jpg"}
-,   {"id":"lazyload_1347943086_77","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/06/98/9a/93/welcome-to-the-holiday.jpg"}
-,   {"id":"lazyload_1347943086_78","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_79","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
-,   {"id":"lazyload_1347943086_80","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_81","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/04/0f/20/ca/springhill-suites-north.jpg"}
-,   {"id":"lazyload_1347943086_82","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/04/0f/20/ca/springhill-suites-north.jpg"}
-,   {"id":"lazyload_1347943086_83","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_84","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
-,   {"id":"lazyload_1347943086_85","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_86","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/02/7c/31/53/residence-inn-located.jpg"}
-,   {"id":"lazyload_1347943086_87","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/02/7c/31/53/residence-inn-located.jpg"}
-,   {"id":"lazyload_1347943086_88","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_89","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
-,   {"id":"lazyload_1347943086_90","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_91","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/01/7d/3e/07/hampton-inn-suites-pittsburgh.jpg"}
-,   {"id":"lazyload_1347943086_92","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/01/7d/3e/07/hampton-inn-suites-pittsburgh.jpg"}
-,   {"id":"lazyload_1347943086_93","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_94","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
-,   {"id":"lazyload_1347943086_95","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
-,   {"id":"lazyload_1347943086_96","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/location-pin.png"}
-,   {"id":"lazyload_1347943086_97","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/07/80/e3/f8/king-suite-sleeping-area.jpg"}
-,   {"id":"lazyload_1347943086_98","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/07/80/e3/f8/king-suite-sleeping-area.jpg"}
-,   {"id":"lazyload_1347943086_99","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/maps/icons/icon_mapControl_expand_idle_30x30.png"}
-,   {"id":"lazyload_1347943086_100","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/maps/icons/icon_mapControl_expand_hover_30x30.png"}
-,   {"id":"lazyload_1347943086_101","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/02/70/2b/79/pens-bruins.jpg"}
-,   {"id":"lazyload_1347943086_102","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/21/8e/bb/view-down-carson-street.jpg"}
-,   {"id":"lazyload_1347943086_103","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/05/0d/d9/06/getlstd-property-photo.jpg"}
-,   {"id":"lazyload_1347943086_104","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/05/37/e0/1b/the-urban-tap.jpg"}
-,   {"id":"lazyload_1347943086_105","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/07/43/a1/67/cover-photo.jpg"}
-,   {"id":"lazyload_1347943086_106","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2a/fd/93/avatar.jpg"}
-,   {"id":"lazyload_1347943086_107","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_108","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2a/fd/93/avatar.jpg"}
-,   {"id":"lazyload_1347943086_109","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_110","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/70/avatar053.jpg"}
-,   {"id":"lazyload_1347943086_111","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
-,   {"id":"lazyload_1347943086_112","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/branding/identityFOOT_2014.png"}
-,   {"id":"lazyload_1347943086_113","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/bell.png"}
-,   {"id":"p13n_tp_stm","tagType":"img","scroll":false,"priority":1000,"logerror":false,"data":"http://p.smartertravel.com/ext/pixel/ta/seed.gif?id=NY1QkB0y0N5Q2qABtOrnCZ3ktgHVh3NqgM6F4s6euVvrQ7p1mexQCYyoRHZ_sstB"}
+{"id":"lazyload_95398141_0","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/8d/avatar014.jpg"}
+,   {"id":"lazyload_95398141_1","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_2","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_3","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_4","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_5","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/b9/88/7c/the-common-man.jpg"}
+,   {"id":"lazyload_95398141_6","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_7","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_8","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_9","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_10","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/05/f4/d6/7e/joekool79.jpg"}
+,   {"id":"lazyload_95398141_11","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_12","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_13","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_14","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_15","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/80/avatar001.jpg"}
+,   {"id":"lazyload_95398141_16","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_17","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/6a/avatar048.jpg"}
+,   {"id":"lazyload_95398141_18","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_19","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_20","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_21","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_22","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/06/3b/86/d7/hockeynut2116.jpg"}
+,   {"id":"lazyload_95398141_23","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_24","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_25","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_26","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_27","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/5c/e5/9b/timalnick.jpg"}
+,   {"id":"lazyload_95398141_28","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_29","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_30","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_31","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_32","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/07/69/87/34/jessicamccoy.jpg"}
+,   {"id":"lazyload_95398141_33","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_34","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/a7/avatar078.jpg"}
+,   {"id":"lazyload_95398141_35","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_36","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_37","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2a/fd/a3/avatar.jpg"}
+,   {"id":"lazyload_95398141_38","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_39","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_40","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/x.gif"}
+,   {"id":"lazyload_95398141_41","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_42","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/02/7c/31/53/residence-inn-located.jpg"}
+,   {"id":"lazyload_95398141_43","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/7d/3e/07/hampton-inn-suites-pittsburgh.jpg"}
+,   {"id":"lazyload_95398141_44","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/07/80/e3/f8/king-suite-sleeping-area.jpg"}
+,   {"id":"lazyload_95398141_45","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/06/6a/5a/7a/doubletree-by-hilton.jpg"}
+,   {"id":"lazyload_95398141_46","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/06/fb/56/6d/welcome-to-the-holiday.jpg"}
+,   {"id":"lazyload_95398141_47","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/c2/0b/09/cambria-suites-at-consol.jpg"}
+,   {"id":"lazyload_95398141_48","tagType":"img","scroll":false,"priority":500,"logerror":true,"data":"//maps.google.com/maps/api/staticmap?channel=ta.desktop&center=40.429955,-79.988869&zoom=14&maptype=roadmap&size=300x190&client=gme-tripadvisorinc1&sensor=false&markers=icon:http%3A%2F%2Fc1.tacdn.com%2Fimg2%2Fmaps%2Ficons%2Fpin_v2_CurrentCenter.png|40.429955,-79.98887&language=en_US&signature=be7d_Aw7JEymnPDJly8xJIGtI1c="}
+,   {"id":"lazyload_95398141_49","tagType":"img","scroll":false,"priority":1000,"logerror":false,"data":"//ad.atdmt.com/i/img;p=11007200799198;cache=?ord=1426954452170"}
+,   {"id":"lazyload_95398141_50","tagType":"img","scroll":false,"priority":1000,"logerror":false,"data":"//ad.doubleclick.net/ad/N4764.TripAdvisor/B7050081;sz=1x1?ord=1426954452170"}
+,   {"id":"lazyload_95398141_51","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/maps/icons/spinner24.gif"}
+,   {"id":"lazyload_95398141_52","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/ProviderThumbnails/dirs/87/34/8734ee8d74cba16735566188df0717781.jpg"}
+,   {"id":"lazyload_95398141_53","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/05/5b/ee/23/traditional-king-room.jpg"}
+,   {"id":"lazyload_95398141_54","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/01/a3/98/6e/standard-king-guest-room.jpg"}
+,   {"id":"lazyload_95398141_55","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/06/2e/5c/b9/exterior.jpg"}
+,   {"id":"lazyload_95398141_56","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/ProviderThumbnails/dirs/56/da/56daf0b4e2286c65f667f06a75cd60b91.jpg"}
+,   {"id":"lazyload_95398141_57","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/53/e0/0d/marriott-pittsburgh-city.jpg"}
+,   {"id":"lazyload_95398141_58","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/06/29/ff/1b/welcome.jpg"}
+,   {"id":"lazyload_95398141_59","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/4e/66/37/monaco-pittsburgh.jpg"}
+,   {"id":"lazyload_95398141_60","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/80/c3/ef/1-king-bed.jpg"}
+,   {"id":"lazyload_95398141_61","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/2a/1e/02/room-with-2-queen-beds.jpg"}
+,   {"id":"lazyload_95398141_62","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/ProviderThumbnails/dirs/bc/9f/bc9f270e4e9e942814559cfa79cb864f2.jpg"}
+,   {"id":"lazyload_95398141_63","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/04/20/4d/93/hyatt-house-pittsburgh.jpg"}
+,   {"id":"lazyload_95398141_64","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/73/90/e3/queen-guest-room.jpg"}
+,   {"id":"lazyload_95398141_65","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/07/73/8c/1b/queen-guest-room.jpg"}
+,   {"id":"lazyload_95398141_66","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-t/02/bf/ea/e9/morning-glory-inn.jpg"}
+,   {"id":"lazyload_95398141_67","tagType":"img","scroll":false,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/buttons/changeDates.png"}
+,   {"id":"lazyload_95398141_68","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_69","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
+,   {"id":"lazyload_95398141_70","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_71","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/location-pin.png"}
+,   {"id":"lazyload_95398141_72","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/04/20/4d/93/hyatt-house-pittsburgh.jpg"}
+,   {"id":"lazyload_95398141_73","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/04/20/4d/93/hyatt-house-pittsburgh.jpg"}
+,   {"id":"lazyload_95398141_74","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_75","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
+,   {"id":"lazyload_95398141_76","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_77","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/06/98/9a/93/welcome-to-the-holiday.jpg"}
+,   {"id":"lazyload_95398141_78","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/06/98/9a/93/welcome-to-the-holiday.jpg"}
+,   {"id":"lazyload_95398141_79","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_80","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
+,   {"id":"lazyload_95398141_81","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_82","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/04/0f/20/ca/springhill-suites-north.jpg"}
+,   {"id":"lazyload_95398141_83","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/04/0f/20/ca/springhill-suites-north.jpg"}
+,   {"id":"lazyload_95398141_84","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_85","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
+,   {"id":"lazyload_95398141_86","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_87","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/02/7c/31/53/residence-inn-located.jpg"}
+,   {"id":"lazyload_95398141_88","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/02/7c/31/53/residence-inn-located.jpg"}
+,   {"id":"lazyload_95398141_89","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_90","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
+,   {"id":"lazyload_95398141_91","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_92","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/01/7d/3e/07/hampton-inn-suites-pittsburgh.jpg"}
+,   {"id":"lazyload_95398141_93","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/01/7d/3e/07/hampton-inn-suites-pittsburgh.jpg"}
+,   {"id":"lazyload_95398141_94","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_95","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/small-gray-arrow.png"}
+,   {"id":"lazyload_95398141_96","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/match-icon-lg.png"}
+,   {"id":"lazyload_95398141_97","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/just_for_you/icons/location-pin.png"}
+,   {"id":"lazyload_95398141_98","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-s/07/80/e3/f8/king-suite-sleeping-area.jpg"}
+,   {"id":"lazyload_95398141_99","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-f/07/80/e3/f8/king-suite-sleeping-area.jpg"}
+,   {"id":"lazyload_95398141_100","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/maps/icons/icon_mapControl_expand_idle_30x30.png"}
+,   {"id":"lazyload_95398141_101","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/maps/icons/icon_mapControl_expand_hover_30x30.png"}
+,   {"id":"lazyload_95398141_102","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/02/70/2b/79/pens-bruins.jpg"}
+,   {"id":"lazyload_95398141_103","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/21/8e/bb/view-down-carson-street.jpg"}
+,   {"id":"lazyload_95398141_104","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/05/0d/d9/06/getlstd-property-photo.jpg"}
+,   {"id":"lazyload_95398141_105","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/05/37/e0/1b/the-urban-tap.jpg"}
+,   {"id":"lazyload_95398141_106","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/07/43/a1/67/cover-photo.jpg"}
+,   {"id":"lazyload_95398141_107","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2a/fd/93/avatar.jpg"}
+,   {"id":"lazyload_95398141_108","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_109","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2a/fd/93/avatar.jpg"}
+,   {"id":"lazyload_95398141_110","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_111","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/70/avatar053.jpg"}
+,   {"id":"lazyload_95398141_112","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/gray_flag.png"}
+,   {"id":"lazyload_95398141_113","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/branding/identityFOOT_2014.png"}
+,   {"id":"lazyload_95398141_114","tagType":"img","scroll":true,"priority":100,"logerror":false,"data":"http://e2.tacdn.com/img2/icons/bell.png"}
+,   {"id":"p13n_tp_stm","tagType":"img","scroll":false,"priority":1000,"logerror":false,"data":"http://p.smartertravel.com/ext/pixel/ta/seed.gif?id=NY1QkB0y0N51r2RvFvKgZ7ECEMGnkrsgN0luNckT_8LZscvDy0u_ETbIsNzl624E"}
 ];
 var lazyHtml = [
 ];
@@ -6389,7 +6541,7 @@ ta.util.error.record(null, 'no ta.meta.update for meta_ui_post_click_prices');
 }
 </script>
 <script type="text/javascript">
-ta.store('abMarkerSet', '');
+ta.store('abMarkerSet', 't1673_revops_hr_pre_dates_messaging_copy');
 ta.keep('startOffset', '1');
 <!-- currentGeoId = 53449 -->
 ta.store('page.geo', "53449");
@@ -6399,7 +6551,7 @@ ta.store('facebook.disableLogin', false);
 ta.store('facebook.apiKey', "f1e687a58f0cdac60b7af2317a5febb3");
 ta.store('facebook.appId', "162729813767876");
 ta.store('facebook.appName', "tripadvisor");
-ta.store('facebook.taServerTime', "1426800665");
+ta.store('facebook.taServerTime', "1426954451");
 ta.store('facebook.skip.session.check',"false");
 ta.store('facebook.apiVersion', "v1.0");
 ta.store("facebook.invalidFBCreds", true);
@@ -6447,7 +6599,7 @@ ta.store('ads.pageTargeting', {
 "price": "midlevel",
 "star": "3",
 "PageType": "Hotel_Review",
-"pool": "B",
+"pool": "A",
 "kw": "Holiday_Inn_Express_Pittsburgh_South_Side",
 "country": "191",
 "geo": "53449",
@@ -6455,17 +6607,17 @@ ta.store('ads.pageTargeting', {
 "rd": "com",
 "hname": "Holiday_Inn_Express_Pittsburgh_South_Side",
 "gname": "Pittsburgh",
-"slice": "control_20",
+"slice": "single_32",
 "drs": [
-"mob_5",
-"fl_1"
+"mob_6",
+"fl_7"
 ],
 "report": [
-"desktop_Hotel_Review_control_20",
+"desktop_Hotel_Review_single_32",
 "desktop_Hotel_Review_WIN_SIZE",
-"desktop_com_b",
-"desktop_Hotel_Review_mob_5",
-"desktop_Hotel_Review_fl_1"
+"desktop_com_a",
+"desktop_Hotel_Review_mob_6",
+"desktop_Hotel_Review_fl_7"
 ],
 "seg": [
 "midlevel"
@@ -6665,7 +6817,7 @@ ta.common.dmp.store.setActiveDMP( ta.common.dmp.bluekai);
 else if (ta && ta.util && ta.util.error && ta.util.error.record) {
 ta.util.error.record.apply(this, [null, "DMP JavaScript not found"]);
 }
-ta.common.dmp.store.storeValue("taUUID", "gr3ekGijTcYSwpR+MDgsqxcDo5UJW+xDPHF/K8zvYYwob0tTgys9vQ==");
+ta.common.dmp.store.storeValue("taUUID", "5Wf1UBvRdL8Zx6m4R4uGOrUpu2gdVS4YP+8aB8+Fd1s=");
 ta.common.dmp.store.setBehaviors({
 "ServletName" : [
 "Hotel_Review"
@@ -6725,6 +6877,8 @@ ta.store('access_control_headers', true);
 ta.store('secure_registration.enabled',true);
 ta.store( 'meta.disclaimerLinkText', 'Disclaimer' );
 ta.store('restaurant_reserve_ui',true);
+ta.store('hotels_placements_short_cells', true);
+ta.store('hotels_placements_short_cells.overlaysCss', "http://e2.tacdn.com/css2/hotels_list_short_cells_overlays-v21723092943a.css" )
 </script>
 <script class="allowabsoluteurls" type="text/javascript">
 <!--
@@ -6778,7 +6932,7 @@ ta.common.ads.remarketingOptions = ta.common.ads.remarketingOptions || {};
 (function() {
 var store = function(key, val) { ta.common.ads.remarketingOptions[key] = val; };
 store('pixelServlet', 'PageMoniker');
-store('pixelList', "nanigans_fbx_pixel,google_pixel,criteo_pixel,choicestream_seg_pixel,nanigans_fbx_clickout_pixel,ignition_one_pixel,twitter_pixel,facebook_wca_pixel,choicestream_id_pixel,nanigans_fb_dr_clickout_pixel,triggit_fbx_pixel,google_clickout_pixel,clicktripz_clickout_pixel,yahoo_clickout_pixel,nanigans_fb_dr_pixel,choicestream_pixel_2,choicestream_clickout_pixel,triggit_fbx_clickout_pixel,facebook_dr_pixel,yahoo_pixel");
+store('pixelList', "choicestream_pixel_2,nanigans_fb_dr_clickout_pixel,choicestream_id_pixel,nanigans_fb_dr_pixel,choicestream_clickout_pixel,triggit_fbx_pixel,facebook_dr_pixel,clicktripz_clickout_pixel,ignition_one_pixel,choicestream_seg_pixel,yahoo_clickout_pixel,google_pixel,twitter_pixel,yahoo_pixel,google_clickout_pixel,nanigans_fbx_clickout_pixel,triggit_fbx_clickout_pixel,nanigans_fbx_pixel,criteo_pixel,facebook_wca_pixel");
 store('pixelsEnabled', true);
 store('clickoutPixelsEnabled', true);
 store('pixelContext', {
@@ -6787,7 +6941,7 @@ curLocId: "278403",
 locIds: "278403",
 blTabIdx: "",
 servlet: "Hotel_Review",
-userUnique: "2b34057176fd3d8ef33d58be744ee850ddf1b63c"
+userUnique: "2a0250e108ab6fd20d1986028a7df68a8aa39aef"
 });
 var delayedLoadFunc = function() {
 setTimeout(function() {
@@ -6900,6 +7054,15 @@ ta.load('ta-overlays');
 }, 'preload ta-overlays');
 </script>
 <script type="text/javascript">
+ta.store("ib_full_description_lightbox_on_flyout", true);
+</script>
+<script type="text/javascript">
+ta.store("ib_room_list_match_flyout", true);
+</script>
+<script type="text/javascript">
+ta.store("ib_flyout_more_rooms", true);
+</script>
+<script type="text/javascript">
 ta.store('hr_soft_gate_room_tips_control', true);
 </script>
 <script type="text/javascript">
@@ -6909,8 +7072,8 @@ ta.store('screenSizeRecord', true);
 /* <![CDATA[ */
 ta.plc_hr_unavail_xsell_flyout_0_handlers = ta.p13n.placements.load('hr_unavail_xsell_flyout','handlers.js', { 'name': 'hr_unavail_xsell_flyout', 'occurrence': 0, 'id': 'taplc_hr_unavail_xsell_flyout_0', 'location_id': 278403, 'servletClass': 'com.TripResearch.servlet.accommodation.AccommodationDetail'});
 ta.plc_hr_persistent_mini_meta_0_handlers = ta.p13n.placements.load('hr_persistent_mini_meta','handlers.js', { 'name': 'hr_persistent_mini_meta', 'occurrence': 0, 'id': 'taplc_hr_persistent_mini_meta_0', 'location_id': 278403, 'servletClass': 'com.TripResearch.servlet.accommodation.AccommodationDetail'});
-ta.plc_hr_leave_behind_xsell_0_handlers = ta.p13n.placements.load('hr_leave_behind_xsell','handlers.js', { 'name': 'hr_leave_behind_xsell', 'occurrence': 0, 'id': 'taplc_hr_leave_behind_xsell_0', 'location_id': 278403, 'servletClass': 'com.TripResearch.servlet.accommodation.AccommodationDetail'});
 ta.plc_prodp13n_between_reviews_cohort_0_handlers = ta.p13n.placements.load('prodp13n_between_reviews_cohort','handlers.js', { 'name': 'prodp13n_between_reviews_cohort', 'occurrence': 0, 'id': 'taplc_prodp13n_between_reviews_cohort_0', 'location_id': 278403, 'servletClass': 'com.TripResearch.servlet.accommodation.AccommodationDetail'});
+ta.plc_hr_leave_behind_xsell_0_handlers = ta.p13n.placements.load('hr_leave_behind_xsell','handlers.js', { 'name': 'hr_leave_behind_xsell', 'occurrence': 0, 'id': 'taplc_hr_leave_behind_xsell_0', 'location_id': 278403, 'servletClass': 'com.TripResearch.servlet.accommodation.AccommodationDetail'});
 ta.plc_prodp13n_hr_similar_xsell_row2_0_handlers = ta.p13n.placements.load('prodp13n_hr_similar_xsell_row2','handlers.js', { 'name': 'prodp13n_hr_similar_xsell_row2', 'occurrence': 0, 'id': 'taplc_prodp13n_hr_similar_xsell_row2_0', 'location_id': 278403, 'servletClass': 'com.TripResearch.servlet.accommodation.AccommodationDetail'});
 if (ta.prwidgets) {
 ta.prwidgets.initWidgets(document);
@@ -6919,6 +7082,6 @@ ta.prwidgets.initWidgets(document);
 </script>
 <div id="IP_IFRAME_HOLDER"></div>
 </body>
-<!-- st: 281 dc: 2 sc: 19 -->
-<!-- uid: VQtAGQokHiwAAH2bQFQAAAAW -->
+<!-- st: 248 dc: 2 sc: 19 -->
+<!-- uid: VQ2Y0wokHTwAAAuEfSsAAAAQ -->
 </html>

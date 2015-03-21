@@ -38,12 +38,13 @@ def parseHotelList(root_url):
         if title.find('a'):
             t = title.find('a')['href']
             hotelUrl.append(root+t)
-    print hotelUrl
-    print len(hotelUrl)
+    # print hotelUrl
+    # print len(hotelUrl)
     res = []
     for hotel in hotelUrl:
         res.append(parseHotel(hotel))
-    writeToFile(res)
+    writeToFile(res,'Hotels')
+    return len(hotelUrl)
 
 
 # def get_content(element, page_tag):
@@ -65,7 +66,7 @@ def get_title(element, res):
     title = element.find("h1")
     res["title"] = unicode(title.text).strip()
 
-def get_address(element, res):
+def get_hotel_address(element, res):
     info = element.find("div",attrs={"class":"header_contact_info"})
     if info==None:
         res['address']=None
@@ -73,7 +74,7 @@ def get_address(element, res):
     address = ""
     for part in info.find_all("span",attrs={"class":"format_address"}):
         address += part.text
-    res['address'] = address
+    res['address'] = address.strip()
 
 def get_description(element, res):
     descp = element.find("div",attrs={"id":"BODYCON"})
@@ -89,15 +90,90 @@ def parseHotel(url):
     dump_url(url)
     res = {}
     get_title(soup,res)
-    get_address(soup,res)
-    get_description(soup,res)
+    get_hotel_address(soup,res)
+    # get_description(soup,res)
     return res
     
 
-def writeToFile(res):
-    f = open("out.json", "w")
+
+def parseRestaurantList(url):
+    html = url_open(url)
+    soup = BeautifulSoup(html, "html5lib")
+    dump_url(url)
+    titlelist = soup.find_all('div',attrs={"class":"listing"})
+    # print titlelist[0]
+    restaurantList = []
+    for r in titlelist:
+        if r.find('a',attrs={"class":"property_title"}):
+            t = r.find('a')['href']
+            restaurantList.append(root+t)
+    # print restaurantList
+    # print len(restaurantList)
+    # input()
+    res = []    
+    for rest in restaurantList:
+        res.append(parseRestaurant(rest))
+    writeToFile(res,'Restaurant')
+    return len(titlelist)
+
+def get_restaurant_address(element,res):
+    address = ""
+    address = element.find("address").find("span").text
+    res['address'] = address.strip()
+
+
+
+def parseRestaurant(url):
+    html = url_open(url)
+    soup = BeautifulSoup(html, "html5lib")
+    dump_url(url)
+    res = {}
+    get_title(soup,res)
+    get_restaurant_address(soup,res)
+    return res
+
+
+def parseAttractionList(url):
+    html = url_open(url)
+    soup = BeautifulSoup(html, "html5lib")
+    dump_url(url)
+    titlelist = soup.find_all('div',attrs={"class":"property_title"})
+    attractionList = []
+    for title in titlelist:
+        attractionList.append(root+title.find("a")['href'])
+    # print attractionList
+    # print len(attractionList)
+    res = []
+    for attraction in attractionList:
+        res.append(parseAttraction(attraction))
+    writeToFile(res,"Attractions")
+    return len(titlelist)
+
+def parseAttraction(url):
+    html = url_open(url)
+    soup = BeautifulSoup(html, "html5lib")
+    dump_url(url)
+    res = {}
+    get_title(soup,res)
+    get_attraction_address(soup,res)
+    return res
+
+def get_attraction_address(element,res):
+    ad = element.find('address')
+    if ad == None:
+    	res['address'] = "Unknown"
+    	return
+    else:
+    	ad = ad.text
+    action_re = re.compile(r"Address:(.*)")
+    m = action_re.search(ad)
+    res['address']=m.group(1).strip()
+
+def writeToFile(res,catagory):
+    filename = catagory+"_out.json"
+    f = open(filename, "w")
     for item in res:
-    	   f.write(str(item)+'\n')
+       f.write(str(item)+'\n')
     f.close()
 
 root="http://www.tripadvisor.com"
@@ -120,12 +196,25 @@ if __name__ == "__main__":
             action_re = re.compile(r"/(.*)-g(\d*)-([a-zA-Z0-9-_]*).html")
             m = action_re.search(t)
             aspect = m.group(1)
-            if aspect != 'ShowForum' and aspect != 'Travel_Guide':
+            if aspect != 'ShowForum' and aspect != 'Travel_Guide' and aspect != 'Flights':
                 urlqueue.append(root+t)
-    print urlqueue
+    # print urlqueue
 
         # suffix = activity.find("a")['href']
         # page = root + suffix
         # soup = dump_url(page)
         # parse_page(soup)
-    parseHotelList(urlqueue[0])
+
+    # while True:
+    # 	if parseHotelList(urlqueue[0])!=0:
+    # 		break
+    # 	print 'try again'
+    # # print urlqueue[2]
+    while True:
+    	if parseAttractionList(urlqueue[2])!=0:
+    		break
+        print 'try again'
+    # while True:
+    # 	if parseRestaurantList(urlqueue[3]):
+    # 		break
+    # 	print 'try again'
