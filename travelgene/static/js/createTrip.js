@@ -21,13 +21,13 @@ function loadActivities(city){
            var strId = ""+(child[i].id);
            if(strId.indexOf("test")>=0){
                 child[i].text = ids[cnt];
-                console.log(child[i]);
-                shref = './Activities?'+"city="+city+'&id='+ids[cnt].split('_')[1];
+                shref = './Activities?'+"city="+city+'&id='+ids[cnt];
                 child[i].setAttribute('link',shref);
                 child[i].setAttribute('text',ids[cnt]);
                 child[i].onclick = function(){
                     location.href = this.getAttribute('link');
                 }
+                console.log(child[i]);
                 cnt++;
            }
         }
@@ -36,7 +36,7 @@ function loadActivities(city){
     xmlhttp.open("GET","http://127.0.0.1:5000/ActivityInfo/"+city);
     xmlhttp.send();
 }
-function writeInfo(activitiesId, date1, date2, userid, city){
+function writeInfo(activitiesId, date1, date2, city){
   activitiesId = activitiesId.substring(0,activitiesId.length-1);
   console.log(activitiesId);
   var xmlhttp;
@@ -45,11 +45,11 @@ function writeInfo(activitiesId, date1, date2, userid, city){
     }else{// code for IE6, IE5
       xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.open("GET","http://127.0.0.1:5000/addTrip?activitiesId="+activitiesId+"&userid="+userid+"&city="+city+"&date1="+date1+"&date2="+date2,true);
+    xmlhttp.open("GET","http://127.0.0.1:5000/addTrip?activitiesId="+activitiesId+"&city="+city+"&date1="+date1+"&date2="+date2,true);
     xmlhttp.send();
 }
 
-function writeActivities(date1,date2, user, dst){
+function writeActivities(date1,date2, dst){
   child = document.getElementById("droppable").childNodes;
   activitiesId = ""
   for(i=0;i<child.length;i++){
@@ -59,7 +59,7 @@ function writeActivities(date1,date2, user, dst){
             activitiesId += (child[i].text+"$");
     }
   }
-  writeInfo(activitiesId, date1,date2, user, dst);
+  writeInfo(activitiesId, date1,date2, dst);
 }
 
 $(document).ready(function() {

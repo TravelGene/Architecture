@@ -77,6 +77,8 @@ def get_address(element, res):
 
 def get_description(element, res):
     descp = element.find("div",attrs={"id":"BODYCON"})
+    print descp.find("div",attrs={"class":"tabs_description_content"})
+    input()
     print descp.find("div",atrrs={"class":"hr_tabs content_block hr_tabs_block"})
     
     # res['description']=descp.find("div",attrs={"class":"tabs_descriptive_text"}).text
@@ -84,11 +86,11 @@ def get_description(element, res):
 def parseHotel(url):
     html = url_open(url)
     soup = BeautifulSoup(html,"html5lib")
-    soup = dump_url(url)
+    dump_url(url)
     res = {}
     get_title(soup,res)
     get_address(soup,res)
-    # get_description(soup,res)
+    get_description(soup,res)
     return res
     
 
