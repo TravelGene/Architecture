@@ -1,5 +1,5 @@
 __author__ = 'lubron'
-import os
+
 from travelgene import app
 from travelgene import mongo
 from flask import Flask, render_template, session, redirect, url_for, escape, request
@@ -75,7 +75,7 @@ def showFriendList():
                 dateResult += ', '
                 dateResult += date.split("-")[0]
                 tripObj['depart_date'] = dateResult
-                print tripObj['depart_date']
+
 
             tripObjList.append(tripObj)
 

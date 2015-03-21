@@ -164,6 +164,7 @@ em {
 	font-size: .875em; /* 14px */
 	margin-top: 1.5em;
 	font-family: 'Patua One', cursive;
+    margin-left: 30px;
 }
 .more-link:link, .more-link:visited {
 	color: #f0bf00;
@@ -552,10 +553,12 @@ article.post {
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    margin-top:20px;
+    min-width:810px;
 }
 article .inside {
-	margin: 18px 24px 24px;
-	padding-top: 1em;
+	margin: 5px 24px 24px;
+    width:94%;
 	background: url("../img/dot-row-2.png") repeat-x scroll 0 0 transparent !important;
 }
 .post-date {
@@ -566,6 +569,7 @@ article .inside {
 	font-style: normal;
 	line-height: 2;
 	margin-right: 5px;
+    margin-bottom: 0px;
 }
 #news h1 {
 	font-size: 3em;
@@ -624,7 +628,7 @@ section#team .align, section#contact .align {
 	text-align:center
 }
 .team-thumb {
-	margin-top: 26px;
+	/*margin-top: 26px;*/
 	text-align:center;
 }
 .job-position {
@@ -1136,5 +1140,18 @@ footer p {
 
 
 .img-news{
+    float:left;
+}
+
+.description{
+    float:right;
+    margin-left:10px;
+    max-width:350px;
+    min-width:130px;
+    height:250px;
+}
+
+.attraction{
+    width:100%;
     float:left;
 }

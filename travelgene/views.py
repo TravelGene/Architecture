@@ -46,24 +46,31 @@ def tmp():
 #Nanjie Chenglie
 @app.route('/signup',methods=['POST'])
 def signupp():
-    email = request.form['Email or mobile number']
-    password = request.form['New password']
-    firstname = request.form['First name']
-    lastname = request.form['Last name']
-    wholename = firstname+lastname
+    email = request.form['email']
+    password = request.form['password']
+    firstname = request.form['fname']
+    lastname = request.form['lname']
+    wholename = firstname+ ' ' +lastname
     # after sign up it is sign in
     session['username'] = email
     #print firstname
     #print lastname
-    print wholename
-    print password
 
-    print email
 
-    mongo.db['user'].insert({'user_id':'1','user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
+    numberOfUser = mongo.db['user'].count()
+    resultId = ''
+
+    for x in range(0, 8 - len(str(numberOfUser))):
+        resultId = '0' + resultId
+
+    resultId += str(numberOfUser)
+
+    session['user_id'] = resultId
+
+    mongo.db['user'].insert({'user_id':resultId,'user_name':wholename,'password':password,'email':email,'phone':'','birth':'','trip_id':''})
     # zhiyuel: jumps to where????? need to be consistent
 
-    return redirect('CreateTrip.html')
+    return redirect('index.html')
 #Nanjie Chenglie
 @app.route('/login',methods=['POST'])
 def login():
@@ -75,13 +82,12 @@ def login():
         password = request.form['password']
         #update in database
         if passw==password:
-            print "yesyesyes"
             session['username'] = email
-            print session['username']
+            session['user_id'] = mongo.db['user'].find_one({'email': email})['user_id']
+
             return render_template("profilec.html", username=email)
             #return redirect(url_for('nextPage', id="test"))#param
         else:
-            print "nononononononono"
             return redirect('Nlogin.html')
 
 @app.route('/test/<id>')

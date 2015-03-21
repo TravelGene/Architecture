@@ -152,7 +152,7 @@
                 <h3>Email:</h3>
                 <p>{{targetUser.email}}</p>
                 <!--<input class="form-control">-->
-                <a class="more-link"  href="/profilec.html">Edit</a>
+                <a class="more-link"  href="/editprofile.html">Edit</a>
               </div>
             </div>
             
@@ -289,17 +289,18 @@
 
                       <article class="post">
 
-           <div style="float:left">
+           <div style="float:left; margin:10px 10px 2px 24px; height:180px">
             <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-2.jpg" alt="">
+               <h2 style=" margin:1px 1px 1px 1px; text-align:center">{{friend.user_name}}</h2>
           </div>
 
 
-          <div style = "margin-left : 250px">
+          <div style = "margin-left : 30px; float:left;min-width:40%">
 
-            <div style = "padding-top : 50px">
-             <h2>{{friend.user_name}}</h2>
+            <div style = "">
 
-             <div class ="destination" style = "margin-left : 100px">
+
+             <div class ="destination" style = "margin-top:30px">
                  <h2>Been to : </h2>
                  {% for place in friend.trip_list %}
                  {% if loop.index == 1 %}
@@ -311,36 +312,34 @@
 
             </div>
 
-            <div style = "float:right">
-             <a href="#" class="myButton1">add to wishlist</a>
-           </div>
+
 
 
          </div>
 
        </div>
 
-       <div class="inside" style="margin-top : 50px">
+       <div class="inside" style="float:left">
 
              {% for place in friend.trip_list %}
                 {% if loop.index == 1 %}
-                 <img class="img-news"  src="{{place.img_url}}" alt width="400" height="300">
-            <p class="post-date">{{place.depart_date}}</p>
-                {% endif %}
-             {% endfor %}
+                <div style="float:left">
+             <img class="img-news"  src="{{place.img_url}}" alt width="400" height="300">
+                </div>
+
+            <div class="description" >
+                <div style="float: left; width : 98%;">
+                    <h2 style="float:left; margin:3px" >{{ place.destination }}</h2>
+                    <p class="post-date">{{place.depart_date}}</p>
+                </div>
 
 
 
 
-
-
-        <div class="entry-content" style="margin-top : 50px; float:right">
-
-
-                 {% for place in friend.trip_list %}
-                    {% if loop.index == 1 %}
-                    <h3 style="width:260px"> Attraction:</h3>
-                    <h2 style="width:260px"> {{ place.attraction }}</h2>
+                    <div class="attraction">
+                        <h3 > Attraction:</h3>
+                        <h4 style="margin-top:10px"> {{ place.attraction }}</h4>
+                    </div>
                     {% endif %}
                  {% endfor %}
 
@@ -351,7 +350,7 @@
 
 
             <a href="/trip_detail_main.html" class="more-link" style = "float:right">Details</a>
-
+            <a href="/trip_detail_main.html" class="more-link" style = "float:right">Add to Favorate</a>
 
 
 
