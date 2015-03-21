@@ -12,13 +12,14 @@ from flask.ext.pymongo import PyMongo
 @app.route('/ActivityInfo/<City>/<id>')
 def get_info(City,id):  
     idval = City+"_"+id;
-    print idval;
-    allContent = mongo.db[City].find_one({'a_id' : str(idval)});  
+    print "aaaaaaaaaaaaaaa",idval;
+    allContent = mongo.db[City].find_one({'place_id' : str(idval)});  
     print allContent;
     result = {};
-    result['a_id'] = allContent['a_id'];
+    result['place_id'] = allContent['place_id'];
     result['address'] = allContent['address'];
     result['cato'] = allContent['category_str_list'];
     result['comment'] = allContent['comment'];
     result['name'] = allContent['title'];
+    print 'zzzzzzzzzzzzz',result
     return json.dumps(result);

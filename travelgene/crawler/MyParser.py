@@ -1,3 +1,4 @@
+#hotel crawler
 from bs4 import BeautifulSoup
 import re
 import json
@@ -156,7 +157,6 @@ if __name__ == "__main__":
             if aspect != 'ShowForum' and aspect != 'Travel_Guide':
                 urlqueue.append(root+t)
     print urlqueue
-
         # suffix = activity.find("a")['href']
         # page = root + suffix
         # soup = dump_url(page)
