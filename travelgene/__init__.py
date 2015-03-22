@@ -27,6 +27,13 @@ from travelgene import backend
 from travelgene import activities
 from travelgene import CreateTrip
 from travelgene import friendlist
+
 from travelgene import editprofile
+from travelgene import loginFB
+
+
+
+from travelgene import editprofile
+
 from travelgene import loginFB
 

@@ -33,13 +33,26 @@ def unabletologin():
     return render_template('Nlogin.html')
 
 
-@app.route('/CreateTrip.html', methods = ['GET'])
+# Lubron
+@app.route('/create_trip_new.html', methods = ['GET', 'POST'])
 def loadTrip():
-    dest = request.args.get('destination')
-    date1 = request.args.get('goDate')
-    date2 = request.args.get('returnDate')
-    print dest,date1,date2;
-    return render_template("CreateTrip.html", dest=dest, date1 = date1, date2 = date2)
+    if request.method == 'POST':
+        dest = str(request.form['destination'])
+        ## store date
+        session['goDate'] = request.form['goDate']
+        session['returnDate'] = request.form['returnDate']
+
+        destFirst = dest[0].upper()
+        refinedDestName = destFirst + dest[1: len(dest)].lower()
+
+        print refinedDestName
+
+        recommendCityObj = mongo.db['city'].find_one({'dest' : refinedDestName})
+
+        return render_template("create_trip_new.html", recommendCityObj=recommendCityObj)
+
+    else:
+        return redirect("create_trip_new.html")
 
 @app.route('/Activities',methods=['GET'])
 def toActivity():
@@ -67,5 +80,7 @@ def signup():
 def calendar():
     return render_template('calendar.html')
     
-
+@app.route('/create_trip_new.html')
+def createNew():
+    return render_template('create_trip_new.html')
 

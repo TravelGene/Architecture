@@ -156,12 +156,17 @@
                 <h1><span>Travel Gene</span></h1>
       						<h2>YOUR PERSONAL TRIP ADVISOR</h2>
                   <div class="span12" >
-      						<input type="text" id="destination" name="your-email" placeholder=" enter your destination" class="cform-text" size="40" title="your email" style ="width : 300px">
-      						<input type="text"  class="picktime" id="goDate"  name="your-email" placeholder=" start date" class="cform-text" size="40" title="your email">
-      						<input type="text" class="picktime" id="returnDate" name="your-email" placeholder=" return date" class="cform-text" size="40" title="your email">
+                      <form action="{{ url_for('loadTrip') }}" method = 'post'>
+      						<input type="text" id="destination" name="destination" placeholder=" enter your destination" class="cform-text" size="40" title="your email" style ="width : 300px">
+      						<input type="text"  class="picktime" name="goDate" id="goDate"  name="your-email" placeholder=" start date" class="cform-text" size="40" title="your email">
+      						<input type="text" class="picktime" name="returnDate" id="returnDate" name="your-email" placeholder=" return date" class="cform-text" size="40" title="your email">
       						<!-- <a href="/CreateTrip.html" > -->
-                  <a>
-      						<input type="submit" onclick="conveyTripInfo()"  value="begin a new trip" class="cform-submit" ></a>
+                            <a>
+      						<!--<input type="submit" onclick="conveyTripInfo()"  value="begin a new trip" class="cform-submit" >-->
+      						<input type="submit"  value="begin a new trip" class="cform-submit" >
+
+                            </a>
+                      </form>
                   </div>
 							 </div>
       				</div>

@@ -371,7 +371,7 @@ ul.icon li:hover {
 	opacity:0.7;
 }
 section.single-page {
-	padding: 4.75em 0; /* 76px */
+	margin:30px;
 }
 section.single-page h1 {
 	text-align: center;

@@ -1,0 +1,107 @@
+    <!DOCTYPE HTML>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Legend - One Page Bootstrap Template</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- Styles -->
+      <link rel="stylesheet" type="text/css" href="/static/css/qk.css">
+      <link href="/static/css/bootstrap.css" rel="stylesheet">
+      <link href="/static/css/drag.css" rel="stylesheet">
+      <link href="/static/css/style.css" rel="stylesheet">
+        <link href="/static/css/createtrip.css" rel="stylesheet">
+      <link rel='stylesheet' id='prettyphoto-css'  href="/static/css/prettyPhoto.css" type='text/css' media='all'>
+
+      <link href="/static/css/fontello.css" type="text/css" rel="stylesheet">
+
+
+  <!--[if lt IE 7]>
+            <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">
+            <![endif]-->
+            <!-- Google Web fonts -->
+            <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+            <style>
+            body {
+              padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+            </style>
+            <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+        </head>
+
+            <body>
+          <!--******************** NAVBAR ********************-->
+          <div class="navbar-wrapper">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+              <div class="navbar-inner">
+                <div class="container">
+                  <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+                  <h1 class="brand"><a href="/index.html">Travel Gene!</a></h1>
+                  <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+                  <nav class="pull-right nav-collapse collapse">
+                    <ul id="menu-main" class="nav">
+                      <li><a title="portfolio" href="/profilec.html">Sign out</a></li>
+                      <li><a title="services" href="/profilec.html">Account</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- /.container -->
+              </div>
+              <!-- /.navbar-inner -->
+            </div>
+            <!-- /.navbar -->
+          </div>
+          <!-- /.navbar-wrapper -->
+          <div id="top"></div>
+
+
+          <!--******************** Portfolio Section ********************-->
+          <section id="portfolio" class="single-page scrollblock">
+            <div class="container">
+              <div class="main-body" style="z-index:1">
+                <div class = "design">
+                    Design your Trip
+                </div>
+                  <div class = trip-act>
+                      <div class = "trip-act-left">Your Trip Plan</div>
+                      <div class = "trip-act-right">Alternative Activity</div>
+                  </div>
+                <div class="sideBySide">
+                  <div class="right">
+                    <ul class="source connected">
+                      <li class="plan"><span><p>Alfa Romeo</p></span></li>
+                      <li class="plan"><span><p>Alfa Romeo</p></span></li>
+                      <li class="plan"><span><p>Alfa Romeo</p></span></li>
+                      <li class="plan"><span><p>Alfa Romeo</p></span></li>
+                    </ul>
+                  </div>
+                  <div class="left">
+                    <ul class="target connected">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+                <div class="create" ><a  class="myButtonr" href="/profilec.html">Create Trip</a></div>
+            </div>
+            <!-- /.container -->
+          </section>
+        </body>
+          <!-- Loading the javaScript at the end of the page -->
+          <script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+            <script type="text/javascript" src="/static/js/jquery.sortable.js"></script>
+
+          <!--Panel-->
+            <script type="text/javascript">
+              $(function () {
+                $(".source, .target").sortable({
+                  connectWith: ".connected"
+                });
+              });
+            </script>
+
+
+      </html>
