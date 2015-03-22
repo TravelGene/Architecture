@@ -98,7 +98,7 @@ def showFriendList():
                 if rank == 4:
                     break
 
-    print tripInfoDict
+    
 
 
     return render_template('friendlist.html', friendlist = friendObjList, targetUser = targetUser, tripDictSort = tripInfoDict)

@@ -34,10 +34,10 @@ def test1():
 @app.route('/fb.html')
 def testfb():
     print 'nnnnnn'
-    # return render_template('test1.html')
-    return facebook.authorize(callback=url_for('facebook_authorized',
-        next=request.args.get('next') or request.referrer or None,
-        _external=True))
+    return render_template('test1.html')
+    # return facebook.authorize(callback=url_for('facebook_authorized',
+    #     next=request.args.get('next') or request.referrer or None,
+    #     _external=True))
 
 @app.route('/fblogin/authorized')
 @facebook.authorized_handler

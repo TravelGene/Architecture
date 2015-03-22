@@ -51,8 +51,8 @@ def addTrip():
     print newTrip,'\n\n\n\n\n\n'
     mongo.db['trip'].insert(newTrip)
 
-    usrid = request.args.get(session['user_id'])
-    usr = mongo.db['user'].find({user_id:usrid})
+    usrid = session['user_id']
+    usr = mongo.db['user'].find({'user_id':usrid})
     print usr
     # usr.getTrip_id
     # nTripId = generateTripid
@@ -62,6 +62,7 @@ def addTrip():
 
 @app.route('/ActivityInfo/<city>')
 def retrieveActivity(city):
+
     tripId = mongo.db[city].distinct('place_id')
     print "zxcvzvvdfasfaf",tripId
     res = ""
@@ -76,10 +77,12 @@ def retrieveActivity(city):
     #         city = id.split('_')[0]
     #         result = mongo.db[city].find({place_id:"id"})
     #         print result
-    
-    
+
+
     # res = "";
     # for s in result:
     #     res += (s+'$')
     # print res
     # return res
+
+

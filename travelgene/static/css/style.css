@@ -371,7 +371,7 @@ ul.icon li:hover {
 	opacity:0.7;
 }
 section.single-page {
-	padding: 4.75em 0; /* 76px */
+	margin:30px;
 }
 section.single-page h1 {
 	text-align: center;
@@ -630,6 +630,8 @@ section#team .align, section#contact .align {
 .team-thumb {
 	/*margin-top: 26px;*/
 	text-align:center;
+    width:150px;
+    height:150px;
 }
 .job-position {
 	font-family: 'Open Sans', sans-serif;
@@ -1154,4 +1156,9 @@ footer p {
 .attraction{
     width:100%;
     float:left;
+}
+
+.friend-icon{
+    height:50px;
+    width:50px;
 }
