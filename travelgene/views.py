@@ -23,6 +23,7 @@ def home_page():
         print 'Logged in as %s' % escape(session['username'])
     return render_template('index.html')
 
+
 # zhiyuel
 @app.route('/tmp.html')
 def tmp():
@@ -82,21 +83,25 @@ def login():
         # Found=oh.find_one({'email':email})
         # passw = Found['password']
         print email
-        print oh
+        # print oh
         Found=oh.find_one({'email':email})
         print Found
         passw = Found['password']
-
+        print passw, "password in db"
         password = request.form['password']
+        print password, "password I give"
         #update in database
+
         if passw==password:
             session['username'] = email
             session['user_id'] = mongo.db['user'].find_one({'email': email})['user_id']
+            print session['user_id'] + "login"
 
-            return render_template("profilec.html", username=email)
+            return render_template("index.html")
             #return redirect(url_for('nextPage', id="test"))#param
         else:
             return redirect('Nlogin.html')
+
 
 @app.route('/test/<id>')
 def nextPage(id):

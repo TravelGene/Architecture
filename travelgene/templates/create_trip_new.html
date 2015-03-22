@@ -2,7 +2,7 @@
     <html lang="en">
     <head>
       <meta charset="utf-8">
-      <title>Legend - One Page Bootstrap Template</title>
+      <title>Travel Gene</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -44,7 +44,7 @@
                   <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                   <nav class="pull-right nav-collapse collapse">
                     <ul id="menu-main" class="nav">
-                      <li><a title="portfolio" href="/profilec.html">Sign out</a></li>
+                      <li><a title="portfolio" href="{{url_for('logOut')}}">Sign out</a></li>
                       <li><a title="services" href="/profilec.html">Account</a></li>
                     </ul>
                   </nav>
@@ -73,26 +73,34 @@
                 <div class="sideBySide">
                   <div class="right">
                     <ul class="source connected">
-                      <li class="plan"><span><p>Alfa Romeo</p></span></li>
-                      <li class="plan"><span><p>Alfa Romeo</p></span></li>
-                      <li class="plan"><span><p>Alfa Romeo</p></span></li>
-                      <li class="plan"><span><p>Alfa Romeo</p></span></li>
+                      <!--<li class="plan"><span><p>Alfa Romeo</p></span></li>-->
+                      <!--<li class="plan"><span><p>Alfa Romeo</p></span></li>-->
+                      <!--<li class="plan"><span><p>Alfa Romeo</p></span></li>-->
+                      <!--<li class="plan"><span><p>Alfa Romeo</p></span></li>-->
+                      {% for city in recommendCityObj %}
+                        {% if loop.index <= 5 %}
+                            <li class="plan" text="{{city.place_id}}" style="background-image:url({{city.img_url}})"><a style="height:100%; width:100%" href="{{ url_for('get_info', place_id = city.place_id) }}"><span><p>{{ city.desc }}</p></span></a></li>
+                        {% endif %}
+                      {% endfor %}
                     </ul>
                   </div>
                   <div class="left">
-                    <ul class="target connected">
+                    <ul id="select" class="target connected">
                     </ul>
                   </div>
                 </div>
               </div>
-                <div class="create" ><a  class="myButtonr" href="/profilec.html">Create Trip</a></div>
+                <div class="create" ><a  class="myButtonr" href="/profilec.html" onclick="writeActivities( '{{tripInfoList.goDate}}', '{{tripInfoList.returnDate}}', '{{tripInfoList.dest}}')">Create Trip</a></div>
             </div>
             <!-- /.container -->
           </section>
         </body>
           <!-- Loading the javaScript at the end of the page -->
+
           <script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
             <script type="text/javascript" src="/static/js/jquery.sortable.js"></script>
+    <script type="text/javascript" src="/static/js/createTrip.js"></script>
+
 
           <!--Panel-->
             <script type="text/javascript">
