@@ -404,7 +404,7 @@ class OAuthRemoteApp(object):
             raise OAuthException('Unsupported access_token_method: ' +
                                  self.access_token_method)
         data = parse_response(resp, content)
-        print data
+        print data #####zhiyuel
         if not self.status_okay(resp):
             raise OAuthException('Invalid response from ' + self.name,
                                  type='invalid_response', data=data)

@@ -115,7 +115,17 @@
        });
 
        }
-
+    $.ajax({
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      url: "/blog/add/ajax",
+      data: JSON.stringify({title: 'hallo', article: 'test'}),
+      success: function (data) {
+        console.log(data.title);
+        console.log(data.article);
+      },
+      dataType: "json"
+    });
 </script>
 <div id="fb-root"></div>
 

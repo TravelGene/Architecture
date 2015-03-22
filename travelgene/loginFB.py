@@ -31,13 +31,32 @@ def test1():
     print 'test1.html'
     return render_template('test1.html')
 
+# @app.route('/blog/add/ajax', methods=['POST', 'GET'])
+# def add_blog_ajax():
+#     if request.method == 'POST':
+#         title = request.json['title']
+#         article = request.json['article']
+#         # blog = Blog(title, article)
+#         # db.session.add(blog)
+#         # db.session.commit()
+#         # return jsonify(title=title, article=article)
+#         print title
+#         print article
+#         return redirect(url_for("home_page"))
+
+
 @app.route('/fb.html')
 def testfb():
     print 'nnnnnn'
-    return render_template('test1.html')
-    # return facebook.authorize(callback=url_for('facebook_authorized',
-    #     next=request.args.get('next') or request.referrer or None,
-    #     _external=True))
+    if session.has_key('oauth_token'):
+        print "already has.."
+        del session['oauth_token']
+    # del get_facebook_oauth_token
+    # return redirect('test1.html')
+    print request.args.get('next')
+    return facebook.authorize(callback=url_for('facebook_authorized',
+        next=request.args.get('next') or request.referrer or None,
+        _external=True))
 
 @app.route('/fblogin/authorized')
 @facebook.authorized_handler
@@ -52,13 +71,16 @@ def facebook_authorized(resp):
     session['logged_in'] = True
     me = facebook.get('/me')
     friends=facebook.get('/me/taggable_friends')
-    print friends
+    friendlists = map(lambda x: (x['name'], x['id'],x['picture']), friends.data['data'])
+    print friendlists[0][2]['data']['url']
+    print "####"
+    print
 
     print 'Logged in as id=%s name=%s redirect=%s' % \
         (me.data['id'], me.data['name'], request.args.get('next'))
 
-    print request.args.get('next')
-    return redirect(url_for('home_page'))
+    # print request.args.get('next')
+    return redirect(url_for("home_page"))
 
 @app.route('/logout')
 def logout():

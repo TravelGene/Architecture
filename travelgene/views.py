@@ -16,13 +16,12 @@ from bson.json_util import dumps
 
 
 @app.route('/')
-@app.route('/index')
-
+@app.route('/index.html')
 #zhiyuel
-def index():
+def home_page():
     if 'username' in session:
-        return 'Logged in as %s' % escape(session['username'])
-    return "Hello, World!"
+        print 'Logged in as %s' % escape(session['username'])
+    return render_template('index.html')
 
 # zhiyuel
 @app.route('/tmp.html')
