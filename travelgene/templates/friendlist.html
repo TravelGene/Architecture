@@ -139,7 +139,7 @@
 
               <div class="entry-content">
                <div class="teamalign"> 
-                <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt="">
+                <img class="team-thumb img-circle" align="middle" src="{{targetUser.icon_url}}" alt="">
               </div>
             </div>
             
@@ -161,8 +161,7 @@
             <div class="entry-content">
               <h3>Your Friends on TravelGene</h3>
                 {% for friend in friendlist %}
-                    <h3>{{friend.user_name}}</h3>
-
+                <img class="friend-icon" align="middle" src="{{friend.icon_url}}" alt="">
                 {% endfor %}
 
 
@@ -290,7 +289,7 @@
                       <article class="post">
 
            <div style="float:left; margin:10px 10px 2px 24px; height:180px">
-            <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-2.jpg" alt="">
+            <img class="team-thumb img-circle" align="middle" src="{{ friend.icon_url }}" alt="">
                <h2 style=" margin:1px 1px 1px 1px; text-align:center">{{friend.user_name}}</h2>
           </div>
 
