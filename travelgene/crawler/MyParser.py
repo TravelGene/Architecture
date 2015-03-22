@@ -26,18 +26,34 @@ def dump_url(url):
     return BeautifulSoup(content)
 
 
-def parseHotelList(root_url):
-    root_html = url_open(root_url)
-    root_soup = BeautifulSoup(root_html,'html5lib')
-    soup = dump_url(root_url)
-    # print root_soup
-    titlelist = root_soup.find_all('div',attrs={"class":"listing_title"})
-    # input()
+def get_title(element, res):
+    title = element.find("h1")
+    res["title"] = unicode(title.text).strip()
+
+def parseHotelList(url):
+    dump_url(url)
+    visited_url={}
+    html = url_open(url)
+    soup = BeautifulSoup(html, "html5lib")
+    re_action = re.compile(r"(.*)-(.*)-(.*).*")
+    page_no = get_last_page_no(soup)
+    print page_no
+    m = re_action.search(url)
     hotelUrl = []
-    for title in titlelist:
-        if title.find('a'):
-            t = title.find('a')['href']
-            hotelUrl.append(root+t)
+    for i in xrange(0,page_no):
+        nurl = m.group(1)+'-'+m.group(2)+'-'+'oa'+(str)(i*30)+'-'+m.group(3)
+        if nurl in visited_url.keys(): 
+            continue
+        visited_url[nurl]=1
+        html = url_open(nurl)
+        soup = BeautifulSoup(html, "html5lib")
+        dump_url(nurl)
+        titlelist = soup.find_all('div',attrs={"class":"listing_title"})
+        for title in titlelist:
+            if title.find('a'):
+                t = title.find('a')['href']
+                hotelUrl.append(root+t)
+    # input()
     # print hotelUrl
     # print len(hotelUrl)
     res = []
@@ -47,24 +63,21 @@ def parseHotelList(root_url):
     return len(hotelUrl)
 
 
-# def get_content(element, page_tag):
-#     res = {}
-#     res["tag"] = list(page_tag)
-#     get_title(element, res)
-#     print "xxxxx", res["title"]
-#     get_photo_url(element, res)
-#     get_rank(element, res)
-#     get_rating(element, res)
-#     get_review_count(element, res)
-#     get_reviews(element, res)
-#     get_tag(element, res)
-#     get_description(element, res)
-#     get_target_url(element, res)
-#     return res
+def parseHotel(url):
+    html = url_open(url)
+    soup = BeautifulSoup(html,"html5lib")
+    #soup = dump_url(url)
+    dump_url(url)
+    res = {}
+    get_title(soup,res)
+    get_hotel_address(soup,res)
+    print "start crawling description..."
+    print url
+    # get_description(soup,res)
+    get_reviews(soup, res)
+    get_ratings(soup, res)
 
-def get_title(element, res):
-    title = element.find("h1")
-    res["title"] = unicode(title.text).strip()
+    return res
 
 def get_hotel_address(element, res):
     info = element.find("div",attrs={"class":"header_contact_info"})
@@ -76,52 +89,81 @@ def get_hotel_address(element, res):
         address += part.text
     res['address'] = address.strip()
 
+
 def get_description(element, res):
-    descp = element.find("div",attrs={"id":"BODYCON"})
-    print descp.find("div",attrs={"class":"tabs_description_content"})
-    input()
-    print descp.find("div",atrrs={"class":"hr_tabs content_block hr_tabs_block"})
-    
+    descp = element.find("div",attrs={"id":"BODYCON"}).find("div",attrs={"class":"answers_in_head"})
+    print descp
+    print "@@@@@@@@@@@@@1"
+
+    # ret=descp.
+
+    print ret
+
+    # print descp.find("div",atrrs={"class":"hr_tabs content_block hr_tabs_block"})
+
     # res['description']=descp.find("div",attrs={"class":"tabs_descriptive_text"}).text
 
-def parseHotel(url):
-    html = url_open(url)
-    soup = BeautifulSoup(html,"html5lib")
-    dump_url(url)
-    res = {}
-    get_title(soup,res)
-    get_hotel_address(soup,res)
-    # get_description(soup,res)
-    return res
+
+def get_reviews(element, res):
+    try:
+        reviewlist=[]
+        review=element.find("div",attrs={"id":"REVIEWS"})     
+        reviews=review.find_all("div",attrs={"class":"reviewSelector"})      
+        for r in reviews:
+            ret = r.find("p",attrs={"class":"partial_entry"})
+            if ret != None:
+                d = unicode(ret.text).strip()
+                reviewlist.append(d)
+        res['review_list']=reviewlist
+            # print reviewlist
+    except (AttributeError):
+        res['review_list']=[]
+
+def get_ratings(element, res):
+    try:    
+        rating_div=element.find("div",attrs={"class":"rs rating"})
+        cnt=rating_div.find("span",attrs={"property":"v:count"})
+        rate=rating_div.find("img")
+        res['review_count']=cnt.text
+        res['rating_string']=rate["content"]
+    except (AttributeError):
+        res['review_count']="Unknown"
+        res['rating_string']="Unknown"
     
 
-
 def parseRestaurantList(url):
+    dump_url(url)
+    visited_url={}
     html = url_open(url)
     soup = BeautifulSoup(html, "html5lib")
-    dump_url(url)
-    titlelist = soup.find_all('div',attrs={"class":"listing"})
-    # print titlelist[0]
+    re_action = re.compile(r"(.*)-(.*)-(.*).*")
+    page_no = get_last_page_no(soup)
+    print page_no
+    m = re_action.search(url)
     restaurantList = []
-    for r in titlelist:
-        if r.find('a',attrs={"class":"property_title"}):
-            t = r.find('a')['href']
-            restaurantList.append(root+t)
-    # print restaurantList
-    # print len(restaurantList)
-    # input()
+    cnt = 0
+    for i in xrange(0,page_no):
+        nurl = m.group(1)+'-'+m.group(2)+'-'+'oa'+(str)(i*30)+'-'+m.group(3)
+        if nurl in visited_url.keys(): 
+            continue
+        visited_url[nurl]=1
+        html = url_open(nurl)
+        soup = BeautifulSoup(html, "html5lib")
+        dump_url(nurl)
+        titlelist = soup.find_all('div',attrs={"class":"listing"})
+        for r in titlelist:
+            if r.find('a',attrs={"class":"property_title"}):
+                t = r.find('a')['href']
+                restaurantList.append(root+t)
+                print cnt
+                cnt += 1
+    print restaurantList
+    print len(restaurantList)
     res = []    
     for rest in restaurantList:
         res.append(parseRestaurant(rest))
     writeToFile(res,'Restaurant')
     return len(titlelist)
-
-def get_restaurant_address(element,res):
-    address = ""
-    address = element.find("address").find("span").text
-    res['address'] = address.strip()
-
-
 
 def parseRestaurant(url):
     html = url_open(url)
@@ -130,19 +172,54 @@ def parseRestaurant(url):
     res = {}
     get_title(soup,res)
     get_restaurant_address(soup,res)
+    get_ratings(soup,res)
+    get_reviews(soup,res)
     return res
 
 
+def get_restaurant_address(element,res):
+    address = ""
+    address = element.find("address").find("span").text
+    res['address'] = address.strip()
+
+def get_last_page_no(soup):
+    page_no = -1
+    for page in soup.find_all("a",attrs ={"class":"paging taLnk "} ) :
+        p = unicode (page.string.strip())
+        if p != None and int(p) > page_no:
+            page_no = int(p)
+    return page_no
 def parseAttractionList(url):
+    visited_url={}
     html = url_open(url)
     soup = BeautifulSoup(html, "html5lib")
-    dump_url(url)
-    titlelist = soup.find_all('div',attrs={"class":"property_title"})
+    re_action = re.compile(r"(.*)-(.*)-(.*).*")
+    page_no = get_last_page_no(soup)
+    print page_no
+    m = re_action.search(url)
     attractionList = []
-    for title in titlelist:
-        attractionList.append(root+title.find("a")['href'])
-    # print attractionList
-    # print len(attractionList)
+    attraction_re = re.compile(r"Attraction_Review(.*)")
+    for i in xrange(0,page_no):
+        nurl = m.group(1)+'-'+m.group(2)+'-'+'oa'+(str)(i*30)+'-'+m.group(3)
+        if nurl in visited_url.keys(): 
+            continue
+        visited_url[nurl]=1
+        html = url_open(nurl)
+        soup = BeautifulSoup(html, "html5lib")
+        dump_url(nurl)
+        titlelist = soup.find_all('div',attrs={"class":"property_title"})
+        print len(titlelist)
+        for title in titlelist:
+            t = title.find("a")['href']
+            mm = attraction_re.search(t)
+            if mm != None:
+                attractionList.append(root+t)
+        titlelist = soup.find_all('div',attrs={"class":"child_attraction"})
+        for title in titlelist:
+            attractionList.append(root+title.find("a")['href'])
+    
+    print attractionList
+    print len(attractionList)
     res = []
     for attraction in attractionList:
         res.append(parseAttraction(attraction))
@@ -156,18 +233,19 @@ def parseAttraction(url):
     res = {}
     get_title(soup,res)
     get_attraction_address(soup,res)
+    get_reviews(soup,res)
+    get_ratings(soup,res)
     return res
 
 def get_attraction_address(element,res):
-    ad = element.find('address')
-    if ad == None:
-    	res['address'] = "Unknown"
-    	return
-    else:
-    	ad = ad.text
-    action_re = re.compile(r"Address:(.*)")
-    m = action_re.search(ad)
-    res['address']=m.group(1).strip()
+    try:
+        ad = element.find('address')
+        ad = ad.text
+        action_re = re.compile(r"Address:(.*)")
+        m = action_re.search(ad)
+        res['address']=m.group(1).strip()
+    except (AttributeError):
+        res['address'] = "Unknown"
 
 def writeToFile(res,catagory):
     filename = catagory+"_out.json"
@@ -205,16 +283,18 @@ if __name__ == "__main__":
         # soup = dump_url(page)
         # parse_page(soup)
 
-    # while True:
-    # 	if parseHotelList(urlqueue[0])!=0:
-    # 		break
-    # 	print 'try again'
-    # # print urlqueue[2]
     while True:
-    	if parseAttractionList(urlqueue[2])!=0:
-    		break
+        if parseHotelList(urlqueue[0])!=0:
+            break
         print 'try again'
+
+    # print urlqueue[2]
     # while True:
-    # 	if parseRestaurantList(urlqueue[3]):
-    # 		break
-    # 	print 'try again'
+    #     if parseAttractionList(urlqueue[2])!=0:
+    #         break
+    #     print 'try again'
+    # while True:
+    #     if parseRestaurantList(urlqueue[3]):
+    #         break
+    #     print 'try again'
+
