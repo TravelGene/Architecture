@@ -52,7 +52,7 @@ def loadTrip():
         return render_template("create_trip_new.html", recommendCityObj=recommendCityObj)
 
     else:
-        return redirect("create_trip_new.html")
+        return render_template("create_trip_new.html")
 
 @app.route('/Activities',methods=['GET'])
 def toActivity():
