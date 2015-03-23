@@ -14,7 +14,7 @@ mongoimport -h ds031107.mongolab.com:31107 -d travelgene -c Bellevue -u travelge
 mongoimport -h ds031107.mongolab.com:31107 -d travelgene -c Seattle -u travelgene -p genetravel --type json --file ./Tripadvisor.Seattle.json --jsonArray
 mongoimport -h ds031107.mongolab.com:31107 -d travelgene -c Kirkland -u travelgene -p genetravel --type json --file ./Tripadvisor.Redmond.json --jsonArray
 
-mongo < createDB.js
+
 
 db.counters.drop()
 db.counters.insert(
