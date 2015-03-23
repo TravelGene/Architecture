@@ -56,7 +56,7 @@ color:#333;
 }
 /*---------- FORMS ----------*/
 
-input[type=text], input[type=submit], textarea {
+input[type=text], input[type=submit], input[type=password], textarea {
 	width: 100%;
 	padding: 0.5em;
 	font-size: 1em;
@@ -65,6 +65,8 @@ input[type=text], input[type=submit], textarea {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
+
+
 input, button, select, textarea {
 	font-family: 'Quattrocento', serif;
 }
@@ -295,7 +297,7 @@ ul#menu-main > li > a:hover {
 	-o-background-size: cover;
 	background-size: cover;
 	;
-	min-height: 1000px;
+	min-height: 800px;
 	margin-top: 0px;
 /*	padding-top:100px;*/
 	text-align:center;
@@ -318,7 +320,7 @@ ul#menu-main > li > a:hover {
 #headerwrap h1 span {
 	color:#f0bf00;
 }
-#headerwrap input[type=text] {
+#headerwrap input[type=text], #headerwrap input[type=password] {
 	background: rgba(227, 231, 228, 1);
 	font-family: 'Open Sans', sans serif;
 	font-size: 1.3125em;
@@ -561,6 +563,18 @@ article.post {
     margin-top:20px;
     min-width:810px;
 }
+.trip-history-post{
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    margin-top:20px;
+    min-width:810px;
+}
+
+
 article .inside {
 	margin: 5px 24px 24px;
     width:94%;
@@ -1155,7 +1169,14 @@ footer p {
     margin-left:10px;
     max-width:350px;
     min-width:130px;
-    height:250px;
+
+}
+.trip-history-description{
+    padding:20px;
+        float:right;
+    margin-left:10px;
+    max-width:350px;
+    min-width:130px;
 }
 
 .attraction{

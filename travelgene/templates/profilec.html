@@ -91,12 +91,11 @@
                     <h3>Email:</h3>
                     <p>{{user.email}}</p>
                     <!--<input class="form-control">-->
-                    <a class="more-link"  href="/profilec.html">Edit</a>
+                    <a class="more-link"  href="/editprofile.html">Edit</a>
                 </div>
             </div>
             <div class="span3" style="margin-top: 10px;width: 90%">
-            <a href="/friendlist.html" class="more-link" style="margin-left: 45px;height: 50px">Friends</a>
-            <a href="/calendar.html" class="more-link" style="margin-left: 45px;margin-top: 10px;height: 50px">Calendar</a>
+
                     <button class="myButton" style="margin-left: 45px;height: 50px"><a href="/friendlist.html" style="color:white">Friends</a></button>
                     <button class="myButton" style="margin-left: 45px;margin-top: 10px;height: 50px"><a href="/calendar.html" style="color:white">Calendar</a></button>
             </div>
@@ -137,10 +136,10 @@
         <div id="BODYCON">
 
             {% for trip in tripList %}
-                    <article class="post">
+                    <article class="trip-history-post">
                         <div style="overflow: hidden">
                             <img class="img-news" style="float:left"  src="{{trip.img_url}}" alt width="400" height="300">
-                            <div class="description" >
+                            <div class="trip-history-description" >
                                 <div style="float: left; width : 98%;">
                                 <h2 style="float:left; margin:3px" >{{ trip.destination }}</h2>
                                 <p class="post-date">{{trip.depart_date}}</p>
@@ -151,6 +150,7 @@
                                 </div>
                             </div>
                         </div>
+                    </article>
           {% endfor %}
             </div>
         </div>
