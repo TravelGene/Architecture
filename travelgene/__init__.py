@@ -30,9 +30,8 @@ from travelgene import CreateTrip
 from travelgene import friendlist
 
 from travelgene import editprofile
-from travelgene import loginFB
 
-
+from travelgene import profilec
 
 from travelgene import editprofile
 
