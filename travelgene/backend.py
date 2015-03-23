@@ -75,9 +75,6 @@ def toActivity():
 def tripdetail():
     return render_template('trip_detail_main.html')
 
-@app.route('/profilec.html')
-def profiles():
-    return render_template('profilec.html')
 
 
 
