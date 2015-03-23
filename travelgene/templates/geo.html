@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  
+    <head>  
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+        <title>Geolocation</title>  
+    </head>  
+    <body>  
+        <input type="button" id="getPos" value="Get My Location">
+        <div id="info" class="">  
+            Where you are： longitude
+            <span class="tip">unknown</span>，latitude
+            <span class="tip">unknown</span>  
+        </div>  
+ 
+        <script type="text/javascript">  
+            var t = 0;  
+            var dom = {  
+                btn : document.getElementById('getPos'),  
+                info : document.getElementById('info')  
+            };  
+ 
+            dom.btn.onclick = function(){  
+                if (navigator.geolocation) {  
+                    dom.info.innerHTML = "Waiting for the results getting back";
+                    dom.info.className = "warn";  
+                    navigator.geolocation.getCurrentPosition(getPositionSuccess,getPositionError,{enableHighAcuracy:true,timeout:500000,maximumAge:3000});  
+                }else {  
+                     dom.info.innerHTML = "browser doesn't support this service";
+                     dom.info.className = "warn";  
+                }  
+            }  
+ 
+            function getPositionSuccess(position){  
+                var lat = position.coords.latitude;  
+                var lng = position.coords.longitude;  
+                dom.info.innerHTML = "Where you are： longitude" + lng + "，latitude" + lat;
+ 
+                if(typeof position.address === "undefined"){  
+                    dom.info.innerHTML += "<br /><span class='tip'>Using Firefox 3.5+ to get more information like city, country</span>";
+                }else{  
+                    dom.info.innerHTML += "<br /><span class='tip'>" + position.address.country + " , " + position.address.region + " , " + position.address.city+"</span>";  
+                }  
+            }  
+ 
+            function getPositionError(error){  
+                switch(error.code){  
+                    case error.TIMEOUT :  
+                        dom.info.innerHTML = "time out";
+                        break;  
+                    case error.PERMISSION_DENIED :  
+                        dom.info.innerHTML = "you've denied our request";
+                        break;  
+                    case error.POSITION_UNAVAILABLE :   
+                        dom.info.innerHTML = "we could not provide position service any more";
+                        break;  
+                }  
+            }
+ 
+        </script>  
+    </body>  
+</html>

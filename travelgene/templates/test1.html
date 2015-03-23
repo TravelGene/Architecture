@@ -2,10 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript" charset="utf-8">
+        function abc(){
+        alert("hello!");
+    }
+    </script>
 <title>Facebook Login JavaScript Example</title>
 <meta charset="UTF-8">
 </head>
 <body>
+<div id="fb-root"></div>
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -17,23 +23,27 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-       localStorage.setItem('accessToken', response.authResponse.accessToken);
-      testAPI();
+        console.log("connected!");
+        //the following statement is critical
+        localStorage.setItem('accessToken', response.authResponse.accessToken);
+        testAPI();
     } else if (response.status === 'not_authorized') {
+        console.log("not_authorized!");
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
         FB.login(function(response) {
-               console.log(response);
-             }, {scope: 'user_friends,public_profile,email'});
+//               console.log(response);
+             }, {scope: 'user_friends,public_profile,email,user_photos'});
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
+        console.log("already log out!");
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
     }
-  }
 
+  }
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
   // code below.
@@ -52,32 +62,22 @@
     version    : 'v2.2' // use version 2.2
   });
 
-  // Now that we've initialized the JavaScript SDK, we call
-  // FB.getLoginStatus().  This function gets the state of the
-  // person visiting this page and can return one of three states to
-  // the callback you provide.  They can be:
-  //
-  // 1. Logged into your app ('connected')
-  // 2. Logged into Facebook, but not your app ('not_authorized')
-  // 3. Not logged into Facebook and can't tell if they are logged into
-  //    your app or not.
-  //
-  // These three cases are handled in the callback function.
-
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
 
   };
 
-  // Load the SDK asynchronously
+//  Load the SDK asynchronously
   (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
+
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1596233553958439&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+
+}(document, 'script', 'facebook-jssdk'));
 
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
@@ -89,57 +89,64 @@
       FB.api('/me', function(response) {
       console.log(response);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name +":"+response.id +'!';
+        'Thanks for logging in, ' + response.name +":"+response.id +" and your email is" +response.email
         });
+      FB.api('/me/picture', function(response) {
+            document.getElementById('profile').src =response['data']['url'];
+        });
+
 //         FB.login(function(response) {
 //           console.log(response);
 //         }, {scope: 'user_friends'});
-      FB.logout(function(response) {
-        // Person is now logged out
-          console.log("log out...");
-        });
-//
-//        FB.login(
-//          function(response) {
-//            console.log(response);
-//          },
-//          {
-//            scope: 'user_likes',
-//            auth_type: 'rerequest'
-//          }
-//        );
+
+//        FB.logout(function(response) {
+//        // Person is now logged out
+//          console.log("log out...");
+//        });
+
        FB.api('/me/taggable_friends', function(response) {
             var friends=JSON.stringify(response);
-            console.log(friends);
-            var fbname = response['data'][0]['name'];
-            var furl = response['data'][0]['picture']['data']['url'];
-            document.getElementById('friends').innerHTML = fbname;
-            document.getElementById('f_image').src=furl;
+//            console.log(friends);
+            var div_friends=document.getElementById("friends");
+           var head = document.createElement("h2");
+           div_friends.appendChild(head);
+           head.innerHTML="friend list";
+           for(i=0;i<10;i++){
+               var fbname = response['data'][i]['name'];
+               var furl = response['data'][i]['picture']['data']['url'];
+               var name=document.createElement("label");
+               name.innerHTML=fbname;
+               div_friends.appendChild(name);
+               var elem = document.createElement("img");
+               div_friends.appendChild(elem);
+               elem.src = furl;
+               elem.alt=fbname;
+           }
        });
 
        }
-    $.ajax({
-      type: "POST",
-      contentType: "application/json; charset=utf-8",
-      url: "/blog/add/ajax",
-      data: JSON.stringify({title: 'hallo', article: 'test'}),
-      success: function (data) {
-        console.log(data.title);
-        console.log(data.article);
-      },
-      dataType: "json"
-    });
+//    $.ajax({
+//      type: "POST",
+//      contentType: "application/json; charset=utf-8",
+//      url: "/blog/add/ajax",
+//      data: JSON.stringify({title: 'hallo', article: 'test'}),
+//      success: function (data) {
+//        console.log(data.title);
+//        console.log(data.article);
+//      },
+//      dataType: "json"
+//    });
 
-    function logout(){
-        alert("logout")
-        FB.logout(function(response) {
-        // Person is now logged out
-          console.log("log out...");
-           window.location.reload()
+
+    function fbLogout() {
+        FB.logout(function (response) {
+            //Do what ever you want here when logged out like reloading the page
+            window.location.reload();
         });
     }
+
 </script>
-<div id="fb-root"></div>
+
 
 <!--
   Below we include the Login Button social plugin. This button uses
@@ -147,21 +154,27 @@
   the FB.login() function when clicked.
 -->
 <!--<div class="fb-login-button" data-max-rows="2" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>-->
-<fb:login-button scope="user_friends,public_profile,email,user_likes " onlogin="checkLoginState();">
+<fb:login-button autologoutlink="true" scope="user_friends,public_profile,email,user_likes " onlogin="checkLoginState();">
 
 </fb:login-button>
 
 
 
+<!--<div class="fb-login-button" onclick="abc()" data-max-rows="3" data-size="medium" data-show-faces="true" data-auto-logout-link="true"></div>-->
+
 <div id="status">
+
 </div>
+<img id="profile" src=""/>
+
 
 
 <div id="friends">
+
 </div>
 
-<img id ="f_image" src="" />
+<!--<img id ="f_image" src="" />-->
+<!--<button onclick="fbLogout()">log out</button>-->
 
-<input type="button" onclick="logout()" value="log out"/>
 </body>
 </html>

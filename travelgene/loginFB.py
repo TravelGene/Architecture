@@ -31,6 +31,11 @@ def test1():
     print 'test1.html'
     return render_template('test1.html')
 
+@app.route('/geo.html')
+def geo():
+    print 'geo.html'
+    return render_template('geo.html')
+
 # @app.route('/blog/add/ajax', methods=['POST', 'GET'])
 # def add_blog_ajax():
 #     if request.method == 'POST':
