@@ -94,10 +94,10 @@
 //         FB.login(function(response) {
 //           console.log(response);
 //         }, {scope: 'user_friends'});
-//      FB.logout(function(response) {
-//        // Person is now logged out
-//          console.log("log out...");
-//        });
+      FB.logout(function(response) {
+        // Person is now logged out
+          console.log("log out...");
+        });
 //
 //        FB.login(
 //          function(response) {
@@ -109,9 +109,12 @@
 //          }
 //        );
        FB.api('/me/taggable_friends', function(response) {
-            console.log(JSON.stringify(response));
-//          document.getElementById('status').innerHTML =
-//            'Thanks for logging in, ' + response.name +":"+response.id +'!';
+            var friends=JSON.stringify(response);
+            console.log(friends);
+            var fbname = response['data'][0]['name'];
+            var furl = response['data'][0]['picture']['data']['url'];
+            document.getElementById('friends').innerHTML = fbname;
+            document.getElementById('f_image').src=furl;
        });
 
        }
@@ -126,6 +129,15 @@
       },
       dataType: "json"
     });
+
+    function logout(){
+        alert("logout")
+        FB.logout(function(response) {
+        // Person is now logged out
+          console.log("log out...");
+           window.location.reload()
+        });
+    }
 </script>
 <div id="fb-root"></div>
 
@@ -139,9 +151,17 @@
 
 </fb:login-button>
 
+
+
 <div id="status">
 </div>
 
 
+<div id="friends">
+</div>
+
+<img id ="f_image" src="" />
+
+<input type="button" onclick="logout()" value="log out"/>
 </body>
 </html>
