@@ -45,10 +45,10 @@
               });
             </script>
             <script type="text/javascript" src="static/js/loadActivities.js"></script>
-            <script type="text/javascript">
-            window.onload = loadInfo("{{city}}","{{id}}");
-            console.log("asdfasdf","{{city}}","{{id}}");
-            </script>
+            <!--<script type="text/javascript">-->
+            <!--window.onload = loadInfo("{{city}}","{{id}}");-->
+            <!--console.log("asdfasdf","{{city}}","{{id}}");-->
+            <!--</script>-->
         </head>
         <body>
           <!--******************** NAVBAR ********************-->
@@ -62,7 +62,7 @@
                   <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                   <nav class="pull-right nav-collapse collapse">
                     <ul id="menu-main" class="nav">
-                     <li><a title="Signout" >Sign out</a></li>
+                     <li><a title="Signout" href="{{url_for('logOut')}}">Sign out</a></li>
                      <li><a title="Account" href="/profilec.html">Account</a></li>
                    </ul>
                  </nav>
@@ -89,17 +89,13 @@
         <article class="show_area">
 
           <div class="activity_info">
-           <h2 class="activity_name">La Gourmandine Bakery</h2>
+           <h2 class="activity_name">{{city.desc}}</h2>
            <div class="diy-slideshow">
+
             <figure class="show">
-              <img src="static/img/restaurant1.png" width="100%" /><figcaption>Taken by QQ</figcaption> 
+              <img src="{{city.img_url}}" width="100%" /><figcaption>Taken by QQ</figcaption>
             </figure>
-            <figure>
-              <img src="static/img/restaurant2.png" width="100%" /><figcaption>"Starlight" by ChaoticMind75</figcaption> 
-            </figure>
-            <figure>
-              <img src="static/img/restaurant3.png" width="100%" /><figcaption>"Snowstorm" by Beaulawrence</figcaption> 
-            </figure>
+
             <span class="prev">&laquo;</span>
             <span class="next">&raquo;</span>
           </div>
@@ -114,7 +110,7 @@
           </div>
           <div class="food_category"><b>Cuisines:</b> French</div>
           <div class="telephone">Tel:412315369</div>
-          <div class="location">Location:4605 butler Strret, Lawrenceville, PA</div>
+          <div class="location">{{city.address}}</div>
         </div>
 
         <div class="users_feedback"> 
@@ -126,7 +122,7 @@
               <div role="tabpanel" class="tab-pane active" id="Review1">
                 <div class="comment_user">
                   <a href="/profilec.html">
-                   <img src="static/img/portrait-1.jpg" />
+                   <img src="/static/img/portrait-1.jpg" />
                  </a>
                  <p >
                   Yinzer13
@@ -144,7 +140,7 @@
             <div role="tabpanel" class="tab-pane active" id="Review2">
               <div class="comment_user">
                 <a href="/profilec.html">
-                 <img src="static/img/portrait-2.jpg" />
+                 <img src="/static/img/portrait-2.jpg" />
                </a>
 
                <p >

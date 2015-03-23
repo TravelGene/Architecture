@@ -1,4 +1,6 @@
+       <!--modified Qiqis -->
     <!DOCTYPE HTML>
+
     <html lang="en">
     <head>
     <meta charset="utf-8">
@@ -74,27 +76,27 @@
      <!--******************** Portfolio Section ********************-->
     <section id="portfolio" class="single-page scrollblock">
       
-	<div class="container">
+    <div class="container">
 
         <div style="margin-top: 0px">
         <div id="LEFTNAV">
             <div class="entry-content">
-            <div class="teamalign"> <img class="team-thumb img-circle" align="middle" src="/static/img/portrait-1.jpg" alt=""> </div>
+            <div class="teamalign"> <img class="team-thumb img-circle" align="middle" src="{{user.icon_url}}" alt=""> </div>
             </div>
             <div class="span3" style="margin-top: 10px;width: 90%">
                 <div class="entry-content">
                     <h3>Name:</h3>
-                    <p>{{username}}</p>
+                    <p>{{user.user_name}}</p>
                     <!-- <input class="form-control">-->
                     <h3>Email:</h3>
-                    <p>{{username}}</p>
+                    <p>{{user.email}}</p>
                     <!--<input class="form-control">-->
                     <a class="more-link"  href="/profilec.html">Edit</a>
                 </div>
             </div>
             <div class="span3" style="margin-top: 10px;width: 90%">
-			<a href="/friendlist.html" class="more-link" style="margin-left: 45px;height: 50px">Friends</a>
-			<a href="/calendar.html" class="more-link" style="margin-left: 45px;margin-top: 10px;height: 50px">Calendar</a>
+            <a href="/friendlist.html" class="more-link" style="margin-left: 45px;height: 50px">Friends</a>
+            <a href="/calendar.html" class="more-link" style="margin-left: 45px;margin-top: 10px;height: 50px">Calendar</a>
                     <button class="myButton" style="margin-left: 45px;height: 50px"><a href="/friendlist.html" style="color:white">Friends</a></button>
                     <button class="myButton" style="margin-left: 45px;margin-top: 10px;height: 50px"><a href="/calendar.html" style="color:white">Calendar</a></button>
             </div>
@@ -119,88 +121,46 @@
                     <div class="entry-content">
                         <h3>Countries</h3>
 
-                    <p>2</p>
+                    <p>1</p>
                     </div>
                  </div>
                 <div class="span1">
                     <div class="entry-content">
                         <h3>Cities</h3>
 
-                    <p>4</p>
+                    <p>{{cityNumber}}</p>
                     </div>
                 </div>
 
             </div>
         </div>
-		<div id="BODYCON">
+        <div id="BODYCON">
 
-
+            {% for trip in tripList %}
                     <article class="post">
                         <div style="overflow: hidden">
-                            <img class="img-news" style="float:left"  src="/static/img/blog_img-01.jpg" alt>
-                            <div class="inside" style="margin-left: 500px">
-                                <p class="post-date">Feb, 2015</p>
-                                <h2>Pittsburgh, PA</h2>
-                                <div class="entry-content">
-                                    <p>
-                                        CMU VS PITTS
-                                    </p>
-                                    <a href="/trip_detail_main.html" class="more-link" style="float:right">Details</a>
-
+                            <img class="img-news" style="float:left"  src="{{trip.img_url}}" alt width="400" height="300">
+                            <div class="description" >
+                                <div style="float: left; width : 98%;">
+                                <h2 style="float:left; margin:3px" >{{ trip.destination }}</h2>
+                                <p class="post-date">{{trip.depart_date}}</p>
+                                </div>
+                                <div class="attraction">
+                                <h3 > Attraction:</h3>
+                                <h4 style="margin-top:10px"> {{ trip.attraction }}</h4>
                                 </div>
                             </div>
                         </div>
-
-
-                    </article>
-                    <article class="post" style="margin-top: 40px">
-                        <div style="overflow: hidden">
-                            <img class="img-news" style="float:left"  src="/static/img/blog_img-02.jpg" alt>
-                            <div class="inside" style="margin-left: 500px">
-                                <p class="post-date">Feb, 2015</p>
-                                <h2>Death Valley, CA</h2>
-                                <div class="entry-content">
-                                    <p>
-                                        This is a great place for adventure!
-                                    </p>
-                                    <a href="/trip_detail_main.html" class="more-link" style="float:right">Details</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="post" style="margin-top: 40px">
-                        <div style="overflow: hidden">
-                            <img class="img-news" style="float:left"  src="/static/img/blog_img-03.jpg" alt>
-                            <div class="inside" style="margin-left: 500px">
-                                <p class="post-date">Feb, 2015</p>
-                                <h2>Beijing, China</h2>
-                                <div class="entry-content">
-                                    <p>
-                                        Cute Panda.
-                                    </p>
-                                    <a href="/profilec.html" class="more-link" style="float:right">Details</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+          {% endfor %}
             </div>
         </div>
-	</div>
-			
+    </div>
+            
 
-	</div>
+    </div>
       <!-- /.container -->
     </section>
     <hr>
-
-
-
-
-
-
-
 
 
 

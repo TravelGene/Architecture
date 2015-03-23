@@ -25,12 +25,18 @@ def addTrip():
     print 'placeid',placeId
     nTripId = mongo.db['trip'].find({}).count()+1
 
+
+    destFirst = dest[0].upper()
+    dest = destFirst + dest[1: len(dest)].lower()
+
     activitiesList = placeId.split('$');
+    print activitiesList, " activitiesList"
     nAId = mongo.db['activity'].find({}).count()+1
+    aIdList = []
     for i in range(len(activitiesList)):
         if len(activitiesList[i])==0:
             continue
-        activitiesList[i] += dest+'_'+activitiesList[i]
+        # activitiesList[i] += dest+'_'+activitiesList[i]
         newActivity = {
             'a_id':nAId+i,
             'start_time':'default',
@@ -38,25 +44,38 @@ def addTrip():
             'place_id':activitiesList[i],
             'trip_id':nTripId
         }
+        # print newActivity, "newActivity"
         mongo.db['activity'].insert(newActivity)
-    print "ddddddddddd",activitiesList
+        # print n, "chenggonglema"
+        aIdList.append(nAId + i)
+    # print "ddddddddddd",activitiesList
     newTrip = {
         'trip_id':nTripId,
         'destination':dest,
         'depart_date':date1,
         'return_date':date2,
-        'activities':activitiesList,
+        'activities':aIdList,
         'img_url':[]
     };
-    print newTrip,'\n\n\n\n\n\n'
+    # print newTrip,'\n\n\n\n\n\n'
     mongo.db['trip'].insert(newTrip)
 
+
+    # print session['user_id'], 'User Session id'
     usrid = session['user_id']
-    usr = mongo.db['user'].find({'user_id':usrid})
-    print usr
-    # usr.getTrip_id
-    # nTripId = generateTripid
-    # usr.updateTrip_id(nTripId)
+    usr = mongo.db['user'].find_one({'user_id':usrid})
+    tripList = usr['trip_list']
+    # print tripList, "before"
+    tripList.append(nTripId)
+
+    # print tripList, "after"
+    n = mongo.db['user'].find_and_modify(query = {'user_id' : usrid},
+                                    update = {"$set" : {'trip_list' : tripList}},
+                                    upsert = False)
+
+
+
+
     print 'done'
     return render_template('profilec.html')
 

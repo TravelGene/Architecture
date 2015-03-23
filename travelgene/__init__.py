@@ -17,9 +17,10 @@ app.config['MONGO3_PORT'] = 31107
 app.config['MONGO3_DBNAME'] = 'travelgene'
 app.config['MONGO3_USERNAME']='travelgene'
 app.config['MONGO3_PASSWORD']='genetravel'
+cors = CORS(app)
 mongo = PyMongo(app, config_prefix='MONGO3')
 oauth = OAuth()
-cors = CORS(app)
+
 
 # from travelgene import *
 from travelgene import views
@@ -29,9 +30,8 @@ from travelgene import CreateTrip
 from travelgene import friendlist
 
 from travelgene import editprofile
-from travelgene import loginFB
 
-
+from travelgene import profilec
 
 from travelgene import editprofile
 

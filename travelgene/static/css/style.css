@@ -239,6 +239,11 @@ em {
 #menu-main {
 	margin-top: 1.125em;
 }
+
+ul#menu-main li{
+    cursor:pointer;
+}
+
 ul#menu-main > li > a {
 	font-family: 'Patua One', cursive;
 	font-weight: normal;

@@ -22,6 +22,13 @@ def hello_world():
     return "abc"
 
 
+
+@app.route('/index')
+def logOut():
+    session['username'] = None
+    print "qiu cheng gong"
+    return render_template('index.html')
+
 @app.route('/Nlogin.html')
 def unabletologin():
     return render_template('Nlogin.html')
@@ -36,23 +43,31 @@ def loadTrip():
         session['goDate'] = request.form['goDate']
         session['returnDate'] = request.form['returnDate']
 
+        # transform into first letter upper then lower
         destFirst = dest[0].upper()
         refinedDestName = destFirst + dest[1: len(dest)].lower()
 
-        print refinedDestName
+        # print refinedDestName
+        recommendCityObj = mongo.db[refinedDestName].find()
 
-        recommendCityObj = mongo.db['city'].find_one({'dest' : refinedDestName})
+        # print recommendCityObj
 
-        return render_template("create_trip_new.html", recommendCityObj=recommendCityObj)
+        tripInfoList = {}
+        tripInfoList['dest'] = str(request.form['destination'])
+        tripInfoList['goDate'] = request.form['goDate']
+        tripInfoList['returnDate'] = request.form['returnDate']
+
+
+        return render_template("create_trip_new.html", recommendCityObj=recommendCityObj, tripInfoList = tripInfoList)
 
     else:
         return render_template("create_trip_new.html")
-
+#
 @app.route('/Activities',methods=['GET'])
 def toActivity():
     city=str(request.args.get('city'));
     id=request.args.get('id');
-    return render_template("Activities.html",city=city,id=id);
+    return render_template("Activities.html");
     #zhiyuel: here jumps to nothing!!!!
 
 
@@ -60,9 +75,6 @@ def toActivity():
 def tripdetail():
     return render_template('trip_detail_main.html')
 
-@app.route('/profilec.html')
-def profiles():
-    return render_template('profilec.html')
 
 
 
@@ -74,7 +86,5 @@ def signup():
 def calendar():
     return render_template('calendar.html')
     
-@app.route('/create_trip_new.html')
-def createNew():
-    return render_template('create_trip_new.html')
+
 

@@ -21,10 +21,9 @@ def editProfilePostInfo():
 
         targetUser = mongo.db['user'].find_one({'email' : session['username']})
 
-        n = mongo.db['user'].update({'email' : session['username']}, {'user_id' : targetUser['user_id'], 'user_name' : targetUser['user_name'], 'password' : pwd,
-                                 'email' : targetUser['email'], 'birth' : targetUser['birth'], 'friend_id' : targetUser['friend_id'],
-                                 'trip_list' : targetUser['trip_list'], 'icon_url' : targetUser['icon_url'], 'user_id' : targetUser['user_name'],
-                                 'phone' : targetUser['phone']}, True)
+        mongo.db['user'].find_and_modify(query = {'email' : session['username']},
+                                            update = {"$set" : {'password' : pwd}},
+                                            upsert = True)
 
         return render_template('profilec.html')
     else:
