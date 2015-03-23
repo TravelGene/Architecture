@@ -77,7 +77,7 @@ def addTrip():
 
 
     print 'done'
-    return render_template('profilec.html')
+    return render_template('profilec.html', user = usr)
 
 @app.route('/ActivityInfo/<city>')
 def retrieveActivity(city):
