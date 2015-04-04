@@ -8,6 +8,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 import monkapi
+import testmonk
 
 # from flask.ext.social import Social
 # from flask.ext.social.datastore import SQLAlchemyConnectionDatastore
@@ -47,7 +48,9 @@ def loadTrip():
         refinedDestName = destFirst + dest[1: len(dest)].lower()
 
         # print refinedDestName
-        recommendCityObj = mongo.db[refinedDestName].find()
+        if monkapi.is_initialized == False:
+            monkapi.init_monk()
+        recommendCityObj = monkapi.get_recommended_place(refinedDestName)
 
         # print recommendCityObj
 
@@ -87,8 +90,6 @@ def calendar():
 # Author: Qiankun
 @app.route('/testmonk.html')
 def monktest():
-	monkapi.init_monk()
-	ent_id = monkapi.get_entity_id('Seattle','Seattle_00000003')
-	monkapi.add_label(ent_id,'likeTravel','Y')
+	testmonk.add_sample_label()
 	return render_template('testmonk.html',result='ok')
 	

@@ -52,13 +52,11 @@ def loadTrip():
         recommendCityObj = monkapi.get_recommended_place(refinedDestName)
 
         # print recommendCityObj
-
+        print session,"session in backend"
         tripInfoList = {}
         tripInfoList['dest'] = str(request.form['destination'])
         tripInfoList['goDate'] = request.form['goDate']
         tripInfoList['returnDate'] = request.form['returnDate']
-
-
         return render_template("create_trip_new.html", recommendCityObj=recommendCityObj, tripInfoList = tripInfoList)
 
     else:
@@ -77,7 +75,6 @@ def tripdetail():
     return render_template('trip_detail_main.html')
 
 
-
 @app.route('/signup.html')
 def signup():
     return render_template('signup.html')
@@ -89,8 +86,8 @@ def calendar():
 # Author: Qiankun
 @app.route('/testmonk.html')
 def monktest():
-	monkapi.init_monk()
-	ent_id = monkapi.get_entity_id('Seattle','Seattle_00000003')
-	monkapi.add_label(ent_id,'likeTravel','Y')
-	return render_template('testmonk.html',result='ok')
-	
+    monkapi.init_monk()
+    ent_id = monkapi.get_entity_id('Seattle','Seattle_00000007')
+    monkapi.add_label(ent_id,'likeTravel','Y')
+    return render_template('testmonk.html',result='ok')
+    
