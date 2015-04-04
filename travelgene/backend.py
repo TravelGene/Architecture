@@ -3,12 +3,11 @@ from travelgene import app
 from travelgene import mongo
 from flask import Flask, render_template, session, redirect, url_for, escape, request
 import json
-from pymongo import MongoClient
-import pymongo
 import flask_debugtoolbar
 from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
+import monkapi
 
 # from flask.ext.social import Social
 # from flask.ext.social.datastore import SQLAlchemyConnectionDatastore
@@ -48,7 +47,9 @@ def loadTrip():
         refinedDestName = destFirst + dest[1: len(dest)].lower()
 
         # print refinedDestName
-        recommendCityObj = mongo.db[refinedDestName].find()
+        if monkapi.is_initialized == False:
+            monkapi.init_monk()
+        recommendCityObj = monkapi.get_recommended_place(refinedDestName)
 
         # print recommendCityObj
 
@@ -77,7 +78,6 @@ def tripdetail():
 
 
 
-
 @app.route('/signup.html')
 def signup():
     return render_template('signup.html')
@@ -86,5 +86,11 @@ def signup():
 def calendar():
     return render_template('calendar.html')
     
-
-
+# Author: Qiankun
+@app.route('/testmonk.html')
+def monktest():
+	monkapi.init_monk()
+	ent_id = monkapi.get_entity_id('Seattle','Seattle_00000003')
+	monkapi.add_label(ent_id,'likeTravel','Y')
+	return render_template('testmonk.html',result='ok')
+	

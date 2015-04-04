@@ -1,0 +1,17 @@
+import sys
+sys.path.append("/home/micz/pymonk-master/")
+
+import pymongo
+import monk.core.api as ms
+from monk.roles.configuration import default_config
+from pymongo import MongoClient
+client = MongoClient()
+
+if __name__=='__main__':
+	config=default_config()
+	ms.initialize(default_config())
+	ents = ms.convert_entities()
+	stemTS = ms.yaml2json('turtle_scripts/turtle_stem.yml')
+	stemT = ms.create_turtle(stemTS)
+	stemT = ms.load_turtle('travel_stem','monk')
+	stemT.generic()

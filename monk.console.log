@@ -1,0 +1,202 @@
+[2015-03-30 00:17:42,223][16380][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-30 00:17:42,260][16380][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-30 00:17:42,260][16380][monk.api    ][INFO    ][40  ] : ------start up------
+[2015-03-30 00:17:42,945][16380][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-30 00:17:42,951][16380][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-30 00:17:42,952][16380][monk.api    ][INFO    ][40  ] : ------start up------
+[2015-03-30 00:19:27,300][19186][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-30 00:19:27,309][19186][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-30 00:19:27,310][19186][monk.api    ][INFO    ][40  ] : ------start up------
+[2015-03-30 00:19:27,324][19186][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:19:27] "GET /testmonk.html HTTP/1.1" 500 -
+[2015-03-30 00:19:27,363][19186][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:19:27] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2015-03-30 00:19:27,366][19186][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:19:27] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+[2015-03-30 00:19:27,367][19186][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:19:27] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2015-03-30 00:19:27,406][19186][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:19:27] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2015-03-30 00:19:27,419][19186][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:19:27] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+[2015-03-30 00:19:27,486][19186][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:19:27] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2015-03-30 00:20:12,797][19186][werkzeug    ][INFO    ][87  ] :  * Detected change in '/home/micz/Architecture/travelgene/pymonk-master/monk/roles/configuration.py', reloading
+[2015-03-30 00:20:42,323][20275][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-30 00:20:42,329][20275][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-30 00:20:42,329][20275][monk.api    ][INFO    ][40  ] : ------start up------
+[2015-03-30 00:20:42,339][20275][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:20:42] "GET /testmonk.html HTTP/1.1" 500 -
+[2015-03-30 00:20:42,383][20275][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:20:42] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2015-03-30 00:20:42,384][20275][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:20:42] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+[2015-03-30 00:20:42,386][20275][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:20:42] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2015-03-30 00:20:42,418][20275][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:20:42] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2015-03-30 00:20:42,419][20275][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:20:42] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+[2015-03-30 00:20:42,490][20275][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [30/Mar/2015 00:20:42] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2015-03-31 17:56:31,197][10683][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-31 17:56:31,231][10683][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-31 17:56:31,231][10683][monk.api    ][INFO    ][40  ] : ------start up------
+[2015-03-31 17:58:33,432][13278][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-31 17:58:33,438][13278][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-31 17:58:33,439][13278][monk.api    ][INFO    ][40  ] : ------start up------
+[2015-03-31 17:58:33,449][13278][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 17:58:33] "GET /testmonk.html HTTP/1.1" 500 -
+[2015-03-31 17:58:33,655][13278][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 17:58:33] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2015-03-31 17:58:33,665][13278][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 17:58:33] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+[2015-03-31 17:58:33,677][13278][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 17:58:33] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2015-03-31 17:58:33,740][13278][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 17:58:33] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2015-03-31 17:58:33,758][13278][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 17:58:33] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+[2015-03-31 17:58:33,812][13278][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 17:58:33] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2015-03-31 17:58:53,155][13278][werkzeug    ][INFO    ][87  ] :  * Detected change in '/home/micz/Architecture/travelgene/monkapi.py', reloading
+[2015-03-31 18:01:38,387][15205][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-31 18:01:38,392][15205][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 18:01:38] "GET /testmonk.html HTTP/1.1" 500 -
+[2015-03-31 18:01:38,433][15205][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 18:01:38] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2015-03-31 18:01:38,436][15205][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 18:01:38] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+[2015-03-31 18:01:38,438][15205][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 18:01:38] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2015-03-31 18:01:38,475][15205][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 18:01:38] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2015-03-31 18:01:38,477][15205][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 18:01:38] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+[2015-03-31 18:01:38,531][15205][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 18:01:38] "GET /testmonk.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2015-03-31 18:01:45,759][15205][werkzeug    ][INFO    ][87  ] :  * Detected change in '/home/micz/Architecture/travelgene/monkapi.py', reloading
+[2015-03-31 18:01:46,993][16033][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-31 18:01:46,999][16033][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-31 18:01:46,999][16033][monk.api    ][INFO    ][40  ] : ------start up------
+[2015-03-31 18:01:47,009][16033][werkzeug    ][INFO    ][87  ] : 127.0.0.1 - - [31/Mar/2015 18:01:47] "GET /testmonk.html?__debugger__=yes&cmd=source&frm=139685071315792&s=71DlJF9YHy4c4EvnK5Tg HTTP/1.1" 500 -
+[2015-03-31 18:01:47,854][16033][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-31 18:01:47,860][16033][monk.roles.configuration][INFO    ][94  ] : configuration done
+[2015-03-31 18:01:47,860][16033][monk.api    ][INFO    ][40  ] : ------start up------
+[2015-03-31 18:17:14,328][29532][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 18:17:14,333][29532][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 18:17:14,333][29532][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 18:17:14,334][29532][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 18:17:14,334][29532][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 18:17:14,335][29532][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 18:17:14,336][29532][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 18:17:14,336][29532][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 18:17:14,336][29532][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 18:17:14,337][29532][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 18:17:14,337][29532][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 18:17:59,931][30379][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 18:17:59,936][30379][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 18:17:59,936][30379][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 18:17:59,938][30379][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 18:17:59,938][30379][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 18:17:59,938][30379][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 18:17:59,939][30379][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 18:17:59,940][30379][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 18:17:59,940][30379][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 18:17:59,940][30379][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 18:17:59,940][30379][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 18:19:39,926][31828][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 18:19:39,932][31828][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 18:19:39,932][31828][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 18:19:39,933][31828][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 18:19:39,933][31828][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 18:19:39,934][31828][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 18:19:39,935][31828][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 18:19:39,935][31828][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 18:19:39,936][31828][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 18:19:39,936][31828][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 18:19:39,936][31828][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 18:19:50,343][32017][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 18:19:50,348][32017][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 18:19:50,349][32017][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 18:19:50,350][32017][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 18:19:50,350][32017][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 18:19:50,351][32017][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 18:19:50,351][32017][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 18:19:50,352][32017][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 18:19:50,352][32017][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 18:19:50,352][32017][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 18:19:50,352][32017][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 20:57:57,016][6030 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 20:57:57,024][6030 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 20:57:57,024][6030 ][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 20:57:57,025][6030 ][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 20:57:57,025][6030 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 20:57:57,026][6030 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 20:57:57,027][6030 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 20:57:57,028][6030 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 20:57:57,028][6030 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 20:57:57,028][6030 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 20:57:57,028][6030 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 23:38:04,215][12999][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:38:04,222][12999][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:38:04,222][12999][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 23:38:04,224][12999][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 23:38:04,224][12999][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 23:38:04,225][12999][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 23:38:04,228][12999][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 23:38:04,229][12999][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 23:38:04,230][12999][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 23:38:04,230][12999][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 23:38:04,230][12999][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 23:38:37,130][13520][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:38:37,140][13520][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:38:37,140][13520][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 23:38:37,142][13520][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 23:38:37,142][13520][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 23:38:37,144][13520][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 23:38:37,147][13520][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 23:38:37,148][13520][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 23:38:37,148][13520][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 23:38:37,148][13520][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 23:38:37,148][13520][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 23:41:35,401][15971][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:41:35,412][15971][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:41:35,412][15971][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 23:41:35,414][15971][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 23:41:35,414][15971][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 23:41:35,415][15971][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 23:41:35,416][15971][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 23:41:35,417][15971][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 23:41:35,417][15971][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 23:41:35,418][15971][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 23:41:35,418][15971][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 23:44:58,440][18919][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:44:58,448][18919][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:44:58,448][18919][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 23:44:58,450][18919][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 23:44:58,450][18919][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 23:44:58,451][18919][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 23:44:58,451][18919][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 23:44:58,455][18919][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 23:44:58,455][18919][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 23:44:58,455][18919][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 23:44:58,455][18919][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 23:46:42,216][20478][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:46:42,227][20478][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:46:42,227][20478][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 23:46:42,229][20478][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 23:46:42,229][20478][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 23:46:42,230][20478][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 23:46:42,231][20478][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 23:46:42,232][20478][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 23:46:42,232][20478][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 23:46:42,232][20478][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 23:46:42,233][20478][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 23:47:52,890][20478][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:47:52,896][20478][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:49:47,438][23291][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:49:47,450][23291][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:49:47,450][23291][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 23:49:47,452][23291][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 23:49:47,452][23291][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 23:49:47,453][23291][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 23:49:47,454][23291][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 23:49:47,454][23291][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 23:49:47,455][23291][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 23:49:47,455][23291][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 23:49:47,455][23291][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-03-31 23:53:34,426][25798][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:53:34,433][25798][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-03-31 23:53:34,433][25798][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-03-31 23:53:34,434][25798][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-03-31 23:53:34,434][25798][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-03-31 23:53:34,435][25798][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-03-31 23:53:34,435][25798][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-03-31 23:53:34,436][25798][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-03-31 23:53:34,436][25798][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-03-31 23:53:34,436][25798][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-03-31 23:53:34,436][25798][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-03 19:57:41,143][13808][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-03 19:57:41,178][13808][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-03 19:57:41,179][13808][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-03 19:57:41,231][13808][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-03 19:57:41,231][13808][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-03 19:57:41,232][13808][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-03 19:57:41,233][13808][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-03 19:57:41,234][13808][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-03 19:57:41,234][13808][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-03 19:57:41,234][13808][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-03 19:57:41,234][13808][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 

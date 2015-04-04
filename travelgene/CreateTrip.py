@@ -2,8 +2,6 @@ from travelgene import app
 from travelgene import mongo
 from flask import Flask, render_template, session, redirect, url_for, escape, request
 import json
-from pymongo import MongoClient
-import pymongo
 import flask_debugtoolbar
 from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
@@ -60,7 +58,6 @@ def addTrip():
     # print newTrip,'\n\n\n\n\n\n'
     mongo.db['trip'].insert(newTrip)
 
-
     # print session['user_id'], 'User Session id'
     usrid = session['user_id']
     usr = mongo.db['user'].find_one({'user_id':usrid})
@@ -72,36 +69,5 @@ def addTrip():
     n = mongo.db['user'].find_and_modify(query = {'user_id' : usrid},
                                     update = {"$set" : {'trip_list' : tripList}},
                                     upsert = False)
-
-
-
-
     print 'done'
     return render_template('profilec.html', user = usr)
-
-@app.route('/ActivityInfo/<city>')
-def retrieveActivity(city):
-
-    tripId = mongo.db[city].distinct('place_id')
-    print "zxcvzvvdfasfaf",tripId
-    res = ""
-    for id in tripId:
-        # if (random.random()*100)%2==0:
-        res += (id.split('_')[1]+'$')
-    print "here::::::::::::::::",res
-    return res
-
-
-
-    #         city = id.split('_')[0]
-    #         result = mongo.db[city].find({place_id:"id"})
-    #         print result
-
-
-    # res = "";
-    # for s in result:
-    #     res += (s+'$')
-    # print res
-    # return res
-
-
