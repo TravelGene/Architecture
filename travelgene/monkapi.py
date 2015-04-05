@@ -1,6 +1,5 @@
 import sys
-sys.path.append("/Users/lubron/Documents/Course/Competitive Engineering/Architecture/travelgene/pymonk-master/")
-sys.path.append("/Users/lubron/Documents/Course/Competitive Engineering/Architecture/travelgene/pymonk-master/monk/roles")
+sys.path.append("travelgene/pymonk-master/")
 from travelgene import app
 from travelgene import mongo
 from flask import Flask, render_template, session, redirect, url_for, escape, request

@@ -24,7 +24,7 @@ mongo = PyMongo(app)
 oauth = OAuth()
 
 
-mongolocal=PyMongo(app)
+# mongolocal=PyMongo(app)
 
 oauth = OAuth()
 
