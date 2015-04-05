@@ -17,7 +17,7 @@ document=({"user_id":"00000008", "user_name":"liuzhiyue", "password":"123456", "
 db.user.insert(document)
 
 
-document=({"trip_id":1,"destination":"Seattle","depart_date":new Date('May 10, 2012'),"return_date":new Date('May 16, 2012'),"a_id":[1,2,3,4],"img_url":"","attraction":""});
+document=({"trip_id":1,"destination":"Seattle","depart_date":new Date('March 24, 2015'),"return_date":new Date('March 25, 2015'),"a_id":[1,2,3,4],"img_url":"","attraction":""});
 db.trip.insert(document)
 document=({"trip_id":2,"destination":"Kirkland","depart_date":new Date('Jan 10, 2012'),"return_date":new Date('Jan 16, 2012'),"a_id":[3,4,5],"img_url":"","attraction":""});
 db.trip.insert(document)

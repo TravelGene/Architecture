@@ -120,8 +120,7 @@ def login():
             targetUser = userDB.find_one({'email' : email})
             # set user_id into session
             session["user_id"] = targetUser['user_id']
-
-
+            print session,"session in view"
             return render_template('index.html')
             #return redirect(url_for('nextPage', id="test"))#param
         else:

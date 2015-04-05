@@ -35,7 +35,7 @@ def getMonth(str):
 
 @app.route('/profilec.html',methods=['GET'])
 def showProfilec():
-    
+    print session,"profilec"
     email = session['username']
     userDB = mongo.db['user']
     targetUser = userDB.find_one({'email' : email})
@@ -48,14 +48,14 @@ def showProfilec():
 
     cityNumber=0
 
-    print "show profile"
+    # print "show profile"
 
     tripObjList = []
     for tripId in tripIDList:
         tripObj = tripDB.find_one({'trip_id':tripId})
       #print tripObj
 
-        print tripObj
+        # print tripObj
 
         if bool(tripObj): # if this trip is not none
             if str(tripObj['destination']) not in tripDictSet :
@@ -65,7 +65,7 @@ def showProfilec():
 
 
             tripInfo = mongo.db['city'].find_one({'dest' :str(tripObj['destination'])})
-            print tripInfo
+            # print tripInfo
             tripObj['img_url'] = tripInfo['img_url']
             tripObj['attraction'] = tripInfo['attraction']
             date = str(tripObj['depart_date']).split(" ")[0]

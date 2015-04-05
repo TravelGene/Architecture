@@ -23,10 +23,13 @@ $.fn.sortable = function(options) {
 		}
 		var isHandle, index, items = $(this).children(options.items);
 		var placeholder = $('<' + (/^ul|ol$/i.test(this.tagName) ? 'li' : 'div') + ' class="sortable-placeholder">');
+
 		items.find(options.handle).mousedown(function() {
 			isHandle = true;
+
 		}).mouseup(function() {
 			isHandle = false;
+
 		});
 		$(this).data('items', options.items)
 		placeholders = placeholders.add(placeholder);
@@ -47,18 +50,36 @@ $.fn.sortable = function(options) {
 			placeholders.detach();
 			if (index != dragging.index()) {
 				items.parent().trigger('sortupdate', {item: dragging});
+
 			}
 			dragging = null;
 		}).not('a[href], img').on('selectstart.h5s', function() {
 			this.dragDrop && this.dragDrop();
+
 			return false;
 		}).end().add([this, placeholder]).on('dragover.h5s dragenter.h5s drop.h5s', function(e) {
 			if (!items.is(dragging) && options.connectWith !== $(dragging).parent().data('connectWith')) {
 				return true;
 			}
 			if (e.type == 'drop') {
+
 				e.stopPropagation();
 				placeholders.filter(':visible').after(dragging);
+
+                if(dragging.parent("ul").attr("id") == "alternative"){
+                    // no change
+                }
+                else
+                    //console.log("now se");
+                    $.getJSON('/update_recommend_list', {
+                      place_id : dragging.attr("text"),
+                      value: "Y"
+                    }, function(data) {
+                        alert(data.new_place);
+                    });
+                    return false;
+                //console.log(dragging.attr("text"));
+                //console.log(dragging.parent("ul").attr("id"));
 				return false;
 			}
 			e.preventDefault();
@@ -67,11 +88,13 @@ $.fn.sortable = function(options) {
 				if (options.forcePlaceholderSize) {
 					placeholder.height(dragging.outerHeight());
 				}
+
 				dragging.hide();
 				$(this)[placeholder.index() < $(this).index() ? 'after' : 'before'](placeholder);
 				placeholders.not(placeholder).detach();
 			} else if (!placeholders.is(this) && !$(this).children(options.items).length) {
 				placeholders.detach();
+
 				$(this).append(placeholder);
 			}
 			return false;
