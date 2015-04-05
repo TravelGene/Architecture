@@ -81,7 +81,7 @@ def add_numbers():
     list = monkapi.update_recommended_place("monk",dest, place_id, value)
 
 
-    return jsonify(new_place=[i.serialize for i in list])
+    return jsonify(new_place=[i.serialize() for i in list])
 
 
 
@@ -93,10 +93,17 @@ def toActivity():
     #zhiyuel: here jumps to nothing!!!!
 
 
-@app.route('/trip_detail_main.html')
-def tripdetail():
-    return render_template('trip_detail_main.html')
+# @app.route('/trip_detail_main.html')
+# def tripdetail():
+#     return render_template('trip_detail_main.html')
 
+@property
+def serialize(self):
+    return {
+        "place_id" : self.place_id,
+        "img_url" : self.img_url,
+        "desc" : self.desc
+    }
 
 @app.route('/signup.html')
 def signup():

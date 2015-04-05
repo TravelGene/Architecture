@@ -303,70 +303,21 @@ google.maps.event.addDomListener(window, 'load', initialize);
 				<div id="trip-details">
 				<div id="head2">Trip Description</div>
 				<table border="1" class="lamp">
+
+
+                {% for i in activityList %}
 				<tr>
 				  <th>
 					<img src="/static/img/TripIcon/airplane.png" alt="Note" style="height:32px;width:32px">
 				  </th>
 				  <td>
-					Take flight AA386 from Hanford to Death Valley at 4:00 PM at Hanford Airport on Jan 1st
+					<span>Go: {{ i.start_time }}</span>
+                    <span>Back: {{ i.end_time }}</span>
+                    <span>Destination : {{ i.place_id }}</span>
 				  </td>
 				</tr>
-				<tr>
-				  <th>
-					<img src="/static/img/TripIcon/enternment.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Explore the famous Death Valley Amusement Park at 9:00 AM
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="/static/img/TripIcon/history.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Visit the Golden Valley Museum
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="/static/img/TripIcon/museum.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Shop at Inyo Forest Mall and eat lunch at 11:00 AM
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="/static/img/TripIcon/shopping.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					<a href="/Activities.html" style="color:black;">Have lunch at La Gourmandine Bakery.</a>
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="/static/img/TripIcon/bus.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Take bus X27 to Sierra Mountain Forest at 4:00 PM
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="/static/img/TripIcon/sports.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Watch the Super Bowl Game at 5:00 PM
-				  </td>
-				</tr>
-				<tr>
-				  <th>
-					<img src="/static/img/TripIcon/airplane.png" alt="Note" style="height:32px;width:32px">
-				  </th>
-				  <td>
-					Take flight AA387 from Sierra Mountain to Hanford at 8:00 PM at Hanford Airport on Jan 1st
-				  </td>
-				</tr>
+                    {% endfor %}
+
 				</table>
 				</div>
 				<div id="head3">Route Map</div>

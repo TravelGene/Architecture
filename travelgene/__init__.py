@@ -47,3 +47,5 @@ from travelgene import monkapi
 
 from travelgene import testmonk
 
+from travelgene import tripdetail
+
