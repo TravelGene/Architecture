@@ -1002,3 +1002,591 @@
 [2015-04-04 20:08:00,397][30296][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
 [2015-04-04 20:08:00,397][30296][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
 [2015-04-04 20:08:00,397][30296][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 20:41:29,019][26684][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:41:29,025][26684][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:41:29,025][26684][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 20:41:29,026][26684][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 20:41:29,026][26684][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 20:41:29,027][26684][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 20:41:29,027][26684][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 20:41:29,028][26684][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 20:41:29,028][26684][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 20:41:29,028][26684][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 20:41:29,029][26684][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 20:46:14,418][30592][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:46:14,424][30592][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:46:14,424][30592][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 20:46:14,425][30592][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 20:46:14,425][30592][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 20:46:14,426][30592][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 20:46:14,426][30592][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 20:46:14,427][30592][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 20:46:14,427][30592][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 20:46:14,427][30592][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 20:46:14,427][30592][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 20:46:15,895][30592][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 20:46:15,896][30592][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 20:46:15,897][30592][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 20:46:15,897][30592][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 1
+[2015-04-04 20:46:15,897][30592][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * * * * * 53249:0.0004697 53250:0.0004697 53251:0.0004697 53252:0.0004697 ...
+[53255:0.0,53249:0.000469654798508]
+[2015-04-04 20:46:15,897][30592][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1539 53250:0.1539 53251:0.1539 53252:0.1539 ...
+[53255:0.0,53249:0.153882279992]
+[2015-04-04 20:46:15,898][30592][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 14
+[2015-04-04 20:48:08,534][1326 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:48:08,539][1326 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:48:08,539][1326 ][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 20:48:08,540][1326 ][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 20:48:08,540][1326 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 20:48:08,541][1326 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 20:48:08,542][1326 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 20:48:08,542][1326 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 20:48:08,542][1326 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 20:48:08,543][1326 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 20:48:08,543][1326 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 20:48:17,879][1326 ][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 20:48:17,881][1326 ][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 20:48:17,881][1326 ][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 20:48:17,881][1326 ][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 1
+[2015-04-04 20:48:17,881][1326 ][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * 53249:-0.01616 53250:-0.01616 53251:-0.01616 53252:-0.01616 ...
+[53249:-0.0161577910185,53255:0.0]
+[2015-04-04 20:48:17,881][1326 ][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1211 53250:0.1211 53251:0.1211 53252:0.1211 ...
+[53255:0.0,53249:0.121097043157]
+[2015-04-04 20:48:17,882][1326 ][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 15
+[2015-04-04 20:50:59,812][3635 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:50:59,819][3635 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:50:59,820][3635 ][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 20:50:59,821][3635 ][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 20:50:59,821][3635 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 20:50:59,821][3635 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 20:50:59,822][3635 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 20:50:59,823][3635 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 20:50:59,823][3635 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 20:50:59,824][3635 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 20:50:59,824][3635 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 20:51:05,921][3635 ][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 20:51:05,924][3635 ][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 20:51:05,924][3635 ][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 20:51:05,924][3635 ][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 1
+[2015-04-04 20:51:05,924][3635 ][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.005247 53250:-0.005247 53251:-0.005247 53252:-0.005247 ...
+[53249:-0.00524678826332,53255:0.0]
+[2015-04-04 20:51:05,924][3635 ][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1268 53250:0.1268 53251:0.1268 53252:0.1268 ...
+[53255:0.0,53249:0.126761257648]
+[2015-04-04 20:51:05,926][3635 ][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 16
+[2015-04-04 20:53:48,463][6550 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:53:48,470][6550 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:53:48,470][6550 ][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 20:53:48,471][6550 ][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 20:53:48,471][6550 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 20:53:48,472][6550 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 20:53:48,472][6550 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 20:53:48,473][6550 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 20:53:48,473][6550 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 20:53:48,473][6550 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 20:53:48,473][6550 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 20:53:49,895][6550 ][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 20:53:49,896][6550 ][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 20:53:49,896][6550 ][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 20:53:49,897][6550 ][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 1
+[2015-04-04 20:53:49,897][6550 ][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.002591 53250:-0.002591 53251:-0.002591 53252:-0.002591 ...
+[53249:-0.00259131193161,53255:0.0]
+[2015-04-04 20:53:49,897][6550 ][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1268 53250:0.1268 53251:0.1268 53252:0.1268 ...
+[53255:0.0,53249:0.126825422049]
+[2015-04-04 20:53:49,898][6550 ][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 17
+[2015-04-04 21:02:08,333][13418][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:02:08,340][13418][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:02:08,340][13418][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:02:08,341][13418][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:02:08,342][13418][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:02:08,342][13418][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:02:08,343][13418][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:02:08,343][13418][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:02:08,344][13418][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:02:08,344][13418][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:02:08,344][13418][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:02:10,229][13418][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:02:10,231][13418][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:02:10,231][13418][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:02:10,232][13418][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 1
+[2015-04-04 21:02:10,232][13418][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.001126 53250:-0.001126 53251:-0.001126 53252:-0.001126 ...
+[53249:-0.00112627446651,53255:0.0]
+[2015-04-04 21:02:10,232][13418][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1272 53250:0.1272 53251:0.1272 53252:0.1272 ...
+[53255:0.0,53249:0.127164185047]
+[2015-04-04 21:02:10,233][13418][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 18
+[2015-04-04 21:02:53,704][14434][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:02:53,710][14434][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:02:53,710][14434][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:02:53,711][14434][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:02:53,711][14434][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:02:53,712][14434][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:02:53,713][14434][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:02:53,713][14434][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:02:53,713][14434][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:02:53,714][14434][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:02:53,714][14434][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:03:01,655][14434][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:03:01,656][14434][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:03:01,657][14434][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:03:01,657][14434][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 1
+[2015-04-04 21:03:01,657][14434][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.0005061 53250:-0.0005061 53251:-0.0005061 53252:-0.0005061 ...
+[53249:-0.000506103038788,53255:0.0]
+[2015-04-04 21:03:01,657][14434][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1273 53250:0.1273 53251:0.1273 53252:0.1273 ...
+[53255:0.0,53249:0.127278253436]
+[2015-04-04 21:03:01,658][14434][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 19
+[2015-04-04 21:07:26,243][18281][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:07:26,252][18281][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:07:26,252][18281][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:07:26,253][18281][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:07:26,253][18281][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:07:26,254][18281][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:07:26,255][18281][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:07:26,256][18281][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:07:26,256][18281][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:07:26,256][18281][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:07:26,257][18281][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:07:35,400][18281][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:07:35,402][18281][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:07:35,402][18281][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:07:35,402][18281][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 1
+[2015-04-04 21:07:35,403][18281][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.0002253 53250:-0.0002253 53251:-0.0002253 53252:-0.0002253 ...
+[53249:-0.000225320458412,53255:0.0]
+[2015-04-04 21:07:35,403][18281][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1273 53250:0.1273 53251:0.1273 53252:0.1273 ...
+[53255:0.0,53249:0.127333715558]
+[2015-04-04 21:07:35,404][18281][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 20
+[2015-04-04 21:09:06,178][18281][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:09:06,179][18281][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:09:06,180][18281][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:09:06,180][18281][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 2
+[2015-04-04 21:09:06,180][18281][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:0.002569 53250:0.002569 53251:0.002569 53252:0.002569 ...
+[53260:0.0,53253:0.0719528347254]
+[2015-04-04 21:09:06,180][18281][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1327 53250:0.1327 53251:0.1327 53252:0.1327 ...
+[53260:0.0,53253:0.271464705467]
+[2015-04-04 21:09:06,183][18281][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 21
+[2015-04-04 21:10:14,957][20740][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:10:14,963][20740][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:10:14,963][20740][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:10:14,964][20740][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:10:14,964][20740][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:10:14,965][20740][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:10:14,965][20740][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:10:14,966][20740][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:10:14,966][20740][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:10:14,966][20740][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:10:14,967][20740][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:10:16,629][20740][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:10:16,656][20740][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:10:16,656][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:10:16,656][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 1
+[2015-04-04 21:10:16,656][20740][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:0.002012 53250:0.002012 53251:0.002012 53252:0.002012 ...
+[53255:-0.0693842247128,53249:0.00201219320297]
+[2015-04-04 21:10:16,656][20740][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1342 53250:0.1342 53251:0.1342 53252:0.1342 ...
+[53255:-0.0693842247128,53249:0.134152024984]
+[2015-04-04 21:10:16,657][20740][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 22
+[2015-04-04 21:11:22,218][20740][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:11:22,224][20740][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:11:28,004][20740][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:11:28,005][20740][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:11:28,005][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:11:28,005][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 2
+[2015-04-04 21:11:28,005][20740][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:0.0001837 53250:0.0001837 53251:0.0001837 53252:0.0001837 ...
+[53255:0.0,53253:0.0695830136538]
+[2015-04-04 21:11:28,006][20740][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1325 53250:0.1325 53251:0.1325 53252:0.1325 ...
+[53255:0.0,53253:0.271305859089]
+[2015-04-04 21:11:28,007][20740][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 23
+[2015-04-04 21:11:55,036][20740][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:11:55,043][20740][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:11:59,613][20740][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:11:59,613][20740][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:11:59,613][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:11:59,614][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:11:59,614][20740][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.008124 53250:-0.008124 53251:-0.008124 53252:-0.008124 ...
+[53249:-0.00812386721373,53253:0.0779002681375]
+[2015-04-04 21:11:59,614][20740][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1161 53250:0.1161 53251:0.1161 53252:0.1161 ...
+[53260:0.0,53253:0.35752338171]
+[2015-04-04 21:11:59,615][20740][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 24
+[2015-04-04 21:12:39,819][20740][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:12:39,820][20740][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:12:39,820][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:12:39,820][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:12:39,821][20740][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.003643 53250:-0.003643 53251:-0.003643 53252:-0.003643 ...
+[53249:-0.00364318862557,53253:0.0377703756094]
+[2015-04-04 21:12:39,821][20740][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1169 53250:0.1169 53251:0.1169 53252:0.1169 ...
+[53260:0.0,53253:0.355163872242]
+[2015-04-04 21:12:39,823][20740][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 25
+[2015-04-04 21:12:41,712][20740][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:12:41,713][20740][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:12:41,714][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:12:41,714][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:12:41,714][20740][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.001626 53250:-0.001626 53251:-0.001626 53252:-0.001626 ...
+[53249:-0.00162637978792,53253:0.0183125138283]
+[2015-04-04 21:12:41,714][20740][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1173 53250:0.1173 53251:0.1173 53252:0.1173 ...
+[53260:0.0,53253:0.354018509388]
+[2015-04-04 21:12:41,716][20740][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 26
+[2015-04-04 21:12:48,354][20740][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:12:48,354][20740][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:12:48,354][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:12:48,354][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:12:48,354][20740][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.0007222 53250:-0.0007222 53251:-0.0007222 53252:-0.0007222 ...
+[53249:-0.000722244381905,53253:0.00887873768806]
+[2015-04-04 21:12:48,354][20740][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1175 53250:0.1175 53251:0.1175 53252:0.1175 ...
+[53260:0.0,53253:0.353463470936]
+[2015-04-04 21:12:48,358][20740][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 27
+[2015-04-04 21:12:51,132][20740][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:12:51,133][20740][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:12:51,134][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:12:51,134][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:12:51,135][20740][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.0003176 53250:-0.0003176 53251:-0.0003176 53252:-0.0003176 ...
+[53249:-0.000317599624395,53253:0.00430493056774]
+[2015-04-04 21:12:51,135][20740][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1176 53250:0.1176 53251:0.1176 53252:0.1176 ...
+[53260:0.0,53253:0.353194594383]
+[2015-04-04 21:12:51,136][20740][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 28
+[2015-04-04 21:15:04,153][20740][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:15:04,160][20740][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:15:11,561][20740][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:15:11,561][20740][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:15:11,561][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:15:11,562][20740][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:15:11,562][20740][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.0001389 53250:-0.0001389 53251:-0.0001389 53252:-0.0001389 ...
+[53249:-0.000138893723488,53253:0.00208702683449]
+[2015-04-04 21:15:11,562][20740][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1176 53250:0.1176 53251:0.1176 53252:0.1176 ...
+[53260:0.0,53253:0.353063702583]
+[2015-04-04 21:15:11,564][20740][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 29
+[2015-04-04 21:16:43,101][25917][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:16:43,109][25917][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:16:43,110][25917][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:16:43,111][25917][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:16:43,111][25917][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:16:43,112][25917][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:16:43,113][25917][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:16:43,114][25917][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:16:43,114][25917][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:16:43,114][25917][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:16:43,114][25917][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:16:45,047][25917][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:16:45,049][25917][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:16:45,049][25917][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:16:45,049][25917][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:16:45,049][25917][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-6.001e-05 53250:-6.001e-05 53251:-6.001e-05 53252:-6.001e-05 ...
+[53249:-6.00144267082e-05,53253:0.00101166963577]
+[2015-04-04 21:16:45,049][25917][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1176 53250:0.1176 53251:0.1176 53252:0.1176 ...
+[53260:0.0,53253:0.35300001502]
+[2015-04-04 21:16:45,051][25917][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 30
+[2015-04-04 21:17:43,708][27116][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:17:43,714][27116][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:17:43,715][27116][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:17:43,716][27116][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:17:43,716][27116][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:17:43,717][27116][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:17:43,717][27116][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:17:43,718][27116][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:17:43,718][27116][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:17:43,718][27116][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:17:43,718][27116][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:17:48,111][27116][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:17:48,112][27116][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:17:48,113][27116][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:17:48,113][27116][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:17:48,113][27116][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-2.565e-05 53250:-2.565e-05 53251:-2.565e-05 53252:-2.565e-05 ...
+[53249:-2.56486237049e-05,53253:0.000490501523018]
+[2015-04-04 21:17:48,113][27116][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1176 53250:0.1176 53251:0.1176 53252:0.1176 ...
+[53260:0.0,53253:0.352969348431]
+[2015-04-04 21:17:48,114][27116][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 31
+[2015-04-04 21:19:03,113][27116][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:19:03,119][27116][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:20:04,358][29152][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:20:04,365][29152][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:20:04,365][29152][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:20:04,366][29152][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:20:04,366][29152][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:20:04,367][29152][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:20:04,367][29152][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:20:04,368][29152][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:20:04,368][29152][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:20:04,368][29152][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:20:04,368][29152][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:23:16,421][31898][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:23:16,427][31898][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:23:16,428][31898][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:23:16,429][31898][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:23:16,429][31898][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:23:16,430][31898][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:23:16,430][31898][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:23:16,431][31898][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:23:16,431][31898][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:23:16,431][31898][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:23:16,431][31898][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:27:57,784][31898][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:27:57,790][31898][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:28:01,147][31898][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:28:01,150][31898][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:28:01,150][31898][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:28:01,150][31898][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 4
+[2015-04-04 21:28:01,150][31898][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.000357 53250:-0.000357 53251:-0.000357 53252:-0.000357 ...
+[53249:-0.000357046723366,53255:0.00268594175577]
+[2015-04-04 21:28:01,151][31898][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.117 53250:0.117 53251:0.117 53252:0.117 ...
+[53260:0.0,53253:0.356598556042]
+[2015-04-04 21:28:01,152][31898][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 32
+[2015-04-04 21:30:13,247][31898][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:30:13,248][31898][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:30:13,248][31898][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:30:13,248][31898][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 5
+[2015-04-04 21:30:13,248][31898][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.0005126 53250:-0.0005126 53251:-0.0005126 53252:-0.0005126 ...
+[53249:-0.000512562692165,53253:0.00281842052937]
+[2015-04-04 21:30:13,248][31898][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1163 53250:0.1163 53251:0.1163 53252:0.1163 ...
+[53260:0.0,53253:0.360175549984]
+[2015-04-04 21:30:13,250][31898][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 33
+[2015-04-04 21:30:34,970][31898][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:30:34,971][31898][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:30:34,972][31898][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:30:34,972][31898][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 5
+[2015-04-04 21:30:34,972][31898][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.0002409 53250:-0.0002409 53251:-0.0002409 53252:-0.0002409 ...
+[53249:-0.000240944325924,53253:0.00139458477497]
+[2015-04-04 21:30:34,972][31898][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1163 53250:0.1163 53251:0.1163 53252:0.1163 ...
+[53260:0.0,53253:0.360146313906]
+[2015-04-04 21:30:34,974][31898][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 34
+[2015-04-04 21:38:52,235][13148][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:38:52,242][13148][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:38:52,242][13148][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:38:52,243][13148][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:38:52,243][13148][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:38:52,244][13148][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:38:52,245][13148][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:38:52,245][13148][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:38:52,245][13148][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:38:52,245][13148][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:38:52,246][13148][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:38:53,348][13148][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:38:53,350][13148][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:38:53,350][13148][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:38:53,350][13148][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 1
+[2015-04-04 21:38:53,351][13148][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * * 53249:0.02206 53250:0.02206 53251:0.02206 53252:0.02206 ...
+[53253:-0.220139160752,53249:0.0220573693514]
+[2015-04-04 21:38:53,351][13148][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1607 53250:0.1607 53251:0.1607 53252:0.1607 ...
+[53255:-0.121429681778,53249:0.160669922829]
+[2015-04-04 21:38:53,355][13148][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 35
+[2015-04-04 21:38:55,170][13148][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:38:55,170][13148][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:38:55,171][13148][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:38:55,171][13148][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 2
+[2015-04-04 21:38:55,171][13148][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * * 53249:0.001821 53250:0.001821 53251:0.001821 53252:0.03994 ...
+[53255:0.0,53252:0.0399437695742]
+[2015-04-04 21:38:55,172][13148][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1423 53250:0.1423 53251:0.1423 53252:0.2185 ...
+[53255:0.0,53252:0.218500092626]
+[2015-04-04 21:38:55,175][13148][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 36
+[2015-04-04 21:38:59,872][13148][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:38:59,873][13148][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:38:59,873][13148][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:38:59,874][13148][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:38:59,874][13148][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * * 53249:-0.01049 53250:-0.01049 53251:-0.01049 53252:0.00916 ...
+[53249:-0.0104912221432,53295:0.0704444795847]
+[2015-04-04 21:38:59,874][13148][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1195 53250:0.1195 53251:0.1195 53252:0.1969 ...
+[53255:0.0,53253:0.260340511799]
+[2015-04-04 21:38:59,877][13148][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 37
+[2015-04-04 21:40:57,498][15014][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:40:57,504][15014][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:40:57,504][15014][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:40:57,505][15014][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:40:57,505][15014][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:40:57,506][15014][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:40:57,506][15014][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:40:57,507][15014][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:40:57,507][15014][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:40:57,507][15014][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:40:57,507][15014][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:41:22,295][15478][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:41:22,304][15478][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:41:22,304][15478][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:41:22,305][15478][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:41:22,305][15478][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:41:22,306][15478][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:41:22,307][15478][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:41:22,308][15478][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:41:22,308][15478][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:41:22,308][15478][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:41:22,308][15478][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:41:58,541][15996][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:41:58,550][15996][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:41:58,550][15996][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:41:58,552][15996][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:41:58,552][15996][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:41:58,556][15996][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:41:58,557][15996][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:41:58,558][15996][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:41:58,558][15996][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:41:58,558][15996][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:41:58,559][15996][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:42:48,039][16696][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:42:48,049][16696][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:42:48,049][16696][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:42:48,050][16696][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:42:48,051][16696][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:42:48,052][16696][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:42:48,052][16696][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:42:48,053][16696][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:42:48,053][16696][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:42:48,053][16696][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:42:48,054][16696][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:43:07,524][17051][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:43:07,529][17051][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:43:07,529][17051][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:43:07,530][17051][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:43:07,531][17051][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:43:07,531][17051][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:43:07,532][17051][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:43:07,532][17051][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:43:07,532][17051][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:43:07,533][17051][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:43:07,533][17051][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:43:39,537][17532][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:43:39,543][17532][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:43:39,543][17532][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:43:39,544][17532][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:43:39,544][17532][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:43:39,545][17532][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:43:39,545][17532][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:43:39,546][17532][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:43:39,546][17532][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:43:39,546][17532][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:43:39,546][17532][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:44:13,339][18029][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:44:13,344][18029][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:44:13,344][18029][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:44:13,345][18029][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:44:13,346][18029][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:44:13,346][18029][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:44:13,347][18029][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:44:13,348][18029][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:44:13,348][18029][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:44:13,348][18029][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:44:13,348][18029][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:44:33,517][18321][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:44:33,523][18321][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:44:33,523][18321][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:44:33,524][18321][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:44:33,524][18321][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:44:33,525][18321][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:44:33,526][18321][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:44:33,526][18321][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:44:33,527][18321][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:44:33,527][18321][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:44:33,527][18321][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:44:34,943][18321][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:44:34,949][18321][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:44:59,733][18734][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:44:59,739][18734][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:44:59,739][18734][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:44:59,740][18734][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:44:59,740][18734][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:44:59,741][18734][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:44:59,741][18734][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:44:59,742][18734][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:44:59,742][18734][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:44:59,742][18734][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:44:59,742][18734][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:45:11,839][18734][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:45:11,846][18734][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:45:28,809][18734][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:45:28,812][18734][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:45:28,812][18734][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:45:28,812][18734][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 2
+[2015-04-04 21:45:28,813][18734][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * 53249:0.01093 53250:0.01093 53251:0.01093 53252:-0.04685 ...
+[53295:-0.0704444795847,53255:0.0734920650721]
+[2015-04-04 21:45:28,813][18734][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1518 53250:0.1518 53251:0.1518 53252:0.09403 ...
+[53295:-0.0704444795847,53253:0.228338748217]
+[2015-04-04 21:45:28,814][18734][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 38
+[2015-04-04 21:45:30,776][18734][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:45:30,776][18734][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:45:30,777][18734][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:45:30,777][18734][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:45:30,777][18734][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * 53249:-0.01256 53250:-0.01256 53251:-0.01256 53252:-0.01256 ...
+[53249:-0.0125643312931,53253:0.0713881105185]
+[2015-04-04 21:45:30,777][18734][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1157 53250:0.1157 53251:0.1157 53252:0.1157 ...
+[53260:0.0,53253:0.357139229774]
+[2015-04-04 21:45:30,778][18734][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 39
+[2015-04-04 21:45:36,327][18734][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:45:36,328][18734][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:45:36,328][18734][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:45:36,328][18734][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:45:36,328][18734][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * 53249:-0.005777 53250:-0.005777 53251:-0.005777 53252:-0.005777 ...
+[53249:-0.0057769715786,53253:0.034612596035]
+[2015-04-04 21:45:36,329][18734][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1168 53250:0.1168 53251:0.1168 53252:0.1168 ...
+[53260:0.0,53253:0.354976296425]
+[2015-04-04 21:45:36,330][18734][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 40
+[2015-04-04 21:51:18,649][23622][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:51:18,655][23622][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:51:18,655][23622][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:51:18,656][23622][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:51:18,656][23622][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:51:18,657][23622][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:51:18,657][23622][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:51:18,658][23622][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:51:18,658][23622][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:51:18,658][23622][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:51:18,658][23622][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:51:35,978][23622][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:51:35,984][23622][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:51:39,130][23622][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:51:39,131][23622][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:51:39,132][23622][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:51:39,132][23622][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 2
+[2015-04-04 21:51:39,132][23622][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * 53249:0.01179 53250:0.01179 53251:0.01179 53252:0.01179 ...
+[53295:-0.09058444947,53255:0.0197887681425]
+[2015-04-04 21:51:39,132][23622][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1461 53250:0.1461 53251:0.1461 53252:0.1461 ...
+[53295:-0.09058444947,53253:0.202343195677]
+[2015-04-04 21:51:39,133][23622][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 41
+[2015-04-04 21:51:41,455][23622][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:51:41,456][23622][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:51:41,456][23622][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:51:41,456][23622][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 2
+[2015-04-04 21:51:41,456][23622][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * 53249:-0.0005321 53250:-0.0005321 53251:-0.0005321 53252:-0.0005321 ...
+[53249:-0.00053209066391,53255:0.0032807290554]
+[2015-04-04 21:51:41,456][23622][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1333 53250:0.1333 53251:0.1333 53252:0.1333 ...
+[53260:0.0,53253:0.266850739717]
+[2015-04-04 21:51:41,458][23622][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 42
+[2015-04-04 21:51:43,728][23622][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:51:43,728][23622][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:51:43,728][23622][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:51:43,729][23622][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:51:43,729][23622][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * * 53249:-0.006664 53250:-0.006664 53251:-0.006664 53252:0.03243 ...
+[53249:-0.0066636800766,53277:0.0390908680856]
+[2015-04-04 21:51:43,729][23622][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1205 53250:0.1205 53251:0.1205 53252:0.1986 ...
+[53260:0.0,53253:0.255970567465]
+[2015-04-04 21:51:43,730][23622][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 43
+[2015-04-04 21:52:38,022][25206][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:52:38,027][25206][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 21:52:38,027][25206][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 21:52:38,028][25206][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 21:52:38,028][25206][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 21:52:38,029][25206][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 21:52:38,030][25206][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 21:52:38,030][25206][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 21:52:38,030][25206][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 21:52:38,030][25206][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 21:52:38,030][25206][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 21:52:41,012][25206][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:52:41,014][25206][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:52:41,014][25206][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:52:41,015][25206][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 1
+[2015-04-04 21:52:41,015][25206][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:0.01105 53250:0.01105 53251:0.01105 53252:-0.02804 ...
+[53255:-0.132917061448,53249:0.0110491663218]
+[2015-04-04 21:52:41,015][25206][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1492 53250:0.1492 53251:0.1492 53252:0.1101 ...
+[53255:-0.132917061448,53249:0.149217605591]
+[2015-04-04 21:52:41,016][25206][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 44
+[2015-04-04 21:52:43,179][25206][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:52:43,179][25206][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:52:43,179][25206][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:52:43,180][25206][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 2
+[2015-04-04 21:52:43,180][25206][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:0.002053 53250:0.002053 53251:0.002053 53252:0.04017 ...
+[53255:0.0,53252:0.0401741415262]
+[2015-04-04 21:52:43,180][25206][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1423 53250:0.1423 53251:0.1423 53252:0.2185 ...
+[53255:0.0,53252:0.218516722322]
+[2015-04-04 21:52:43,181][25206][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 45
+[2015-04-04 21:52:45,104][25206][monk.tigress][DEBUG   ][109 ][tigress.py] : combinedField Y
+[2015-04-04 21:52:45,105][25206][monk.mantis ][DEBUG   ][102 ][mantis.py] : gamma in mantis 1
+[2015-04-04 21:52:45,105][25206][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : rho0 in svm_solver_dual.trainModel 0.25
+[2015-04-04 21:52:45,105][25206][monk.svm_solver_dual][DEBUG   ][138 ][mantis.py] : num_instances 3
+[2015-04-04 21:52:45,106][25206][monk.mantis ][DEBUG   ][155 ][mantis.py] : q = * 53249:-0.01038 53250:-0.01038 53251:-0.01038 53252:0.009271 ...
+[53249:-0.0103800296783,53255:0.0704433470964]
+[2015-04-04 21:52:45,106][25206][monk.mantis ][DEBUG   ][156 ][mantis.py] : w = * 53249:0.1195 53250:0.1195 53251:0.1195 53252:0.1969 ...
+[53260:0.0,53253:0.260348021984]
+[2015-04-04 21:52:45,108][25206][monk.turtle ][DEBUG   ][230 ][turtle.py] : training clock 46

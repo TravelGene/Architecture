@@ -41,6 +41,7 @@ def addTrip():
         # print place['place_type'],'\n\n\n\n\n\n\n\n\n'
         placeList.append(place)
     aIdList = agendaGenerator(placeList,nTripId,nAId,date1)
+    print "asdfsdasddgrf",aIdList
     newTrip = {
         'trip_id':nTripId,
         'destination':dest,
@@ -75,7 +76,7 @@ def agendaGenerator(placeList,nTripId,nAId,date1):
     print len(placeList)
     for place in placeList:
         print place['place_type'],'\n\n\n\n\n\n\n\n'
-        if(place['place_type']=='hotel'):
+        if(place['place_type']=='hotel') and len(origin)==0:
             origin = place
             destination = place
             hotelActivity = {
@@ -118,7 +119,8 @@ def agendaGenerator(placeList,nTripId,nAId,date1):
             newOrder = content['routes'][0]['waypoint_order']
     # print type(content['routes'])
     # print content
-    print newOrder
+    print 'new order:',newOrder
+    aIdList = []
     for i in range(len(newOrder)):
         newActivity = {
             'a_id':nAId+i+1,
@@ -127,9 +129,10 @@ def agendaGenerator(placeList,nTripId,nAId,date1):
             'place_id':waypoints[newOrder[i]]['place_id'],
             'trip_id':nTripId
         }
+        aIdList.append(nAId+i+1)
         print newActivity
         mongo.db['activity'].insert(newActivity)
-    
+    return aIdList
 
 def url_open(pageUrl):
     # print pageUrl

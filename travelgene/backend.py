@@ -55,6 +55,10 @@ def loadTrip():
             monkapi.init_monk()
         recommendCityObj = monkapi.get_recommended_place(refinedDestName)
 
+        for r in recommendCityObj:
+            print r
+
+
         # print recommendCityObj
         # print session,"session in backend"
         tripInfoList = {}
@@ -71,17 +75,16 @@ def loadTrip():
 @app.route('/update_recommend_list')
 def add_numbers():
     dest = session['dest']
-    place_id = request.args.get('place_id', '000001')
+    place_id = request.args.get('place_id')
     value = request.args.get('value','Y')
 
     print place_id, "place_id"
     print value, "value"
     print dest, "dest"
-
-    list = monkapi.update_recommended_place("monk",dest, place_id, value)
-
-
-    return jsonify(new_place=[i.serialize for i in list])
+    newlist = monkapi.update_recommended_place(dest, place_id, value)
+    # print "newlist newlist newlist\n\n",newlist
+    # return jsonify(new_place=[i.serialize for i in newlist])
+    return json.dumps(newlist)
 
 
 
@@ -111,8 +114,8 @@ def calendar():
 def monktest():
     monkapi.init_monk()
     monkapi.init_database()
-    ent_id = monkapi.get_entity_id('Seattle','Seattle_00000000')
-    monkapi.add_label(ent_id,'likeTravel','Y')
+    ent_id = monkapi.get_entity_id('Seattle','Seattle_00000006')
+    # monkapi.add_label(ent_id,'likeTravel','Y')
     monkapi.add_label(ent_id,'place_type','restaurant')
     return render_template('testmonk.html',result='ok')
     

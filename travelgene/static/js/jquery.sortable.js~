@@ -75,7 +75,7 @@ $.fn.sortable = function(options) {
                       place_id : dragging.attr("text"),
                       value: "Y"
                     }, function(data) {
-                        alert(data[0]);
+                        alert(data);
                     });
                     return false;
                 //console.log(dragging.attr("text"));
