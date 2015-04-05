@@ -19,7 +19,7 @@ def editProfilePostInfo():
     if request.method == 'POST':
         pwd = request.form['password']
 
-        targetUser = mongo.db['user'].find_one({'email' : session['username']})
+        # targetUser = mongo.db['user'].find_one({'email' : session['username']})
 
         mongo.db['user'].find_and_modify(query = {'email' : session['username']},
                                             update = {"$set" : {'password' : pwd}},

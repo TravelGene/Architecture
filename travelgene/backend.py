@@ -69,7 +69,7 @@ def loadTrip():
 
     else:
         return render_template("create_trip_new.html")
-#
+
 
 # update recommend list with ajax
 @app.route('/update_recommend_list')
@@ -96,10 +96,17 @@ def toActivity():
     #zhiyuel: here jumps to nothing!!!!
 
 
-@app.route('/trip_detail_main.html')
-def tripdetail():
-    return render_template('trip_detail_main.html')
+# @app.route('/trip_detail_main.html')
+# def tripdetail():
+#     return render_template('trip_detail_main.html')
 
+@property
+def serialize(self):
+    return {
+        "place_id" : self.place_id,
+        "img_url" : self.img_url,
+        "desc" : self.desc
+    }
 
 @app.route('/signup.html')
 def signup():

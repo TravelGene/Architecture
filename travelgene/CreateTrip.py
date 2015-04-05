@@ -50,6 +50,8 @@ def addTrip():
         'activities':aIdList,
         'img_url':[]
     }
+    print newTrip
+    print "new ou h"
     mongo.db['trip'].insert(newTrip)
 
     # print session['user_id'], 'User Session id'

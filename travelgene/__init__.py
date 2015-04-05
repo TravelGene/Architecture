@@ -18,10 +18,12 @@ app = Flask(__name__)
 #app.config['MONGO3_USERNAME']='travelgene'
 #app.config['MONGO3_PASSWORD']='genetravel'
 cors = CORS(app)
+
 #mongo = PyMongo(app, config_prefix='MONGO3')
 mongo = PyMongo(app)
 oauth = OAuth()
 
+# mongolocal=PyMongo(app)
 
 # from travelgene import *
 from travelgene import views
@@ -41,4 +43,6 @@ from travelgene import loginFB
 from travelgene import monkapi
 
 from travelgene import testmonk
+
+from travelgene import tripdetail
 

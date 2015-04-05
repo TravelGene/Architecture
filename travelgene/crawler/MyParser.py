@@ -17,7 +17,7 @@ def url_open(pageUrl):
     return contents
 
 def dump_url(url):
-    print "xxxxx", url
+    # print "xxxxx", url
     content = url_open(url)
     fname = "html/" + url.split("/")[-1]
     f = open(fname, "w+")
@@ -37,7 +37,7 @@ def parseHotelList(url):
     soup = BeautifulSoup(html, "html5lib")
     re_action = re.compile(r"(.*)-(.*)-(.*).*")
     page_no = get_last_page_no(soup)
-    print page_no
+    # print page_no
     m = re_action.search(url)
     hotelUrl = []
     for i in xrange(0,page_no):
@@ -48,6 +48,7 @@ def parseHotelList(url):
         html = url_open(nurl)
         soup = BeautifulSoup(html, "html5lib")
         dump_url(nurl)
+        print "xxxxx", url
         titlelist = soup.find_all('div',attrs={"class":"listing_title"})
         for title in titlelist:
             if title.find('a'):
@@ -71,13 +72,35 @@ def parseHotel(url):
     res = {}
     get_title(soup,res)
     get_hotel_address(soup,res)
-    print "start crawling description..."
-    print url
+    # print "start crawling description..."
+    # print url
     # get_description(soup,res)
     get_reviews(soup, res)
     get_ratings(soup, res)
+    get_hotel_img(soup, res)
 
     return res
+
+
+
+def get_hotel_img(element, res):
+    img_url=""
+    if element.find("div",attrs={"id":"BC_PHOTOS"}) == None:
+        img_div=element.find("div", attrs={"id":"HR_HACKATHON_CONTENT"})
+        img_url=img_div.find("img",attrs={"class":"sizedThumb_thumbnail"})["src"]
+        print img_url
+    else:
+        img_div=element.find("div",attrs={"id":"BC_PHOTOS"})
+        if img_div.find("span")== None:
+            pass
+        else:
+            img_span=img_div.find("span")
+            if img_span.find("img")['src']== None:
+                pass
+            else:
+                img_url=img_span.find("img")['src']
+                print img_url
+    res['img_url']=img_url #changed
 
 def get_hotel_address(element, res):
     info = element.find("div",attrs={"class":"header_contact_info"})
@@ -94,10 +117,8 @@ def get_description(element, res):
     descp = element.find("div",attrs={"id":"BODYCON"}).find("div",attrs={"class":"answers_in_head"})
     print descp
     print "@@@@@@@@@@@@@1"
-
     # ret=descp.
-
-    print ret
+    # print ret
 
     # print descp.find("div",atrrs={"class":"hr_tabs content_block hr_tabs_block"})
 
@@ -132,13 +153,13 @@ def get_ratings(element, res):
     
 
 def parseRestaurantList(url):
-    dump_url(url)
+    # dump_url(url)
     visited_url={}
     html = url_open(url)
     soup = BeautifulSoup(html, "html5lib")
     re_action = re.compile(r"(.*)-(.*)-(.*).*")
     page_no = get_last_page_no(soup)
-    print page_no
+    # print page_no
     m = re_action.search(url)
     restaurantList = []
     cnt = 0
@@ -149,38 +170,60 @@ def parseRestaurantList(url):
         visited_url[nurl]=1
         html = url_open(nurl)
         soup = BeautifulSoup(html, "html5lib")
-        dump_url(nurl)
+        # dump_url(nurl)
         titlelist = soup.find_all('div',attrs={"class":"listing"})
         for r in titlelist:
             if r.find('a',attrs={"class":"property_title"}):
                 t = r.find('a')['href']
                 restaurantList.append(root+t)
-                print cnt
+                # print cnt
                 cnt += 1
-    print restaurantList
-    print len(restaurantList)
+    # print restaurantList
+    # print len(restaurantList)
     res = []    
     for rest in restaurantList:
         res.append(parseRestaurant(rest))
     writeToFile(res,'Restaurant')
     return len(titlelist)
 
+
+
 def parseRestaurant(url):
     html = url_open(url)
+    time.sleep(1)
     soup = BeautifulSoup(html, "html5lib")
     dump_url(url)
+    print url
     res = {}
-    get_title(soup,res)
-    get_restaurant_address(soup,res)
-    get_ratings(soup,res)
-    get_reviews(soup,res)
+    # get_title(soup,res)
+    # get_restaurant_address(soup,res)
+    # get_ratings(soup,res)
+    # get_reviews(soup,res)
+    # get_restaurant_openhour(soup, res)
+    get_restuarant_img(soup, res)
     return res
 
+def get_restaurant_openhour(element, res):
+    open_div=""
+    if element.find("div",attrs={"class":"time"})==None:
+        pass
+    else:
+        open_div=element.find("div",attrs={"class":"time"}).text
+    print open_div
+    res["open_hour"]=open_div
 
 def get_restaurant_address(element,res):
     address = ""
     address = element.find("address").find("span").text
     res['address'] = address.strip()
+
+def get_restuarant_img(element, res):
+    img_url=""
+    img_div=element.find("div",attrs={"class":"flexible_photos"})
+    print img_div
+    img_url=img_div.find("img",attrs={"id":"HERO_PHOTO"})['src']
+    print img_url
+    res['img_url']=img_url
 
 def get_last_page_no(soup):
     page_no = -1
@@ -283,18 +326,18 @@ if __name__ == "__main__":
         # soup = dump_url(page)
         # parse_page(soup)
 
-    while True:
-        if parseHotelList(urlqueue[0])!=0:
-            break
-        print 'try again'
+    # while True:
+    #     if parseHotelList(urlqueue[0])!=0:
+    #         break
+    #     print 'try again'
 
     # print urlqueue[2]
     # while True:
     #     if parseAttractionList(urlqueue[2])!=0:
     #         break
     #     print 'try again'
-    # while True:
-    #     if parseRestaurantList(urlqueue[3]):
-    #         break
-    #     print 'try again'
+    while True:
+        if parseRestaurantList(urlqueue[3]):
+            break
+        print 'try again'
 
