@@ -23,10 +23,7 @@ cors = CORS(app)
 mongo = PyMongo(app)
 oauth = OAuth()
 
-
 # mongolocal=PyMongo(app)
-
-oauth = OAuth()
 
 # from travelgene import *
 from travelgene import views
