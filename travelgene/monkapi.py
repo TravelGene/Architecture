@@ -1,6 +1,6 @@
 import sys
-sys.path.append("/home/micz/Architecture/travelgene/pymonk-master/")
-sys.path.append("/home/micz/Architecture/travelgene/pymonk-master/monk/roles")
+sys.path.append("/Users/lubron/Documents/Course/Competitive Engineering/Architecture/travelgene/pymonk-master/")
+sys.path.append("/Users/lubron/Documents/Course/Competitive Engineering/Architecture/travelgene/pymonk-master/monk/roles")
 from travelgene import app
 from travelgene import mongo
 from flask import Flask, render_template, session, redirect, url_for, escape, request
@@ -23,6 +23,10 @@ def init_monk():
 	config=default_config()
 	ms.initialize(default_config())
 	is_initialized = True
+        likeTS = ms.yaml2json('travelgene/pymonk-master/examples/turtle_scripts/turtle_like.yml')
+	# print likeTS
+	likeT = ms.create_turtle(likeTS)
+	likeT.save()
 
 def add_label(ent_id,field,value):
 	ent = ms.load_entity(ent_id)
@@ -33,13 +37,13 @@ def add_data_to_model(turtle_name,ent_id,creator='monk'):
 	ms.add_data(turtle_name,creator,ent_id);
 
 def train(turtleName,creator='monk'):
-	trainer = ms.load_turtle(turtleName,creator)
-	trainer.train()
-	return train
+    trainer = ms.load_turtle(turtleName,creator)
+    trainer.train()
+    return trainer
 
 def predict(trainer,ent_id,creator='monk'):#How?
-	ent = ms.load_entity(ent_id)
-	return sign0(trainer.pandas[0].predict(ent))
+    ent = ms.load_entity(ent_id)
+    return sign0(trainer.pandas[0].predict(ent))
 
 def get_recommended_place(collection_name):  
 	#print collection_name
@@ -53,16 +57,22 @@ def get_recommended_place(collection_name):
 		rst.append(e)
 	return rst
 
-def update_recommended_place(creator,collection_name,place_id,ajsoncontainingfieldandvalue):
-	user_turtle = 'likeTravel'								# get turtle name from creator? need to updpate database 'user'
+def update_recommended_place(creator,collection_name,place_id,value):
+        user_turtle = 'likeTravel'
+        likeTS = ms.yaml2json('travelgene/pymonk-master/examples/turtle_scripts/turtle_like.yml')
+
+        likeT = ms.create_turtle(likeTS)
+        likeT.save()
+					# get turtle name from creator? need to updpate database 'user'
+    # print collection_name, "collection"
 	ent_id = get_entity_id(collection_name,place_id)
-	add_label(ent_id,field,value)
+	add_label(ent_id,"likeTravel",value)
 	add_data_to_model(user_turtle,ent_id,creator)
 	trainer = train(user_turtle,creator)
 
 	ents = ms.load_entities()
 	for ent in ents:
-		if predict(trainer,end._id)==0:
+		if predict(trainer,ent._id)==0:
 			add_label(ent._id,'likeTravel','N')
 		else:
 			add_label(ent._id,'likeTravel','Y')

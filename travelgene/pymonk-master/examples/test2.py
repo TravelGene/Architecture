@@ -1,5 +1,7 @@
 import sys
-sys.path.append("/home/micz/pymonk-master/")
+sys.path.append("/Users/lubron/Documents/Course/Competitive Engineering/Architecture/travelgene/pymonk-master/")
+
+
 from monk.math.cmath import sign0
 import pymongo
 import monk.core.api as ms

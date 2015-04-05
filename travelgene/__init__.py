@@ -40,3 +40,5 @@ from travelgene import loginFB
 
 from travelgene import monkapi
 
+from travelgene import testmonk
+
