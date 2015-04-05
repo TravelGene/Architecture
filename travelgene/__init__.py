@@ -19,8 +19,10 @@ app.config['MONGO3_USERNAME']='travelgene'
 app.config['MONGO3_PASSWORD']='genetravel'
 cors = CORS(app)
 mongo = PyMongo(app, config_prefix='MONGO3')
-oauth = OAuth()
 
+mongolocal=PyMongo(app)
+
+oauth = OAuth()
 
 # from travelgene import *
 from travelgene import views
