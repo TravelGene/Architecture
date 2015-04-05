@@ -35,7 +35,7 @@ def getMonth(str):
 
 @app.route('/profilec.html',methods=['GET'])
 def showProfilec():
-    print session,"profilec"
+    # print session,"profilec"
     email = session['username']
     userDB = mongo.db['user']
     targetUser = userDB.find_one({'email' : email})

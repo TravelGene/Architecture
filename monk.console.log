@@ -765,3 +765,240 @@
 [2015-04-04 15:49:29,851][9688 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
 [2015-04-04 15:50:17,837][9688 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
 [2015-04-04 15:50:17,843][9688 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 17:02:42,631][6367 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 17:02:42,641][6367 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 17:02:42,642][6367 ][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 17:02:42,644][6367 ][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 17:02:42,644][6367 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 17:02:42,645][6367 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 17:02:42,646][6367 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 17:02:42,647][6367 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 17:02:42,647][6367 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 17:02:42,648][6367 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 17:02:42,648][6367 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 17:03:34,426][6367 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 17:03:34,432][6367 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 17:05:33,356][6367 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 17:05:33,361][6367 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 17:07:07,609][6367 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 17:07:07,617][6367 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:15:46,131][15997][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:15:46,137][15997][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:15:46,137][15997][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:15:46,138][15997][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:15:46,138][15997][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:15:46,139][15997][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:15:46,140][15997][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:15:46,140][15997][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:15:46,141][15997][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:15:46,141][15997][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:15:46,141][15997][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:25:55,545][25390][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:25:55,551][25390][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:25:55,551][25390][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:25:55,552][25390][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:25:55,552][25390][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:25:55,553][25390][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:25:55,553][25390][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:25:55,554][25390][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:25:55,554][25390][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:25:55,554][25390][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:25:55,554][25390][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:26:33,315][25937][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:26:33,321][25937][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:26:33,321][25937][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:26:33,323][25937][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:26:33,323][25937][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:26:33,323][25937][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:26:33,324][25937][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:26:33,324][25937][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:26:33,325][25937][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:26:33,325][25937][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:26:33,325][25937][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:27:37,865][25937][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:27:37,871][25937][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:28:07,743][25937][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:28:07,748][25937][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:29:06,008][25937][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:29:06,013][25937][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:29:55,288][28971][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:29:55,294][28971][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:29:55,294][28971][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:29:55,296][28971][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:29:55,296][28971][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:29:55,297][28971][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:29:55,298][28971][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:29:55,298][28971][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:29:55,299][28971][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:29:55,299][28971][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:29:55,299][28971][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:31:43,093][30214][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:31:43,098][30214][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:31:43,099][30214][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:31:43,100][30214][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:31:43,100][30214][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:31:43,101][30214][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:31:43,101][30214][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:31:43,102][30214][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:31:43,102][30214][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:31:43,102][30214][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:31:43,102][30214][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:32:02,487][30214][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:32:02,492][30214][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:33:11,432][30214][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:33:11,438][30214][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:33:44,992][32225][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:33:44,998][32225][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:33:44,998][32225][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:33:45,000][32225][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:33:45,000][32225][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:33:45,000][32225][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:33:45,001][32225][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:33:45,001][32225][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:33:45,002][32225][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:33:45,002][32225][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:33:45,002][32225][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:34:25,524][32225][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:34:25,531][32225][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:35:18,670][32225][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:35:18,675][32225][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:38:06,910][3704 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:38:06,916][3704 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:38:06,916][3704 ][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:38:06,917][3704 ][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:38:06,918][3704 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:38:06,918][3704 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:38:06,919][3704 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:38:06,919][3704 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:38:06,920][3704 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:38:06,920][3704 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:38:06,920][3704 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:39:35,520][5289 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:39:35,526][5289 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:39:35,526][5289 ][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:39:35,527][5289 ][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:39:35,527][5289 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:39:35,528][5289 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:39:35,528][5289 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:39:35,529][5289 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:39:35,529][5289 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:39:35,529][5289 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:39:35,529][5289 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:41:57,597][7487 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:41:57,602][7487 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:41:57,602][7487 ][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:41:57,604][7487 ][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:41:57,604][7487 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:41:57,604][7487 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:41:57,605][7487 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:41:57,606][7487 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:41:57,606][7487 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:41:57,606][7487 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:41:57,606][7487 ][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:45:03,176][7487 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:45:03,188][7487 ][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:48:49,742][13598][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:48:49,747][13598][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:48:49,747][13598][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:48:49,748][13598][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:48:49,749][13598][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:48:49,749][13598][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:48:49,750][13598][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:48:49,750][13598][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:48:49,750][13598][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:48:49,750][13598][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:48:49,751][13598][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:49:54,098][14606][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:49:54,104][14606][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:49:54,105][14606][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:49:54,106][14606][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:49:54,106][14606][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:49:54,106][14606][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:49:54,107][14606][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:49:54,108][14606][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:49:54,108][14606][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:49:54,108][14606][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:49:54,108][14606][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:50:40,949][14606][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:50:40,955][14606][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:52:00,566][14606][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:52:00,572][14606][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:52:17,278][14606][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:52:17,288][14606][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:53:37,654][17725][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:53:37,660][17725][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:53:37,660][17725][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:53:37,662][17725][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:53:37,662][17725][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:53:37,663][17725][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:53:37,663][17725][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:53:37,664][17725][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:53:37,664][17725][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:53:37,664][17725][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:53:37,664][17725][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:56:20,797][20054][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:56:20,804][20054][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:56:20,804][20054][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:56:20,805][20054][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:56:20,805][20054][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:56:20,806][20054][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:56:20,807][20054][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:56:20,808][20054][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:56:20,808][20054][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:56:20,809][20054][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:56:20,809][20054][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:57:27,059][21071][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:57:27,066][21071][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:57:27,066][21071][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:57:27,067][21071][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:57:27,067][21071][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:57:27,068][21071][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:57:27,069][21071][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:57:27,069][21071][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:57:27,070][21071][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:57:27,070][21071][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:57:27,070][21071][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:58:58,500][22428][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:58:58,505][22428][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:58:58,505][22428][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:58:58,506][22428][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:58:58,507][22428][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:58:58,507][22428][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:58:58,508][22428][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:58:58,509][22428][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:58:58,509][22428][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:58:58,509][22428][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:58:58,509][22428][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 19:59:55,283][23248][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:59:55,289][23248][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 19:59:55,289][23248][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 19:59:55,291][23248][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 19:59:55,291][23248][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 19:59:55,291][23248][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 19:59:55,292][23248][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 19:59:55,292][23248][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 19:59:55,293][23248][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 19:59:55,293][23248][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 19:59:55,293][23248][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 20:05:04,887][27350][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:05:04,895][27350][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:05:04,895][27350][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 20:05:04,896][27350][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 20:05:04,896][27350][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 20:05:04,898][27350][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 20:05:04,899][27350][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 20:05:04,900][27350][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 20:05:04,900][27350][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 20:05:04,900][27350][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 20:05:04,900][27350][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 
+[2015-04-04 20:08:00,388][30296][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:08:00,393][30296][monk.roles.configuration][INFO    ][93  ][configuration.py] : configuration done
+[2015-04-04 20:08:00,393][30296][monk.api    ][INFO    ][40  ][api.py  ] : ------start up------
+[2015-04-04 20:08:00,395][30296][monk.uid    ][INFO    ][32  ][uid.py  ] : initializing uid store
+[2015-04-04 20:08:00,395][30296][monk.crane  ][INFO    ][61  ][crane.py] : initializing Seattle 
+[2015-04-04 20:08:00,395][30296][monk.crane  ][INFO    ][61  ][crane.py] : initializing UserStore 
+[2015-04-04 20:08:00,396][30296][monk.crane  ][INFO    ][61  ][crane.py] : initializing EngineStore 
+[2015-04-04 20:08:00,396][30296][monk.crane  ][INFO    ][61  ][crane.py] : initializing PandaStore 
+[2015-04-04 20:08:00,397][30296][monk.crane  ][INFO    ][61  ][crane.py] : initializing MantisStore 
+[2015-04-04 20:08:00,397][30296][monk.crane  ][INFO    ][61  ][crane.py] : initializing TurtleStore 
+[2015-04-04 20:08:00,397][30296][monk.crane  ][INFO    ][61  ][crane.py] : initializing TigressStore 

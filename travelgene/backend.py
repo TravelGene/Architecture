@@ -52,7 +52,7 @@ def loadTrip():
         recommendCityObj = monkapi.get_recommended_place(refinedDestName)
 
         # print recommendCityObj
-        print session,"session in backend"
+        # print session,"session in backend"
         tripInfoList = {}
         tripInfoList['dest'] = str(request.form['destination'])
         tripInfoList['goDate'] = request.form['goDate']
@@ -87,7 +87,9 @@ def calendar():
 @app.route('/testmonk.html')
 def monktest():
     monkapi.init_monk()
-    ent_id = monkapi.get_entity_id('Seattle','Seattle_00000007')
+    monkapi.init_database()
+    ent_id = monkapi.get_entity_id('Seattle','Seattle_00000000')
     monkapi.add_label(ent_id,'likeTravel','Y')
+    monkapi.add_label(ent_id,'place_type','restaurant')
     return render_template('testmonk.html',result='ok')
     

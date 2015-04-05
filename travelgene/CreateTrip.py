@@ -16,7 +16,7 @@ import urllib2
 #Author: Qiankun Zhuang
 @app.route('/addTrip',methods=['GET'])
 def addTrip():
-    print session
+    print session,"session in addTrip"
     dest = request.args.get('city');
     date1 = request.args.get('date1');
     date2 = request.args.get('date2');
@@ -54,6 +54,7 @@ def addTrip():
 
     # print session['user_id'], 'User Session id'
     usrid = session['user_id']
+    # print usrid
     usr = mongo.db['user'].find_one({'user_id':usrid})
     tripList = usr['trip_list']
     # print tripList, "before"
@@ -67,36 +68,45 @@ def addTrip():
     return render_template('profilec.html', user = usr)
 
 def agendaGenerator(placeList,nTripId,nAId,date1):
+    if len(placeList) == 0:
+        return []
     waypoints = []
     origin = ""
     destination = ""
+    print len(placeList)
     for place in placeList:
-        # print place['place_type'],'\n\n\n\n\n\n\n\n'
+        print place['place_type'],'\n\n\n\n\n\n\n\n'
         if(place['place_type']=='hotel'):
             origin = place
             destination = place
+            hotelActivity = {
+                'a_id':nAId,
+                'start_time':'default',
+                'end_time':'default',
+                'place_id':origin['place_id'],
+                'trip_id':nTripId
+            }
+            mongo.db['activity'].insert(hotelActivity)
         else:
             waypoints.append(place)
+    if len(origin) == 0:
+        origin = waypoints[0]
+        destination = waypoints[-1]
+    if len(waypoints) == 0:
+        return
     url = "https://maps.googleapis.com/maps/api/directions/json?"+"origin="+origin['address'].strip().replace(' ','+')+"&destination="+destination['address'].strip().replace(' ','+')+"&waypoints=optimize:true";
     for waypoint in waypoints:
         url = url + "|"+waypoint['address'].strip().replace(' ','+')
     key = "AIzaSyB9C0e4iBw9iNWd-g0r7YlsjuOAvbSKM6g"
     url = url + "&key="+key
 
-    hotelActivity = {
-        'a_id':nAId,
-        'start_time':'default',
-        'end_time':'default',
-        'place_id':origin['place_id'],
-        'trip_id':nTripId
-    }
+    
     start_time = datetime.strptime(date1,"%Y-%m-%d")
     start_time = start_time.replace(hour=10)
     end_time = datetime.strptime(date1,"%Y-%m-%d")
     end_time = end_time.replace(hour=22)
     total_time = end_time - start_time
-    time_slice = timedelta(seconds = total_time.seconds/len(waypoints))
-
+    time_slice = timedelta(seconds = total_time.seconds/(len(waypoints)))
     rst = url_open(url)
     time.sleep(1)
     if rst == None :
@@ -119,7 +129,7 @@ def agendaGenerator(placeList,nTripId,nAId,date1):
             'trip_id':nTripId
         }
         print newActivity
-        #mongo.db['activity'].insert(newActivity)
+        mongo.db['activity'].insert(newActivity)
     
 
 def url_open(pageUrl):
