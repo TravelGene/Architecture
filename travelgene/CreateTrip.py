@@ -16,7 +16,7 @@ import urllib2
 #Author: Qiankun Zhuang
 @app.route('/addTrip',methods=['GET'])
 def addTrip():
-    print session
+
     dest = request.args.get('city');
     date1 = request.args.get('date1');
     date2 = request.args.get('date2');
