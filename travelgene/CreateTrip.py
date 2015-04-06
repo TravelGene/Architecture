@@ -47,7 +47,7 @@ def addTrip():
         'destination':dest,
         'depart_date':date1,
         'return_date':date2,
-        'activities':aIdList,
+        'a_id':aIdList,
         'img_url':[]
     }
     print newTrip
@@ -67,7 +67,7 @@ def addTrip():
                                     update = {"$set" : {'trip_list' : tripList}},
                                     upsert = False)
     print 'done'
-    return render_template('profilec.html', user = usr)
+    return url_for('tripdetail', user = usr)
 
 def agendaGenerator(placeList,nTripId,nAId,date1):
     if len(placeList) == 0:
@@ -123,6 +123,8 @@ def agendaGenerator(placeList,nTripId,nAId,date1):
     # print content
     print 'new order:',newOrder
     aIdList = []
+    if origin != waypoints[0]:
+        aIdList.append(nAId)
     for i in range(len(newOrder)):
         newActivity = {
             'a_id':nAId+i+1,

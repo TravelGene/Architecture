@@ -31,4 +31,9 @@ def tripdetail():
             activity['place_id'] = place_name
             activityList.append(activity);
 
+
+
+
+
+
     return render_template('trip_detail_main.html', activityList = activityList)

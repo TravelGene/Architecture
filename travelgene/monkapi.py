@@ -16,6 +16,15 @@ from monk.math.cmath import sign0
 is_initialized = False
 def init_database():
     ents = ms.convert_entities()
+    stemTS = ms.yaml2json('travelgene/pymonk-master/examples/turtle_scripts/turtle_stem.yml')
+    stemT = ms.create_turtle(stemTS)
+    # print stemT.generic()
+    ents = ms.load_entities()
+    # print len(ents)
+    # print ents[0].generic()
+    fields=['title', 'comment', 'desc']
+    print [stemT.predict(ent, fields) for ent in ents]
+    stemT.save()
     [ent.save() for ent in ents]
 
 def init_monk():

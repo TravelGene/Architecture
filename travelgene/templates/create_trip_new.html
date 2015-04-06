@@ -78,7 +78,7 @@
                       <!--<li class="plan"><span><p>Alfa Romeo</p></span></li>-->
                       <!--<li class="plan"><span><p>Alfa Romeo</p></span></li>-->
                       {% for city in recommendCityObj %}
-                        {% if loop.index <= 10 %}
+                        {% if loop.index <= 5 %}
                             <li class="plan" text="{{city.place_id}}" style="background-image:url({{city.img_url}})"><a style="height:100%; width:100%" href="{{ url_for('get_info', place_id = city.place_id) }}"><span><p>{{ city.desc }}</p></span></a></li>
                         {% endif %}
                       {% endfor %}
@@ -90,7 +90,7 @@
                   </div>
                 </div>
               </div>
-                <div class="create" ><a  class="myButtonr" href="/trip_detail_main" onclick="writeActivities( '{{tripInfoList.goDate}}', '{{tripInfoList.returnDate}}', '{{tripInfoList.dest}}')">Create Trip</a></div>
+                <div class="create" ><a  class="myButtonr" onclick="writeActivities( '{{tripInfoList.goDate}}', '{{tripInfoList.returnDate}}', '{{tripInfoList.dest}}')" href="/trip_detail_main">Create Trip</a></div>
             </div>
             <!-- /.container -->
           </section>

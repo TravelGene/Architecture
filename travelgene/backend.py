@@ -55,8 +55,8 @@ def loadTrip():
             monkapi.init_monk()
         recommendCityObj = monkapi.get_recommended_place(refinedDestName)
 
-        for r in recommendCityObj:
-            print r
+        # for r in recommendCityObj:
+        #     print r
 
 
         # print recommendCityObj
@@ -83,8 +83,10 @@ def add_numbers():
     print dest, "dest"
     newlist = monkapi.update_recommended_place(dest, place_id, value)
     # print "newlist newlist newlist\n\n",newlist
-    # return jsonify(new_place=[i.serialize for i in newlist])
+    print json.dumps(newlist)
+    print 'caocaocoaocoaco'
     return json.dumps(newlist)
+    # return json.dumps(newlist)
 
 
 
@@ -100,12 +102,12 @@ def toActivity():
 # def tripdetail():
 #     return render_template('trip_detail_main.html')
 
-@property
+
 def serialize(self):
     return {
-        "place_id" : self.place_id,
-        "img_url" : self.img_url,
-        "desc" : self.desc
+        "place_id" : self['place_id'],
+        "img_url" : self['img_url'],
+        "desc" : self['desc']
     }
 
 @app.route('/signup.html')
@@ -121,9 +123,14 @@ def calendar():
 def monktest():
     monkapi.init_monk()
     monkapi.init_database()
-    ent_id = monkapi.get_entity_id('Seattle','Seattle_00000006')
-    # monkapi.add_label(ent_id,'likeTravel','Y')
-    monkapi.add_label(ent_id,'place_type','restaurant')
+
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000008"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000009"), "place_type", "others")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000010"), "place_type", "others")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000011"), "place_type", "cafe")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000012"), "place_type", "others")
+
+
     return render_template('testmonk.html',result='ok')
     
 
