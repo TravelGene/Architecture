@@ -113,6 +113,7 @@ def get_hotel_address(element, res):
     res['address'] = address.strip()
 
 
+#using scrapy could crawl the description data
 def get_description(element, res):
     descp = element.find("div",attrs={"id":"BODYCON"}).find("div",attrs={"class":"answers_in_head"})
     print descp
