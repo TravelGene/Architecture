@@ -77,6 +77,9 @@ def parseHotel(url):
     get_reviews(soup, res)
     get_ratings(soup, res)
 
+    get_location(soup)
+    get_img_url(soup)
+    get_open_hour(soup)
     return res
 
 def get_hotel_address(element, res):
@@ -288,13 +291,13 @@ if __name__ == "__main__":
             break
         print 'try again'
 
-    # print urlqueue[2]
-    # while True:
-    #     if parseAttractionList(urlqueue[2])!=0:
-    #         break
-    #     print 'try again'
-    # while True:
-    #     if parseRestaurantList(urlqueue[3]):
-    #         break
-    #     print 'try again'
+    print urlqueue[2]
+    while True:
+        if parseAttractionList(urlqueue[2])!=0:
+            break
+        print 'try again'
+    while True:
+        if parseRestaurantList(urlqueue[3]):
+            break
+        print 'try again'
 
