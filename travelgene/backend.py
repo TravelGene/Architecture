@@ -123,8 +123,15 @@ def calendar():
 def monktest():
     monkapi.init_monk()
     monkapi.init_database()
-
-#
+    
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000000"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000001"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000002"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000003"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000004"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000005"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000006"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000007"), "place_type", "restaurant")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000008"), "place_type", "restaurant")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000009"), "place_type", "others")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000010"), "place_type", "others")
