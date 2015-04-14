@@ -123,8 +123,8 @@ def calendar():
 def monktest():
     monkapi.init_monk()
     monkapi.init_database()
-<<<<<<< Updated upstream
 
+#
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000008"), "place_type", "restaurant")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000009"), "place_type", "others")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000010"), "place_type", "others")
@@ -132,11 +132,10 @@ def monktest():
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000012"), "place_type", "others")
 
 
-=======
-    ent_id = monkapi.get_entity_id('Seattle','Seattle_00000001')
-    # monkapi.add_label(ent_id,'likeTravel','Y')
-    # monkapi.add_label(ent_id,'place_type','restaurant')
->>>>>>> Stashed changes
+    ent_id = monkapi.get_entity_id('Seattle','Seattle_00000012')
+    monkapi.add_label(ent_id,'likeTravel','Y')
+    monkapi.add_label(ent_id,'place_type','restaurant')
+
     return render_template('testmonk.html',result='ok')
     
 

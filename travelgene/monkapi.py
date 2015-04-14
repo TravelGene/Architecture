@@ -20,6 +20,8 @@ def init_database():
     stemT = ms.create_turtle(stemTS)
     # print stemT.generic()
     ents = ms.load_entities()
+    for ent in ents:
+        add_label(ent._id,'likeTravel','N')
     # print len(ents)
     # print ents[0].generic()
     fields=['title', 'comment', 'desc']
