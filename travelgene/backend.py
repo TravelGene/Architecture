@@ -130,7 +130,7 @@ def monktest():
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000002"), "place_type", "restaurant")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000003"), "place_type", "restaurant")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000004"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000005"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000005"), "place_type", "hotel")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000006"), "place_type", "restaurant")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000007"), "place_type", "restaurant")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000008"), "place_type", "restaurant")
