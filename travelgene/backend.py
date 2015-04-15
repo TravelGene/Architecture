@@ -123,7 +123,7 @@ def calendar():
 def monktest():
     monkapi.init_monk()
     monkapi.init_database()
-    
+
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000000"), "place_type", "restaurant")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000001"), "place_type", "restaurant")
     monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000002"), "place_type", "restaurant")
