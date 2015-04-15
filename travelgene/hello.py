@@ -14,9 +14,6 @@ def homeP():
 def home_page():
     return render_template('index.html')
 
-@app.route('/CreateTrip.html')
-def create_trip():
-	return render_template('CreateTrip.html')
 
 @app.route('/Activities.html')
 def activities():

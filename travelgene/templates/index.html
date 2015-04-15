@@ -46,7 +46,7 @@
 
           <!--our system's js-->
           <script type="text/javascript" src="/static/js/Login.js"></script>
-          <script type="text/javascript" src="/static/js/input_trip.js"></script>
+
 
 
 
@@ -128,13 +128,22 @@
       					<h1 class="brand"><a href="/index.html">Home</a></h1>
       					<!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
       					<nav class="pull-right nav-collapse collapse">
-      						<ul id="menu-main" class="nav">
+                             <ul id="menu-main" class="nav">
+
+      						{% if not session.username %}
 
       							<li id="siin"><a title="portfolio" onclick="openpopin()" >Sign in</a></li>
       							<li id="siup"><a title="services" onclick="openpopup()" href="/signup.html">Sign up</a></li>
-								<li id="account"  style="display:none;"><a title="services"  href="/profilec.html">Account</a></li>
 
-      						</ul>
+
+
+                            {% else %}
+
+                                 <li><a title="portfolio" href="{{url_for('logOut')}}">Sign out</a></li>
+                                 <li><a title="services" href="/profilec.html">Account</a></li>
+
+                            {% endif %}
+                            </ul>
       					</nav>
       				</div>
       				<!-- /.container -->
@@ -160,9 +169,9 @@
       						<input type="text" id="destination" name="destination" placeholder=" enter your destination" class="cform-text" size="40" title="your email" style ="width : 300px">
       						<input type="text"  class="picktime" name="goDate" id="goDate"  name="your-email" placeholder=" start date" class="cform-text" size="40" title="your email">
       						<input type="text" class="picktime" name="returnDate" id="returnDate" name="your-email" placeholder=" return date" class="cform-text" size="40" title="your email">
-      						<!-- <a href="/CreateTrip.html" > -->
+
                             <a>
-      						<!--<input type="submit" onclick="conveyTripInfo()"  value="begin a new trip" class="cform-submit" >-->
+
       						<input type="submit"  value="begin a new trip" class="cform-submit" >
 
                             </a>
@@ -276,7 +285,7 @@
       	<!-- Loading the javaScript at the end of the page -->
       	<script type="text/javascript" src="/static/js/bootstrap.js"></script>
       	<script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script>
-      	<script type="text/javascript" src="/static/js/site.js"></script>
+
 
       </body>
       </html>

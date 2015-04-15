@@ -1,0 +1,32 @@
+{ "_id" : { "$oid" : "524c04c4e291973e1136496c" }, 
+"address" : "\n\t\t\t1620 BroadwaySeattle, WA 98122\n\t\t", ##
+"category_str_list" : [ "Ice Cream & Frozen Yogurt" ], 
+"comment" : "I love all those options for yogurt flavors and toppings.", ##
+"desc" : "Yogurtland", 
+
+"google_geometry" : 
+[ { "address_components" : 
+	[ { "long_name" : "1620", "short_name" : "1620", "types" : [ "street_number" ] }, 
+	{ "long_name" : "Broadway", "short_name" : "Broadway", "types" : [ "route" ] }, 
+	{ "long_name" : "Capitol Hill", "short_name" : "Capitol Hill", "types" : [ "neighborhood", "political" ] }, 
+	{ "long_name" : "Seattle", "short_name" : "Seattle", "types" : [ "locality", "political" ] }, 
+	{ "long_name" : "Seattle", "short_name" : "Seattle", "types" : [ "administrative_area_level_3", "political" ] }, 
+	{ "long_name" : "King", "short_name" : "King", "types" : [ "administrative_area_level_2", "political" ] }, 
+	{ "long_name" : "Washington", "short_name" : "WA", "types" : [ "administrative_area_level_1", "political" ] }, 
+	{ "long_name" : "United States", "short_name" : "US", "types" : [ "country", "political" ] }, 
+	{ "long_name" : "98122", "short_name" : "98122", "types" : [ "postal_code" ] } ], 
+
+	"formatted_address" : "1620 Broadway, Seattle, WA 98122, USA", 
+
+	"geometry" : 
+		{ "location" : { "lat" : 47.6162747, "lng" : -122.3205492 }, 
+		"location_type" : "ROOFTOP", 
+		"viewport" : { "northeast" : { "lat" : 47.6176236802915, "lng" : -122.3192002197085 }, "southwest" : { "lat" : 47.6149257197085, "lng" : -122.3218981802915 } } }, 
+	"types" : [ "street_address" ] }
+ ], 
+ "link" : "/biz/yogurtland-seattle", 
+ "price_range" : 1, ##
+ "rating_string" : "4.5", ##
+ "review_count" : "275", ##
+ "title" : "Yogurtland"  ##
+}

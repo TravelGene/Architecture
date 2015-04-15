@@ -1,0 +1,13 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}} - microblog</title>
+    {% else %}
+    <title>microblog</title>
+    {% endif %}
+  </head>
+  <body>
+    <p>{{result}}</p>
+    <button href='/init_database'>init_database</button>
+  </body>
+</html>

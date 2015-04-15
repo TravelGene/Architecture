@@ -45,10 +45,10 @@
               });
             </script>
             <script type="text/javascript" src="static/js/loadActivities.js"></script>
-            <script type="text/javascript">
-            window.onload = loadInfo("{{city}}","{{id}}");
-            console.log("asdfasdf","{{city}}","{{id}}");
-            </script>
+            <!--<script type="text/javascript">-->
+            <!--window.onload = loadInfo("{{city}}","{{id}}");-->
+            <!--console.log("asdfasdf","{{city}}","{{id}}");-->
+            <!--</script>-->
         </head>
         <body>
           <!--******************** NAVBAR ********************-->
@@ -62,7 +62,7 @@
                   <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
                   <nav class="pull-right nav-collapse collapse">
                     <ul id="menu-main" class="nav">
-                     <li><a title="Signout" >Sign out</a></li>
+                     <li><a title="Signout" href="{{url_for('logOut')}}">Sign out</a></li>
                      <li><a title="Account" href="/profilec.html">Account</a></li>
                    </ul>
                  </nav>
@@ -89,17 +89,13 @@
         <article class="show_area">
 
           <div class="activity_info">
-           <h2 class="activity_name">La Gourmandine Bakery</h2>
+           <h2 class="activity_name">{{city.desc}}</h2>
            <div class="diy-slideshow">
+
             <figure class="show">
-              <img src="static/img/restaurant1.png" width="100%" /><figcaption>Taken by QQ</figcaption> 
+              <img src="{{city.img_url}}" width="100%" /><figcaption>Taken by QQ</figcaption>
             </figure>
-            <figure>
-              <img src="static/img/restaurant2.png" width="100%" /><figcaption>"Starlight" by ChaoticMind75</figcaption> 
-            </figure>
-            <figure>
-              <img src="static/img/restaurant3.png" width="100%" /><figcaption>"Snowstorm" by Beaulawrence</figcaption> 
-            </figure>
+
             <span class="prev">&laquo;</span>
             <span class="next">&raquo;</span>
           </div>
@@ -112,9 +108,17 @@
               <span class="hours">7:30 am - 4:30 pm</span>
             </div>
           </div>
-          <div class="food_category"><b>Cuisines:</b> French</div>
+          <div class="food_category"><b>Category:</b>
+            {% for item in city.category_str_list %}
+              {{item}}
+              {% if loop.last == False %}
+                ,
+              {% endif %}
+            {% endfor %}
+
+          </div>
           <div class="telephone">Tel:412315369</div>
-          <div class="location">Location:4605 butler Strret, Lawrenceville, PA</div>
+          <div class="location">{{city.address}}</div>
         </div>
 
         <div class="users_feedback"> 
@@ -122,11 +126,13 @@
             <ul class="nav nav-tabs" role="tablist" id="myTab">
               <li role="presentation" class="active"><a href="#Review" aria-controls="Review" role="tab" data-toggle="tab">Review</a></li>
             </ul>
+
+
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="Review1">
                 <div class="comment_user">
                   <a href="/profilec.html">
-                   <img src="static/img/portrait-1.jpg" />
+                   <img src="/static/img/portrait-1.jpg" />
                  </a>
                  <p >
                   Yinzer13
@@ -137,30 +143,11 @@
               </div>
               <div class="comments">
                 <p>
-                  This little bakery is such a welcome addition to the atmosphere and offerings Lawrenceville provides! The owners are from France and have not Americanized their pastries or breads! You can get a sandwhich or bread or pastries and eat it there on the very few tables provided. At lunchtime you can imagine it getting rather crowded and tables being scarce!
+                  {{city.comment}}
                 </p>
               </div>
+              </div>
             </div>
-            <div role="tabpanel" class="tab-pane active" id="Review2">
-              <div class="comment_user">
-                <a href="/profilec.html">
-                 <img src="static/img/portrait-2.jpg" />
-               </a>
-
-               <p >
-                alynn
-              </p>
-              <p class="location">
-                Pittsburgh
-              </p>  
-            </div>
-            <div class="comments">
-              <p>
-                When I say that I am a bakery connoisseur, I kid you not. I love and appreciate well baked items with quality ingredients. My husband and I will drive 45 minutes to get to this bakery. Everything we have ever purchased has been amazing. Their baguettes, their croissants, their rolls are all delectable. Every pastry we buy is over the...
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </article>
@@ -172,7 +159,7 @@
 <!-- Loading the javaScript at the end of the page -->
 <script type="text/javascript" src="/static/js/bootstrap.js"></script>
 <script type="text/javascript" src="/static/js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="/static/js/site.js"></script>
+
 
 <!--Panel-->
 <script>
@@ -180,7 +167,7 @@
     $('#myTab a:last').tab('show')
   })
 </script>
-<a href="#" class="more-link">Details</a>
+
 <!-- Slide show-->
 <script type="text/javascript">
       var counter = 0, // to keep track of current slide

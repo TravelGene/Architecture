@@ -10,3 +10,5 @@ travel/views.pyc
 *.iml
 
 *.iml
+
+monk.console.log

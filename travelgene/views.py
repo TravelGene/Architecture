@@ -1,4 +1,5 @@
 #author zhiyuel
+#@modified Qiqis
 import os
 from travelgene import app
 from travelgene import mongo
@@ -12,17 +13,35 @@ from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 from bson.json_util import dumps
+import operator
+from sets import Set
 
+
+def getMonth(str):
+    monthMap = {}
+    monthMap['01'] = 'Jan'
+    monthMap['02'] = 'Feb'
+    monthMap['03'] = 'Mar'
+    monthMap['04'] = 'Apr'
+    monthMap['05'] = 'May'
+    monthMap['06'] = 'Jun'
+    monthMap['07'] = 'Jul'
+    monthMap['08'] = 'Aug'
+    monthMap['09'] = 'Sep'
+    monthMap['10'] = 'Oct'
+    monthMap['11'] = 'Nov'
+    monthMap['12'] = 'Dec'
+    return monthMap[str]
 
 
 @app.route('/')
-@app.route('/index')
-
+@app.route('/index.html')
 #zhiyuel
-def index():
+def home_page():
     if 'username' in session:
-        return 'Logged in as %s' % escape(session['username'])
-    return "Hello, World!"
+        print 'Logged in as %s' % escape(session['username'])
+    return render_template('index.html')
+
 
 # zhiyuel
 @app.route('/tmp.html')
@@ -83,21 +102,30 @@ def login():
         # Found=oh.find_one({'email':email})
         # passw = Found['password']
         print email
-        print oh
+        # print oh
         Found=oh.find_one({'email':email})
         print Found
         passw = Found['password']
-
+        print passw, "password in db"
         password = request.form['password']
+        print password, "password I give"
         #update in database
-        if passw==password:
-            session['username'] = email
-            session['user_id'] = mongo.db['user'].find_one({'email': email})['user_id']
 
-            return render_template("profilec.html", username=email)
+        # modified as for delivering for profile
+        if passw==password:
+            print "yesyesyes"
+            #set username into session
+            session['username'] = email
+            userDB = mongo.db['user']
+            targetUser = userDB.find_one({'email' : email})
+            # set user_id into session
+            session["user_id"] = targetUser['user_id']
+            # print session,"session in view"
+            return render_template('index.html')
             #return redirect(url_for('nextPage', id="test"))#param
         else:
             return redirect('Nlogin.html')
+
 
 @app.route('/test/<id>')
 def nextPage(id):

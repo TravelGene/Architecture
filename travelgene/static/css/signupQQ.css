@@ -6,17 +6,17 @@
 	margin-bottom: 20px;
 }
 
-#container input[type=text]{
+#container input[type=text], input[type=password]{
 	height: 2.5em;
 }
 
-#container input.cform-text-name{
+#container input.cform-text-name, #container input.cform-password-name{
 	text-align: left;
 	width: 200px;
 }
 
 
-#container input.cform-text{
+#container input.cform-text, #container input.cform-password-name{
 	width: 415px;
 	text-align: left;
 }

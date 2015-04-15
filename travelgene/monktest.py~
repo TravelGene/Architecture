@@ -1,0 +1,35 @@
+import sys
+sys.path.append("/home/micz/pymonk-master/")
+from travelgene import app
+from travelgene import mongo
+from flask import Flask, render_template, session, redirect, url_for, escape, request
+import json
+import flask_debugtoolbar
+from flask_debugtoolbar import DebugToolbarExtension
+from flask.ext.cors import CORS
+from flask.ext.pymongo import PyMongo
+import random
+import monk.core.api as ms
+from monk.roles.configuration import default_config
+from monk.math.cmath import sign0
+
+def init_database():
+	config=default_config()
+	ms.initialize(default_config())
+
+def add_label(ent_id,field,value):
+	ent = ms.load_entity(ent_id)
+	ent._setattr(field,value)
+	ms.crane.entityStore(end)
+
+def add_data_to_model(turtle_name,ent_id,creator='monk',):
+	ms.add_data(turtle_name,creator,ent_id);
+
+def train(turtleName,creator='monk'):
+	trainer = ms.load_turtle(turtleName,creator)
+	trainer.train()
+
+def predict(turtleName,ent_id,creator='monk'):
+	trainer = ms.load_turtle(turtleName,creator)
+	ent = ms.load_entity(ent_id)
+	return sign0(trainer.pandas[0].predict(ent))

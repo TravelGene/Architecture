@@ -9,17 +9,9 @@ from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.cors import CORS
 from flask.ext.pymongo import PyMongo
 
-@app.route('/ActivityInfo/<City>/<id>')
-def get_info(City,id):  
-    idval = City+"_"+id;
-    print "aaaaaaaaaaaaaaa",idval;
-    allContent = mongo.db[City].find_one({'place_id' : str(idval)});  
-    print allContent;
-    result = {};
-    result['place_id'] = allContent['place_id'];
-    result['address'] = allContent['address'];
-    result['cato'] = allContent['category_str_list'];
-    result['comment'] = allContent['comment'];
-    result['name'] = allContent['title'];
-    print 'zzzzzzzzzzzzz',result
-    return json.dumps(result);
+@app.route('/ActivityInfo/<place_id>')
+def get_info(place_id):
+    City = place_id.split('_')[0]
+    allContent = mongo.db[City].find_one({'place_id' : str(place_id)})
+    print allContent
+    return render_template("Activities.html",city=allContent);
