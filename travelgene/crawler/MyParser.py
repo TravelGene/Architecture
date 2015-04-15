@@ -79,6 +79,9 @@ def parseHotel(url):
     get_ratings(soup, res)
     get_hotel_img(soup, res)
 
+    get_location(soup)
+    get_img_url(soup)
+    get_open_hour(soup)
     return res
 
 
@@ -113,6 +116,7 @@ def get_hotel_address(element, res):
     res['address'] = address.strip()
 
 
+#using scrapy could crawl the description data
 def get_description(element, res):
     descp = element.find("div",attrs={"id":"BODYCON"}).find("div",attrs={"class":"answers_in_head"})
     print descp
@@ -195,12 +199,12 @@ def parseRestaurant(url):
     dump_url(url)
     print url
     res = {}
-    # get_title(soup,res)
-    # get_restaurant_address(soup,res)
-    # get_ratings(soup,res)
-    # get_reviews(soup,res)
-    # get_restaurant_openhour(soup, res)
-    get_restuarant_img(soup, res)
+    get_title(soup,res)
+    get_restaurant_address(soup,res)
+    get_ratings(soup,res)
+    get_reviews(soup,res)
+    get_restaurant_openhour(soup, res)
+    # get_restuarant_img(soup, res)
     return res
 
 def get_restaurant_openhour(element, res):
@@ -326,16 +330,16 @@ if __name__ == "__main__":
         # soup = dump_url(page)
         # parse_page(soup)
 
-    # while True:
-    #     if parseHotelList(urlqueue[0])!=0:
-    #         break
-    #     print 'try again'
+    while True:
+        if parseHotelList(urlqueue[0])!=0:
+            break
+        print 'try again'
 
-    # print urlqueue[2]
-    # while True:
-    #     if parseAttractionList(urlqueue[2])!=0:
-    #         break
-    #     print 'try again'
+    print urlqueue[2]
+    while True:
+        if parseAttractionList(urlqueue[2])!=0:
+            break
+        print 'try again'
     while True:
         if parseRestaurantList(urlqueue[3]):
             break
