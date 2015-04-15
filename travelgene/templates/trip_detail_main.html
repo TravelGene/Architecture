@@ -145,28 +145,74 @@
 
 
 
-var placeList = []
+var placeList = [];
+var wayPoints = [];
+var i = 0;
 {% for item in routeLocationInfo %}
 
   var newPlace = new google.maps.LatLng({{item.lat}}, {{item.lng}});
   placeList.push(newPlace);
+//    if(i != 1 && i != )
 
 {% endfor %}
+
+wayPoints = placeList.slice(1, placeList.length);
+
+
+var waypts = [];
+
+for(var i = 0; i < wayPoints.length; i++){
+    waypts.push({
+        location: wayPoints[i]
+    });
+}
+
+
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
 var haight = new google.maps.LatLng(37.7699298, -122.4469157);
 var oceanBeach = new google.maps.LatLng(37.7683909618184, -122.51089453697205);
+var marker;
+var geocoder;
+var infowindow;
 
 function initialize() {
   directionsDisplay = new google.maps.DirectionsRenderer();
+    geocoder = new google.maps.Geocoder();
+
   var mapOptions = {
     zoom: 18,
-    center: haight
-  }
+    center: placeList[0]
+
+  };
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   directionsDisplay.setMap(map);
+    marker=new google.maps.Marker({
+      position:placeList[0],
+      icon:'../static/img/TripIcon/marker.png',
+        zIndex:9999
+      });
      calcRoute();
+     geocoder.geocode({'latLng': placeList[0]}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        if (results[1]) {
+            infowindow = new google.maps.InfoWindow({
+            content:results[1].formatted_address
+            });
+        }
+      } else {
+        alert("Geocoder failed due to: " + status);
+      }
+    });
+
+
+        google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map,marker);
+
+     });
+
+
 }
 
 function calcRoute() {
@@ -174,8 +220,9 @@ function calcRoute() {
   var request = {
 //      origin: placeList[0],
 //      destination: placeList[placeList.length - 1],
-        origin:haight,
-      destination: oceanBeach,
+        origin:placeList[0],
+      waypoints:waypts,
+      destination: placeList[0],
       // Note that Javascript allows us to access the constant
       // using square brackets and a string value as its
       // "property."
@@ -185,8 +232,34 @@ function calcRoute() {
     if (status == google.maps.DirectionsStatus.OK) {
       directionsDisplay.setDirections(response);
     }
+
   });
+    marker.setMap(map);
 }
+
+
+//function placeMarker() {
+//    alert(placeList[0]);
+//    geocoder.geocode({'latLng': placeList[0]}, function(results, status) {
+//      if (status == google.maps.GeocoderStatus.OK) {
+//          alert("woca");
+//        if (results[1]) {
+//            alert(placeList[0]);
+//          infowindow.setContent(results[1].formatted_address);
+//          infowindow.open(map, marker);
+//        }
+//      } else {
+//        alert("Geocoder failed due to: " + status);
+//      }
+//    });
+//
+//}
+//
+//google.maps.event.addListener(marker, 'click', function() {
+//    alert(placeList[0]);
+//    placeMarker();
+//  });
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
