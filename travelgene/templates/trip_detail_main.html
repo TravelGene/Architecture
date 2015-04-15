@@ -149,18 +149,33 @@ var badwaterrrrrrr = new google.maps.LatLng(37.23998, -118.83171);
 var badwaterrr = new google.maps.LatLng(36.33998, -119.63171);
 var badwaterr = new google.maps.LatLng(36.578581, -118.291994);
 
+
+var placeList = []
+{% for item in routeLocationInfo %}
+  
+  var newPlace = new google.maps.LatLng({{item.lat}}, {{item.lng}});
+  placeList.push(newPlace);
+{% endfor %}
+
 // Load the Visualization API and the columnchart package.
 google.load('visualization', '1', {packages: ['columnchart']});
 
 function initialize() {
   var mapOptions = {
-    zoom: 8,
-    center: lonepine,
-    mapTypeId: 'terrain'
+    zoom: 16,
+    center: placeList[0],
+    mapTypeId: 'roadmap'
   }
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   
-  var lineCoordinates = [ whitney, lonepine, owenslake, panamintsprings, beattyjunction, badwater, badwaterrrrrrr, badwaterrr, badwaterr];
+  for(i in placeList){
+    var marker = new google.maps.Marker({
+      position:placeList[i],
+    });
+    marker.setMap(map);
+  }
+
+  // var lineCoordinates = [ whitney, lonepine, owenslake, panamintsprings, beattyjunction, badwater, badwaterrrrrrr, badwaterrr, badwaterr];
   
   // Define the symbol, using one of the predefined paths ('CIRCLE')
   // supplied by the Google Maps JavaScript API.
@@ -175,10 +190,11 @@ function initialize() {
 
   // Draw the path, using the Visualization API and the Elevation service.
   drawPath();
-  
+  // alert(placeList);
   // Create the polyline and add the symbol to it via the 'icons' property.
   line = new google.maps.Polyline({
-    path: lineCoordinates,
+    // path: lineCoordinates,
+    path : placeList,
     icons: [{
       icon: lineSymbol,
       offset: '100%'
@@ -194,8 +210,8 @@ function drawPath() {
   // Create a new chart in the elevation_chart DIV.
   chart = new google.visualization.ColumnChart(document.getElementById('elevation_chart'));
 
-  var path = [ whitney, lonepine, owenslake, panamintsprings, beattyjunction, badwater, badwaterrrrrrr, badwaterrr, badwaterr];
-
+  // var path = [ whitney, lonepine, owenslake, panamintsprings, beattyjunction, badwater, badwaterrrrrrr, badwaterrr, badwaterr];
+  var path = placeList;
   // Create a PathElevationRequest object using this array.
   // Ask for 256 samples along that path.
   var pathRequest = {
@@ -205,6 +221,9 @@ function drawPath() {
 
   // Initiate the path request.
   elevator.getElevationAlongPath(pathRequest, plotElevation);
+
+
+
 }
 
 // Takes an array of ElevationResult objects, draws the path on the map
@@ -243,7 +262,7 @@ function plotElevation(results, status) {
   }
 
   // Draw the chart using the data within its DIV.
-  document.getElementById('elevation_chart').style.display = 'block';
+  document.getElementById('elevation_chart').style.display = 'none';
   chart.draw(data, {
     height: 150,
     legend: 'none',
@@ -308,12 +327,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 {% for i in activityList %}
 				<tr>
 				  <th>
-					<img src="/static/img/TripIcon/airplane.png" alt="Note" style="height:32px;width:32px">
+					<img src="/static/img/TripIcon/{{i.place_type}}.png" alt="Note" style="height:32px;width:32px">
 				  </th>
 				  <td>
-					<span>Go: {{ i.start_time }}</span>
-                    <span>Back: {{ i.end_time }}</span>
-                    <span>Destination : {{ i.place_id }}</span>
+					{% if i.start_time %}
+          <p style ="margin : 0px">Go: {{ i.start_time }}</p>
+          <p >Back: {{ i.end_time }}</p>
+          {% endif %}
+          <p style ="margin : 0px; font-weight:800">{{ i.place_id }}</p>
+
 				  </td>
 				</tr>
                     {% endfor %}
@@ -323,7 +345,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 				<div id="head3">Route Map</div>
 				<div id="map-canvas"></div>
 				<div id="elevation_chart"></div>
-				<div class="span12">
+<!-- 				<div class="span12">
 				  <ul class="icon">
 					<li><a href="/profilec.html" target="_blank"><i class="icon-pinterest-circled"></i></a></li>
 					<li><a href="/profilec.html" target="_blank"><i class="icon-facebook-circled"></i></a></li>
@@ -331,7 +353,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 					<li><a href="/profilec.html" target="_blank"><i class="icon-gplus-circled"></i></a></li>
 					<li><a href="/profilec.html" target="_blank"><i class="icon-skype-circled"></i></a></li>
 				  </ul>
-				</div>
+				</div> -->
 				<a href="/profilec.html" class="myButton" onclick="myFunction()">Print this Trip</a>
 			</div>
           <div class="row">

@@ -1,6 +1,6 @@
 from travelgene import app
 from travelgene import mongo
-from flask import Flask, render_template, session, redirect, url_for, escape, request
+from flask import Flask, render_template, session, redirect, url_for, escape, request, jsonify
 import json
 import flask_debugtoolbar
 from flask_debugtoolbar import DebugToolbarExtension
@@ -13,8 +13,11 @@ import time
 import urllib2
 
 
+
+
 #Author: Qiankun Zhuang
 @app.route('/addTrip',methods=['GET'])
+# @app.route('/trip_detail_main.html')
 def addTrip():
     dest = request.args.get('city');
     date1 = request.args.get('date1');
@@ -40,7 +43,11 @@ def addTrip():
         # print place
         # print place['place_type'],'\n\n\n\n\n\n\n\n\n'
         placeList.append(place)
+    
     aIdList = agendaGenerator(placeList,nTripId,nAId,date1)
+    # aIdList = List[0]
+    # routeLocationInfo = List[1];
+
     print "asdfsdasddgrf",aIdList
     newTrip = {
         'trip_id':nTripId,
@@ -61,13 +68,37 @@ def addTrip():
     tripList = usr['trip_list']
     # print tripList, "before"
     tripList.append(nTripId)
-
+    ## update trip list in user collection
     # print tripList, "after"
     n = mongo.db['user'].find_and_modify(query = {'user_id' : usrid},
                                     update = {"$set" : {'trip_list' : tripList}},
                                     upsert = False)
     print 'done'
-    return url_for('tripdetail', user = usr)
+    # print routeLocationInfo, "hahah"
+
+    # session['routeLocationInfo'] = routeLocationInfo
+    # print session['routeLocationInfo'], "hahah"
+    ########################################### add trip detail here @lubron
+    ## store info of user's newly built activities
+    # activityList = []
+
+    # for activity_id in aIdList:
+    #     ## find target activity
+    #     activity = mongo.db['activity'].find_one({'a_id' : activity_id})
+    #     ## get Destination name
+    #     place = str(activity['place_id']).split("_")[0]
+    #     ## search the collection with given destination name to get the specifity activity place name
+    #     place_name = mongo.db[place].find_one({'place_id' : activity['place_id']})['desc']
+    #     ##### here use place_id to store the name of target place
+    #     activity['place_id'] = place_name
+    #     activityList.append(activity);
+
+    #return render_template('trip_detail_main.html', activityList = activityList, routeLocationInfo = routeLocationInfo)
+    print aIdList
+
+    return redirect(url_for('tripdetail'))
+
+
 
 def agendaGenerator(placeList,nTripId,nAId,date1):
     if len(placeList) == 0:
@@ -83,10 +114,11 @@ def agendaGenerator(placeList,nTripId,nAId,date1):
             destination = place
             hotelActivity = {
                 'a_id':nAId,
-                'start_time':'default',
-                'end_time':'default',
+                'start_time':'',
+                'end_time':'',
                 'place_id':origin['place_id'],
-                'trip_id':nTripId
+                'trip_id':nTripId,
+                'place_type' : 'hotel'
             }
             mongo.db['activity'].insert(hotelActivity)
         else:
@@ -109,33 +141,59 @@ def agendaGenerator(placeList,nTripId,nAId,date1):
     end_time = end_time.replace(hour=22)
     total_time = end_time - start_time
     time_slice = timedelta(seconds = total_time.seconds/(len(waypoints)))
-    rst = url_open(url)
+    
+    ## route information
+    rst= url_open(url)
+
+    locationInfo = []
     time.sleep(1)
     if rst == None :
         newOrder = range(len(waypoints))
     else:
         content = json.loads(rst)
         if content['status'] != 'OK':
+            print 'google not ok'
             newOrder = range(len(waypoints))
+            
         else:
             newOrder = content['routes'][0]['waypoint_order']
+                        ## process route information to get the begin, end, waypoints lat and lng
+            print 'new order:',newOrder
+            # listPlaceOnRoute = content['routes'][0]['legs']
+
+            # ## store spots location info along the road
+            # #print " the length of list place on route "
+            # ## extract from listPlaceOnRoute
+            # for item in listPlaceOnRoute:
+            #     newPlaceLocation = {}
+            #     newPlaceLocation['start_location'] = {}
+            #     newPlaceLocation['start_location']['lat'] = item['start_location']['lat']
+            #     newPlaceLocation['start_location']['lng'] = item['start_location']['lng']
+            #     newPlaceLocation['end_location'] = {}
+            #     newPlaceLocation['end_location']['lat'] = item['end_location']['lat']
+            #     newPlaceLocation['end_location']['lng'] = item['end_location']['lng']
+            #     locationInfo.append(newPlaceLocation)
+            #print locationInfo, "locationinfo"  
     # print type(content['routes'])
     # print content
-    print 'new order:',newOrder
     aIdList = []
     if origin != waypoints[0]:
         aIdList.append(nAId)
     for i in range(len(newOrder)):
         newActivity = {
             'a_id':nAId+i+1,
-            'start_time':(start_time+time_slice*i).isoformat(),
-            'end_time':(start_time+time_slice*(i+1)).isoformat(),
+            'start_time':(start_time+time_slice*i).isoformat().replace("T", " "),
+            'end_time':(start_time+time_slice*(i+1)).isoformat().replace("T", " "),
             'place_id':waypoints[newOrder[i]]['place_id'],
-            'trip_id':nTripId
+            'trip_id':nTripId,
+            'place_type' : waypoints[newOrder[i]]['place_type']
         }
         aIdList.append(nAId+i+1)
         print newActivity
         mongo.db['activity'].insert(newActivity)
+    # result = []
+    # result.append(aIdList)
+    # result.append(locationInfo)
     return aIdList
 
 def url_open(pageUrl):

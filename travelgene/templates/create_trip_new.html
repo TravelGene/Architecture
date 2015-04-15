@@ -79,7 +79,7 @@
                       <!--<li class="plan"><span><p>Alfa Romeo</p></span></li>-->
                       {% for city in recommendCityObj %}
                         {% if loop.index <= 5 %}
-                            <li class="plan" text="{{city.place_id}}" style="background-image:url({{city.img_url}})"><a style="height:100%; width:100%" href="{{ url_for('get_info', place_id = city.place_id) }}"><span><p>{{ city.desc }}</p></span></a></li>
+                            <li class="plan" text="{{city.place_id}}" style="background-image:url({{city.img_url}})"><a target="_blank" style="height:100%; width:100%" href="{{ url_for('get_info', place_id = city.place_id) }}"><span><p>{{ city.desc }}</p></span></a></li>
                         {% endif %}
                       {% endfor %}
                     </ul>

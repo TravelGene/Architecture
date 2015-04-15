@@ -17,8 +17,9 @@ import operator
 @app.route('/trip_detail_main')
 def tripdetail():
     newTripInfo = mongo.db['trip'].find({}).sort("trip_id", -1).limit(1);
-
+    
     activityList = []
+    routeLocationInfo = []
     for doc in newTripInfo:
         for activity_id in doc['a_id']:
             ## find target activity
@@ -27,8 +28,44 @@ def tripdetail():
             place = str(activity['place_id']).split("_")[0]
             ## search the collection with given destination name to get the specifity activity place name
             place_name = mongo.db[place].find_one({'place_id' : activity['place_id']})['desc']
+
+            ## get geo info
+            geo = mongo.db[place].find_one({'place_id' : activity['place_id']})['google_geometry'][0]['geometry']['location']
+            # print geo, "geogeogeogeogeogeogeogeogeogeogeogeogeo"
+
             ##### here use place_id to store the name of target place
             activity['place_id'] = place_name
-            activityList.append(activity);
+            activityList.append(activity)
+            routeLocationInfo.append(geo)
 
-    return render_template('trip_detail_main.html', activityList = activityList)
+            # print activity['place_type'], "typetypetypetypetypetypetypetypetype"
+
+            ## find lat and lng in Seattle collection
+            
+
+
+
+    # listPlaceOnRoute = content['routes'][0]['legs']
+
+    # ## store spots location info along the road
+    # #print " the length of list place on route "
+    # ## extract from listPlaceOnRoute
+    # for item in listPlaceOnRoute:
+    #     newPlaceLocation = {}
+    #     newPlaceLocation['start_location'] = {}
+    #     newPlaceLocation['start_location']['lat'] = item['start_location']['lat']
+    #     newPlaceLocation['start_location']['lng'] = item['start_location']['lng']
+    #     newPlaceLocation['end_location'] = {}
+    #     newPlaceLocation['end_location']['lat'] = item['end_location']['lat']
+    #     newPlaceLocation['end_location']['lng'] = item['end_location']['lng']
+    #             locationInfo.append(newPlaceLocation)
+
+    # routeLocationInfo = session['routeLocationInfo'] 
+    
+    # print routeLocationInfo, "routeLocationInfo"
+    
+    # print "\n\n\n\n"
+    
+    # print activityList, "activityList"
+
+    return render_template('trip_detail_main.html', activityList = activityList, routeLocationInfo = routeLocationInfo)

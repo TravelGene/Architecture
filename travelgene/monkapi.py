@@ -51,7 +51,12 @@ def train(turtleName,creator='monk'):
 
 def predict(trainer,ent_id,creator='monk'):#How?
     ent = ms.load_entity(ent_id)
-    return sign0(trainer.pandas[0].predict(ent))
+    print ent.desc
+    # return sign0(trainer.pandas[0].predict(ent))
+    score=trainer.pandas[0].predict(ent)
+    print score
+    return score
+
 
 def get_recommended_place(collection_name):  
     #print collection_name
@@ -76,7 +81,8 @@ def update_recommended_place(collection_name,place_id,value,creator='monk'):
     trainer = train(user_turtle,creator)
     ents = ms.load_entities()
     for ent in ents:
-        if predict(trainer,ent._id)==0:
+
+        if predict(trainer,ent._id)<0.135:
             add_label(ent._id,'likeTravel','N')
         else:
             add_label(ent._id,'likeTravel','Y')
