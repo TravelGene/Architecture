@@ -74,24 +74,6 @@ def addTrip():
                                     update = {"$set" : {'trip_list' : tripList}},
                                     upsert = False)
     print 'done'
-    # print routeLocationInfo, "hahah"
-
-    # session['routeLocationInfo'] = routeLocationInfo
-    # print session['routeLocationInfo'], "hahah"
-    ########################################### add trip detail here @lubron
-    ## store info of user's newly built activities
-    # activityList = []
-
-    # for activity_id in aIdList:
-    #     ## find target activity
-    #     activity = mongo.db['activity'].find_one({'a_id' : activity_id})
-    #     ## get Destination name
-    #     place = str(activity['place_id']).split("_")[0]
-    #     ## search the collection with given destination name to get the specifity activity place name
-    #     place_name = mongo.db[place].find_one({'place_id' : activity['place_id']})['desc']
-    #     ##### here use place_id to store the name of target place
-    #     activity['place_id'] = place_name
-    #     activityList.append(activity);
 
     #return render_template('trip_detail_main.html', activityList = activityList, routeLocationInfo = routeLocationInfo)
     print aIdList
@@ -159,23 +141,7 @@ def agendaGenerator(placeList,nTripId,nAId,date1):
             newOrder = content['routes'][0]['waypoint_order']
                         ## process route information to get the begin, end, waypoints lat and lng
             print 'new order:',newOrder
-            # listPlaceOnRoute = content['routes'][0]['legs']
 
-            # ## store spots location info along the road
-            # #print " the length of list place on route "
-            # ## extract from listPlaceOnRoute
-            # for item in listPlaceOnRoute:
-            #     newPlaceLocation = {}
-            #     newPlaceLocation['start_location'] = {}
-            #     newPlaceLocation['start_location']['lat'] = item['start_location']['lat']
-            #     newPlaceLocation['start_location']['lng'] = item['start_location']['lng']
-            #     newPlaceLocation['end_location'] = {}
-            #     newPlaceLocation['end_location']['lat'] = item['end_location']['lat']
-            #     newPlaceLocation['end_location']['lng'] = item['end_location']['lng']
-            #     locationInfo.append(newPlaceLocation)
-            #print locationInfo, "locationinfo"  
-    # print type(content['routes'])
-    # print content
     aIdList = []
     if origin != waypoints[0]:
         aIdList.append(nAId)
