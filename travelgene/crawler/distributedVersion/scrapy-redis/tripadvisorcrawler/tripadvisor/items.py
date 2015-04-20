@@ -1,3 +1,6 @@
+# coding: utf-8
+
+# Copyright (c) 2015, TravelGene.
 # Define here the models for your scraped items
 #
 # See documentation in:
