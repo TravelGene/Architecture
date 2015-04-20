@@ -13,7 +13,7 @@ import json
 import sys
 import time
 import random
-
+import urllib2
 
 
 class MyCrawler(RedisMixin, CrawlSpider):
