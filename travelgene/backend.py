@@ -114,9 +114,68 @@ def serialize(self):
 def signup():
     return render_template('signup.html')
 
-@app.route('/calendar.html')
+#leixiao, Nanjie
+@app.route('/basic-views.html',methods=['GET'])
 def calendar():
-    return render_template('calendar.html')
+    print session,"calendar"
+    email = session['username']
+    userDB = mongo.db['user']
+    targetUser = userDB.find_one({'email' : email})
+
+    tripIDList = targetUser['trip_id']
+    tripDB = mongo.db['trip']
+
+    # judge whether same person has gone to same place several times
+    tripDictSet = set()
+
+    cityNumber=0
+
+    # print "show profile"
+
+    tripObjList = []
+    for tripId in tripIDList:
+        tripObj = tripDB.find_one({'trip_id':tripId})
+      #print tripObj
+
+        # print tripObj
+
+        if bool(tripObj): # if this trip is not none
+            if str(tripObj['destination']) not in tripDictSet :
+                cityNumber+=1
+            else:
+                tripDictSet.add(str(tripObj['destination']))
+
+
+            tripInfo = mongo.db['city'].find_one({'dest' :str(tripObj['destination'])})
+            # print tripInfo
+            tripObj['img_url'] = tripInfo['img_url']
+           # tripObj['attraction'] = tripInfo['attraction']
+            #date = str(tripObj['depart_date']).split(" ")[0]
+            #dateResult = getMonth(date.split("-")[1])
+            #dateResult += ', '
+            #dateResult += date.split("-")[0]
+            #tripObj['depart_date'] = dateResult
+            
+            att = str(tripInfo['attraction']).split(",")
+            
+            attraction = str(tripInfo['attraction']).split(",")[0]
+            attraction2 = str(tripInfo['attraction']).split(",")[1]
+            
+            
+               
+            
+            tripObj['att1'] = attraction
+            tripObj['att2'] = attraction2
+            
+            
+            dateResult = str(tripObj['depart_date']).split(" ")[0]
+            tripObj['depart_date'] = dateResult
+
+
+        tripObjList.append(tripObj)
+
+
+    return render_template('basic-views.html',user = targetUser, tripList = tripObjList,cityNumber=cityNumber)
     
 # Author: Qiankun
 @app.route('/testmonk.html')
