@@ -40,7 +40,7 @@ def showProfilec():
     userDB = mongo.db['user']
     targetUser = userDB.find_one({'email' : email})
 
-    tripIDList = targetUser['trip_id']
+    tripIDList = targetUser['trip_list']
     tripDB = mongo.db['trip']
 
     # judge whether same person has gone to same place several times
@@ -50,8 +50,9 @@ def showProfilec():
 
     # print "show profile"
 
+
     tripObjList = []
-    for tripId in tripIDList:
+    for tripId in reversed(tripIDList):
         tripObj = tripDB.find_one({'trip_id':tripId})
       #print tripObj
 
@@ -63,11 +64,19 @@ def showProfilec():
             else:
                 tripDictSet.add(str(tripObj['destination']))
 
-
+            activityIdList = tripObj['a_id']
+            activityList = ''
+            for aid in activityIdList:
+                activity = mongo.db['activity'].find_one({"a_id":aid})
+                placeId = activity['place_id']
+                cityName = placeId.split("_")[0]
+                placeName = str(mongo.db[cityName].find_one({'place_id' : placeId})['title'])
+                activityList = activityList + ", " + placeName
+            activityList = activityList[1:]
             tripInfo = mongo.db['city'].find_one({'dest' :str(tripObj['destination'])})
             # print tripInfo
             tripObj['img_url'] = tripInfo['img_url']
-            tripObj['attraction'] = tripInfo['attraction']
+            tripObj['attraction'] = activityList
             date = str(tripObj['depart_date']).split(" ")[0]
             dateResult = getMonth(date.split("-")[1])
             dateResult += ', '

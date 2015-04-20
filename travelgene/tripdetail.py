@@ -38,34 +38,5 @@ def tripdetail():
             activityList.append(activity)
             routeLocationInfo.append(geo)
 
-            # print activity['place_type'], "typetypetypetypetypetypetypetypetype"
-
-            ## find lat and lng in Seattle collection
-            
-
-
-
-    # listPlaceOnRoute = content['routes'][0]['legs']
-
-    # ## store spots location info along the road
-    # #print " the length of list place on route "
-    # ## extract from listPlaceOnRoute
-    # for item in listPlaceOnRoute:
-    #     newPlaceLocation = {}
-    #     newPlaceLocation['start_location'] = {}
-    #     newPlaceLocation['start_location']['lat'] = item['start_location']['lat']
-    #     newPlaceLocation['start_location']['lng'] = item['start_location']['lng']
-    #     newPlaceLocation['end_location'] = {}
-    #     newPlaceLocation['end_location']['lat'] = item['end_location']['lat']
-    #     newPlaceLocation['end_location']['lng'] = item['end_location']['lng']
-    #             locationInfo.append(newPlaceLocation)
-
-    # routeLocationInfo = session['routeLocationInfo'] 
-    
-    # print routeLocationInfo, "routeLocationInfo"
-    
-    # print "\n\n\n\n"
-    
-    # print activityList, "activityList"
 
     return render_template('trip_detail_main.html', activityList = activityList, routeLocationInfo = routeLocationInfo)
