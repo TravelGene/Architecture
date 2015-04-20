@@ -14,6 +14,29 @@ import sys
 import time
 import random
 import urllib2
+
+
+class MyCrawler(RedisMixin, CrawlSpider):
+    """Spider that reads urls from redis queue (myspider:start_urls)."""
+    name = 'mycrawler_redis'
+    redis_key = 'mycrawler:start_urls'
+    
+    rules = (
+        # follow all links
+        Rule(SgmlLinkExtractor(), callback='parse_page', follow=True),
+    )
+    def set_crawler(self, crawler):
+        CrawlSpider.set_crawler(self, crawler)
+        RedisMixin.setup_redis(self)
+
+def parse_page(self, response):
+    el = ExampleLoader(response=response)
+    el.add_xpath('name', '//title[1]/text()')
+    el.add_value('url', response.url)
+    return el.load_item()
+
+
+
 def url_open(pageUrl):
     headers = {  'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'  , 'Referer':'https://itunes.apple.com'} 
     req = urllib2.Request(  url = pageUrl,   headers = headers  ) 
