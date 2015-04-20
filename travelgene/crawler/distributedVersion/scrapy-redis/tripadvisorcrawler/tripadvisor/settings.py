@@ -1,3 +1,6 @@
+# coding: utf-8
+
+# Copyright (c) 2015, TravelGene.
 # Scrapy settings for example project
 #
 # For simplicity, this file contains only the most important settings by
