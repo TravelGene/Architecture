@@ -60,35 +60,34 @@ def predict(trainer,ent_id,creator='monk'):#How?
     return score
 
 
-def get_recommended_place(collection_name):  
+def get_recommended_place(collection_name,skip_num=0,request_num=5):  
     #print collection_name
-    ents = ms.load_entities(query={'likeTravel':'Y'},skip=0,num=10,collectionName = collection_name)
-    rst = []
+    ents = ms.load_entities(collectionName = collection_name)
+    user_turtle = 'likeTravel'
+    trainer = train(user_turtle,'monk')
+    rank=[]
     for ent in ents:
+	rank.append((ent._id,predict(trainer,ent._id)))
+    sorted_by_score = sorted(rank, key=lambda tup: tup[1])
+    rst = []
+    for r in sorted_by_score:
+	ent = ms.load_entity(r[0])
         e = {}
         e['place_id'] = ent.place_id
         e['img_url'] = ent.img_url
         e['desc'] = ent.desc
         rst.append(e)
-    print len(ents)
-    return rst
+   # print len(ents)
+    return rst[skip_num:skip_num+request_num]
 
-def update_recommended_place(collection_name,place_id,value,creator='monk'):
+def update_recommended_place(collection_name,place_id,value,creator='monk',skip_num=0):
     user_turtle = 'likeTravel'
-                    # get turtle name from creator? need to updpate database 'user'
+    # get turtle name from creator? need to updpate database 'user'
     # print collection_name, "collection"
     ent_id = get_entity_id(collection_name,place_id)
     add_label(ent_id,'likeTravel',value)
     add_data_to_model(user_turtle,ent_id,creator)
-    trainer = train(user_turtle,creator)
-    ents = ms.load_entities()
-    for ent in ents:
-
-        if predict(trainer,ent._id)<0.135:
-            add_label(ent._id,'likeTravel','N')
-        else:
-            add_label(ent._id,'likeTravel','Y')
-    return get_recommended_place(collection_name)
+    return get_recommended_place(collection_name,skip_num)
 
 def get_entity_id(collection_name,place_id):
     res = mongo.db[collection_name].find_one({'place_id':place_id})

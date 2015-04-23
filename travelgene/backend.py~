@@ -122,38 +122,19 @@ def calendar():
 @app.route('/testmonk.html')
 def monktest():
     monkapi.init_monk()
-<<<<<<< HEAD
-    # monkapi.init_database()
 
-    # monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000008"), "place_type", "restaurant")
-    # monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000009"), "place_type", "others")
-    # monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000010"), "place_type", "others")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000011"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000011"), "likeTravel", "Y")
-    # monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000012"), "place_type", "others")
-    # monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000012"), "place_type", "others")
-=======
     monkapi.init_database()
 
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000000"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000001"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000002"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000003"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000004"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000005"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000006"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000007"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000008"), "place_type", "restaurant")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000009"), "place_type", "others")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000010"), "place_type", "others")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000011"), "place_type", "cafe")
-    monkapi.add_label(monkapi.get_entity_id("Seattle","Seattle_00000012"), "place_type", "others")
+    monkapi.add_label(monkapi.get_entity_id("Kirkland","Kirkland_00000000"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Kirkland","Kirkland_00000001"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Kirkland","Kirkland_00000002"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Kirkland","Kirkland_00000003"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Redmond","Redmond_00000000"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Redmond","Redmond_00000001"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Redmond","Redmond_00000002"), "place_type", "restaurant")
+    monkapi.add_label(monkapi.get_entity_id("Redmond","Redmond_00000003"), "place_type", "restaurant")
+   
 
->>>>>>> 06445f1e60d2cb5c9cf0637982b56847ec8f12b8
-
-    ent_id = monkapi.get_entity_id('Seattle','Seattle_00000012')
-    monkapi.add_label(ent_id,'likeTravel','Y')
-    monkapi.add_label(ent_id,'place_type','restaurant')
 
     return render_template('testmonk.html',result='ok')
     
