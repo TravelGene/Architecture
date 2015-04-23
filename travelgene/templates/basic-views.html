@@ -83,6 +83,32 @@
 			},
 			editable: true,
 			droppable: true, // this allows things to be dropped onto the calendar
+			
+			events: [
+			
+			
+			
+			{% for i in tripList %}
+			
+				{
+					title: '{{i.att1}}',
+					start: '2015-04-10'
+				},
+				
+			{% endfor %}
+			
+				{
+					title: '{{tripList[0].att1}}',
+					start: '2015-05-04'
+				}
+			
+				
+		
+				],
+			
+			
+			
+			
 			drop: function() {
 				// is the "remove after drop" checkbox checked?
 				if ($('#drop-remove').is(':checked')) {
@@ -178,11 +204,12 @@
 
 		<div id='external-events'>
 			<h4>Draggable Events</h4>
-			<div class='fc-event'>{{tripList[0].att1}}</div>
-			<div class='fc-event'>{{tripList[1].att1}}</div>
-			<div class='fc-event'>{{tripList[2].att1}}</div>
-			<div class='fc-event'>{{tripList[3].att1}}</div>
-			<div class='fc-event'>{{tripList[4].att1}}</div>
+			{% for i in tripList %}
+			
+			<div class='fc-event'>{{i.att1}}</div>
+			<div class='fc-event'>{{i.att2}}</div>
+			
+			{% endfor %}
 			<p>
 				<input type='checkbox' id='drop-remove' checked>
 				<label for='drop-remove'>remove after drop</label>
