@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<style type="text/css" >
+ul,li,ol {list-style:none;  margin:0;  padding:0;}
+li {float:left;}
+li.new {position:relative;}
+li.last {float:right;}
+#calendarWrap{width:250px; z-index:0;}
+#calendar {clear:both;}
+#dpYyyyMm {width:120px; text-align:center;}
+</style>
+<title>Insert title here</title>
+  <script language="javascript">
+   var baseDate = new Date(); //±âÁØÀÏ ±žÇÏ±â 
+   
+   var daysOfWeekName = new Array();
+   daysOfWeekName[0] = "SUN";
+   daysOfWeekName[1] = "MON";
+   daysOfWeekName[2] = "TUE";
+   daysOfWeekName[3] = "WEN";
+   daysOfWeekName[4] = "THU";
+   daysOfWeekName[5] = "FRI";
+   daysOfWeekName[6] = "SAT";
+   
+   function getYear(a){
+	   return a.getFullYear();
+   }
+   function getMonth(a){
+	   return a.getMonth();
+   }
+   //returns the day of the month(1-31) 
+   function getDate(a){
+	   return a.getDate();
+   }
+   //returns the day of the week (from 0 to 6)
+   function getDay(a){
+	   return a.getDay();
+   }
+   
+   
+   function getLastFullDate(a){
+	   var tmp = a;	  
+	   tmp.setMonth(getMonth(tmp)+1,0); 
+	   
+	   return tmp;
+   }
+   
+   function getFirstFullDate(a){
+	   var tmp = a;	  
+	   tmp.setMonth(getMonth(tmp),1); 
+	   
+	   return tmp;
+   }
+   
+   function getLastDate(a){
+	   var tmp = a;	 
+	   tmp = getDate(getLastFullDate(tmp));
+	   
+	   return tmp;
+   }
+   
+   
+   function getWeekCountOfMonth(a){
+	   var tmp1 = getLastDate(a);  //ž¶Áöž· ÀÏÀÚ (1-31);
+	   var tmp2 = getDay(getFirstFullDate(a));  	   //Ã¹Â°³¯ÀÇ day(0-6);
+	   var tmp3 = 5;
+	   
+	   if((parseInt(tmp1)+ parseInt(tmp2))%7 == 0) {
+	     tmp3 = parseInt((parseInt(tmp1)+ parseInt(tmp2))/7)  ;
+	   }else{
+		 tmp3 = parseInt((parseInt(tmp1)+ parseInt(tmp2))/7) + 1;  
+	   }
+	   
+	   return tmp3;
+   }
+   
+   function setMoveMonth(a){
+	  var tmp = a;
+	  baseDate.setMonth(getMonth(baseDate)+tmp);
+	  
+	  init();
+   }
+   
+   function makeCalendar(){
+	   
+	  // var mFirstdate = 1;
+	  var mLastdate = getLastDate(baseDate);   //¿ùÀÇ ž¶Áöž·ÀÏÀÚ
+	  var mFirstDay  =  getDay(getFirstFullDate(baseDate));  //1ÀÏÀÇ œÃÀÛ¿äÀÏ    
+	  var mWeekCount = getWeekCountOfMonth(baseDate); //ÃÑ ÁÖÂ÷Œö
+	  var mDay = 0;
+	  var mDisplayDay = 0;
+	  var makeHTML = "<table border = 1 cellpadding = 1 cellspacing= 0 >";
+	    makeHTML += "<tr>";	   
+	   for(var m=0;m<=6;m++){
+	    makeHTML += "<td>";	   		
+	    makeHTML += daysOfWeekName[m]  ; 
+	    makeHTML += "</td>";
+	   }
+	    makeHTML += "</tr>";	   		  
+	   
+	   for(var i=1;i<=mWeekCount;i++){
+	   	makeHTML += "<tr>";
+	   	 for(var j=0;j<7;j++){
+	   		mDay = (mDay + 1) ;
+
+	   		mDisplayDay = mDay - mFirstDay;
+	   		makeHTML += "<td>";	   		
+        if(mDisplayDay > 0 && mDisplayDay <= mLastdate){ 	   		 
+	   		   makeHTML += mDisplayDay  ;
+        }	   		   
+	   		makeHTML += "</td>";
+	   	 }
+	   	makeHTML += "</tr>";
+	   }
+	   makeHTML += "</table>";
+	   
+	   return makeHTML;
+   }
+   
+   function makeDpYearMonth(a){
+	   var makeHTML = getYear(a)+"  ";
+	   makeHTML += getMonth(a)+1;
+	   
+	   return makeHTML;
+	   
+   }
+   
+   function init(){
+	   document.getElementById("calendar").innerHTML = makeCalendar();
+	   document.getElementById("dpYyyyMm").innerHTML = makeDpYearMonth(baseDate); 
+   }
+  </script>
+</head>
+<body onload="init()">
+ <div id="calendarWrap"> 
+   <div id="naviMonth">
+     <ul>
+       <li id="prevMonth"><a href="#" onclick="setMoveMonth(-1); return false;"> << </a> </li>
+       <li id="dpYyyyMm">
+       	
+       </li>
+       <li id="nextMonth" class="last"> <a href="#" onclick="setMoveMonth(1); return false;"> >> </a> </li>  
+     </ul>
+   </div>
+   
+   <div id="calendar">ŽÞ·ÂÀÚž®</div>
+  </div>
+</body>
+</html>
