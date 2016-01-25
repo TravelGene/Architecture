@@ -5,6 +5,7 @@ import sys
 import time
 import random
 import urllib2
+import html5lib
 def url_open(pageUrl):
     headers = {  'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'  , 'Referer':'https://itunes.apple.com'} 
     req = urllib2.Request(  url = pageUrl,   headers = headers  ) 
@@ -40,6 +41,7 @@ def parseHotelList(url):
     # print page_no
     m = re_action.search(url)
     hotelUrl = []
+    print page_no
     for i in xrange(0,page_no):
         nurl = m.group(1)+'-'+m.group(2)+'-'+'oa'+(str)(i*30)+'-'+m.group(3)
         if nurl in visited_url.keys(): 
@@ -77,11 +79,12 @@ def parseHotel(url):
     # get_description(soup,res)
     get_reviews(soup, res)
     get_ratings(soup, res)
+    # print url
     get_hotel_img(soup, res)
 
-    get_location(soup)
-    get_img_url(soup)
-    get_open_hour(soup)
+    # get_location(soup)
+    # get_img_url(soup)
+    # get_open_hour(soup)
     return res
 
 
@@ -90,7 +93,13 @@ def get_hotel_img(element, res):
     img_url=""
     if element.find("div",attrs={"id":"BC_PHOTOS"}) == None:
         img_div=element.find("div", attrs={"id":"HR_HACKATHON_CONTENT"})
-        img_url=img_div.find("img",attrs={"class":"sizedThumb_thumbnail"})["src"]
+        img_url_obj=img_div.find("img",attrs={"class":"sizedThumb_thumbnail"})
+        if img_url_obj:
+            img_url = img_url_obj["src"]
+        else:
+            img_url_container=img_div.find("div",attrs={"class":"sizedThumb_container"})
+            if img_url_container:
+                img_url = img_url_container.find("img")["src"]
         print img_url
     else:
         img_div=element.find("div",attrs={"id":"BC_PHOTOS"})
@@ -147,9 +156,13 @@ def get_reviews(element, res):
 def get_ratings(element, res):
     try:    
         rating_div=element.find("div",attrs={"class":"rs rating"})
-        cnt=rating_div.find("span",attrs={"property":"v:count"})
+        cnt=rating_div.find("a")
         rate=rating_div.find("img")
-        res['review_count']=cnt.text
+        if cnt["content"]:
+            res['review_count']=cnt["content"]
+        else:
+            res['review_count']=0
+        # print res['review_count']
         res['rating_string']=rate["content"]
     except (AttributeError):
         res['review_count']="Unknown"
@@ -231,7 +244,7 @@ def get_restuarant_img(element, res):
 
 def get_last_page_no(soup):
     page_no = -1
-    for page in soup.find_all("a",attrs ={"class":"paging taLnk "} ) :
+    for page in soup.find_all("a",attrs ={"class":"pageNum taLnk"} ) :
         p = unicode (page.string.strip())
         if p != None and int(p) > page_no:
             page_no = int(p)
@@ -321,9 +334,10 @@ if __name__ == "__main__":
             action_re = re.compile(r"/(.*)-g(\d*)-([a-zA-Z0-9-_]*).html")
             m = action_re.search(t)
             aspect = m.group(1)
+
             if aspect != 'ShowForum' and aspect != 'Travel_Guide' and aspect != 'Flights':
                 urlqueue.append(root+t)
-    # print urlqueue
+    print urlqueue
 
         # suffix = activity.find("a")['href']
         # page = root + suffix
@@ -335,13 +349,13 @@ if __name__ == "__main__":
             break
         print 'try again'
 
-    print urlqueue[2]
-    while True:
-        if parseAttractionList(urlqueue[2])!=0:
-            break
-        print 'try again'
-    while True:
-        if parseRestaurantList(urlqueue[3]):
-            break
-        print 'try again'
+    # print urlqueue[2]
+    # while True:
+    #     if parseAttractionList(urlqueue[2])!=0:
+    #         break
+    #     print 'try again'
+    # while True:
+    #     if parseRestaurantList(urlqueue[3]):
+    #         break
+    #     print 'try again'
 
